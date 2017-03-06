@@ -1,4 +1,4 @@
-﻿// Tusonic.PL
+﻿// Tusonic.PL - Pixel Shon Adventure
 var cr = {};
 cr.plugins_ = {};
 cr.behaviors = {};
