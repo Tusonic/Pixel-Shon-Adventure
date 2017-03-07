@@ -1,4 +1,4 @@
-﻿// Tusonic.PL - Pixel Shon Adventure
+﻿// Tusonic.PL
 var cr = {};
 cr.plugins_ = {};
 cr.behaviors = {};
@@ -23443,11 +23443,11 @@ cr.getObjectRefTable = function () { return [
 	cr.plugins_.Particles,
 	cr.plugins_.Function,
 	cr.plugins_.Keyboard,
-	cr.plugins_.Text,
 	cr.plugins_.TiledBg,
-	cr.plugins_.Touch,
+	cr.plugins_.Text,
 	cr.plugins_.Sprite,
 	cr.plugins_.Tilemap,
+	cr.plugins_.Touch,
 	cr.behaviors.Bullet,
 	cr.behaviors.solid,
 	cr.behaviors.Sin,
