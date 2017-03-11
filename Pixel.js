@@ -24217,15 +24217,15 @@ cr.behaviors.solid = function(runtime)
 }());
 cr.getObjectRefTable = function () { return [
 	cr.plugins_.GoogleAnalytics_ST,
-	cr.plugins_.Function,
-	cr.plugins_.Keyboard,
 	cr.plugins_.Particles,
-	cr.plugins_.Text,
-	cr.plugins_.Touch,
-	cr.plugins_.TiledBg,
+	cr.plugins_.Keyboard,
+	cr.plugins_.Function,
 	cr.plugins_.Spritefont2,
 	cr.plugins_.Sprite,
+	cr.plugins_.Touch,
+	cr.plugins_.TiledBg,
 	cr.plugins_.Tilemap,
+	cr.plugins_.Text,
 	cr.behaviors.Bullet,
 	cr.behaviors.solid,
 	cr.behaviors.Sin,
@@ -24296,5 +24296,9 @@ cr.getObjectRefTable = function () { return [
 	cr.plugins_.Sprite.prototype.acts.SetPosToObject,
 	cr.behaviors.Bullet.prototype.acts.SetSpeed,
 	cr.system_object.prototype.cnds.OnLoadFinished,
-	cr.plugins_.Sprite.prototype.cnds.OnAnimFinished
+	cr.plugins_.Sprite.prototype.cnds.OnAnimFinished,
+	cr.plugins_.Sprite.prototype.cnds.OnDestroyed,
+	cr.plugins_.TiledBg.prototype.acts.SetVisible,
+	cr.system_object.prototype.cnds.Every,
+	cr.system_object.prototype.exps.random
 ];};
