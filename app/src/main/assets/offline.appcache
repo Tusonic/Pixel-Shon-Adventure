@@ -1,5 +1,5 @@
 ﻿CACHE MANIFEST
-#1489328878
+#1489452076
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
@@ -13,6 +13,14 @@ images/tiledbackgroundjungle2.png
 images/cloud6-sheet0.png
 images/tiledbackgroundstart.png
 images/platforma1-sheet0.png
+images/board2-sheet0.png
+images/door-sheet0.png
+images/lasermove-sheet0.png
+images/laserray-sheet0.png
+images/particleslaser.png
+images/laserbutton-sheet0.png
+images/laserlevel242-sheet0.png
+images/laserray24.png
 images/menu-sheet0.png
 images/tiledbackground.png
 images/menuplayer-sheet0.png
@@ -36,13 +44,10 @@ images/board3-sheet0.png
 images/table24-sheet0.png
 images/sprite3-sheet0.png
 images/table-sheet0.png
-images/off3-sheet0.png
 images/l13off3-sheet0.png
 images/l13off3-sheet1.png
 images/table2-sheet0.png
 images/table3-sheet0.png
-images/board2-sheet0.png
-images/door-sheet0.png
 images/snake0-sheet0.png
 images/spider0-sheet0.png
 images/spider0-sheet1.png
@@ -50,11 +55,6 @@ images/bossspider-sheet0.png
 images/heartboss3-sheet0.png
 images/bosscheck.png
 images/enemy-sheet0.png
-images/lasermove-sheet0.png
-images/laserray-sheet0.png
-images/particleslaser.png
-images/laserlevel242-sheet0.png
-images/laserray24.png
 images/key0-sheet0.png
 images/key1-sheet0.png
 images/doorkey1.png
@@ -94,7 +94,7 @@ images/platform-sheet0.png
 images/support2-sheet0.png
 images/platformsold-sheet0.png
 images/lawastonesmooth-sheet0.png
-images/test1.png
+images/efectlawastone1.png
 images/platformcontroll-sheet0.png
 images/platformcontrolr-sheet0.png
 images/deletelawa-sheet0.png
