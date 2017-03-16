@@ -24539,15 +24539,15 @@ cr.behaviors.solid = function(runtime)
 }());
 cr.getObjectRefTable = function () { return [
 	cr.plugins_.GoogleAnalytics_ST,
+	cr.plugins_.Function,
 	cr.plugins_.Keyboard,
 	cr.plugins_.Particles,
-	cr.plugins_.Function,
-	cr.plugins_.Text,
-	cr.plugins_.Sprite,
-	cr.plugins_.Spritefont2,
-	cr.plugins_.Tilemap,
-	cr.plugins_.TiledBg,
 	cr.plugins_.Touch,
+	cr.plugins_.Spritefont2,
+	cr.plugins_.Text,
+	cr.plugins_.TiledBg,
+	cr.plugins_.Tilemap,
+	cr.plugins_.Sprite,
 	cr.behaviors.Bullet,
 	cr.behaviors.solid,
 	cr.behaviors.Sin,
@@ -24625,5 +24625,6 @@ cr.getObjectRefTable = function () { return [
 	cr.behaviors.custom.prototype.acts.SetSpeed,
 	cr.system_object.prototype.cnds.Every,
 	cr.system_object.prototype.exps.random,
-	cr.behaviors.Rotate.prototype.acts.SetSpeed
+	cr.behaviors.Rotate.prototype.acts.SetSpeed,
+	cr.behaviors.Sin.prototype.acts.SetActive
 ];};
