@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+   <!-- TUSONIC -->
+    <name>Level1-6</name>
+    <events>
+        <include>Control</include>
+        <include>Key</include>
+        <include>Logic1</include>
+        <include>Enemy</include>
+        <include>Player</include>
+        <event-block sid="394782979431043">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="302480938218059" type="Snake0">
+                    <param id="0" name="Object">LaserRay</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="470598899455099" type="System">
+                    <param id="0" name="Object to create">SnakeDeath</param>
+                    <param id="1" name="Layer">&quot;Player&quot;</param>
+                    <param id="2" name="X">Snake0.X</param>
+                    <param id="3" name="Y">Snake0.Y-10</param>
+                </action>
+                <action id="-9" name="Destroy" sid="449745279496207" type="Snake0" />
+                <action id="-14" name="Toggle boolean" sid="224276263072742" type="LaserButton">
+                    <param id="0" name="Instance variable">LaserB1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="812572352795918">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="297085357912310" type="L13OFF1">
+                    <param id="0" name="Instance variable">L1</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="453749823120205" type="L13OFF2">
+                    <param id="0" name="Instance variable">L2</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="131398615971319" type="L13OFF3">
+                    <param id="0" name="Instance variable">L3</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="707623718823980" type="L13OFF4">
+                    <param id="0" name="Instance variable">L4</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="617738407701354" type="L13OFF5">
+                    <param id="0" name="Instance variable">L5</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="181975444766950" type="L13OFF6">
+                    <param id="0" name="Instance variable">L6</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="512623893011421" type="Portal">
+                    <param id="0" name="Animation">&quot;ID_OPEN&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="487097616200810" type="PortalNextLevel">
+                    <param id="0" name="X">880</param>
+                    <param id="1" name="Y"> 208</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="547243492781246" title="Level 1.6">
+            <sub-events>
+                <event-block sid="170087096969630">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="282273996104027" type="Player">
+                            <param id="0" name="Object">LaserButton</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="756929724177123">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="432459175230940" type="Keyboard">
+                                    <param id="0" name="Key">66 (B)</param>
+                                </condition>
+                                <condition id="3" name="On touched object" sid="317649948922348" type="Touch">
+                                    <param id="0" name="Object">B</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-14" name="Toggle boolean" sid="812012174374755" type="LaserButton">
+                                    <param id="0" name="Instance variable">LaserB1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="534558913709039">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="790418211824073" type="LaserButton">
+                            <param id="0" name="Instance variable">LaserB1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="268530845710770" type="Function">
+                            <param id="0" name="Name">&quot;onLaserStart16&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="5" name="Set frame" sid="673821324092702" type="LaserButton">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="891728088418081" type="LaserRay">
+                            <param id="0" name="X">LaserLevel16.X+0</param>
+                            <param id="1" name="Y">LaserLevel16.Y+0</param>
+                        </action>
+                        <action id="-6" name="Set height" sid="688691393040563" type="LaserRay">
+                            <param id="0" name="Height">LaserLevel16.Height + 64</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="410647315779387" type="ParticlesLaser">
+                            <param id="0" name="Object">LaserRay</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="286852559898175">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="669084407272082" type="LaserButton">
+                            <param id="0" name="Instance variable">LaserB1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="137646930246113" type="Function">
+                            <param id="0" name="Name">&quot;onLaserStop16&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="5" name="Set frame" sid="551801867270325" type="LaserButton">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="532275330366902" type="LaserRay">
+                            <param id="0" name="X">-100</param>
+                            <param id="1" name="Y">-100</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="818289101492259" type="ParticlesLaser">
+                            <param id="0" name="Object">LaserRay</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="583988187505568">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="315979584425393" type="Player">
+                    <param id="0" name="Object">PortalNextLevel</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="334591671873055" type="System">
+                    <param id="0" name="Layout">Level2-1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="804392742788437">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="498336227685783" type="Player">
+                    <param id="0" name="Object">LaserRay</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="297947840385338" type="Function">
+                    <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="676511873822815">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="496158877484043" type="Player">
+                    <param id="0" name="Object">Snake0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Track Event" sid="963661124928200" type="GoogleAnalytics">
+                    <param id="0" name="Category">&quot;Enemy&quot;</param>
+                    <param id="1" name="Name">&quot;Snake 1-6&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="650439136418627">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="582208976621186" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Track Event" sid="659243182986808" type="GoogleAnalytics">
+                    <param id="0" name="Category">&quot;Level&quot;</param>
+                    <param id="1" name="Name">&quot;Start Level1-6&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

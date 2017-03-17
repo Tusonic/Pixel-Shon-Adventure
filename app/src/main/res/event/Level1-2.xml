@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+   <!-- TUSONIC -->
+    <name>Level1-2</name>
+    <events>
+        <include>Control</include>
+        <include>Player</include>
+        <event-block sid="617240210686813">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="912653566856717" type="Player">
+                    <param id="0" name="Object">Trap</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="491160362556382" type="Function">
+                    <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Track Event" sid="768415355208612" type="GoogleAnalytics">
+                    <param id="0" name="Category">&quot;Death&quot;</param>
+                    <param id="1" name="Name">&quot;Player  Death 1-2&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="OPEN DOOR" sid="324276113874736" title="PORTAL2">
+            <sub-events>
+                <event-block sid="446441438428070">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="512274717480206" type="Player">
+                            <param id="0" name="Object">PortalOpenDoor</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="324505338132239" type="Portal">
+                            <param id="0" name="Animation">&quot;ID_OPEN&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="208181394953073">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="662963421750419" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="612314146285321" type="Portal">
+                            <param id="0" name="Animation">&quot;ID_CLOSE&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="NEXT LEVEL" sid="622689241718592" title="PORTAL LEVEL2">
+            <sub-events>
+                <event-block sid="945989900552095">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="378530094929000" type="Player">
+                            <param id="0" name="Object">PortalNextLevel</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="492895552770421" type="System">
+                            <param id="0" name="Layout">Level1-3</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="116969127482646">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="656561418467416" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Track Event" sid="308781325682789" type="GoogleAnalytics">
+                    <param id="0" name="Category">&quot;Level&quot;</param>
+                    <param id="1" name="Name">&quot;Start Level1-2&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

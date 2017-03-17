@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+   <!-- TUSONIC -->
+    <name>Menu</name>
+    <events>
+        <event-block sid="377504197893586">
+            <conditions>
+                <condition id="14" name="On tap" sid="651544823369899" type="Touch" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="591334529631464" type="System">
+                    <param id="0" name="Layout">Select</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="996152894310818">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="470315290624319" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="783011832764800" type="System">
+                    <param id="0" name="Layout">Select</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="499269312610380">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="259503022065088" type="Keyboard">
+                    <param id="0" name="Key">87 (W)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="329720291432812" type="System">
+                    <param id="0" name="Layout">Select</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="941381414989228">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="914316230621265" type="Keyboard">
+                    <param id="0" name="Key">83 (S)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="241833966481804" type="System">
+                    <param id="0" name="Layout">Select</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="747202148211434">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="564153112953960" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="450905468112529" type="System">
+                    <param id="0" name="Layout">Select</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="717802929822397">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="643400265223014" type="Keyboard">
+                    <param id="0" name="Key">68 (D)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="859311168333290" type="System">
+                    <param id="0" name="Layout">Select</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="242941129388527">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="356332659815834" type="Keyboard">
+                    <param id="0" name="Key">66 (B)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="135033586432123" type="System">
+                    <param id="0" name="Layout">Select</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

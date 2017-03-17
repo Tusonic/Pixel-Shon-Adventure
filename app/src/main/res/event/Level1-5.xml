@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+   <!-- TUSONIC -->
+    <name>Level1-5</name>
+    <events>
+        <include>Key</include>
+        <include>Control</include>
+        <include>Player</include>
+        <event-group description="OPEN DOOR" sid="537557599698496" title="PORTAL5">
+            <sub-events>
+                <event-block sid="164032308420636">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="508161012988429" type="Player">
+                            <param id="0" name="Object">PortalOpenDoor</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="709080449728519" type="Portal">
+                            <param id="0" name="Animation">&quot;ID_OPEN&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="282471498999989">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="782577081394710" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="943236029981633" type="Portal">
+                            <param id="0" name="Animation">&quot;ID_CLOSE&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="NEXT LEVEL" sid="750965376724453" title="PORTAL LEVEL5">
+            <sub-events>
+                <event-block sid="330728872214842">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="849799749281002" type="Player">
+                            <param id="0" name="Object">PortalNextLevel</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="782963678078649" type="System">
+                            <param id="0" name="Layout">Level1-6</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Laser" sid="364111025716599" title="Laser 1.5">
+            <sub-events>
+                <event-block sid="962350580349705">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="868913550396167" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="557258346434973" type="LaserRay">
+                            <param id="0" name="X">LaserMove.X+0</param>
+                            <param id="1" name="Y">LaserMove.Y+0</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="176183260329311" type="ParticlesLaser">
+                            <param id="0" name="Object">LaserRay</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="452619492717365">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="846984396318307" type="LaserRay">
+                                    <param id="0" name="Object">PlatformaEmpty</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-6" name="Set height" sid="548784918962159" type="LaserRay">
+                                    <param id="0" name="Height">LaserMove.Height + 33</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="908234682200813">
+                            <conditions>
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="120963138792391" type="LaserRay">
+                                    <param id="0" name="Object">PlatformaEmpty</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-6" name="Set height" sid="923476694175848" type="LaserRay">
+                                    <param id="0" name="Height">LaserMove.Height + 80</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="157538949401607">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="654834812149224" type="Player">
+                    <param id="0" name="Object">LaserRay</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="875191008997856" type="Function">
+                    <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Track Event" sid="706141233400241" type="GoogleAnalytics">
+                    <param id="0" name="Category">&quot;Death&quot;</param>
+                    <param id="1" name="Name">&quot;Player Death 1-5 Laser&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="416583091176309">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="958449270636920" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Track Event" sid="456563121527742" type="GoogleAnalytics">
+                    <param id="0" name="Category">&quot;Level&quot;</param>
+                    <param id="1" name="Name">&quot;Start Level1-5&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

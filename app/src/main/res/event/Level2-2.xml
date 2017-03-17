@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+   <!-- TUSONIC -->
+    <name>Level2-2</name>
+    <events>
+        <include>Control</include>
+        <include>Enemy</include>
+        <include>Key</include>
+        <include>Player</include>
+        <event-block sid="723149103831071">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="467298060762481" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="812008055002407" type="LightPlayer">
+                    <param id="0" name="X">lerp(Self.X, Player.X, 0.17)</param>
+                    <param id="1" name="Y">lerp(Self.Y, Player.Y, 0.17)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="OPEN DOOR" sid="154506031049467" title="PORTAL8">
+            <sub-events>
+                <event-block sid="301882625134494">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="899501917974224" type="Player">
+                            <param id="0" name="Object">PortalOpenDoor</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="752484994176769" type="Portal">
+                            <param id="0" name="Animation">&quot;ID_OPEN&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="346160803492135">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="905324552868521" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="659519016036014" type="Portal">
+                            <param id="0" name="Animation">&quot;ID_CLOSE&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="NEXT LEVEL" sid="168996152543252" title="PORTAL LEVEL8">
+            <sub-events>
+                <event-block sid="108604372624584">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="269992433078029" type="Player">
+                            <param id="0" name="Object">PortalNextLevel</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="442383599151252" type="System">
+                            <param id="0" name="Layout">Level2-3</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="495619247994990">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="943727506137883" type="Player">
+                    <param id="0" name="Object">Spider0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Track Event" sid="756637519875604" type="GoogleAnalytics">
+                    <param id="0" name="Category">&quot;Enemy&quot;</param>
+                    <param id="1" name="Name">&quot;Spider 2-2&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="517312714999733">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="181169717957131" type="Player">
+                    <param id="0" name="Object">Snake0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Track Event" sid="751333720103036" type="GoogleAnalytics">
+                    <param id="0" name="Category">&quot;Enemy&quot;</param>
+                    <param id="1" name="Name">&quot;Snake 2-2&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="662680931047572">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="996466338556371" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Track Event" sid="379606863788169" type="GoogleAnalytics">
+                    <param id="0" name="Category">&quot;Level&quot;</param>
+                    <param id="1" name="Name">&quot;Start Level2-2&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

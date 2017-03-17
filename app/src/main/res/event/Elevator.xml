@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+   <!-- TUSONIC -->
+    <name>Elevator</name>
+    <events>
+        <variable constant="0" name="Elevator" sid="910079693523298" static="0" type="number">0</variable>
+        <event-block sid="941122134902558">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="453393553930184" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="501865961465643" type="System">
+                    <param id="0" name="Variable">Elevator</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="961608045514752">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="718650337782887" type="System">
+                    <param id="0" name="Variable">Elevator</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="506233871479151" type="Elevator">
+                    <param id="0" name="Animation">&quot;STOP&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="954966750762148">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="873404647477054" type="System">
+                    <param id="0" name="Variable">Elevator</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="896769738307277" type="Elevator">
+                    <param id="0" name="Animation">&quot;DOWN&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="236045055517391">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="416198599856017" type="System">
+                    <param id="0" name="Variable">Elevator</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="204717776428403" type="Elevator">
+                    <param id="0" name="Animation">&quot;UP&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="326254153081877">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="598227044187606" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="459179344573047" type="ElevatorB">
+                    <param id="0" name="Object">Elevator</param>
+                    <param id="1" name="Image point (optional)">1</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="183954934421935" type="ElevatorA">
+                    <param id="0" name="Object">Elevator</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="284626009521993" title="Elevator Down">
+            <sub-events>
+                <event-block sid="145109987934604">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="750179593724194" type="ElevatorGoDown">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="132770469432048" type="Player">
+                            <param id="0" name="Object">Elevator</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="217352453709953" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block any="1" sid="416660782890388">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="654901002834919" type="Touch">
+                                    <param id="0" name="Object">B</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="982647351080941" type="Keyboard">
+                                    <param id="0" name="Key">66 (B)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="601438649210585" type="System">
+                                    <param id="0" name="Variable">Elevator</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action behavior="Bullet" id="2" name="Set gravity" sid="812241959435959" type="Elevator">
+                                    <param id="0" name="Gravity">10</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="738690661906815" title="Elevator Up">
+            <sub-events>
+                <event-block sid="806637069335633">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="954576350702390" type="ElevatorGoUp">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="970615161640907" type="Player">
+                            <param id="0" name="Object">Elevator</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="983285226544595" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block any="1" sid="640505915173320">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="955304058369912" type="Touch">
+                                    <param id="0" name="Object">B</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="581406170450162" type="Keyboard">
+                                    <param id="0" name="Key">66 (B)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="915641904315891" type="System">
+                                    <param id="0" name="Variable">Elevator</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="Bullet" id="2" name="Set gravity" sid="564406486192722" type="Elevator">
+                                    <param id="0" name="Gravity">-10</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="854347611733701" title="Elevator Stop">
+            <sub-events>
+                <event-block sid="319103555211550">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="633902219909155" type="Elevator">
+                            <param id="0" name="Object">ElevatorStop</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="931707031771114" type="Elevator">
+                            <param id="0" name="Speed">0</param>
+                        </action>
+                        <action behavior="Bullet" id="2" name="Set gravity" sid="751186580640385" type="Elevator">
+                            <param id="0" name="Gravity">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="433129006686216" type="System">
+                            <param id="0" name="Variable">Elevator</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

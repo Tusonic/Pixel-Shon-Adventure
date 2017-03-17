@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+   <!-- TUSONIC -->
+    <name>Level2-3</name>
+    <events>
+        <include>Control</include>
+        <include>Key</include>
+        <include>Enemy</include>
+        <include>Player</include>
+        <event-group description="OPEN DOOR" sid="858071064165081" title="PORTAL9">
+            <sub-events>
+                <event-block sid="434123240300507">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="327981447693936" type="Player">
+                            <param id="0" name="Object">PortalOpenDoor</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="514638958692696" type="Portal">
+                            <param id="0" name="Animation">&quot;ID_OPEN&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="682558597453281">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="710057754997288" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="523483332053890" type="Portal">
+                            <param id="0" name="Animation">&quot;ID_CLOSE&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="NEXT LEVEL" sid="678230689614217" title="PORTAL LEVEL9">
+            <sub-events>
+                <event-block sid="168149518739474">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="903086937744859" type="Player">
+                            <param id="0" name="Object">PortalNextLevel</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="288005210552752" type="System">
+                            <param id="0" name="Layout">Level2-4</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="661842768111655">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="488953373604116" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="724053175076516" type="LightPlayer">
+                    <param id="0" name="X">lerp(Self.X, Player.X, 0.17)</param>
+                    <param id="1" name="Y">lerp(Self.Y, Player.Y, 0.17)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="394876295505922">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="784140973941617" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Track Event" sid="863156010668201" type="GoogleAnalytics">
+                    <param id="0" name="Category">&quot;Level&quot;</param>
+                    <param id="1" name="Name">&quot;Start Level2-3&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="593775445043620">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="497115740876918" type="Player">
+                    <param id="0" name="Object">Spider0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Track Event" sid="233375401652087" type="GoogleAnalytics">
+                    <param id="0" name="Category">&quot;Enemy&quot;</param>
+                    <param id="1" name="Name">&quot;Spider 2-3&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

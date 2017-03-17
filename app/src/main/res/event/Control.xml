@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+   <!-- TUSONIC -->
+    <name>Control</name>
+    <events>
+        <variable comment="Live" constant="0" name="Player" sid="424234830368794" static="0" type="number">3</variable>
+        <variable constant="0" name="Control" sid="770938357013916" static="0" type="number">0</variable>
+        <event-block sid="210609339047104">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="936277084860349" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="573282914094408" type="System">
+                    <param id="0" name="Variable">Control</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="771721376327525">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="181186210894456" type="System" />
+                <condition id="-14" name="Compare variable" sid="632072488802029" type="System">
+                    <param id="0" name="Variable">Control</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="879623935910932" type="L">
+                    <param id="0" name="X">20</param>
+                    <param id="1" name="Y">120</param>
+                </action>
+                <action id="-3" name="Set position" sid="607422333858890" type="R">
+                    <param id="0" name="X">60</param>
+                    <param id="1" name="Y">120</param>
+                </action>
+                <action id="-3" name="Set position" sid="109267602131118" type="A">
+                    <param id="0" name="X">195</param>
+                    <param id="1" name="Y">120</param>
+                </action>
+                <action id="-3" name="Set position" sid="467024830761694" type="B">
+                    <param id="0" name="X">235</param>
+                    <param id="1" name="Y">120</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="464462132363935">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="697141146988961" type="System" />
+                <condition id="-14" name="Compare variable" sid="155416433918196" type="System">
+                    <param id="0" name="Variable">Control</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="165836636100465" type="L">
+                    <param id="0" name="X">-100</param>
+                    <param id="1" name="Y">-100</param>
+                </action>
+                <action id="-3" name="Set position" sid="751957900208427" type="R">
+                    <param id="0" name="X">-100</param>
+                    <param id="1" name="Y">-100</param>
+                </action>
+                <action id="-3" name="Set position" sid="681467945533490" type="A">
+                    <param id="0" name="X">-100</param>
+                    <param id="1" name="Y">-100</param>
+                </action>
+                <action id="-3" name="Set position" sid="527735378529059" type="B">
+                    <param id="0" name="X">-100</param>
+                    <param id="1" name="Y">-100</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

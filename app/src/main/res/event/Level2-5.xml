@@ -1,0 +1,464 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+   <!-- TUSONIC -->
+    <name>Level2-5</name>
+    <events>
+        <variable constant="0" name="SpiderBoss" sid="611853411851916" static="0" type="number">0</variable>
+        <include>Logic1</include>
+        <include>Key</include>
+        <include>Enemy</include>
+        <include>Elevator</include>
+        <include>Player</include>
+        <include>Control</include>
+        <event-block sid="632533743137762">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="584967020768695" type="Player">
+                    <param id="0" name="Object">CavePlatformFade</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="1" name="Start fade" sid="928221187710287" type="CavePlatformFade" />
+            </actions>
+        </event-block>
+        <event-block sid="469345853908269">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="739161288455126" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="637575864525321" type="System">
+                    <param id="0" name="Variable">SpiderBoss</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="6" name="Set speed" sid="902316543355121" type="BossSpider">
+                    <param id="0" name="Speed">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="Laser" sid="285567885234778" title="Laser 2.5">
+            <sub-events>
+                <event-block sid="353996581520448">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="609690986214554" type="OFF3">
+                            <param id="0" name="Instance variable">B3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="575003852000728" type="LaserRay">
+                            <param id="0" name="X">LaserLevel251.X+0</param>
+                            <param id="1" name="Y">LaserLevel251.Y+0</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="743317363644367" type="ParticlesLaser">
+                            <param id="0" name="Object">LaserRay</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                        <action id="-6" name="Set height" sid="876600928684956" type="LaserRay">
+                            <param id="0" name="Height">LaserMove.Height + 33</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="275075881466244">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="145501777924518" type="OFF4">
+                            <param id="0" name="Instance variable">B4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="597817398730204" type="LaserRay2">
+                            <param id="0" name="X">LaserLevel252.X+0</param>
+                            <param id="1" name="Y">LaserLevel252.Y+0</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="199339013335643" type="ParticlesLaser2">
+                            <param id="0" name="Object">LaserRay2</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                        <action id="-6" name="Set height" sid="208428083991551" type="LaserRay2">
+                            <param id="0" name="Height">LaserMove.Height + 33</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="652366128817043">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="655621682236957" type="OFF3">
+                            <param id="0" name="Instance variable">B3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="341294125241565" type="LaserRay">
+                            <param id="0" name="X">-100</param>
+                            <param id="1" name="Y">-100</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="233639973564565" type="ParticlesLaser">
+                            <param id="0" name="X">-200</param>
+                            <param id="1" name="Y">-200</param>
+                        </action>
+                        <action id="-6" name="Set height" sid="932395931396143" type="LaserRay">
+                            <param id="0" name="Height">LaserMove.Height + 33</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="243856376428062">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="542270884333322" type="OFF4">
+                            <param id="0" name="Instance variable">B4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="960798604931733" type="LaserRay2">
+                            <param id="0" name="X">-100</param>
+                            <param id="1" name="Y">-100</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="518917275197146" type="ParticlesLaser2">
+                            <param id="0" name="X">-200</param>
+                            <param id="1" name="Y">-200</param>
+                        </action>
+                        <action id="-6" name="Set height" sid="841842498219383" type="LaserRay">
+                            <param id="0" name="Height">LaserMove.Height + 33</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="576013642631351" title="COLLISION">
+            <sub-events>
+                <event-block sid="490475675830290">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="193507904951378" type="Spider0">
+                            <param id="0" name="Object">LaserRay</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="769710211227937" type="Spider0" />
+                        <action id="-3" name="Create object" sid="224995193356291" type="System">
+                            <param id="0" name="Object to create">DeathKey1</param>
+                            <param id="1" name="Layer">&quot;Player&quot;</param>
+                            <param id="2" name="X">LaserRay.X</param>
+                            <param id="3" name="Y">LaserRay.Y+30</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="754048709120020" type="OFF3">
+                            <param id="0" name="Instance variable">B3</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="737011058756102">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="968305425144980" type="Spider0">
+                            <param id="0" name="Object">LaserRay2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="213368892589573" type="Spider0" />
+                        <action id="-3" name="Create object" sid="402356414332716" type="System">
+                            <param id="0" name="Object to create">DeathKey1</param>
+                            <param id="1" name="Layer">&quot;Player&quot;</param>
+                            <param id="2" name="X">LaserRay2.X</param>
+                            <param id="3" name="Y">LaserRay2.Y+30</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="320158949436727" type="OFF4">
+                            <param id="0" name="Instance variable">B4</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="749343071541900">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="411492290291128" type="Player">
+                            <param id="0" name="Object">BossSpider</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="249165292140664" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Track Event" sid="209252783080225" type="GoogleAnalytics">
+                            <param id="0" name="Category">&quot;Death&quot;</param>
+                            <param id="1" name="Name">&quot;Player Death 2-5 Boss&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="765626976372546">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="387277698316625" type="Player">
+                            <param id="0" name="Object">LaserRay</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="987897314239463" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Track Event" sid="582193492793704" type="GoogleAnalytics">
+                            <param id="0" name="Category">&quot;Death&quot;</param>
+                            <param id="1" name="Name">&quot;Player Death 2-5 Laser&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="799642835441259">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="979939007280341" type="Player">
+                            <param id="0" name="Object">LaserRay2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="783753244251369" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Track Event" sid="176667994428018" type="GoogleAnalytics">
+                            <param id="0" name="Category">&quot;Death&quot;</param>
+                            <param id="1" name="Name">&quot;Player Death 2-5 Laser&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="158338915954916" title="BOSS">
+            <sub-events>
+                <event-block sid="399060091765317">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="464878020662080" type="BossSpider">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">20</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="206350195782750" type="Player">
+                            <param id="0" name="Object">BossCheck</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="274104112070401" type="Camera">
+                            <param id="0" name="Magnitude">20</param>
+                            <param id="1" name="Duration">0.4</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="238084220265743" type="BossSpider">
+                            <param id="0" name="Animation">&quot;ID_ATACK&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="12" name="Set repeat-to frame" sid="890991366305638" type="BossSpider">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="3" name="Start" sid="197563199786301" type="BossSpider">
+                            <param id="0" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="622243851019535" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="126939058447587" type="System">
+                            <param id="0" name="Object to create">Spider0</param>
+                            <param id="1" name="Layer">&quot;Enemy&quot;</param>
+                            <param id="2" name="X">1104</param>
+                            <param id="3" name="Y">380</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="314302663013047">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="173083435668755" type="BossSpider">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">20</param>
+                        </condition>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="409718538703765" type="Player">
+                            <param id="0" name="Object">BossCheck</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="760149477589439" type="BossSpider">
+                            <param id="0" name="Animation">&quot;ID_ATACK&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="12" name="Set repeat-to frame" sid="855832286133176" type="BossSpider">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="3" name="Start" sid="101129576079138" type="BossSpider">
+                            <param id="0" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="935563172811155">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="101954456826867" type="L13OFF1">
+                            <param id="0" name="Instance variable">L1</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="138263243318142" type="L13OFF2">
+                            <param id="0" name="Instance variable">L2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="882536710418383" type="System">
+                            <param id="0" name="Object to create">DeathKey1</param>
+                            <param id="1" name="Layer">&quot;Player&quot;</param>
+                            <param id="2" name="X">BossSpider.X+40</param>
+                            <param id="3" name="Y">BossSpider.Y+20</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="116129568097579" type="System">
+                            <param id="0" name="Object to create">DeathKey1</param>
+                            <param id="1" name="Layer">&quot;Player&quot;</param>
+                            <param id="2" name="X">BossSpider.X-40</param>
+                            <param id="3" name="Y">BossSpider.Y+20</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="458148451241593" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="822439029611081" type="OFF1">
+                            <param id="0" name="Instance variable">B1</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="523982879754188" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="668925783812562" type="OFF2">
+                            <param id="0" name="Instance variable">B2</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="308839326609940" title="LIFE BOSS">
+            <sub-events>
+                <event-block sid="911430000352799">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="506063738574708" type="OFF1">
+                            <param id="0" name="Instance variable">B1</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="318605229386595" type="OFF2">
+                            <param id="0" name="Instance variable">B2</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="651468403469277" type="System">
+                            <param id="0" name="Variable">SpiderBoss</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="115944042371113" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="836133454606607" type="System">
+                            <param id="0" name="Variable">SpiderBoss</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="130401282415679" type="HeartBoss3" />
+                    </actions>
+                </event-block>
+                <event-block sid="249716130508875">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="970031545950338" type="OFF1">
+                            <param id="0" name="Instance variable">B1</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="752016349433437" type="OFF2">
+                            <param id="0" name="Instance variable">B2</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="205723362277048" type="System">
+                            <param id="0" name="Variable">SpiderBoss</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="139924226562841" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="318911778001426" type="System">
+                            <param id="0" name="Variable">SpiderBoss</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="845812214826714" type="HeartBoss2" />
+                    </actions>
+                </event-block>
+                <event-block sid="841755545182582">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="184557578558461" type="OFF1">
+                            <param id="0" name="Instance variable">B1</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="531303003531170" type="OFF2">
+                            <param id="0" name="Instance variable">B2</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="180760622888955" type="System">
+                            <param id="0" name="Variable">SpiderBoss</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="919803009534654" type="BossSpider" />
+                        <action id="-9" name="Destroy" sid="770987022484883" type="HeartBoss1" />
+                        <action id="-3" name="Set position" sid="348299764815729" type="Key2">
+                            <param id="0" name="X">1104</param>
+                            <param id="1" name="Y">380</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="788370283305487">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="328497471586761" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="854509477291889" type="LightPlayer">
+                    <param id="0" name="X">lerp(Self.X, Player.X, 0.17)</param>
+                    <param id="1" name="Y">lerp(Self.Y, Player.Y, 0.17)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="OPEN DOOR" sid="732371106876891" title="PORTAL11">
+            <sub-events>
+                <event-block sid="403474794971618">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="616292060337526" type="Player">
+                            <param id="0" name="Object">PortalOpenDoor</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="128045944024849" type="Portal">
+                            <param id="0" name="Animation">&quot;ID_OPEN&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="102666916959060">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="870485250011257" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="198583639954849" type="Portal">
+                            <param id="0" name="Animation">&quot;ID_CLOSE&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="NEXT LEVEL" sid="283157558785483" title="PORTAL LEVEL11">
+            <sub-events>
+                <event-block sid="578154016565785">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="558793551180315" type="Player">
+                            <param id="0" name="Object">PortalNextLevel</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="718193765728310" type="System">
+                            <param id="0" name="Layout">Level2-6</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="477295751098758">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="852773456778585" type="Player">
+                    <param id="0" name="Object">Spider0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Track Event" sid="377124363161166" type="GoogleAnalytics">
+                    <param id="0" name="Category">&quot;Enemy&quot;</param>
+                    <param id="1" name="Name">&quot;Spider Level2-5&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

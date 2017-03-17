@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+   <!-- TUSONIC -->
+    <name>Level1-3</name>
+    <events>
+        <include>Control</include>
+        <include>Logic1</include>
+        <include>Player</include>
+        <event-block sid="640971976463391">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="867399417434635" type="L13OFF1">
+                    <param id="0" name="Instance variable">L1</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="319884227810397" type="L13OFF2">
+                    <param id="0" name="Instance variable">L2</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="821555377139631" type="L13OFF3">
+                    <param id="0" name="Instance variable">L3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="2" name="Set gravity" sid="965879425027299" type="Door">
+                    <param id="0" name="Gravity">20</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="503228623338558">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="288393633947771" type="Door">
+                    <param id="0" name="Object">DoorDelete</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="677504911664961" type="Door" />
+                <action id="-9" name="Destroy" sid="874814568721953" type="DoorDelete" />
+            </actions>
+        </event-block>
+        <event-block sid="960468420087576">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="934847241571812" type="Player">
+                    <param id="0" name="Object">Trap2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="914153422330495" type="Function">
+                    <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Track Event" sid="274146806585571" type="GoogleAnalytics">
+                    <param id="0" name="Category">&quot;Death&quot;</param>
+                    <param id="1" name="Name">&quot;Player  Death 1-3 Trap&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="OPEN DOOR" sid="436371426203754" title="PORTAL3">
+            <sub-events>
+                <event-block sid="339612201350261">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="849759357927031" type="Player">
+                            <param id="0" name="Object">PortalOpenDoor</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="568719272736547" type="Portal">
+                            <param id="0" name="Animation">&quot;ID_OPEN&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="863509601540575">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="601946384333417" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="539138581614928" type="Portal">
+                            <param id="0" name="Animation">&quot;ID_CLOSE&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="NEXT LEVEL" sid="899268426966027" title="PORTAL LEVEL3">
+            <sub-events>
+                <event-block sid="453982299545186">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="331870976688397" type="Player">
+                            <param id="0" name="Object">PortalNextLevel</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="391646752820357" type="System">
+                            <param id="0" name="Layout">Level1-4</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="966082076893557">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="730889316039851" type="System">
+                    <param id="0" name="Variable">Control</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="845130658846735" type="Board">
+                    <param id="0" name="Animation">&quot;PC&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="299504195012134">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="937937256650190" type="System">
+                    <param id="0" name="Variable">Control</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="600378943812568" type="Board">
+                    <param id="0" name="Animation">&quot;APP&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="981262381388471">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="630166254661064" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Track Event" sid="778132113894236" type="GoogleAnalytics">
+                    <param id="0" name="Category">&quot;Level&quot;</param>
+                    <param id="1" name="Name">&quot;Start Level1-3&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

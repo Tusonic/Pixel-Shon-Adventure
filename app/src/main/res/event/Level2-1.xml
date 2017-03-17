@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+   <!-- TUSONIC -->
+    <name>Level2-1</name>
+    <events>
+        <include>Control</include>
+        <include>Enemy</include>
+        <include>Player</include>
+        <event-group description="Camera" sid="921304033981888" title="LIGHT" />
+        <event-block sid="744595899857979">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="350784239498750" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="433062550491651" type="LightPlayer">
+                    <param id="0" name="X">lerp(Self.X, Player.X, 0.17)</param>
+                    <param id="1" name="Y">lerp(Self.Y, Player.Y, 0.17)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="OPEN DOOR" sid="136456757780741" title="PORTAL7">
+            <sub-events>
+                <event-block sid="984089914567864">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="160044475892000" type="Player">
+                            <param id="0" name="Object">PortalOpenDoor</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="507884984422203" type="Portal">
+                            <param id="0" name="Animation">&quot;ID_OPEN&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="170862291021818">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="274272529238648" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="329806302037515" type="Portal">
+                            <param id="0" name="Animation">&quot;ID_CLOSE&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="NEXT LEVEL" sid="759136785311818" title="PORTAL LEVEL7">
+            <sub-events>
+                <event-block sid="453666490604444">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="835239514015659" type="Player">
+                            <param id="0" name="Object">PortalNextLevel</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="544794605272860" type="System">
+                            <param id="0" name="Layout">Level2-2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="910011621961412">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="724221179670088" type="Player">
+                    <param id="0" name="Object">Spider0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Track Event" sid="324278334882090" type="GoogleAnalytics">
+                    <param id="0" name="Category">&quot;Enemy&quot;</param>
+                    <param id="1" name="Name">&quot;Spider 2-1&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="546973962706592">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="148132481143321" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Track Event" sid="666826699770633" type="GoogleAnalytics">
+                    <param id="0" name="Category">&quot;Level&quot;</param>
+                    <param id="1" name="Name">&quot;Start Level2-1&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

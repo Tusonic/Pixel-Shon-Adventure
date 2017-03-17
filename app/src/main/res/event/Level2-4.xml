@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+   <!-- TUSONIC -->
+    <name>Level2-4</name>
+    <events>
+        <include>Control</include>
+        <include>Key</include>
+        <include>Logic1</include>
+        <include>Player</include>
+        <event-block sid="149960850936849">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="262595064508803" type="L13OFF1">
+                    <param id="0" name="Instance variable">L1</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="135100499385461" type="L13OFF2">
+                    <param id="0" name="Instance variable">L2</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="916685814741136" type="L13OFF3">
+                    <param id="0" name="Instance variable">L3</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="411501042364866" type="L13OFF4">
+                    <param id="0" name="Instance variable">L4</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="102155765276331" type="L13OFF5">
+                    <param id="0" name="Instance variable">L5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="365537041779682" type="System">
+                    <param id="0" name="Object to create">DeathKey2</param>
+                    <param id="1" name="Layer">&quot;Player&quot;</param>
+                    <param id="2" name="X">Player.X</param>
+                    <param id="3" name="Y">Player.Y</param>
+                </action>
+                <action id="-9" name="Destroy" sid="178323039098608" type="DoorKey2" />
+                <action id="-13" name="Set boolean" sid="476748334051897" type="OFF1">
+                    <param id="0" name="Instance variable">B1</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="463534688027409" type="OFF2">
+                    <param id="0" name="Instance variable">B2</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="898651083032092" type="OFF3">
+                    <param id="0" name="Instance variable">B3</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="727167998104625" type="OFF4">
+                    <param id="0" name="Instance variable">B4</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="585505857998954" type="OFF5">
+                    <param id="0" name="Instance variable">B5</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="301816845443574" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="358214373449688" type="OFF1">
+                    <param id="0" name="Instance variable">B1</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="689206885465247" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="397806747071542" type="OFF2">
+                    <param id="0" name="Instance variable">B2</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="167603417347319" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="301418293573425" type="OFF3">
+                    <param id="0" name="Instance variable">B3</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="980350380234944" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="778723817787708" type="OFF4">
+                    <param id="0" name="Instance variable">B4</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="723166194158258" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="145067300086325" type="OFF5">
+                    <param id="0" name="Instance variable">B5</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="OPEN DOOR" sid="836269127752590" title="PORTAL10">
+            <sub-events>
+                <event-block sid="214385564159965">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="315052240495366" type="Player">
+                            <param id="0" name="Object">PortalOpenDoor</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="780074888060979" type="Portal">
+                            <param id="0" name="Animation">&quot;ID_OPEN&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="695055043707995">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="548894007032460" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="350980518751000" type="Portal">
+                            <param id="0" name="Animation">&quot;ID_CLOSE&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="NEXT LEVEL" sid="919277207980524" title="PORTAL LEVEL10">
+            <sub-events>
+                <event-block sid="488097071981918">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="826843326397458" type="Player">
+                            <param id="0" name="Object">PortalNextLevel</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="590429188239963" type="System">
+                            <param id="0" name="Layout">Level2-5</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="318167992411315">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="966310890673470" type="Player">
+                    <param id="0" name="Object">LaserRay24</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="399023343665128" type="Function">
+                    <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Track Event" sid="673057970664393" type="GoogleAnalytics">
+                    <param id="0" name="Category">&quot;Death&quot;</param>
+                    <param id="1" name="Name">&quot;Player Death 2-4 Laser&quot;</param>
+                </action>
+                <action id="-3" name="Create object" sid="118313989470961" type="System">
+                    <param id="0" name="Object to create">PlayerDeathCave</param>
+                    <param id="1" name="Layer">&quot;Player&quot;</param>
+                    <param id="2" name="X">Player.X</param>
+                    <param id="3" name="Y">Player.Y-15</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="348847931875557">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="665678698021822" type="Player">
+                    <param id="0" name="Object">Trap3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="467668511091825" type="Function">
+                    <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Track Event" sid="505580437097113" type="GoogleAnalytics">
+                    <param id="0" name="Category">&quot;Death&quot;</param>
+                    <param id="1" name="Name">&quot;Player Death 2-4 Trap&quot;</param>
+                </action>
+                <action id="-3" name="Create object" sid="579094657331407" type="System">
+                    <param id="0" name="Object to create">PlayerDeathCave</param>
+                    <param id="1" name="Layer">&quot;Player&quot;</param>
+                    <param id="2" name="X">Player.X</param>
+                    <param id="3" name="Y">Player.Y-15</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="795674667138149">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="105147987174070" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Track Event" sid="334304580699135" type="GoogleAnalytics">
+                    <param id="0" name="Category">&quot;Level&quot;</param>
+                    <param id="1" name="Name">&quot;Start Level2-4&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
