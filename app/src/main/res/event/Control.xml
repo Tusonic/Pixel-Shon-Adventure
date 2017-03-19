@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
-   <!-- TUSONIC -->
+    <!-- TUSONIC -->
     <name>Control</name>
     <events>
         <variable comment="Live" constant="0" name="Player" sid="424234830368794" static="0" type="number">3</variable>
@@ -69,6 +69,110 @@
                 <action id="-3" name="Set position" sid="527735378529059" type="B">
                     <param id="0" name="X">-100</param>
                     <param id="1" name="Y">-100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="984918415672604">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="439606527042602" type="Touch">
+                    <param id="0" name="Object">A</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="640212304244980" type="A">
+                    <param id="0" name="Animation">&quot;Click&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="880416970991477">
+            <conditions>
+                <condition id="4" inverted="1" name="Is touching object" sid="818140998884600" type="Touch">
+                    <param id="0" name="Object">A</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="474003715752996" type="A">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="154930147268673">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="270233731285578" type="Touch">
+                    <param id="0" name="Object">B</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="973129539895457" type="B">
+                    <param id="0" name="Animation">&quot;Click&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="639574882614355">
+            <conditions>
+                <condition id="4" inverted="1" name="Is touching object" sid="817125109986121" type="Touch">
+                    <param id="0" name="Object">B</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="791249631247539" type="B">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="733946151730036">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="387170487859091" type="Touch">
+                    <param id="0" name="Object">L</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="627669601893992" type="L">
+                    <param id="0" name="Animation">&quot;Click&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="426477992682091">
+            <conditions>
+                <condition id="4" inverted="1" name="Is touching object" sid="415515640754598" type="Touch">
+                    <param id="0" name="Object">L</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="141317765307892" type="L">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="218967676153707">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="558388410740067" type="Touch">
+                    <param id="0" name="Object">R</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="868486833532682" type="R">
+                    <param id="0" name="Animation">&quot;Click&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="677657514599509">
+            <conditions>
+                <condition id="4" inverted="1" name="Is touching object" sid="218556812619586" type="Touch">
+                    <param id="0" name="Object">R</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="176516388491425" type="R">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>

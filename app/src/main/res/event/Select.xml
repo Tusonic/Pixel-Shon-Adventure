@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
-   <!-- TUSONIC -->
+    <!-- TUSONIC -->
     <name>Select</name>
     <events>
         <variable constant="0" name="SelectMenu" sid="101388759414679" static="0" type="number">2</variable>
