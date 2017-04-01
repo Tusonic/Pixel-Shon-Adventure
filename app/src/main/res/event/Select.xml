@@ -37,6 +37,34 @@
                     <param id="0" name="Animation">&quot;OFF&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
+                <action id="4" name="Set animation" sid="190329645858145" type="SelectCave1">
+                    <param id="0" name="Animation">&quot;OFF&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="729225117294355" type="SelectCave2">
+                    <param id="0" name="Animation">&quot;OFF&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="225281353226777" type="SelectCave3">
+                    <param id="0" name="Animation">&quot;OFF&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="409864581564752" type="SelectCave4">
+                    <param id="0" name="Animation">&quot;OFF&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="503867699475019" type="SelectCave5">
+                    <param id="0" name="Animation">&quot;OFF&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="252450084895926" type="SelectCave6">
+                    <param id="0" name="Animation">&quot;OFF&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="624707976744292" type="SelectCave7">
+                    <param id="0" name="Animation">&quot;OFF&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
             </actions>
         </event-block>
         <event-group description="" sid="460599403762353" title="Touch Select">
