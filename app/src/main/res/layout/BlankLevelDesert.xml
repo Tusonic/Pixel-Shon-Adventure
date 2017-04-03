@@ -31,7 +31,7 @@
             <instances />
             <effects />
         </layer>
-        <layer name="SkyCloud" sid="109691458758201">
+        <layer name="BackGround" sid="214124863925993">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -49,7 +49,7 @@
             <instances />
             <effects />
         </layer>
-        <layer name="BackGround" sid="214124863925993">
+        <layer name="SkyCloud" sid="109691458758201">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>

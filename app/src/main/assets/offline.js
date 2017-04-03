@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1491158392,
+	"version": 1491251717,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -131,8 +131,10 @@
 		"images/play-sheet0.png",
 		"images/restart-sheet0.png",
 		"images/gamemenu.png",
+		"images/tilemapdesert31.png",
+		"images/tilemapdesert32.png",
+		"images/tilemapdesertbackground.png",
 		"images/backgrounddesert.png",
-		"images/tilemapdesert.png",
 		"images/cloud4-sheet0.png",
 		"images/cloud5-sheet0.png",
 		"images/sky.png",
