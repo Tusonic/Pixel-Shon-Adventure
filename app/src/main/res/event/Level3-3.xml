@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!-- TUSONIC -->
+    <name>Level3-3</name>
+    <events>
+        <include>Trap</include>
+        <include>Player</include>
+        <include>Control</include>
+        <event-block sid="536344892345343">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="128182232448132" type="Player">
+                    <param id="0" name="Object">ButtomTrapCustom2Start</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="0" name="Set speed" sid="312978977853053" type="TrapDesertCustom2">
+                    <param id="0" name="Speed">120</param>
+                </action>
+                <action id="-9" name="Destroy" sid="567526264300519" type="ButtomTrapCustom2Start" />
+            </actions>
+        </event-block>
+        <event-block sid="688880468170500">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="537264638009170" type="TrapDesertCustom2">
+                    <param id="0" name="Object">ButtomTrapCustom2Stop</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="0" name="Set speed" sid="258243350783322" type="TrapDesertCustom2">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="118603147718857" type="ButtomTrapCustom2Stop" />
+            </actions>
+        </event-block>
+        <event-block sid="380229964237535">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="510124316186264" type="Player">
+                    <param id="0" name="Object">LawaBackground</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="353353942496335" type="Function">
+                    <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="363068115834097">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="700221639595022" type="Player">
+                    <param id="0" name="Object">TrapDesertCustom2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="663346299073763" type="Function">
+                    <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="OPEN DOOR" sid="435480994008301" title="PORTAL16">
+            <sub-events>
+                <event-block sid="358742847621090">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="529749800249754" type="Player">
+                            <param id="0" name="Object">PortalOpenDoor</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="844530166503678" type="Portal">
+                            <param id="0" name="Animation">&quot;ID_OPEN&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="242722863237799">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="317942206188511" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="142122426677358" type="Portal">
+                            <param id="0" name="Animation">&quot;ID_CLOSE&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="NEXT LEVEL" sid="987319691763380" title="PORTAL LEVEL16">
+            <sub-events>
+                <event-block sid="198100588140690">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="526667342012865" type="Player">
+                            <param id="0" name="Object">PortalNextLevel</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="141238200158314" type="System">
+                            <param id="0" name="Layout">Level3-3</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

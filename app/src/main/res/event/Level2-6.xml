@@ -70,12 +70,6 @@
                             <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
-                        <action id="-3" name="Create object" sid="131582897168462" type="System">
-                            <param id="0" name="Object to create">PlayerDeathCave</param>
-                            <param id="1" name="Layer">&quot;Player&quot;</param>
-                            <param id="2" name="X">Player.X</param>
-                            <param id="3" name="Y">Player.Y-15</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="896922457373415">
@@ -89,12 +83,6 @@
                             <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
-                        <action id="-3" name="Create object" sid="149975195054022" type="System">
-                            <param id="0" name="Object to create">PlayerDeathCave</param>
-                            <param id="1" name="Layer">&quot;Player&quot;</param>
-                            <param id="2" name="X">Player.X</param>
-                            <param id="3" name="Y">Player.Y-15</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="449561176147602">
@@ -107,12 +95,6 @@
                         <action id="0" name="Call function" sid="840063959190976" type="Function">
                             <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="-3" name="Create object" sid="709355583353917" type="System">
-                            <param id="0" name="Object to create">PlayerDeathCave</param>
-                            <param id="1" name="Layer">&quot;Player&quot;</param>
-                            <param id="2" name="X">Player.X</param>
-                            <param id="3" name="Y">Player.Y-15</param>
                         </action>
                     </actions>
                 </event-block>

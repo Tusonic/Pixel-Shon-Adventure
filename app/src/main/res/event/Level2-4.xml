@@ -149,12 +149,6 @@
                     <param id="0" name="Category">&quot;Death&quot;</param>
                     <param id="1" name="Name">&quot;Player Death 2-4 Laser&quot;</param>
                 </action>
-                <action id="-3" name="Create object" sid="118313989470961" type="System">
-                    <param id="0" name="Object to create">PlayerDeathCave</param>
-                    <param id="1" name="Layer">&quot;Player&quot;</param>
-                    <param id="2" name="X">Player.X</param>
-                    <param id="3" name="Y">Player.Y-15</param>
-                </action>
             </actions>
         </event-block>
         <event-block sid="348847931875557">
@@ -171,12 +165,6 @@
                 <action id="0" name="Track Event" sid="505580437097113" type="GoogleAnalytics">
                     <param id="0" name="Category">&quot;Death&quot;</param>
                     <param id="1" name="Name">&quot;Player Death 2-4 Trap&quot;</param>
-                </action>
-                <action id="-3" name="Create object" sid="579094657331407" type="System">
-                    <param id="0" name="Object to create">PlayerDeathCave</param>
-                    <param id="1" name="Layer">&quot;Player&quot;</param>
-                    <param id="2" name="X">Player.X</param>
-                    <param id="3" name="Y">Player.Y-15</param>
                 </action>
             </actions>
         </event-block>

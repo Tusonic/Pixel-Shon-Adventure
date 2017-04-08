@@ -242,6 +242,12 @@
                             <param id="2" name="X">Player.X</param>
                             <param id="3" name="Y">Player.Y-15</param>
                         </action>
+                        <action id="-3" name="Create object" sid="991390679097490" type="System">
+                            <param id="0" name="Object to create">PlayerDeathCave</param>
+                            <param id="1" name="Layer">&quot;Player&quot;</param>
+                            <param id="2" name="X">Player.X</param>
+                            <param id="3" name="Y">Player.Y-15</param>
+                        </action>
                         <action id="-9" name="Destroy" sid="348990440375015" type="Camera" />
                         <action id="-9" name="Destroy" sid="263686715981553" type="Player" />
                         <action id="-16" name="Wait" sid="904719994985147" type="System">

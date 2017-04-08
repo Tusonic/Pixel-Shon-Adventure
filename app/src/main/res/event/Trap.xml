@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!-- TUSONIC -->
+    <name>Trap</name>
+    <events>
+        <event-group description="" sid="303542401134795" title="TrapDesert1">
+            <sub-events>
+                <comment>DesertLogic1</comment>
+                <event-block sid="569518121232018">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="408591176214594" type="Player">
+                            <param id="0" name="Object">ButtomTrapDesert11</param>
+                        </condition>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="510357229366002" type="TrapDesert11">
+                            <param id="0" name="Object">ButtomTrapDesert11</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="CustomMovement" id="4" name="Accelerate toward angle" sid="163200599282574" type="TrapDesert11">
+                            <param id="0" name="Acceleration">500</param>
+                            <param id="1" name="Angle">90</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="805038838496821">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="876344425909953" type="Player">
+                            <param id="0" name="Object">ButtomTrapDesert12</param>
+                        </condition>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="739376350909850" type="TrapDesert12">
+                            <param id="0" name="Object">ButtomTrapDesert12</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="CustomMovement" id="4" name="Accelerate toward angle" sid="378934204860203" type="TrapDesert12">
+                            <param id="0" name="Acceleration">500</param>
+                            <param id="1" name="Angle">90</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="588629140612579">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="457579179249201" type="Player">
+                            <param id="0" name="Object">ButtomTrapDesert13</param>
+                        </condition>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="823233048127030" type="TrapDesert13">
+                            <param id="0" name="Object">ButtomTrapDesert13</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="CustomMovement" id="4" name="Accelerate toward angle" sid="288137562713116" type="TrapDesert13">
+                            <param id="0" name="Acceleration">500</param>
+                            <param id="1" name="Angle">90</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>DesertLogic2</comment>
+                <event-block sid="860523975562572">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="175229637140022" type="Player">
+                            <param id="0" name="Object">ButtomTrapDesert11</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="807934285208146" type="TrapDesert11">
+                            <param id="0" name="Object">ButtomTrapDesert11</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="CustomMovement" id="0" name="Stop" sid="849521071587265" type="TrapDesert11" />
+                    </actions>
+                </event-block>
+                <event-block sid="363484187970741">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="132449819751321" type="Player">
+                            <param id="0" name="Object">ButtomTrapDesert12</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="830214977028969" type="TrapDesert12">
+                            <param id="0" name="Object">ButtomTrapDesert12</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="CustomMovement" id="0" name="Stop" sid="997620287496755" type="TrapDesert12" />
+                    </actions>
+                </event-block>
+                <event-block sid="152917498357959">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="239538486647174" type="Player">
+                            <param id="0" name="Object">ButtomTrapDesert13</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="756530749974364" type="TrapDesert13">
+                            <param id="0" name="Object">ButtomTrapDesert13</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="CustomMovement" id="0" name="Stop" sid="221981341624449" type="TrapDesert13" />
+                    </actions>
+                </event-block>
+                <comment>DesertLogic3</comment>
+                <event-block sid="177687269475673">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="190234385218004" type="Player">
+                            <param id="0" name="Object">ButtomTrapDesert11</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="667954442896423" type="TrapDesert11">
+                            <param id="0" name="Object">ButtomTrapDesert11</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="CustomMovement" id="0" name="Stop" sid="449946055341505" type="TrapDesert11" />
+                    </actions>
+                </event-block>
+                <event-block sid="543408400748050">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="815831305179550" type="Player">
+                            <param id="0" name="Object">ButtomTrapDesert12</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="732843337155527" type="TrapDesert12">
+                            <param id="0" name="Object">ButtomTrapDesert12</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="CustomMovement" id="0" name="Stop" sid="615946678835017" type="TrapDesert12" />
+                    </actions>
+                </event-block>
+                <event-block sid="354585584534461">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="485695868961476" type="Player">
+                            <param id="0" name="Object">ButtomTrapDesert13</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="290547017885496" type="TrapDesert13">
+                            <param id="0" name="Object">ButtomTrapDesert13</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="CustomMovement" id="0" name="Stop" sid="856721941144659" type="TrapDesert13" />
+                    </actions>
+                </event-block>
+                <comment>Death</comment>
+                <event-block sid="151041275075429">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="692173359914912" type="Player">
+                            <param id="0" name="Object">TrapDesert11</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="742160691895357" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="495759387692700">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="119192802313667" type="Player">
+                            <param id="0" name="Object">TrapDesert12</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="539255461051973" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="299633145893578">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="892215569153214" type="Player">
+                            <param id="0" name="Object">TrapDesert13</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="919759953904089" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="886693801664404" title="TrapDesert2">
+            <sub-events>
+                <event-block sid="557439290519862">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="305395072308179" type="Player">
+                            <param id="0" name="Object">DesertTrap21</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="239262803806932" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="234332341457099">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="600136204536416" type="Player">
+                            <param id="0" name="Object">DesertTrap22</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="413238941081571" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="855960943213240">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="773721169890172" type="Player">
+                            <param id="0" name="Object">DesertTrap23</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="679071613451729" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="872382667455416">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="950975550793586" type="Player">
+                            <param id="0" name="Object">DesertTrap24</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="860308909531359" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="125372687505314" title="TrapDesert3">
+            <sub-events>
+                <event-block sid="752339463753126">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="660435762484882" type="Player">
+                            <param id="0" name="Object">DesertTrap31</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="902783190035396" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="128637825840844">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="905402764673876" type="Player">
+                            <param id="0" name="Object">DesertTrap32</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="779927808930170" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="513281270919435">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="491968930391329" type="Player">
+                            <param id="0" name="Object">DesertTrap33</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="699327943800254" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="665220023136112">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="784793675090390" type="Player">
+                            <param id="0" name="Object">DesertTrap34</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="624745111421213" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="164235104362352">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="978321162925044" type="Player">
+                            <param id="0" name="Object">DesertTrap35</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="159986679688885" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="498832859691737">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="770344538247099" type="Player">
+                            <param id="0" name="Object">DesertTrap36</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="567300009451410" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

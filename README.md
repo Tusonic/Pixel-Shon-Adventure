@@ -42,7 +42,7 @@ ___
 ___
 - [x] Level 3-1  
 - [x] Level 3-2 
-- [ ] Level 3-3
+- [x] Level 3-3
 - [ ] Level 3-4 
 - [ ] Level 3-5
 - [ ] Level 3-6
