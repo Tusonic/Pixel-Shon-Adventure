@@ -1,5 +1,5 @@
 ﻿CACHE MANIFEST
-#1491251717
+#1491651377
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
@@ -134,6 +134,11 @@ images/tilemapdesert31.png
 images/tilemapdesert32.png
 images/tilemapdesertbackground.png
 images/backgrounddesert.png
+images/cactus-sheet0.png
+images/skull2-sheet0.png
+images/trap1-sheet0.png
+images/trapdesert21-sheet0.png
+images/buttomtrapdesert21-sheet0.png
 images/cloud4-sheet0.png
 images/cloud5-sheet0.png
 images/sky.png

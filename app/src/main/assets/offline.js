@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1491251717,
+	"version": 1491651377,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -135,6 +135,11 @@
 		"images/tilemapdesert32.png",
 		"images/tilemapdesertbackground.png",
 		"images/backgrounddesert.png",
+		"images/cactus-sheet0.png",
+		"images/skull2-sheet0.png",
+		"images/trap1-sheet0.png",
+		"images/trapdesert21-sheet0.png",
+		"images/buttomtrapdesert21-sheet0.png",
 		"images/cloud4-sheet0.png",
 		"images/cloud5-sheet0.png",
 		"images/sky.png",
