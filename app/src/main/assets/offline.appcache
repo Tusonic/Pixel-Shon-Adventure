@@ -1,5 +1,5 @@
 ﻿CACHE MANIFEST
-#1491676483
+#1491940808
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
@@ -142,13 +142,19 @@ images/buttomtrapdesert11-sheet0.png
 images/deserttrap21-sheet0.png
 images/deserttrap31-sheet0.png
 images/deserttrap34-sheet0.png
+images/deserttrap37-sheet0.png
 images/trapdesertcustom2-sheet0.png
 images/buttomtrapcustom2start-sheet0.png
 images/buttomtrapcustom2stop-sheet0.png
+images/deserttrap41-sheet0.png
+images/deserttrap42-sheet0.png
+images/activetrap34-sheet0.png
+images/changeangle34-sheet0.png
 images/cloud4-sheet0.png
 images/cloud5-sheet0.png
 images/sky.png
 images/cloud6-sheet0.png
+images/control1camera.png
 images/player-sheet0.png
 images/player-sheet1.png
 images/camera-sheet0.png

@@ -312,6 +312,101 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="843836744724942">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="922227964529052" type="Player">
+                            <param id="0" name="Object">DesertTrap37</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="966477418885003" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="411452350809606">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="484467058899938" type="Player">
+                            <param id="0" name="Object">DesertTrap38</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="489784541875401" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="406536624990421">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="485945936801285" type="Player">
+                            <param id="0" name="Object">DesertTrap39</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="689561327377578" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="986627851288505" title="TrapDesert4">
+            <sub-events>
+                <event-block sid="300655523043895">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="831780050506372" type="Player">
+                            <param id="0" name="Object">DesertTrap41</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="180405231024290" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="853702252794035">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="665289885523784" type="Player">
+                            <param id="0" name="Object">DesertTrap42</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="179842761293999" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="947905973569562">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="345207757021231" type="Player">
+                            <param id="0" name="Object">DesertTrap43</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="321208741631252" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="575611949020731">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="865329336933864" type="Player">
+                            <param id="0" name="Object">DesertTrap44</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="681448674249887" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
     </events>

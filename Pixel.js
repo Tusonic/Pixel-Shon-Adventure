@@ -1,4 +1,4 @@
-﻿// Tusonic.PL
+﻿// TUSONIC.PL
 var cr = {};
 cr.plugins_ = {};
 cr.behaviors = {};
@@ -24540,14 +24540,14 @@ cr.behaviors.solid = function(runtime)
 cr.getObjectRefTable = function () { return [
 	cr.plugins_.GoogleAnalytics_ST,
 	cr.plugins_.Particles,
-	cr.plugins_.Keyboard,
 	cr.plugins_.Function,
-	cr.plugins_.TiledBg,
-	cr.plugins_.Spritefont2,
-	cr.plugins_.Sprite,
-	cr.plugins_.Text,
+	cr.plugins_.Keyboard,
 	cr.plugins_.Tilemap,
+	cr.plugins_.Text,
 	cr.plugins_.Touch,
+	cr.plugins_.Sprite,
+	cr.plugins_.Spritefont2,
+	cr.plugins_.TiledBg,
 	cr.behaviors.solid,
 	cr.behaviors.Sin,
 	cr.behaviors.Bullet,
@@ -24628,5 +24628,7 @@ cr.getObjectRefTable = function () { return [
 	cr.behaviors.Rotate.prototype.acts.SetSpeed,
 	cr.behaviors.Sin.prototype.acts.SetActive,
 	cr.behaviors.custom.prototype.acts.AccelerateAngle,
-	cr.behaviors.custom.prototype.acts.Stop
+	cr.behaviors.custom.prototype.acts.Stop,
+	cr.plugins_.TiledBg.prototype.exps.X,
+	cr.plugins_.TiledBg.prototype.exps.Y
 ];};

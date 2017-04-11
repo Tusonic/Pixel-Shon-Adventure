@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!-- TUSONIC -->
+    <name>Level3-4</name>
+    <events>
+        <include>Trap</include>
+        <include>Key</include>
+        <include>Player</include>
+        <include>Control</include>
+        <event-block sid="501594345398279">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="666577890552222" type="TrapDesertCustom34">
+                    <param id="0" name="Object">ChangeAngle34</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="470447349103232" type="ChangeAngle34" />
+                <action behavior="CustomMovement" id="2" name="Set speed" sid="654640619373575" type="TrapDesertCustom34">
+                    <param id="0" name="Which">2</param>
+                    <param id="1" name="Speed">0</param>
+                </action>
+                <action behavior="CustomMovement" id="2" name="Set speed" sid="654126565536934" type="TrapDesertCustom34">
+                    <param id="0" name="Which">1</param>
+                    <param id="1" name="Speed">-170</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="490134531317501">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="686628864411877" type="Player">
+                    <param id="0" name="Object">ActiveTrap34</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="706780471596402" type="ActiveTrap34" />
+                <action behavior="CustomMovement" id="2" name="Set speed" sid="233456129275875" type="TrapDesertCustom34">
+                    <param id="0" name="Which">2</param>
+                    <param id="1" name="Speed">125</param>
+                </action>
+                <action behavior="ScrollTo" id="0" name="Shake" sid="635953900549770" type="Player">
+                    <param id="0" name="Magnitude">20</param>
+                    <param id="1" name="Duration">1.5</param>
+                    <param id="2" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="850546705462074">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="438378649888613" type="TrapDesertCustom34">
+                    <param id="0" name="Object">DoorKey2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="932538262781314" type="System">
+                    <param id="0" name="Object to create">DeathKey2</param>
+                    <param id="1" name="Layer">&quot;Player&quot;</param>
+                    <param id="2" name="X">DoorKey2.X</param>
+                    <param id="3" name="Y">DoorKey2.Y+20</param>
+                </action>
+                <action id="-9" name="Destroy" sid="915632617263958" type="DoorKey2" />
+                <action id="-9" name="Destroy" sid="863791955604943" type="TrapDesertCustom34" />
+            </actions>
+        </event-block>
+        <event-block sid="409030073230245">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="123770901162563" type="Player">
+                    <param id="0" name="Object">TrapDesertCustom34</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="929974299793063" type="Function">
+                    <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="OPEN DOOR" sid="916671153497927" title="PORTAL17">
+            <sub-events>
+                <event-block sid="147542631734849">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="142645228273376" type="Player">
+                            <param id="0" name="Object">PortalOpenDoor</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="142415576911407" type="Portal">
+                            <param id="0" name="Animation">&quot;ID_OPEN&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="538810404752804">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="762440666051830" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="550488655581389" type="Portal">
+                            <param id="0" name="Animation">&quot;ID_CLOSE&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="NEXT LEVEL" sid="754343663264246" title="PORTAL LEVEL17">
+            <sub-events>
+                <event-block sid="175047147531821">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="752215057816330" type="Player">
+                            <param id="0" name="Object">PortalNextLevel</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="998901125600589" type="System">
+                            <param id="0" name="Layout">Level3-4</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
