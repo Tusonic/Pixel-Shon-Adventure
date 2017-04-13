@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1491940808,
+	"version": 1492117841,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -127,6 +127,14 @@
 		"images/selectcave5-sheet0.png",
 		"images/selectcave6-sheet0.png",
 		"images/selectcave7-sheet0.png",
+		"images/selectdesert1-sheet0.png",
+		"images/selectdesert1-sheet1.png",
+		"images/selectdesert2-sheet0.png",
+		"images/selectdesert3-sheet0.png",
+		"images/selectdesert4-sheet0.png",
+		"images/selectdesert5-sheet0.png",
+		"images/selectdesert6-sheet0.png",
+		"images/selectdesert7-sheet0.png",
 		"images/gameover.png",
 		"images/play-sheet0.png",
 		"images/restart-sheet0.png",
