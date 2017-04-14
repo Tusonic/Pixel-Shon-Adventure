@@ -65,6 +65,10 @@
                     <param id="0" name="Animation">&quot;OFF&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
+                <action id="4" name="Set animation" sid="883954522963690" type="SelectDesert1">
+                    <param id="0" name="Animation">&quot;OFF&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
             </actions>
         </event-block>
         <event-group description="" sid="460599403762353" title="Touch Select">

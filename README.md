@@ -37,7 +37,7 @@ ___
 ___
 - [ ] Control
 - [ ] Logic
-- [ ] Graphics
+- [/] Graphics
 - [ ] Design
 ___
 - [x] Level 3-1  
