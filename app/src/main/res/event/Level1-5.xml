@@ -8,7 +8,7 @@
         <include>Player</include>
         <event-group description="OPEN DOOR" sid="537557599698496" title="PORTAL5">
             <sub-events>
-                <event-block sid="  <!-- TUSONIC -->">
+                <event-block sid="164032308420636">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="508161012988429" type="Player">
                             <param id="0" name="Object">PortalOpenDoor</param>

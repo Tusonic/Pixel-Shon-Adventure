@@ -69,6 +69,30 @@
                     <param id="0" name="Animation">&quot;OFF&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
+                <action id="4" name="Set animation" sid="281651467672954" type="SelectDesert2">
+                    <param id="0" name="Animation">&quot;OFF&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="494524662768509" type="SelectDesert3">
+                    <param id="0" name="Animation">&quot;OFF&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="284582200350808" type="SelectDesert4">
+                    <param id="0" name="Animation">&quot;OFF&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="471319284169214" type="SelectDesert5">
+                    <param id="0" name="Animation">&quot;OFF&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="532413647717203" type="SelectDesert6">
+                    <param id="0" name="Animation">&quot;OFF&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="328828985573620" type="SelectDesert7">
+                    <param id="0" name="Animation">&quot;OFF&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
             </actions>
         </event-block>
         <event-group description="" sid="460599403762353" title="Touch Select">
@@ -298,6 +322,75 @@
                         <action id="4" name="Set animation" sid="130199682142043" type="SelectJungle1">
                             <param id="0" name="Animation">&quot;ON&quot;</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="225760028053214" title="GamePad">
+            <sub-events>
+                <event-block sid="362533383972363">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="613028379889781" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="320334221898400" type="System">
+                            <param id="0" name="Layout">Level1-1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="578184139726657">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="227065927844323" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="403547593126393" type="System">
+                            <param id="0" name="Layout">Level1-1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="299072343835817">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="351943723395665" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="458252542985162" type="System">
+                            <param id="0" name="Layout">Level1-1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="678443276385846">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="424990580893070" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="469553600323095" type="System">
+                            <param id="0" name="Layout">Level1-1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="435233094361384">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="106593735261576" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">9</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="355377962628463" type="System">
+                            <param id="0" name="Layout">Level1-1</param>
                         </action>
                     </actions>
                 </event-block>

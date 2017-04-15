@@ -85,5 +85,70 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="716134082702289">
+            <conditions>
+                <condition id="6" name="On button pressed" sid="166692047879201" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="130359281262583" type="System">
+                    <param id="0" name="Layout">Select</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="773502191696880">
+            <conditions>
+                <condition id="6" name="On button pressed" sid="990413840200229" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="920975554030859" type="System">
+                    <param id="0" name="Layout">Select</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="210464839648577">
+            <conditions>
+                <condition id="6" name="On button pressed" sid="963992768982413" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="452119319356476" type="System">
+                    <param id="0" name="Layout">Select</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="305524670476448">
+            <conditions>
+                <condition id="6" name="On button pressed" sid="826618000813232" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="191018424795634" type="System">
+                    <param id="0" name="Layout">Select</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="236391942721694">
+            <conditions>
+                <condition id="6" name="On button pressed" sid="560766874689825" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">9</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="861721877268221" type="System">
+                    <param id="0" name="Layout">Select</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

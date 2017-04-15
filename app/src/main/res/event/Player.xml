@@ -17,6 +17,14 @@
                         <condition id="3" name="On touched object" sid="202275815425252" type="Touch">
                             <param id="0" name="Object">A</param>
                         </condition>
+                        <condition id="6" name="On button pressed" sid="896466805601568" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">0</param>
+                        </condition>
+                        <condition id="6" name="On button pressed" sid="205321883653165" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">2</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
@@ -66,6 +74,12 @@
                         <condition id="4" name="Is touching object" sid="976643730644787" type="Touch">
                             <param id="0" name="Object">L</param>
                         </condition>
+                        <condition id="5" name="Compare axis" sid="158096011206991" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Axis">0</param>
+                            <param id="2" name="Comparison">2</param>
+                            <param id="3" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action behavior="Platform" id="7" name="Simulate control" sid="871634615693645" type="Player">
@@ -86,6 +100,12 @@
                         </condition>
                         <condition id="4" name="Is touching object" sid="487854449763553" type="Touch">
                             <param id="0" name="Object">R</param>
+                        </condition>
+                        <condition id="5" name="Compare axis" sid="529363259553171" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Axis">0</param>
+                            <param id="2" name="Comparison">4</param>
+                            <param id="3" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -154,6 +174,14 @@
                         <condition id="4" inverted="1" name="Is touching object" sid="339620661421623" type="Touch">
                             <param id="0" name="Object">B</param>
                         </condition>
+                        <condition id="3" inverted="1" name="Is button down" sid="892297042801373" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">1</param>
+                        </condition>
+                        <condition id="3" inverted="1" name="Is button down" sid="410459191440052" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">3</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="810175162944858" type="Player">
@@ -169,6 +197,14 @@
                         </condition>
                         <condition id="2" name="Key is down" sid="135320403728950" type="Keyboard">
                             <param id="0" name="Key">66 (B)</param>
+                        </condition>
+                        <condition id="6" name="On button pressed" sid="932339931795657" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">1</param>
+                        </condition>
+                        <condition id="6" name="On button pressed" sid="211505286958023" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">3</param>
                         </condition>
                     </conditions>
                     <actions />
