@@ -82,24 +82,6 @@
             <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances />
-            <effects />
-        </layer>
-        <layer name="TiledMapDown" sid="524405835350049">
-            <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
-            <parallax>
-                <x>1</x>
-                <y>1</y>
-            </parallax>
-            <zoom-rate>1</zoom-rate>
-            <opacity>1</opacity>
-            <force-own-texture>0</force-own-texture>
-            <global>0</global>
-            <use-render-cells>0</use-render-cells>
-            <blend-mode>0</blend-mode>
-            <effect-fallback>0</effect-fallback>
             <instances>
                 <instance type="Control1Camera" uid="854">
                     <properties>
@@ -121,6 +103,76 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+            </instances>
+            <effects />
+        </layer>
+        <layer name="TiledMapBackground" sid="747805470640998">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="TilemapDesertBackground4" uid="866">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <tile-width>16</tile-width>
+                        <tile-height>16</tile-height>
+                        <tile-x-offset>0</tile-x-offset>
+                        <tile-y-offset>0</tile-y-offset>
+                        <tile-x-spacing>0</tile-x-spacing>
+                        <tile-y-spacing>0</tile-y-spacing>
+                        <seamless-mode>On</seamless-mode>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <width>800</width>
+                        <height>400</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                    <tilemap-data>
+                        <width>50</width>
+                        <height>25</height>
+                        <max-width>50</max-width>
+                        <max-height>25</max-height>
+                        <data>-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,7,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,7,7,-1,-1,-1,-1,-1,-1,1,8,0,7,7,-1,-1,-1,-1,-1,0,7,0,7,0,7,1,8,0,7,0,7,-1,0,7,2,9,1,8,0,7,-1,-1,-1,-1,1,8,1,8,1,8,2,9,1,8,1,8,-1,1,8,3,0,2,9,1,8,-1,-1,-1,-1,2,9,2,9,2,9,3,10,2,9,2,9,-1,2,9,4,1,3,10,2,9,-1,-1,-1,0,3,10,3,10,3,10,4,11,3,10,3,10,-1,3,0,7,2,4,11,3,10,-1,-1,-1,1,4,11,4,11,4,11,5,12,4,0,7,11,-1,4,1,8,3,5,12,4,0,7,-1,-1,2,5,12,5,12,5,12,6,13,5,1,8,12,-1,5,2,9,0,7,13,5,1,8,-1,-1,3,6,13,6,13,6,13,8,-1,0,7,9,13,-1,6,3,10,1,8,0,7,2,9,-1,-1,4,11,3,10,3,10,2,9,-1,1,8,10,-1,-1,0,4,11,2,9,1,8,3,10,-1,-1,5,12,4,11,4,11,3,10,-1,2,9,11,-1,-1,1,5,12,3,10,2,9,4,11,-1,-1,6,13,5,12,5,12,4,11,-1,3,10,12,-1,-1,2,6,13,4,11,3,10,5,12,-1,-1,-1,0,6,13,6,13,5,12,-1,4,0,7,-1,-1,3,10,11,5,12,4,0,7,13,-1,-1,-1,1,8,1,8,1,6,13,-1,5,1,8,-1,-1,4,11,0,0,7,0,7,8,-1,-1,-1,-1,2,9,2,9,2,9,-1,-1,6,2,9,-1,-1,5,0,7,1,8,1,8,9,-1,-1,-1,-1,3,10,3,10,3,10,-1,-1,0,7,10,-1,-1,0,7,8,2,9,2,9,10,-1,-1,-1,-1,4,11,4,11,4,11,-1,-1,1,8,11,-1,-1,1,8,9,3,10,3,10,11,-1,-1,-1,-1,5,12,5,12,5,12,7,-1,2,9,12,-1,-1,2,9,10,4,11,0,0,7,-1,-1,-1,-1,6,13,6,13,6,13,8,-1,3,0,7,-1,-1,3,10,11,5,12,1,0,7,-1,-1,-1,-1,2,3,10,2,9,2,9,-1,4,1,8,-1,-1,4,11,12,6,13,2,1,8,-1,-1,-1,-1,3,4,11,3,10,3,10,-1,5,2,9,-1,-1,5,12,0,7,11,3,2,9,-1,-1,-1,0,4,5,12,4,11,4,11,-1,6,3,10,-1,-1,6,13,1,8,12,4,3,10,-1,-1,-1,1,5,6,13,5,12,5,12,-1,0,7,11,-1,-1,0,7,2,0,7,5,4,11,-1,-1,-1,2,6,13,8,6,13,6,13,-1,1,8,12,-1,-1,1,8,3,1,8,0,7,12,-1,-1,-1,3,6,13,9,4,11,-1,0,7,2,9,0,7,-1,2,9,4,2,9,1,0,7,-1,-1,-1,4,11,3,10,5,12,-1,1,8,3,10,1,8,-1,3,10,5,3,10,2,1,8,-1,-1,-1,5,12,4,11,6,13,7,2,9,4,0,7,9,-1,4,11,6,4,11,3,2,9,-1,-1,-1,6,13,5,12,8,1,8,3,10,5,1,8,10,-1,5,0,7,5,0,7,3,10,-1,-1,-1,-1,2,6,13,9,2,9,4,11,0,7,9,11,-1,0,7,8,0,7,8,4,11,-1,-1,-1,-1,3,0,3,10,3,10,5,12,1,8,10,12,-1,1,0,7,1,8,9,5,12,-1,-1,-1,0,4,1,4,11,4,11,6,13,2,9,11,13,-1,2,1,8,2,9,10,0,7,-1,-1,-1,1,5,2,5,12,5,12,-1,-1,3,10,12,-1,-1,3,2,9,3,10,11,1,8,-1,-1,-1,2,6,3,6,13,6,13,-1,-1,4,11,13,-1,-1,4,3,10,4,11,12,2,9,-1,-1,-1,3,10,4,11,1,8,-1,-1,-1,5,12,-1,-1,-1,0,7,11,5,12,13,3,10,-1,-1,-1,4,11,5,12,2,9,-1,-1,-1,6,13,-1,-1,-1,1,8,12,0,7,0,7,11,-1,-1,-1,5,12,6,13,3,10,-1,-1,-1,0,7,-1,-1,-1,2,9,7,1,8,1,8,7,-1,-1,-1,6,13,8,8,4,11,0,7,0,7,8,-1,-1,-1,3,10,8,2,9,2,9,8,-1,-1,-1,-1,2,9,9,5,12,7,8,1,8,9,-1,-1,-1,4,11,9,3,10,3,10,0,7,0,7,-1,3,10,10,6,13,8,9,2,9,10,-1,-1,-1,5,12,10,0,7,4,11,1,8,1,8,-1,4,11,11,8,2,9,10,3,10,11,-1,-1,-1,0,7,11,1,8,5,12,2,9,2,9,-1,5,12,12,9,3,10,11,4,11,12,-1,-1,-1,1,8,12,2,9,0,7,3,10,3,10,-1,6,13,13,10,4,11,12,5,12,13,-1,-1,-1,2,9,7,3,10,1,8,4,11,4,11,-1,-1,-1,4,11,5,12,13,6,13,9,-1,-1,-1,0,7,8,4,11,0,0,5,0,7,0,7,0,7,5,12,6,13,11,10,3,10,-1,-1,-1,1,8,9,5,12,1,1,6,1,8,1,8,1,8,6,13,9,5,12,11,4,11,-1,-1,-1,2,9,10,6,13,2,2,9,2,9,2,9,2,9,2,9,10,6,13,12,5,12,-1,-1,-1,3,10,11,4,11,3,3,10,3,10,3,10,3,10,3,10,11,3,6,13,6,13,-1,-1,-1,4,11,12,5,12,4,4,11,4,11,4,11,4,11,4,11,12,4,11,-1,-1,-1,-1,-1,-1,5,12,13,6,13,5,5,12,5,12,5,12,5,12,5,12,13,5,12,-1,-1,-1,-1,-1,-1,6,13,-1,-1,-1,6,6,13,6,13,6,13,6,13,6,13,-1,6,13,-1,-1,-1,-1,-1</data>
+                    </tilemap-data>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
+        <layer name="TiledMapDown" sid="524405835350049">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
                 <instance type="DesertTrap51" uid="853">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -641,7 +693,74 @@
             <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances />
+            <instances>
+                <instance type="PortalOpenDoor" uid="869">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>448</x>
+                        <y>360</y>
+                        <z>0</z>
+                        <width>160</width>
+                        <height>48</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Portal" uid="867">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>496</x>
+                        <y>384</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>48</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="PortalNextLevel" uid="868">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>496</x>
+                        <y>368</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
             <effects />
         </layer>
         <layer name="Trap" sid="783609089004775">
@@ -730,8 +849,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>496</x>
-                        <y>272</y>
+                        <x>80</x>
+                        <y>144</y>
                         <z>0</z>
                         <width>15</width>
                         <height>20</height>

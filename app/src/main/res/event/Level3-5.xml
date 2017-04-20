@@ -3,6 +3,7 @@
     <!-- TUSONIC -->
     <name>Level3-5</name>
     <events>
+        <include>Trap</include>
         <include>Player</include>
         <include>Control</include>
         <event-block sid="216153260018246">
@@ -30,5 +31,49 @@
                 </action>
             </actions>
         </event-block>
+        <event-group description="OPEN DOOR" sid="452915000325703" title="PORTAL18">
+            <sub-events>
+                <event-block sid="668835595408326">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="250676348822600" type="Player">
+                            <param id="0" name="Object">PortalOpenDoor</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="373474257282511" type="Portal">
+                            <param id="0" name="Animation">&quot;ID_OPEN&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="526003822900688">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="727866902922647" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="870872979281222" type="Portal">
+                            <param id="0" name="Animation">&quot;ID_CLOSE&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="NEXT LEVEL" sid="296085070281960" title="PORTAL LEVEL18">
+            <sub-events>
+                <event-block sid="671771118818389">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="618712835640369" type="Player">
+                            <param id="0" name="Object">PortalNextLevel</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="437206087038413" type="System">
+                            <param id="0" name="Layout">Level3-5</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
