@@ -35,9 +35,9 @@ ___
 
 ### Level - Desert
 ___
-- [ ] Control
+- [x] Control
 - [ ] Logic
-- [/] Graphics
+- [x] Graphics
 - [ ] Design
 ___
 - [x] Level 3-1  

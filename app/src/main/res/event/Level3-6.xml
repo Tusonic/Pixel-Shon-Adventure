@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!-- TUSONIC -->
+    <name>Level3-6</name>
+    <events>
+        <include>Control</include>
+        <include>Player</include>
+        <event-block sid="683258985246986">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="185171670539774" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="615451795155754" type="System">
+                    <param id="0" name="Seconds">1.5</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="671252320759254" type="DesertTrap51">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="540412666603866" type="DesertTrap53">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="837361920925768" type="DesertTrap55">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="949585333638567" type="DesertTrap57">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="943548212975484" type="DesertTrap59">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
