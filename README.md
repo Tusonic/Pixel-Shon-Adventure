@@ -36,17 +36,17 @@ ___
 ### Level - Desert
 ___
 - [x] Control
-- [ ] Logic
+- [x] Logic
 - [x] Graphics
-- [ ] Design
+- [x] Design
 ___
 - [x] Level 3-1  
 - [x] Level 3-2 
 - [x] Level 3-3
 - [x] Level 3-4 
 - [x] Level 3-5
-- [ ] Level 3-6
-- [ ] Level 3-7
+- [x] Level 3-6
+- [x] Level 3-7
 
 
 ### Level - Castle 

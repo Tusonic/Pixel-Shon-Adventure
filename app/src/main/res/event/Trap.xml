@@ -573,5 +573,78 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="895786704946041" title="TrapDesert7">
+            <sub-events>
+                <event-block sid="161708672474339">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="332652472704848" type="DesertTrap7">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="999828888967022" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="359638608934046" title="TrapDesert8">
+            <sub-events>
+                <event-block sid="247420161380096">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="111696647395349" type="Player">
+                            <param id="0" name="Object">DesertTrap81</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="373111533202607" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="557235963633492">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="452324848080878" type="Player">
+                            <param id="0" name="Object">DesertTrap82</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="938026412313480" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="436064546388840">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="462781050854703" type="Player">
+                            <param id="0" name="Object">DesertTrap83</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="965160848573845" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="301011523161405">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="364167435978969" type="Player">
+                            <param id="0" name="Object">DesertTrap84</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="595715439463221" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
