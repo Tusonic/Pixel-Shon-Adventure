@@ -64,6 +64,14 @@ ___
 - [ ] Level 4-6
 - [ ] Level 4-7
 
+### AirConsole
+___
+- [X] Control
+- [ ] Logic
+- [ ] Graphics
+- [ ] Design
+___
+
 
 | Platform | Pixel Shon Adventure BETA |
 | ------ | ------ |
