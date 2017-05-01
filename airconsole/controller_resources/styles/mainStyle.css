@@ -1,6 +1,7 @@
 html, body {
-	height: 100%;
 	overflow: hidden;
+	margin: 0px;
+	padding: 0px;
 }
 
 body {
@@ -8,9 +9,10 @@ body {
 }
 
 button {
-	margin-bottom: 1px;
-	width: 24%;
-	height: 100%;
+	margin-bottom: 1px;;
+	min-height: 45vh;
+	min-width: 25vw;
+	margin: 1%;
 	border: 0;
 	box-sizing: border-box;
 	font-size: 40px;
@@ -22,4 +24,39 @@ button {
 
 button:hover {
 	background-color: #444444;
+}
+
+.kontener{
+	display: flex;
+}
+
+.sterowanie{
+	display: inline-flex;
+	order:1;
+	align-items: center;
+}
+
+.akcja{
+	display: flex;
+	flex-direction: column;
+	order: 2;
+	width: 50%;
+	align-items: flex-end;
+	justify-content: flex-end;
+}
+
+#l{
+
+}
+
+#r{
+
+}
+
+#a{
+
+}
+
+#b{
+
 }

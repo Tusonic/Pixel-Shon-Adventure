@@ -29,28 +29,24 @@ $(document).ready(function() {
 	airConsole.onMessage = function(deviceId, data) {
 	};
 	
-	$('#up').on(downEvent, function (event) {
-		sendMessage("up");
+	$('#l').on(downEvent, function (event) {
+		sendMessage("l");
 	});
 	
-	$('#up').on(upEvent, function (event) {
+	$('#l').on(upEvent, function (event) {
 		sendMessage("stop");
 	});
 	
-	$('#down').on(downEvent, function (event) {
-		sendMessage("down");
+	$('#r').on(downEvent, function (event) {
+		sendMessage("r");
 	});
 	
-	$('#down').on(upEvent, function (event) {
+	$('#r').on(upEvent, function (event) {
 		sendMessage("stop");
 	});
 	
 	$('#a').on(downEvent, function (event) {
 		sendMessage("a");
-	});
-	
-	$('#a').on(upEvent, function (event) {
-		sendMessage("stop");
 	});
 	
 	$('#b').on(downEvent, function (event) {
