@@ -72,11 +72,14 @@ ___
 - [X] Design
 ___
 
+ADD: DEBUG-MODE!
+
 
 | Platform | Pixel Shon Adventure BETA |
 | ------ | ------ |
 | Android |[DOWNLOAD](https://play.google.com/store/apps/details?id=pl.tusonic.pixelshonadventure) |
 | HTML | [PLAY](http://www.tusonic.pl/beta)|
+| DEBUG | [PLAY](http://www.tusonic.pl/debug)|
 
 
 
