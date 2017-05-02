@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1493226297,
+	"version": 1493745064,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -36,6 +36,7 @@
 		"images/l-sheet1.png",
 		"images/r-sheet0.png",
 		"images/r-sheet1.png",
+		"images/debug-sheet0.png",
 		"images/trap-sheet0.png",
 		"images/trap2-sheet0.png",
 		"images/trap3-sheet0.png",
@@ -188,6 +189,7 @@
 		"icon-256.png",
 		"icon-512.png",
 		"loading-logo.png",
+		"https://www.airconsole.com/api/airconsole-1.7.0.js",
 		"ga_init.js"
 	]
 }

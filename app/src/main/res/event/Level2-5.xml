@@ -460,5 +460,28 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="600602942719117">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="187785008927025" type="Player">
+                    <param id="0" name="Object">Trap</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="236855425524188" type="Function">
+                    <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="758540915058118">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="753127412294706" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="280224706041434" type="LevelName">
+                    <param id="0" name="Text">&quot;2-5&quot;</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

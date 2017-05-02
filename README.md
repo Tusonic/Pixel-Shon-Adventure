@@ -67,9 +67,9 @@ ___
 ### AirConsole
 ___
 - [X] Control
-- [ ] Logic
-- [ ] Graphics
-- [ ] Design
+- [X] Logic
+- [X] Graphics
+- [X] Design
 ___
 
 

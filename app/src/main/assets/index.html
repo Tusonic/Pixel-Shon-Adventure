@@ -1,21 +1,17 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html manifest="offline.appcache">
 <head>
     <meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<title>Pixel Shon Adventure</title>
-
 	<link rel="manifest" href="appmanifest.json" />
-
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 	<link rel="apple-touch-icon" sizes="256x256" href="icon-256.png" />
 	<meta name="HandheldFriendly" content="true" />
-
 	<meta name="mobile-web-app-capable" content="yes" />
 	<link rel="shortcut icon" sizes="256x256" href="icon-256.png" />
-
 	<style type="text/css">
 		* {
 			padding: 0;
@@ -39,11 +35,10 @@
 </head> 
  
 <body> 
-
+	<div id="fb-root"></div>
 	<div id="c2canvasdiv">
-	
+
 		<canvas id="c2canvas" width="256" height="144">
-		
 			<h1>Your browser does not appear to support HTML5.  Try upgrading your browser to the latest version.  <a href="http://www.whatbrowser.org">What is a browser?</a>
 			<br/><br/><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx">Microsoft Internet Explorer</a><br/>
 			<a href="http://www.mozilla.com/firefox/">Mozilla Firefox</a><br/>
@@ -54,6 +49,7 @@
 	</div>
 
 	<script src="jquery-2.1.1.min.js"></script>
+	<script src="https://www.airconsole.com/api/airconsole-1.7.0.js"></script>
 	<script src="ga_init.js"></script>
 	<script src="c2runtime.js"></script>
 
@@ -82,12 +78,11 @@
 		{
 			console.warn("Failed to register service worker: ", e);
 		};
-		
-	
+
 		window.C2_RegisterSW = function C2_RegisterSW()
 		{
 			if (!navigator.serviceWorker)
-				return;		
+				return;
 			
 			try {
 				navigator.serviceWorker.register("sw.js", { scope: "./" })

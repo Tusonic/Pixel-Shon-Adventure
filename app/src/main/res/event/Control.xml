@@ -3,8 +3,10 @@
     <!-- TUSONIC -->
     <name>Control</name>
     <events>
+        <include>AirConsole</include>
         <variable comment="Live" constant="0" name="Player" sid="424234830368794" static="0" type="number">3</variable>
         <variable constant="0" name="Control" sid="770938357013916" static="0" type="number">0</variable>
+        <variable constant="0" name="DebugMode" sid="152364143261658" static="0" type="number">1</variable>
         <event-block sid="210609339047104">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="936277084860349" type="System" />
@@ -173,6 +175,58 @@
                 <action id="4" name="Set animation" sid="176516388491425" type="R">
                     <param id="0" name="Animation">&quot;Default&quot;</param>
                     <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="291530155482606">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="547265762566581" type="System" />
+                <condition id="-14" name="Compare variable" sid="818158414983381" type="System">
+                    <param id="0" name="Variable">DebugMode</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="448479458633052" type="DEBUG">
+                    <param id="0" name="X">-100</param>
+                    <param id="1" name="Y">-100</param>
+                </action>
+                <action id="-3" name="Set position" sid="213499433329643" type="LevelName">
+                    <param id="0" name="X">-100</param>
+                    <param id="1" name="Y">-100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="412835842490963">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="841062088717021" type="System" />
+                <condition id="-14" name="Compare variable" sid="608949554924707" type="System">
+                    <param id="0" name="Variable">DebugMode</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="893118879087154" type="DEBUG">
+                    <param id="0" name="X">235</param>
+                    <param id="1" name="Y">18</param>
+                </action>
+                <action id="-3" name="Set position" sid="147125689122626" type="LevelName">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="660107695875238">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="320483013311218" type="Touch">
+                    <param id="0" name="Object">DEBUG</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="558709270357479" type="System">
+                    <param id="0" name="Layout">Select</param>
                 </action>
             </actions>
         </event-block>

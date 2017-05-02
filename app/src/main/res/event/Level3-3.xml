@@ -102,5 +102,15 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="526723666649155">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="184376784378328" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="403700736388522" type="LevelName">
+                    <param id="0" name="Text">&quot;3-3&quot;</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

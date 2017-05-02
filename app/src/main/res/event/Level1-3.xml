@@ -137,5 +137,15 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="721174680318630">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="426648740755462" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="613650524676330" type="LevelName">
+                    <param id="0" name="Text">&quot;1-3&quot;</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
