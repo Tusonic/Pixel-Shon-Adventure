@@ -9,12 +9,11 @@ body {
 }
 
 button {
-	margin-bottom: 1px;;
+	margin-bottom: 10px;;
 	min-height: 45vh;
 	min-width: 25vw;
 	margin: 1%;
-	border: 0;
-	box-sizing: border-box;
+	border-radius: 50%;
 	font-size: 40px;
 	color: #FFFFFF;
 	background-color: #333333;
@@ -23,7 +22,7 @@ button {
 }
 
 button:hover {
-	background-color: #444444;
+	background-color: #333333;
 }
 
 .kontener{
@@ -34,6 +33,7 @@ button:hover {
 	display: inline-flex;
 	order:1;
 	align-items: center;
+	margin-left:2%;
 }
 
 .akcja{
@@ -43,10 +43,12 @@ button:hover {
 	width: 50%;
 	align-items: flex-end;
 	justify-content: flex-end;
+	margin-right: 2%;
+	margin-top: 2%;
 }
 
 #l{
-
+margin-right: 2%;
 }
 
 #r{
@@ -54,7 +56,7 @@ button:hover {
 }
 
 #a{
-
+margin-bottom: 2%;
 }
 
 #b{
