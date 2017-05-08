@@ -49,11 +49,11 @@ ___
 - [x] Level 3-7
 
 
-### Level - Castle 
+### Level - Castle (PIXEL)
 ___
 - [ ] Control
-- [ ] Logic
-- [ ] Graphics
+- [X] Logic
+- [X] Graphics
 - [ ] Design
 ___
 - [ ] Level 4-1  
@@ -73,6 +73,7 @@ ___
 ___
 
 ADD: DEBUG-MODE!
+ADD: CASTLE GAME!
 
 
 | Platform | Pixel Shon Adventure BETA |
