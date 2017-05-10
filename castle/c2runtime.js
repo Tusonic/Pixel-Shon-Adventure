@@ -20307,12 +20307,12 @@ cr.behaviors.solid = function(runtime)
 	behaviorProto.acts = new Acts();
 }());
 cr.getObjectRefTable = function () { return [
-	cr.plugins_.Keyboard,
 	cr.plugins_.Function,
+	cr.plugins_.Keyboard,
+	cr.plugins_.TiledBg,
+	cr.plugins_.Particles,
 	cr.plugins_.Sprite,
 	cr.plugins_.Tilemap,
-	cr.plugins_.Particles,
-	cr.plugins_.TiledBg,
 	cr.behaviors.solid,
 	cr.behaviors.Platform,
 	cr.behaviors.scrollto,
@@ -20349,5 +20349,6 @@ cr.getObjectRefTable = function () { return [
 	cr.system_object.prototype.acts.RestartLayout,
 	cr.plugins_.Sprite.prototype.cnds.IsOverlapping,
 	cr.system_object.prototype.acts.GoToLayout,
-	cr.plugins_.Sprite.prototype.cnds.OnCollision
+	cr.plugins_.Sprite.prototype.cnds.OnCollision,
+	cr.system_object.prototype.cnds.OnLoadFinished
 ];};
