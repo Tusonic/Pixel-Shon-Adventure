@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!-- TUSONIC -->
+    <name>Level1-2</name>
+    <events>
+        <include>Trap</include>
+        <include>Player</include>
+        <event-group description="Next Level" sid="479223825093724" title="Portal2">
+            <sub-events>
+                <event-block sid="582501511724158">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="747985807147852" type="Shon">
+                            <param id="0" name="Object">PortalOpen</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="521956403318861" type="System">
+                            <param id="0" name="Layout">Level1-3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="567306689962037">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="710105514855548" type="Shon">
+                            <param id="0" name="Object">TiledBackground</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="872881155506636" type="Portal">
+                            <param id="0" name="Animation">&quot;OPEN&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

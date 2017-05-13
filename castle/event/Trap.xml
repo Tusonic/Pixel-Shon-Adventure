@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!-- TUSONIC -->
+    <name>Trap</name>
+    <events>
+        <event-group description="" sid="942503624643555" title="Trap1">
+            <sub-events>
+                <event-block sid="741918184555568">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="865374245704326" type="Shon">
+                            <param id="0" name="Object">Trap11</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="272535979820581" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="315440566896868">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="381018509261878" type="Shon">
+                            <param id="0" name="Object">Trap12</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="377246292586504" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="948309322719865">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="775507884606416" type="Shon">
+                            <param id="0" name="Object">Trap13</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="696949520783976" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="470199092836384">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="832695394083082" type="Shon">
+                            <param id="0" name="Object">Trap14</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="742459709386414" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
