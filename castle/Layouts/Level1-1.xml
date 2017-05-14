@@ -5,11 +5,11 @@
     <event-sheet>Level1-1</event-sheet>
     <size>
         <width>720</width>
-        <height>720</height>
+        <height>352</height>
     </size>
     <margins>
         <horizontal>720</horizontal>
-        <vertical>720</vertical>
+        <vertical>352</vertical>
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
