@@ -27,7 +27,7 @@ ___
 | Platform | Pixel Shon Adventure BETA | (CASTLE)
 | ------ | ------ |
 | Android |[DOWNLOAD](https://play.google.com/store/apps/details?id=pl.tusonic.pixelshonadventure) |
-| HTML | [PLAY](http://www.tusonic.pl/pixelshonadventure
+| HTML | [PLAY](http://www.tusonic.pl/pixelshonadventure |
 
 
 
