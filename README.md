@@ -1,15 +1,13 @@
 [![N|Solid](http://tusonic.pl/pixel.png)](http://tusonic.pl)
 
 # Progress
-### Logic
 
+### Level (Level 1)
 ___
 - [X] Control
 - [X] Logic
 - [X] Graphics
 - [X] Design
-
-### Level (Level 1)
 ___
 - [x] Level 1-1  
 - [x] Level 1-2 
@@ -22,6 +20,11 @@ ___
 
 ### Level (Level 2)
 ___
+- [ ] Control
+- [ ] Logic
+- [ ] Graphics
+- [ ] Design
+___
 - [ ] Level 2-1  
 - [ ] Level 2-2 
 - [ ] Level 2-3
@@ -33,6 +36,11 @@ ___
 
 ### Level (Level 3)
 ___
+- [ ] Control
+- [ ] Logic
+- [ ] Graphics
+- [ ] Design
+___
 - [ ] Level 3-1  
 - [ ] Level 3-2 
 - [ ] Level 3-3
@@ -42,7 +50,12 @@ ___
 - [ ] Level 3-7
 - [ ] Level 3-8 (BOSS) 
 
-### Level (Level 3)
+### Level (Level 4)
+___
+- [ ] Control
+- [ ] Logic
+- [ ] Graphics
+- [ ] Design
 ___
 - [ ] Level 4-1  
 - [ ] Level 4-2 
@@ -64,8 +77,8 @@ ___
 
 | Platform | Pixel Shon Adventure BETA (CASTLE) |
 | ------ | ------ |
-| HTML | [PLAY](http://www.tusonic.pl/beta |
-| HTML | [PLAY](http://www.tusonic.pl/pixelshonadventure |
+| HTML (DEV) | http://www.tusonic.pl/beta |
+| HTML | http://www.tusonic.pl/pixelshonadventure |
 
 
 
