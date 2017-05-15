@@ -3,89 +3,49 @@
     <!-- TUSONIC -->
     <name>Level1-1</name>
     <events>
-        <include>Control</include>
+        <include>Trap</include>
         <include>Player</include>
-        <event-block sid="990185945166836">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="745162801624239" type="Player">
-                    <param id="0" name="Object">Trap</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Call function" sid="752623376492671" type="Function">
-                    <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-                <action id="0" name="Track Event" sid="496646243634390" type="GoogleAnalytics">
-                    <param id="0" name="Category">&quot;Death&quot;</param>
-                    <param id="1" name="Name">&quot;Player  Death 1-1&quot;</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-group description="OPEN DOOR" sid="371539493226926" title="PORTAL">
+        <event-group description="Next Level" sid="730636869037046" title="Portal1">
             <sub-events>
-                <event-block sid="987372784357881">
+                <event-block sid="810070199821157">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="545633250089382" type="Player">
-                            <param id="0" name="Object">PortalOpenDoor</param>
+                        <condition id="1" name="Is overlapping another object" sid="160277921428160" type="Shon">
+                            <param id="0" name="Object">TiledBackground</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="779704506666155" type="Portal">
-                            <param id="0" name="Animation">&quot;ID_OPEN&quot;</param>
+                        <action id="4" name="Set animation" sid="295064588420481" type="Portal">
+                            <param id="0" name="Animation">&quot;OPEN&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="256421559743628">
+                <event-block sid="466421541521397">
                     <conditions>
-                        <condition id="-22" name="Else" sid="380600424841303" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="604923187681232" type="Portal">
-                            <param id="0" name="Animation">&quot;ID_CLOSE&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="NEXT LEVEL" sid="532676612277742" title="PORTAL LEVEL">
-            <sub-events>
-                <event-block sid="131713647554336">
-                    <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="727727848798997" type="Player">
-                            <param id="0" name="Object">PortalNextLevel</param>
+                        <condition id="1" name="Is overlapping another object" sid="231169483672330" type="Shon">
+                            <param id="0" name="Object">PortalOpen</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-2" name="Go to layout" sid="837939456652291" type="System">
+                        <action behavior="Platform" id="11" name="Set enabled" sid="768645926017351" type="Shon">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="741120890956482" type="Shon">
+                            <param id="0" name="Animation">&quot;ID_IDLE&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-20" name="Set layout scale" sid="276067137214493" type="System">
+                            <param id="0" name="Scale">lerp(LayoutScale, 2.0, 6*dt)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="448934670841027" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="736638007903642" type="System">
                             <param id="0" name="Layout">Level1-2</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="485007484643103">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="933165023973840" type="System" />
-            </conditions>
-            <actions>
-                <action id="0" name="Track Event" sid="113851059036467" type="GoogleAnalytics">
-                    <param id="0" name="Category">&quot;Level&quot;</param>
-                    <param id="1" name="Name">&quot;Start Level1-1&quot;</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="531644197984124">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="852924957363919" type="System" />
-            </conditions>
-            <actions>
-                <action id="0" name="Set text" sid="106102642738518" type="LevelName">
-                    <param id="0" name="Text">&quot;1-1&quot;</param>
-                </action>
-            </actions>
-        </event-block>
     </events>
 </c2eventsheet>

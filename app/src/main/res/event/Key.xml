@@ -3,69 +3,69 @@
     <!-- TUSONIC -->
     <name>Key</name>
     <events>
-        <variable comment="BlueKey" constant="0" name="Key2" sid="446250931812509" static="0" type="number">0</variable>
-        <variable comment="RedKey" constant="0" name="Key1" sid="299276230240083" static="0" type="number">0</variable>
-        <variable comment="YellowKey" constant="0" name="Key0" sid="450573540553877" static="0" type="number">0</variable>
-        <event-block sid="578516662580661">
+        <variable constant="0" name="Key0" sid="467619798908709" static="0" type="number">0</variable>
+        <variable constant="0" name="Key1" sid="483809607053948" static="0" type="number">0</variable>
+        <variable constant="0" name="Key2" sid="910797236221844" static="0" type="number">0</variable>
+        <event-block sid="313792286645518">
             <conditions>
-                <condition id="-2" name="On start of layout" sid="191059007379848" type="System" />
+                <condition id="-2" name="On start of layout" sid="699689067324831" type="System" />
             </conditions>
             <actions>
-                <action id="-9" name="Set value" sid="137882384044431" type="System">
+                <action id="-9" name="Set value" sid="629428127857914" type="System">
                     <param id="0" name="Variable">Key0</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action id="-9" name="Set value" sid="116611224781069" type="System">
+                <action id="-9" name="Set value" sid="769939199067075" type="System">
                     <param id="0" name="Variable">Key1</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action id="-9" name="Set value" sid="748301372024591" type="System">
+                <action id="-9" name="Set value" sid="808831285167642" type="System">
                     <param id="0" name="Variable">Key2</param>
                     <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>
-        <event-group description="YELLOW KEY" sid="946472837801131" title="KEY0">
+        <event-group description="" sid="285809716970351" title="Key0">
             <sub-events>
-                <event-block sid="773413630702897">
+                <event-block sid="942247959361603">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="705532151329402" type="System">
+                        <condition id="-14" name="Compare variable" sid="312881989693645" type="System">
                             <param id="0" name="Variable">Key0</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Set position" sid="771770819620783" type="Key0">
-                            <param id="0" name="X">lerp(Self.X, Player.X, 0.05)</param>
-                            <param id="1" name="Y">lerp(Self.Y, Player.Y-30, 0.05)</param>
+                        <action id="-3" name="Set position" sid="948747635350384" type="Key0">
+                            <param id="0" name="X">lerp(Self.X, Shon.X, 0.05)</param>
+                            <param id="1" name="Y">lerp(Self.Y, Shon.Y-30, 0.05)</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="822685655635271">
+                <event-block sid="418834171847875">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="976812315740730" type="Player">
+                        <condition id="0" name="On collision with another object" sid="851097850385024" type="Shon">
                             <param id="0" name="Object">Key0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="155419932424443" type="System">
+                        <action id="-9" name="Set value" sid="756087505255244" type="System">
                             <param id="0" name="Variable">Key0</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="919368697771189">
+                <event-block sid="144233909097346">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="347602910660197" type="Player">
-                            <param id="0" name="Object">PlaceKey0</param>
+                        <condition id="0" name="On collision with another object" sid="162342042800996" type="Shon">
+                            <param id="0" name="Object">Key0OpenDoor</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="679367481834700">
+                        <event-block sid="235382288312525">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="766399650586717" type="System">
+                                <condition id="-14" name="Compare variable" sid="171389852826194" type="System">
                                     <param id="0" name="Variable">Key0</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">0</param>
@@ -73,25 +73,25 @@
                             </conditions>
                             <actions />
                         </event-block>
-                        <event-block sid="922549426185672">
+                        <event-block sid="193582913878631">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="359451133516598" type="System">
+                                <condition id="-14" name="Compare variable" sid="801472788631200" type="System">
                                     <param id="0" name="Variable">Key0</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Create object" sid="697043399905309" type="System">
-                                    <param id="0" name="Object to create">DeathKey0</param>
+                                <action id="-3" name="Create object" sid="180560011150220" type="System">
+                                    <param id="0" name="Object to create">Key0Particles</param>
                                     <param id="1" name="Layer">&quot;Player&quot;</param>
-                                    <param id="2" name="X">Player.X</param>
-                                    <param id="3" name="Y">Player.Y</param>
+                                    <param id="2" name="X">Shon.X</param>
+                                    <param id="3" name="Y">Shon.Y</param>
                                 </action>
-                                <action id="-9" name="Destroy" sid="410102652894109" type="Key0" />
-                                <action id="-9" name="Destroy" sid="857386799250666" type="DoorKey0" />
-                                <action id="-9" name="Destroy" sid="790637804027806" type="PlaceKey0" />
-                                <action id="-9" name="Set value" sid="606564632387812" type="System">
+                                <action id="-9" name="Destroy" sid="846837374639828" type="Key0" />
+                                <action id="-9" name="Destroy" sid="121089373813565" type="Key0Door" />
+                                <action id="-9" name="Destroy" sid="695778897728757" type="Key0OpenDoor" />
+                                <action id="-9" name="Set value" sid="223508098436768" type="System">
                                     <param id="0" name="Variable">Key0</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
@@ -101,47 +101,47 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="RED KEY" sid="956911697612588" title="KEY1">
+        <event-group description="" sid="677692847767964" title="Key1">
             <sub-events>
-                <event-block sid="973258121967223">
+                <event-block sid="209147652312299">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="352889165684503" type="System">
+                        <condition id="-14" name="Compare variable" sid="148816060489631" type="System">
                             <param id="0" name="Variable">Key1</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Set position" sid="157329049277261" type="Key1">
-                            <param id="0" name="X">lerp(Self.X, Player.X, 0.05)</param>
-                            <param id="1" name="Y">lerp(Self.Y, Player.Y-30, 0.05)</param>
+                        <action id="-3" name="Set position" sid="811120389823900" type="Key1">
+                            <param id="0" name="X">lerp(Self.X, Shon.X, 0.05)</param>
+                            <param id="1" name="Y">lerp(Self.Y, Shon.Y-30, 0.05)</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="486420762341960">
+                <event-block sid="492109938696539">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="197225358343600" type="Player">
+                        <condition id="0" name="On collision with another object" sid="378454655941123" type="Shon">
                             <param id="0" name="Object">Key1</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="492559924628889" type="System">
+                        <action id="-9" name="Set value" sid="742830736080375" type="System">
                             <param id="0" name="Variable">Key1</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="423422814218324">
+                <event-block sid="854349174740702">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="732782764246830" type="Player">
-                            <param id="0" name="Object">PlaceKey1</param>
+                        <condition id="0" name="On collision with another object" sid="584602562369093" type="Shon">
+                            <param id="0" name="Object">Key1OpenDoor</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="766929250512952">
+                        <event-block sid="930138491892695">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="518059776210050" type="System">
+                                <condition id="-14" name="Compare variable" sid="182532481890402" type="System">
                                     <param id="0" name="Variable">Key1</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">0</param>
@@ -149,25 +149,25 @@
                             </conditions>
                             <actions />
                         </event-block>
-                        <event-block sid="421062371293017">
+                        <event-block sid="292901860023753">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="998244364017045" type="System">
+                                <condition id="-14" name="Compare variable" sid="510767039618037" type="System">
                                     <param id="0" name="Variable">Key1</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Create object" sid="804302085637551" type="System">
-                                    <param id="0" name="Object to create">DeathKey1</param>
+                                <action id="-3" name="Create object" sid="816019574877139" type="System">
+                                    <param id="0" name="Object to create">Key1Particles</param>
                                     <param id="1" name="Layer">&quot;Player&quot;</param>
-                                    <param id="2" name="X">Player.X</param>
-                                    <param id="3" name="Y">Player.Y</param>
+                                    <param id="2" name="X">Shon.X</param>
+                                    <param id="3" name="Y">Shon.Y</param>
                                 </action>
-                                <action id="-9" name="Destroy" sid="855110110727169" type="Key1" />
-                                <action id="-9" name="Destroy" sid="892192931311945" type="DoorKey1" />
-                                <action id="-9" name="Destroy" sid="170692078288918" type="PlaceKey1" />
-                                <action id="-9" name="Set value" sid="511006448428089" type="System">
+                                <action id="-9" name="Destroy" sid="494623218512371" type="Key1" />
+                                <action id="-9" name="Destroy" sid="551315823773517" type="Key1Door" />
+                                <action id="-9" name="Destroy" sid="296043897726585" type="Key1OpenDoor" />
+                                <action id="-9" name="Set value" sid="866944672375688" type="System">
                                     <param id="0" name="Variable">Key1</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
@@ -177,47 +177,47 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="BLUE KEY" sid="587313923897548" title="KEY2">
+        <event-group description="" sid="261638730041036" title="Key2">
             <sub-events>
-                <event-block sid="384781324976697">
+                <event-block sid="177184821927784">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="701123400149801" type="System">
+                        <condition id="-14" name="Compare variable" sid="649222755095851" type="System">
                             <param id="0" name="Variable">Key2</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Set position" sid="400280098120029" type="Key2">
-                            <param id="0" name="X">lerp(Self.X, Player.X, 0.05)</param>
-                            <param id="1" name="Y">lerp(Self.Y, Player.Y-30, 0.05)</param>
+                        <action id="-3" name="Set position" sid="738103974500227" type="Key2">
+                            <param id="0" name="X">lerp(Self.X, Shon.X, 0.05)</param>
+                            <param id="1" name="Y">lerp(Self.Y, Shon.Y-30, 0.05)</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="991483581981613">
+                <event-block sid="938052931358530">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="768116811529435" type="Player">
+                        <condition id="0" name="On collision with another object" sid="826456127776730" type="Shon">
                             <param id="0" name="Object">Key2</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="314458965007440" type="System">
+                        <action id="-9" name="Set value" sid="348934480285410" type="System">
                             <param id="0" name="Variable">Key2</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="318242350107036">
+                <event-block sid="233781625237168">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="945267624001426" type="Player">
-                            <param id="0" name="Object">PlaceKey2</param>
+                        <condition id="0" name="On collision with another object" sid="952982487480049" type="Shon">
+                            <param id="0" name="Object">Key2OpenDoor</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="396546960781068">
+                        <event-block sid="938267034609445">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="170220246218513" type="System">
+                                <condition id="-14" name="Compare variable" sid="522271165090587" type="System">
                                     <param id="0" name="Variable">Key2</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">0</param>
@@ -225,25 +225,25 @@
                             </conditions>
                             <actions />
                         </event-block>
-                        <event-block sid="170878879966432">
+                        <event-block sid="118918517774161">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="573755160049994" type="System">
+                                <condition id="-14" name="Compare variable" sid="998671369312661" type="System">
                                     <param id="0" name="Variable">Key2</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Create object" sid="359392685073990" type="System">
-                                    <param id="0" name="Object to create">DeathKey2</param>
+                                <action id="-3" name="Create object" sid="811250532791367" type="System">
+                                    <param id="0" name="Object to create">Key2Door</param>
                                     <param id="1" name="Layer">&quot;Player&quot;</param>
-                                    <param id="2" name="X">Player.X</param>
-                                    <param id="3" name="Y">Player.Y</param>
+                                    <param id="2" name="X">Shon.X</param>
+                                    <param id="3" name="Y">Shon.Y</param>
                                 </action>
-                                <action id="-9" name="Destroy" sid="387948762117327" type="Key2" />
-                                <action id="-9" name="Destroy" sid="241754903233810" type="DoorKey2" />
-                                <action id="-9" name="Destroy" sid="580304793983044" type="PlaceKey2" />
-                                <action id="-9" name="Set value" sid="423333895582155" type="System">
+                                <action id="-9" name="Destroy" sid="338473466379856" type="Key2" />
+                                <action id="-9" name="Destroy" sid="801322436365492" type="Key2Door" />
+                                <action id="-9" name="Destroy" sid="873349462451617" type="Key2OpenDoor" />
+                                <action id="-9" name="Set value" sid="752313309150672" type="System">
                                     <param id="0" name="Variable">Key2</param>
                                     <param id="1" name="Value">0</param>
                                 </action>

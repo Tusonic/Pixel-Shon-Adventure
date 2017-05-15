@@ -15115,434 +15115,6 @@ cr.system_object.prototype.loadFromJSON = function (o)
 cr.shaders = {};
 ;
 ;
-cr.plugins_.AirConsole2 = function(runtime) {
-	this.runtime = runtime;
-};
-function AirConsoleOffline() {
-	console.warn('You are currently offline or AirConsole could not be loaded. Plugin fallback to AirConsole mock.');
-	AirConsoleOffline.prototype.getNickname = function() {return 'undefined when offline'};
-	AirConsoleOffline.prototype.getProfilePicture = function() {return 'undefined when offline'};
-	AirConsoleOffline.prototype.getUID = function() {return -9999};
-	AirConsoleOffline.prototype.isPremium = function() {return false};
-	AirConsoleOffline.prototype.getControllerDeviceIds = function() {return []};
-	AirConsoleOffline.prototype.getCustomDeviceState = function() {return null};
-	AirConsoleOffline.prototype.isUserLoggedIn = function() {return false};
-	AirConsoleOffline.prototype.message = function() {};
-	AirConsoleOffline.prototype.broadcast = function() {};
-	AirConsoleOffline.prototype.requestHighScores = function() {};
-	AirConsoleOffline.prototype.storeHighScore = function() {};
-	AirConsoleOffline.prototype.setActivePlayers = function() {};
-	AirConsoleOffline.prototype.showAd = function() {};
-	AirConsoleOffline.prototype.navigateHome = function() {};
-	AirConsoleOffline.prototype.navigateTo = function() {};
-	AirConsoleOffline.prototype.requestPersistentData = function() {};
-	AirConsoleOffline.prototype.storePersistentData = function() {};
-	AirConsoleOffline.prototype.getMasterControllerDeviceId = function() {return -9999};
-	AirConsoleOffline.prototype.getActivePlayerDeviceIds = function() {return []};
-	AirConsoleOffline.prototype.convertPlayerNumberToDeviceId = function() {};
-	AirConsoleOffline.prototype.convertDeviceIdToPlayerNumber = function() {};
-};
-(function ()
-{
-	var pluginProto = cr.plugins_.AirConsole2.prototype;
-	pluginProto.Type = function(plugin) {
-		this.plugin = plugin;
-		this.runtime = plugin.runtime;
-	};
-	var typeProto = pluginProto.Type.prototype;
-	typeProto.onCreate = function() {
-	};
-	pluginProto.Instance = function(type)
-	{
-		this.type = type;
-		this.runtime = type.runtime;
-		this.maxPlayers;
-		this.gameReady = false;
-		this.deviceId;
-		this.message;
-		this.adCompleted = 0;
-		this.persistentData = null;
-		this.highscores = null;
-		this.emailAddress = null;
-		this.customData = null;
-	};
-	var instanceProto = pluginProto.Instance.prototype;
-	instanceProto.onCreate = function()
-	{
-		var self = this;
-		if (typeof AirConsole !== 'undefined') {
-			this.runningOffline = false;
-			this.airConsole = new AirConsole();
-		}
-		else {
-			this.runningOffline = true;
-			this.airConsole = new AirConsoleOffline();
-		}
-		this.maxPlayers = self.properties[0];
-		this.airConsole.onConnect = function (deviceId) {
-			if (self.gameReady) {
-				self.deviceId = deviceId;
-				if (self.airConsole.getControllerDeviceIds().length > self.maxPlayers) {
-					self.runtime.trigger(pluginProto.cnds.OnTooManyPlayers, self);
-				}
-				else {
-					self.runtime.trigger(pluginProto.cnds.OnConnect, self);
-				}
-			}
-		};
-		this.airConsole.onDisconnect = function (deviceId) {
-			if (self.gameReady) {
-				self.deviceId = deviceId;
-				self.runtime.trigger(pluginProto.cnds.OnDisconnect, self);
-				self.runtime.trigger(pluginProto.cnds.OnDeviceDisconnect, self);
-			}
-		};
-		this.airConsole.onMessage = function (deviceId, data) {
-			if (self.gameReady && data) {
-				self.deviceId = deviceId;
-				self.message = data;
-				self.runtime.trigger(pluginProto.cnds.OnMessage, self);
-				self.runtime.trigger(pluginProto.cnds.OnMessageFrom, self);
-				self.runtime.trigger(pluginProto.cnds.OnMessageIs, self);
-				self.runtime.trigger(pluginProto.cnds.OnMessageFromIs, self);
-				self.runtime.trigger(pluginProto.cnds.OnMessageHasProperty, self);
-			}
-		};
-		this.airConsole.onDeviceStateChange = function (deviceId, data) {
-		};
-		this.airConsole.onCustomDeviceStateChange = function (deviceId, customData) {
-			self.deviceId = deviceId;
-			self.customData = customData;
-			self.runtime,trigger(pluginProto.cnds.OnCustomDeviceStateChange, self);
-		};
-		this.airConsole.onHighscores = function (highscores) {
-			if (highscores) {
-				self.highscores = highscore;
-				self.runtime.trigger(pluginProto.cnds.OnHighscores, self);
-			}
-		};
-		this.airConsole.onHighscoreStored = function (highscore) {
-			if (highscore) {
-				self.highscores = highscore;
-				self.runtime.trigger(pluginProto.cnds.OnHighscoreStored, self);
-			}
-		};
-		this.airConsole.onAdComplete = function (adWasShown) {
-			self.adCompleted = (adWasShown) ? 1 : 0;
-			self.runtime.trigger(pluginProto.cnds.OnAdComplete, self);
-		};
-		this.airConsole.onAdShow = function () {
-			self.runtime.trigger(pluginProto.cnds.OnAdShow, self);
-		};
-		this.airConsole.onPremium = function (deviceId) {
-			if (self.gameReady) {
-				self.deviceId = deviceId;
-				self.runtime.trigger(pluginProto.cnds.OnPremium, self);
-			}
-		};
-		this.airConsole.onPersistentDataLoaded = function (data) {
-			if (data) {
-				self.persistentData = data;
-				self.runtime.trigger(pluginProto.cnds.OnPersistentDataLoaded, self);
-			}
-		};
-		this.airConsole.onPersistentDataStored = function (uid) {
-			self.runtime.trigger(pluginProto.cnds.OnPersistentDataStored, self);
-		};
-		this.airConsole.onDeviceProfileChange = function (deviceId) {
-			self.deviceId = deviceId;
-			self.runtime.trigger(pluginProto.cnds.OnDeviceProfileChange, self);
-		};
-	};
-	instanceProto.draw = function(ctx) {
-	};
-	instanceProto.drawGL = function (glw) {
-	};
-	function Cnds() {};
-	Cnds.prototype.OnConnect = function () {
-		return true;
-	};
-	Cnds.prototype.OnDisconnect = function () {
-		return true;
-	};
-	Cnds.prototype.OnDeviceDisconnect = function (deviceId) {
-		return this.deviceId === deviceId;
-	};
-	Cnds.prototype.OnTooManyPlayers = function () {
-		return true;
-	};
-	Cnds.prototype.OnPremium = function () {
-		return true;
-	};
-	Cnds.prototype.OnMessage = function () {
-		return true;
-	};
-	Cnds.prototype.OnMessageFrom = function (deviceId) {
-		return this.deviceId === deviceId;
-	};
-	Cnds.prototype.OnMessageIs = function (property, value) {
-		return (this.message.hasOwnProperty(property) && this.message[property] == value);
-	};
-	Cnds.prototype.OnMessageFromIs = function (property, value, deviceId) {
-		return (this.message.hasOwnProperty(property) && this.message[property] == value && this.deviceId === deviceId);
-	};
-	Cnds.prototype.OnMessageHasProperty = function (property) {
-		return (this.message.hasOwnProperty(property));
-	};
-	Cnds.prototype.IsUserLoggedIn = function (deviceId) {
-		return this.airConsole.isUserLoggedIn(deviceId);
-	};
-	Cnds.prototype.OnAdComplete = function () {
-		return true;
-	};
-	Cnds.prototype.OnAdShow = function () {
-		return true;
-	};
-	Cnds.prototype.OnPersistentDataLoaded = function () {
-		return true;
-	};
-	Cnds.prototype.OnPersistentDataStored = function () {
-		return true;
-	};
-	Cnds.prototype.OnHighScores = function () {
-		return true;
-	};
-	Cnds.prototype.OnHighScoreStored = function () {
-		return true;
-	};
-	Cnds.prototype.OnEmailAddress = function () {
-		return true;
-	};
-	Cnds.prototype.OnDeviceProfileChange = function () {
-		return true;
-	};
-	Cnds.prototype.OnCustomDeviceStateChange = function () {
-		return true;
-	};
-	Cnds.prototype.IsPremium = function (deviceId) {
-		return this.airConsole.isPremium(deviceId);
-	};
-	Cnds.prototype.IsPluginOffline = function () {
-		return this.runningOffline;
-	};
-	Cnds.prototype.IsMultipartMessage = function () {
-		return Object.keys(this.message).length > 1;
-	};
-	pluginProto.cnds = new Cnds();
-	function Acts() {};
-	Acts.prototype.GameReady = function () {
-		this.gameReady = true;
-		var deviceIds = this.airConsole.getControllerDeviceIds();
-		for (var i = 0; i < deviceIds.length; i++) {
-			this.airConsole.onConnect(deviceIds[i]);
-		}
-	};
-	Acts.prototype.Message = function (deviceId, property, value) {
-		this.airConsole.message(deviceId, value);
-	};
-	Acts.prototype.Broadcast = function (property, message) {
-		this.airConsole.broadcast(message);
-	};
-	Acts.prototype.SetCustomDeviceStateProperty = function (property, value) {
-		this.airConsole.setCustomDeviceState(property, value);
-	};
-	Acts.prototype.RequestHighScores = function (level_name, level_version, uids, ranks, total, top) {
-		this.highscores = null;
-		var uidsArray;
-		if (uids == 'all') {
-			uidsArray = '';
-		}
-		else if (uids.indexOf(',') > -1) {
-			uidsArray = uids.split(',');
-		}
-		else {
-			uidsArray = [uids];
-		}
-		var ranksArray = (ranks === 'world') ? [ranks] : ranks.split(',');
-		this.airConsole.requestHighScores(level_name, level_version, uidsArray, ranksArray, total, top);
-	};
-	Acts.prototype.StoreHighScores = function (level_name, level_version, score, uid, data, score_string) {
-		var uidArray = uid.split(',');
-		this.airConsole.storeHighScore(level_name, level_version, score, uidArray, data, score_string);
-	};
-	Acts.prototype.SetActivePlayers = function (max_players) {
-		this.airConsole.setActivePlayers(max_players);
-	};
-	Acts.prototype.ShowAd = function () {
-		this.airConsole.showAd();
-	};
-	Acts.prototype.NavigateHome = function () {
-		this.airConsole.navigateHome();
-	};
-	Acts.prototype.NavigateTo = function (url) {
-		this.airConsole.navigateTo(url);
-	};
-	Acts.prototype.RequestPersistentData = function (uids) {
-		this.persistentData = null;
-		var uidsArray = (uids.indexOf(',') > -1) ? uids.split(',') : [uids];
-		this.airConsole.requestPersistentData(uidsArray);
-	};
-	Acts.prototype.StorePersistentData = function (key, value, uid) {
-		this.airConsole.storePersistentData(key, value, uid);
-	};
-	pluginProto.acts = new Acts();
-	function Exps() {};
-	Exps.prototype.DeviceId = function (ret) {
-		ret.set_int(this.deviceId);
-	};
-	Exps.prototype.Message = function (ret) {
-		if (typeof this.message === 'object') {
-			if (Object.keys(this.message).length === 1) {
-				ret.set_string(this.message[Object.keys(this.message)[0]]);
-			}
-			else {
-				ret.set_string(JSON.stringify(this.message));
-			}
-		}
-	};
-	Exps.prototype.MessageAtProperty = function (ret, property) {
-		if (typeof this.message === 'object' && this.message.hasOwnProperty(property)) {
-			ret.set_string(this.message[property])
-		}
-		else {
-			console.warn("MessageAtProperty - Tried to access a non existing property");
-		}
-	};
-	Exps.prototype.IsMultipartMessage = function(ret) {
-		if (this.message != null && typeof this.message === 'object' && Object.keys(this.message).length > 1) {
-			ret.set_int(1);
-		}
-		else {
-			ret.set_int(0);
-		}
-	};
-	Exps.prototype.MessageHasProperty = function(ret, property) {
-		if (this.message != null && typeof this.message === 'object' && this.message.hasOwnProperty(property)) {
-			ret.set_int(1);
-		}
-		else {
-			ret.set_int(0);
-		}
-	};
-	Exps.prototype.MessageAsJSON = function(ret) {
-		var c2Dictionary = new Object();
-		c2Dictionary['c2dictionary'] = true;
-		c2Dictionary['data'] = getProperties(this.message);
-		ret.set_string(JSON.stringify(c2Dictionary));
-	};
-	Exps.prototype.GetProfilePicture = function(ret, deviceId) {
-		var pic = this.airConsole.getProfilePicture(deviceId) || "https://www.gravatar.com/avatar/00000000000000000000000000000000?f=y";
-		ret.set_string(pic);
-	};
-	Exps.prototype.GetNickname = function(ret, deviceId) {
-		var nickname = this.airConsole.getNickname(deviceId) || "Nickname not found";
-		ret.set_string(nickname);
-	};
-	Exps.prototype.GetUID = function (ret, deviceId) {
-		var uid = this.airConsole.getUID(deviceId) || "Unknown UID";
-		ret.set_string(uid);
-	};
-	Exps.prototype.GetMessagePropertiesCount = function (ret) {
-		if (this.message != null && typeof this.message === 'object') {
-			ret.set_int(Object.keys(this.message).length);
-		}
-		else {
-			ret.set_int(0);
-		}
-	};
-	Exps.prototype.GetMasterControllerDeviceId = function (ret) {
-		var id = this.airConsole.getMasterControllerDeviceId();
-		ret.set_int((typeof id !== 'number' || isNaN(id)) ? -1 : id);
-	};
-	Exps.prototype.ConvertPlayerNumberToDeviceId = function (ret, playerNumber) {
-		var id = this.airConsole.convertPlayerNumberToDeviceId(playerNumber);
-		ret.set_int((typeof id !== 'number') ? -1 : id);
-	};
-	Exps.prototype.ConvertDeviceIdToPlayerNumber = function (ret, deviceId) {
-		var playerNumber = this.airConsole.convertDeviceIdToPlayerNumber(deviceId);
-		ret.set_int((typeof id !== 'number') ? -1 : playerNumber);
-	};
-	Exps.prototype.IsPremium = function (ret, deviceId) {
-		ret.set_int((this.airConsole.isPremium(deviceId) !== false) ? 1 : 0);
-	};
-	Exps.prototype.GetControllerDeviceIds = function (ret) {
-		var arr = this.airConsole.getControllerDeviceIds();
-		var c2array = new Object();
-		c2array['c2array'] = true;
-		c2array['size'] = [arr.length, 1, 1];
-		var data = [];
-		for (var i in arr) {
-			data.push([[arr[i]]]);
-		}
-		c2array['data'] = data;
-		ret.set_string(JSON.stringify(c2array));
-	};
-	Exps.prototype.GetPersistentData = function (ret) {
-		if (this.persistentData != null) {
-			var c2Dictionary = new Object();
-			c2Dictionary['c2dictionary'] = true;
-			c2Dictionary['data'] = getProperties(this.persistentData);
-			ret.set_string(JSON.stringify(c2Dictionary));
-		}
-		else {
-			console.warn("Persistent data requested but they weren't loaded. Did you forget to use RequestPersistentData?");
-			ret.set_string('');
-		}
-	};
-	Exps.prototype.GetHighscores = function (ret) {
-		if (this.highscores != null) {
-			var c2Dictionary = new Object();
-			c2Dictionary['c2dictionary'] = true;
-			c2Dictionary['data'] = getProperties(this.highscores);
-			ret.set_string(JSON.stringify(c2Dictionary));
-		}
-		else {
-			console.warn("Highscores data requested but they weren't loaded. Did you forget to use RequestHighscores?");
-			ret.set_string('');
-		}
-	};
-	Exps.prototype.IsPluginOffline = function (ret) {
-		if (this.runningOffline) {
-			ret.set_int(1);
-		}
-		else {
-			ret.set_int(0);
-		}
-	};
-	Exps.prototype.GetActivePlayerDeviceIds = function (ret) {
-		var arr = this.airConsole.getActivePlayerDeviceIds();
-		var c2array = new Object();
-		c2array['c2array'] = true;
-		c2array['size'] = [arr.length, 1, 1];
-		var data = [];
-		for (var i in arr) {
-			data.push([[arr[i]]]);
-		}
-		c2array['data'] = data;
-		ret.set_string(JSON.stringify(c2array));
-	};
-	pluginProto.exps = new Exps();
-	function getProperties(object) {
-		var data = new Object();
-		$.each(object, function(property, value) {
-			if (typeof value === 'object') {
-				var c2Dictionary = new Object();
-				c2Dictionary['c2dictionary'] = true;
-				c2Dictionary['data'] = getProperties(value);
-				data[property] = JSON.stringify(c2Dictionary);
-			}
-			else {
-				if (typeof value === 'boolean') {
-					value = (!value) ? 0 : 1;
-				}
-				data[property] = value;
-			}
-		});
-		return data;
-	};
-}());
-;
-;
 cr.plugins_.Function = function(runtime)
 {
 	this.runtime = runtime;
@@ -15738,96 +15310,6 @@ cr.plugins_.Function = function(runtime)
 		popFuncStack();
 		ret.set_any(fs.retVal);
 	};
-	pluginProto.exps = new Exps();
-}());
-;
-;
-cr.plugins_.GoogleAnalytics_ST = function(runtime)
-{
-	this.runtime = runtime;
-};
-(function ()
-{
-	var pluginProto = cr.plugins_.GoogleAnalytics_ST.prototype;
-	pluginProto.Type = function(plugin)
-	{
-		this.plugin = plugin;
-		this.runtime = plugin.runtime;
-	};
-	var typeProto = pluginProto.Type.prototype;
-	typeProto.onCreate = function()
-	{
-		if( !this.runtime.isCocoonJs )
-			return;
-	};
-	pluginProto.Instance = function(type)
-	{
-		this.type = type;
-		this.runtime = type.runtime;
-	};
-	var instanceProto = pluginProto.Instance.prototype;
-	instanceProto.onCreate = function()
-	{
-		this.timingEvents = {};
-		if( this.properties[0] == "" || this.properties[0] == "0" )
-			alert( "Please enter your Google Analytics Tracking ID in Google Analytic Object's properties for Google Analytics to work!" );
-		ga( 'create', this.properties[0], 'auto' );
-		ga( 'send', 'pageview' );
-	};
-	instanceProto.onDestroy = function ()
-	{
-	};
-	instanceProto.saveToJSON = function ()
-	{
-		return {
-		};
-	};
-	instanceProto.loadFromJSON = function (o)
-	{
-	};
-	instanceProto.draw = function(ctx)
-	{
-	};
-	instanceProto.drawGL = function (glw)
-	{
-	};
-	function Cnds() {};
-	pluginProto.cnds = new Cnds();
-	function Acts() {};
-	Acts.prototype.TrackEvent = function(category,action)
-	{
-		ga('send', 'event', category, action);
-	}
-	Acts.prototype.TrackEventEx = function(category,action,label,value)
-	{
-		ga('send', 'event', category, action, label, value);
-	}
-	Acts.prototype.TrackTimeStart = function(category,name)
-	{
-		var curTime = (new Date()).getTime();
-		var prop = "cat___" + category + "___name___" + name;
-		if( this.timingEvents.hasOwnProperty( prop ) )
-		{
-			ga('send', 'timing', category, name, curTime - this.timingEvents[ prop ] );
-		}
-		this.timingEvents[ prop ] = curTime;
-	}
-	Acts.prototype.TrackTimeStop = function(category,name)
-	{
-		var curTime = (new Date()).getTime();
-		var prop = "cat___" + category + "___name___" + name;
-		if( this.timingEvents.hasOwnProperty( prop ) )
-		{
-			ga('send', 'timing', category, name, curTime - this.timingEvents[ prop ] );
-			delete this.timingEvents[ prop ];
-		}
-		else
-		{
-			console.log( "Google Analytics Plugin: time tracking for " + prop + " was not started yet is now attempted to be stopped!" );
-		}
-	}
-	pluginProto.acts = new Acts();
-	function Exps() {};
 	pluginProto.exps = new Exps();
 }());
 ;
@@ -16060,6 +15542,284 @@ cr.plugins_.Keyboard = function(runtime)
 	Exps.prototype.StringFromKeyCode = function (ret, kc)
 	{
 		ret.set_string(fixedStringFromCharCode(kc));
+	};
+	pluginProto.exps = new Exps();
+}());
+;
+;
+cr.plugins_.Mouse = function(runtime)
+{
+	this.runtime = runtime;
+};
+(function ()
+{
+	var pluginProto = cr.plugins_.Mouse.prototype;
+	pluginProto.Type = function(plugin)
+	{
+		this.plugin = plugin;
+		this.runtime = plugin.runtime;
+	};
+	var typeProto = pluginProto.Type.prototype;
+	typeProto.onCreate = function()
+	{
+	};
+	pluginProto.Instance = function(type)
+	{
+		this.type = type;
+		this.runtime = type.runtime;
+		this.buttonMap = new Array(4);		// mouse down states
+		this.mouseXcanvas = 0;				// mouse position relative to canvas
+		this.mouseYcanvas = 0;
+		this.triggerButton = 0;
+		this.triggerType = 0;
+		this.triggerDir = 0;
+		this.handled = false;
+	};
+	var instanceProto = pluginProto.Instance.prototype;
+	instanceProto.onCreate = function()
+	{
+		var self = this;
+		if (!this.runtime.isDomFree)
+		{
+			jQuery(document).mousemove(
+				function(info) {
+					self.onMouseMove(info);
+				}
+			);
+			jQuery(document).mousedown(
+				function(info) {
+					self.onMouseDown(info);
+				}
+			);
+			jQuery(document).mouseup(
+				function(info) {
+					self.onMouseUp(info);
+				}
+			);
+			jQuery(document).dblclick(
+				function(info) {
+					self.onDoubleClick(info);
+				}
+			);
+			var wheelevent = function(info) {
+								self.onWheel(info);
+							};
+			document.addEventListener("mousewheel", wheelevent, false);
+			document.addEventListener("DOMMouseScroll", wheelevent, false);
+		}
+	};
+	var dummyoffset = {left: 0, top: 0};
+	instanceProto.onMouseMove = function(info)
+	{
+		var offset = this.runtime.isDomFree ? dummyoffset : jQuery(this.runtime.canvas).offset();
+		this.mouseXcanvas = info.pageX - offset.left;
+		this.mouseYcanvas = info.pageY - offset.top;
+	};
+	instanceProto.mouseInGame = function ()
+	{
+		if (this.runtime.fullscreen_mode > 0)
+			return true;
+		return this.mouseXcanvas >= 0 && this.mouseYcanvas >= 0
+		    && this.mouseXcanvas < this.runtime.width && this.mouseYcanvas < this.runtime.height;
+	};
+	instanceProto.onMouseDown = function(info)
+	{
+		if (!this.mouseInGame())
+			return;
+		this.buttonMap[info.which] = true;
+		this.runtime.isInUserInputEvent = true;
+		this.runtime.trigger(cr.plugins_.Mouse.prototype.cnds.OnAnyClick, this);
+		this.triggerButton = info.which - 1;	// 1-based
+		this.triggerType = 0;					// single click
+		this.runtime.trigger(cr.plugins_.Mouse.prototype.cnds.OnClick, this);
+		this.runtime.trigger(cr.plugins_.Mouse.prototype.cnds.OnObjectClicked, this);
+		this.runtime.isInUserInputEvent = false;
+	};
+	instanceProto.onMouseUp = function(info)
+	{
+		if (!this.buttonMap[info.which])
+			return;
+		if (this.runtime.had_a_click && !this.runtime.isMobile)
+			info.preventDefault();
+		this.runtime.had_a_click = true;
+		this.buttonMap[info.which] = false;
+		this.runtime.isInUserInputEvent = true;
+		this.triggerButton = info.which - 1;	// 1-based
+		this.runtime.trigger(cr.plugins_.Mouse.prototype.cnds.OnRelease, this);
+		this.runtime.isInUserInputEvent = false;
+	};
+	instanceProto.onDoubleClick = function(info)
+	{
+		if (!this.mouseInGame())
+			return;
+		info.preventDefault();
+		this.runtime.isInUserInputEvent = true;
+		this.triggerButton = info.which - 1;	// 1-based
+		this.triggerType = 1;					// double click
+		this.runtime.trigger(cr.plugins_.Mouse.prototype.cnds.OnClick, this);
+		this.runtime.trigger(cr.plugins_.Mouse.prototype.cnds.OnObjectClicked, this);
+		this.runtime.isInUserInputEvent = false;
+	};
+	instanceProto.onWheel = function (info)
+	{
+		var delta = info.wheelDelta ? info.wheelDelta : info.detail ? -info.detail : 0;
+		this.triggerDir = (delta < 0 ? 0 : 1);
+		this.handled = false;
+		this.runtime.isInUserInputEvent = true;
+		this.runtime.trigger(cr.plugins_.Mouse.prototype.cnds.OnWheel, this);
+		this.runtime.isInUserInputEvent = false;
+		if (this.handled && cr.isCanvasInputEvent(info))
+			info.preventDefault();
+	};
+	instanceProto.onWindowBlur = function ()
+	{
+		var i, len;
+		for (i = 0, len = this.buttonMap.length; i < len; ++i)
+		{
+			if (!this.buttonMap[i])
+				continue;
+			this.buttonMap[i] = false;
+			this.triggerButton = i - 1;
+			this.runtime.trigger(cr.plugins_.Mouse.prototype.cnds.OnRelease, this);
+		}
+	};
+	function Cnds() {};
+	Cnds.prototype.OnClick = function (button, type)
+	{
+		return button === this.triggerButton && type === this.triggerType;
+	};
+	Cnds.prototype.OnAnyClick = function ()
+	{
+		return true;
+	};
+	Cnds.prototype.IsButtonDown = function (button)
+	{
+		return this.buttonMap[button + 1];	// jQuery uses 1-based buttons for some reason
+	};
+	Cnds.prototype.OnRelease = function (button)
+	{
+		return button === this.triggerButton;
+	};
+	Cnds.prototype.IsOverObject = function (obj)
+	{
+		var cnd = this.runtime.getCurrentCondition();
+		var mx = this.mouseXcanvas;
+		var my = this.mouseYcanvas;
+		return cr.xor(this.runtime.testAndSelectCanvasPointOverlap(obj, mx, my, cnd.inverted), cnd.inverted);
+	};
+	Cnds.prototype.OnObjectClicked = function (button, type, obj)
+	{
+		if (button !== this.triggerButton || type !== this.triggerType)
+			return false;	// wrong click type
+		return this.runtime.testAndSelectCanvasPointOverlap(obj, this.mouseXcanvas, this.mouseYcanvas, false);
+	};
+	Cnds.prototype.OnWheel = function (dir)
+	{
+		this.handled = true;
+		return dir === this.triggerDir;
+	};
+	pluginProto.cnds = new Cnds();
+	function Acts() {};
+	var lastSetCursor = null;
+	Acts.prototype.SetCursor = function (c)
+	{
+		if (this.runtime.isDomFree)
+			return;
+		var cursor_style = ["auto", "pointer", "text", "crosshair", "move", "help", "wait", "none"][c];
+		if (lastSetCursor === cursor_style)
+			return;		// redundant
+		lastSetCursor = cursor_style;
+		document.body.style.cursor = cursor_style;
+	};
+	Acts.prototype.SetCursorSprite = function (obj)
+	{
+		if (this.runtime.isDomFree || this.runtime.isMobile || !obj)
+			return;
+		var inst = obj.getFirstPicked();
+		if (!inst || !inst.curFrame)
+			return;
+		var frame = inst.curFrame;
+		if (lastSetCursor === frame)
+			return;		// already set this frame
+		lastSetCursor = frame;
+		var datauri = frame.getDataUri();
+		var cursor_style = "url(" + datauri + ") " + Math.round(frame.hotspotX * frame.width) + " " + Math.round(frame.hotspotY * frame.height) + ", auto";
+		document.body.style.cursor = "";
+		document.body.style.cursor = cursor_style;
+	};
+	pluginProto.acts = new Acts();
+	function Exps() {};
+	Exps.prototype.X = function (ret, layerparam)
+	{
+		var layer, oldScale, oldZoomRate, oldParallaxX, oldAngle;
+		if (cr.is_undefined(layerparam))
+		{
+			layer = this.runtime.getLayerByNumber(0);
+			oldScale = layer.scale;
+			oldZoomRate = layer.zoomRate;
+			oldParallaxX = layer.parallaxX;
+			oldAngle = layer.angle;
+			layer.scale = 1;
+			layer.zoomRate = 1.0;
+			layer.parallaxX = 1.0;
+			layer.angle = 0;
+			ret.set_float(layer.canvasToLayer(this.mouseXcanvas, this.mouseYcanvas, true));
+			layer.scale = oldScale;
+			layer.zoomRate = oldZoomRate;
+			layer.parallaxX = oldParallaxX;
+			layer.angle = oldAngle;
+		}
+		else
+		{
+			if (cr.is_number(layerparam))
+				layer = this.runtime.getLayerByNumber(layerparam);
+			else
+				layer = this.runtime.getLayerByName(layerparam);
+			if (layer)
+				ret.set_float(layer.canvasToLayer(this.mouseXcanvas, this.mouseYcanvas, true));
+			else
+				ret.set_float(0);
+		}
+	};
+	Exps.prototype.Y = function (ret, layerparam)
+	{
+		var layer, oldScale, oldZoomRate, oldParallaxY, oldAngle;
+		if (cr.is_undefined(layerparam))
+		{
+			layer = this.runtime.getLayerByNumber(0);
+			oldScale = layer.scale;
+			oldZoomRate = layer.zoomRate;
+			oldParallaxY = layer.parallaxY;
+			oldAngle = layer.angle;
+			layer.scale = 1;
+			layer.zoomRate = 1.0;
+			layer.parallaxY = 1.0;
+			layer.angle = 0;
+			ret.set_float(layer.canvasToLayer(this.mouseXcanvas, this.mouseYcanvas, false));
+			layer.scale = oldScale;
+			layer.zoomRate = oldZoomRate;
+			layer.parallaxY = oldParallaxY;
+			layer.angle = oldAngle;
+		}
+		else
+		{
+			if (cr.is_number(layerparam))
+				layer = this.runtime.getLayerByNumber(layerparam);
+			else
+				layer = this.runtime.getLayerByName(layerparam);
+			if (layer)
+				ret.set_float(layer.canvasToLayer(this.mouseXcanvas, this.mouseYcanvas, false));
+			else
+				ret.set_float(0);
+		}
+	};
+	Exps.prototype.AbsoluteX = function (ret)
+	{
+		ret.set_float(this.mouseXcanvas);
+	};
+	Exps.prototype.AbsoluteY = function (ret)
+	{
+		ret.set_float(this.mouseYcanvas);
 	};
 	pluginProto.exps = new Exps();
 }());
@@ -17888,1417 +17648,6 @@ cr.plugins_.Sprite = function(runtime)
 	Exps.prototype.ImageHeight = function (ret)
 	{
 		ret.set_float(this.curFrame.height);
-	};
-	pluginProto.exps = new Exps();
-}());
-/* global cr,log,assert2 */
-/* jshint globalstrict: true */
-/* jshint strict: true */
-;
-;
-cr.plugins_.Spritefont2 = function(runtime)
-{
-	this.runtime = runtime;
-};
-(function ()
-{
-	var pluginProto = cr.plugins_.Spritefont2.prototype;
-	pluginProto.onCreate = function ()
-	{
-	};
-	pluginProto.Type = function(plugin)
-	{
-		this.plugin = plugin;
-		this.runtime = plugin.runtime;
-	};
-	var typeProto = pluginProto.Type.prototype;
-	typeProto.onCreate = function()
-	{
-		if (this.is_family)
-			return;
-		this.texture_img = new Image();
-		this.runtime.waitForImageLoad(this.texture_img, this.texture_file);
-		this.webGL_texture = null;
-	};
-	typeProto.onLostWebGLContext = function ()
-	{
-		if (this.is_family)
-			return;
-		this.webGL_texture = null;
-	};
-	typeProto.onRestoreWebGLContext = function ()
-	{
-		if (this.is_family || !this.instances.length)
-			return;
-		if (!this.webGL_texture)
-		{
-			this.webGL_texture = this.runtime.glwrap.loadTexture(this.texture_img, false, this.runtime.linearSampling, this.texture_pixelformat);
-		}
-		var i, len;
-		for (i = 0, len = this.instances.length; i < len; i++)
-			this.instances[i].webGL_texture = this.webGL_texture;
-	};
-	typeProto.unloadTextures = function ()
-	{
-		if (this.is_family || this.instances.length || !this.webGL_texture)
-			return;
-		this.runtime.glwrap.deleteTexture(this.webGL_texture);
-		this.webGL_texture = null;
-	};
-	typeProto.preloadCanvas2D = function (ctx)
-	{
-		ctx.drawImage(this.texture_img, 0, 0);
-	};
-	pluginProto.Instance = function(type)
-	{
-		this.type = type;
-		this.runtime = type.runtime;
-	};
-	var instanceProto = pluginProto.Instance.prototype;
-	instanceProto.onDestroy = function()
-	{
-		freeAllLines (this.lines);
-		freeAllClip  (this.clipList);
-		freeAllClipUV(this.clipUV);
-		cr.wipe(this.characterWidthList);
-	};
-	instanceProto.onCreate = function()
-	{
-		this.texture_img      = this.type.texture_img;
-		this.characterWidth   = this.properties[0];
-		this.characterHeight  = this.properties[1];
-		this.characterSet     = this.properties[2];
-		this.text             = this.properties[3];
-		this.characterScale   = this.properties[4];
-		this.visible          = (this.properties[5] === 0);	// 0=visible, 1=invisible
-		this.halign           = this.properties[6]/2.0;		// 0=left, 1=center, 2=right
-		this.valign           = this.properties[7]/2.0;		// 0=top, 1=center, 2=bottom
-		this.wrapbyword       = (this.properties[9] === 0);	// 0=word, 1=character
-		this.characterSpacing = this.properties[10];
-		this.lineHeight       = this.properties[11];
-		this.textWidth  = 0;
-		this.textHeight = 0;
-		if (this.recycled)
-		{
-			cr.clearArray(this.lines);
-			cr.wipe(this.clipList);
-			cr.wipe(this.clipUV);
-			cr.wipe(this.characterWidthList);
-		}
-		else
-		{
-			this.lines = [];
-			this.clipList = {};
-			this.clipUV = {};
-			this.characterWidthList = {};
-		}
-		this.text_changed = true;
-		this.lastwrapwidth = this.width;
-		if (this.runtime.glwrap)
-		{
-			if (!this.type.webGL_texture)
-			{
-				this.type.webGL_texture = this.runtime.glwrap.loadTexture(this.type.texture_img, false, this.runtime.linearSampling, this.type.texture_pixelformat);
-			}
-			this.webGL_texture = this.type.webGL_texture;
-		}
-		this.SplitSheet();
-	};
-	instanceProto.saveToJSON = function ()
-	{
-		var save = {
-			"t": this.text,
-			"csc": this.characterScale,
-			"csp": this.characterSpacing,
-			"lh": this.lineHeight,
-			"tw": this.textWidth,
-			"th": this.textHeight,
-			"lrt": this.last_render_tick,
-			"ha": this.halign,
-			"va": this.valign,
-			"cw": {}
-		};
-		for (var ch in this.characterWidthList)
-			save["cw"][ch] = this.characterWidthList[ch];
-		return save;
-	};
-	instanceProto.loadFromJSON = function (o)
-	{
-		this.text = o["t"];
-		this.characterScale = o["csc"];
-		this.characterSpacing = o["csp"];
-		this.lineHeight = o["lh"];
-		this.textWidth = o["tw"];
-		this.textHeight = o["th"];
-		this.last_render_tick = o["lrt"];
-		if (o.hasOwnProperty("ha"))
-			this.halign = o["ha"];
-		if (o.hasOwnProperty("va"))
-			this.valign = o["va"];
-		for(var ch in o["cw"])
-			this.characterWidthList[ch] = o["cw"][ch];
-		this.text_changed = true;
-		this.lastwrapwidth = this.width;
-	};
-	function trimRight(text)
-	{
-		return text.replace(/\s\s*$/, '');
-	}
-	var MAX_CACHE_SIZE = 1000;
-	function alloc(cache,Constructor)
-	{
-		if (cache.length)
-			return cache.pop();
-		else
-			return new Constructor();
-	}
-	function free(cache,data)
-	{
-		if (cache.length < MAX_CACHE_SIZE)
-		{
-			cache.push(data);
-		}
-	}
-	function freeAll(cache,dataList,isArray)
-	{
-		if (isArray) {
-			var i, len;
-			for (i = 0, len = dataList.length; i < len; i++)
-			{
-				free(cache,dataList[i]);
-			}
-			cr.clearArray(dataList);
-		} else {
-			var prop;
-			for(prop in dataList) {
-				if(Object.prototype.hasOwnProperty.call(dataList,prop)) {
-					free(cache,dataList[prop]);
-					delete dataList[prop];
-				}
-			}
-		}
-	}
-	function addLine(inst,lineIndex,cur_line) {
-		var lines = inst.lines;
-		var line;
-		cur_line = trimRight(cur_line);
-		if (lineIndex >= lines.length)
-			lines.push(allocLine());
-		line = lines[lineIndex];
-		line.text = cur_line;
-		line.width = inst.measureWidth(cur_line);
-		inst.textWidth = cr.max(inst.textWidth,line.width);
-	}
-	var linesCache = [];
-	function allocLine()       { return alloc(linesCache,Object); }
-	function freeLine(l)       { free(linesCache,l); }
-	function freeAllLines(arr) { freeAll(linesCache,arr,true); }
-	function addClip(obj,property,x,y,w,h) {
-		if (obj[property] === undefined) {
-			obj[property] = alloc(clipCache,Object);
-		}
-		obj[property].x = x;
-		obj[property].y = y;
-		obj[property].w = w;
-		obj[property].h = h;
-	}
-	var clipCache = [];
-	function allocClip()      { return alloc(clipCache,Object); }
-	function freeAllClip(obj) { freeAll(clipCache,obj,false);}
-	function addClipUV(obj,property,left,top,right,bottom) {
-		if (obj[property] === undefined) {
-			obj[property] = alloc(clipUVCache,cr.rect);
-		}
-		obj[property].left   = left;
-		obj[property].top    = top;
-		obj[property].right  = right;
-		obj[property].bottom = bottom;
-	}
-	var clipUVCache = [];
-	function allocClipUV()      { return alloc(clipUVCache,cr.rect);}
-	function freeAllClipUV(obj) { freeAll(clipUVCache,obj,false);}
-	instanceProto.SplitSheet = function() {
-		var texture      = this.texture_img;
-		var texWidth     = texture.width;
-		var texHeight    = texture.height;
-		var charWidth    = this.characterWidth;
-		var charHeight   = this.characterHeight;
-		var charU        = charWidth /texWidth;
-		var charV        = charHeight/texHeight;
-		var charSet      = this.characterSet ;
-		var cols = Math.floor(texWidth/charWidth);
-		var rows = Math.floor(texHeight/charHeight);
-		for ( var c = 0; c < charSet.length; c++) {
-			if  (c >= cols * rows) break;
-			var x = c%cols;
-			var y = Math.floor(c/cols);
-			var letter = charSet.charAt(c);
-			if (this.runtime.glwrap) {
-				addClipUV(
-					this.clipUV, letter,
-					x * charU ,
-					y * charV ,
-					(x+1) * charU ,
-					(y+1) * charV
-				);
-			} else {
-				addClip(
-					this.clipList, letter,
-					x * charWidth,
-					y * charHeight,
-					charWidth,
-					charHeight
-				);
-			}
-		}
-	};
-	/*
-     *	Word-Wrapping
-     */
-	var wordsCache = [];
-	pluginProto.TokeniseWords = function (text)
-	{
-		cr.clearArray(wordsCache);
-		var cur_word = "";
-		var ch;
-		var i = 0;
-		while (i < text.length)
-		{
-			ch = text.charAt(i);
-			if (ch === "\n")
-			{
-				if (cur_word.length)
-				{
-					wordsCache.push(cur_word);
-					cur_word = "";
-				}
-				wordsCache.push("\n");
-				++i;
-			}
-			else if (ch === " " || ch === "\t" || ch === "-")
-			{
-				do {
-					cur_word += text.charAt(i);
-					i++;
-				}
-				while (i < text.length && (text.charAt(i) === " " || text.charAt(i) === "\t"));
-				wordsCache.push(cur_word);
-				cur_word = "";
-			}
-			else if (i < text.length)
-			{
-				cur_word += ch;
-				i++;
-			}
-		}
-		if (cur_word.length)
-			wordsCache.push(cur_word);
-	};
-	pluginProto.WordWrap = function (inst)
-	{
-		var text = inst.text;
-		var lines = inst.lines;
-		if (!text || !text.length)
-		{
-			freeAllLines(lines);
-			return;
-		}
-		var width = inst.width;
-		if (width <= 2.0)
-		{
-			freeAllLines(lines);
-			return;
-		}
-		var charWidth = inst.characterWidth;
-		var charScale = inst.characterScale;
-		var charSpacing = inst.characterSpacing;
-		if ( (text.length * (charWidth * charScale + charSpacing) - charSpacing) <= width && text.indexOf("\n") === -1)
-		{
-			var all_width = inst.measureWidth(text);
-			if (all_width <= width)
-			{
-				freeAllLines(lines);
-				lines.push(allocLine());
-				lines[0].text = text;
-				lines[0].width = all_width;
-				inst.textWidth  = all_width;
-				inst.textHeight = inst.characterHeight * charScale + inst.lineHeight;
-				return;
-			}
-		}
-		var wrapbyword = inst.wrapbyword;
-		this.WrapText(inst);
-		inst.textHeight = lines.length * (inst.characterHeight * charScale + inst.lineHeight);
-	};
-	pluginProto.WrapText = function (inst)
-	{
-		var wrapbyword = inst.wrapbyword;
-		var text       = inst.text;
-		var lines      = inst.lines;
-		var width      = inst.width;
-		var wordArray;
-		if (wrapbyword) {
-			this.TokeniseWords(text);	// writes to wordsCache
-			wordArray = wordsCache;
-		} else {
-			wordArray = text;
-		}
-		var cur_line = "";
-		var prev_line;
-		var line_width;
-		var i;
-		var lineIndex = 0;
-		var line;
-		var ignore_newline = false;
-		for (i = 0; i < wordArray.length; i++)
-		{
-			if (wordArray[i] === "\n")
-			{
-				if (ignore_newline === true) {
-					ignore_newline = false;
-				} else {
-					addLine(inst,lineIndex,cur_line);
-					lineIndex++;
-				}
-				cur_line = "";
-				continue;
-			}
-			ignore_newline = false;
-			prev_line = cur_line;
-			cur_line += wordArray[i];
-			line_width = inst.measureWidth(trimRight(cur_line));
-			if (line_width > width)
-			{
-				if (prev_line === "") {
-					addLine(inst,lineIndex,cur_line);
-					cur_line = "";
-					ignore_newline = true;
-				} else {
-					addLine(inst,lineIndex,prev_line);
-					cur_line = wordArray[i];
-				}
-				lineIndex++;
-				if (!wrapbyword && cur_line === " ")
-					cur_line = "";
-			}
-		}
-		if (trimRight(cur_line).length)
-		{
-			addLine(inst,lineIndex,cur_line);
-			lineIndex++;
-		}
-		for (i = lineIndex; i < lines.length; i++)
-			freeLine(lines[i]);
-		lines.length = lineIndex;
-	};
-	instanceProto.measureWidth = function(text) {
-		var spacing = this.characterSpacing;
-		var len     = text.length;
-		var width   = 0;
-		for (var i = 0; i < len; i++) {
-			width += this.getCharacterWidth(text.charAt(i)) * this.characterScale + spacing;
-		}
-		width -= (width > 0) ? spacing : 0;
-		return width;
-	};
-	/***/
-	instanceProto.getCharacterWidth = function(character) {
-		var widthList = this.characterWidthList;
-		if (widthList[character] !== undefined) {
-			return widthList[character];
-		} else {
-			return this.characterWidth;
-		}
-	};
-	instanceProto.rebuildText = function() {
-		if (this.text_changed || this.width !== this.lastwrapwidth) {
-			this.textWidth = 0;
-			this.textHeight = 0;
-			this.type.plugin.WordWrap(this);
-			this.text_changed = false;
-			this.lastwrapwidth = this.width;
-		}
-	};
-	var EPSILON = 0.00001;
-	instanceProto.draw = function(ctx, glmode)
-	{
-		var texture = this.texture_img;
-		if (this.text !== "" && texture != null) {
-			this.rebuildText();
-			if (this.height < this.characterHeight*this.characterScale + this.lineHeight) {
-				return;
-			}
-			ctx.globalAlpha = this.opacity;
-			var myx = this.x;
-			var myy = this.y;
-			if (this.runtime.pixel_rounding)
-			{
-				myx = Math.round(myx);
-				myy = Math.round(myy);
-			}
-			var viewLeft = this.layer.viewLeft;
-			var viewTop = this.layer.viewTop;
-			var viewRight = this.layer.viewRight;
-			var viewBottom = this.layer.viewBottom;
-			ctx.save();
-			ctx.translate(myx, myy);
-			ctx.rotate(this.angle);
-			var angle      = this.angle;
-			var ha         = this.halign;
-			var va         = this.valign;
-			var scale      = this.characterScale;
-			var charHeight = this.characterHeight * scale;
-			var lineHeight = this.lineHeight;
-			var charSpace  = this.characterSpacing;
-			var lines = this.lines;
-			var textHeight = this.textHeight;
-			var letterWidth;
-			var halign;
-			var valign = va * cr.max(0,(this.height - textHeight));
-			var offx = -(this.hotspotX * this.width);
-			var offy = -(this.hotspotY * this.height);
-			offy += valign;
-			var drawX ;
-			var drawY = offy;
-			var roundX, roundY;
-			for(var i = 0; i < lines.length; i++) {
-				var line = lines[i].text;
-				var len  = lines[i].width;
-				halign = ha * cr.max(0,this.width - len);
-				drawX = offx + halign;
-				drawY += lineHeight;
-				if (angle === 0 && myy + drawY + charHeight < viewTop)
-				{
-					drawY += charHeight;
-					continue;
-				}
-				for(var j = 0; j < line.length; j++) {
-					var letter = line.charAt(j);
-					letterWidth = this.getCharacterWidth(letter);
-					var clip = this.clipList[letter];
-					if (angle === 0 && myx + drawX + letterWidth * scale + charSpace < viewLeft)
-					{
-						drawX += letterWidth * scale + charSpace;
-						continue;
-					}
-					if ( drawX + letterWidth * scale > this.width + EPSILON ) {
-						break;
-					}
-					if (clip !== undefined) {
-						roundX = drawX;
-						roundY = drawY;
-						if (angle === 0)
-						{
-							roundX = Math.round(roundX);
-							roundY = Math.round(roundY);
-						}
-						ctx.drawImage( this.texture_img,
-									 clip.x, clip.y, clip.w, clip.h,
-									 roundX,roundY,clip.w*scale,clip.h*scale);
-					}
-					drawX += letterWidth * scale + charSpace;
-					if (angle === 0 && myx + drawX > viewRight)
-						break;
-				}
-				drawY += charHeight;
-				if (angle === 0 && (drawY + charHeight + lineHeight > this.height || myy + drawY > viewBottom))
-				{
-					break;
-				}
-			}
-			ctx.restore();
-		}
-	};
-	var dQuad = new cr.quad();
-	function rotateQuad(quad,cosa,sina) {
-		var x_temp;
-		x_temp   = (quad.tlx * cosa) - (quad.tly * sina);
-		quad.tly = (quad.tly * cosa) + (quad.tlx * sina);
-		quad.tlx = x_temp;
-		x_temp    = (quad.trx * cosa) - (quad.try_ * sina);
-		quad.try_ = (quad.try_ * cosa) + (quad.trx * sina);
-		quad.trx  = x_temp;
-		x_temp   = (quad.blx * cosa) - (quad.bly * sina);
-		quad.bly = (quad.bly * cosa) + (quad.blx * sina);
-		quad.blx = x_temp;
-		x_temp    = (quad.brx * cosa) - (quad.bry * sina);
-		quad.bry = (quad.bry * cosa) + (quad.brx * sina);
-		quad.brx  = x_temp;
-	}
-	instanceProto.drawGL = function(glw)
-	{
-		glw.setTexture(this.webGL_texture);
-		glw.setOpacity(this.opacity);
-		if (!this.text)
-			return;
-		this.rebuildText();
-		if (this.height < this.characterHeight*this.characterScale + this.lineHeight) {
-			return;
-		}
-		this.update_bbox();
-		var q = this.bquad;
-		var ox = 0;
-		var oy = 0;
-		if (this.runtime.pixel_rounding)
-		{
-			ox = Math.round(this.x) - this.x;
-			oy = Math.round(this.y) - this.y;
-		}
-		var viewLeft = this.layer.viewLeft;
-		var viewTop = this.layer.viewTop;
-		var viewRight = this.layer.viewRight;
-		var viewBottom = this.layer.viewBottom;
-		var angle      = this.angle;
-		var ha         = this.halign;
-		var va         = this.valign;
-		var scale      = this.characterScale;
-		var charHeight = this.characterHeight * scale;   // to precalculate in onCreate or on change
-		var lineHeight = this.lineHeight;
-		var charSpace  = this.characterSpacing;
-		var lines = this.lines;
-		var textHeight = this.textHeight;
-		var letterWidth;
-		var cosa,sina;
-		if (angle !== 0)
-		{
-			cosa = Math.cos(angle);
-			sina = Math.sin(angle);
-		}
-		var halign;
-		var valign = va * cr.max(0,(this.height - textHeight));
-		var offx = q.tlx + ox;
-		var offy = q.tly + oy;
-		var drawX ;
-		var drawY = valign;
-		var roundX, roundY;
-		for(var i = 0; i < lines.length; i++) {
-			var line       = lines[i].text;
-			var lineWidth  = lines[i].width;
-			halign = ha * cr.max(0,this.width - lineWidth);
-			drawX = halign;
-			drawY += lineHeight;
-			if (angle === 0 && offy + drawY + charHeight < viewTop)
-			{
-				drawY += charHeight;
-				continue;
-			}
-			for(var j = 0; j < line.length; j++) {
-				var letter = line.charAt(j);
-				letterWidth = this.getCharacterWidth(letter);
-				var clipUV = this.clipUV[letter];
-				if (angle === 0 && offx + drawX + letterWidth * scale + charSpace < viewLeft)
-				{
-					drawX += letterWidth * scale + charSpace;
-					continue;
-				}
-				if (drawX + letterWidth * scale > this.width + EPSILON)
-				{
-					break;
-				}
-				if (clipUV !== undefined) {
-					var clipWidth  = this.characterWidth*scale;
-					var clipHeight = this.characterHeight*scale;
-					roundX = drawX;
-					roundY = drawY;
-					if (angle === 0)
-					{
-						roundX = Math.round(roundX);
-						roundY = Math.round(roundY);
-					}
-					dQuad.tlx  = roundX;
-					dQuad.tly  = roundY;
-					dQuad.trx  = roundX + clipWidth;
-					dQuad.try_ = roundY ;
-					dQuad.blx  = roundX;
-					dQuad.bly  = roundY + clipHeight;
-					dQuad.brx  = roundX + clipWidth;
-					dQuad.bry  = roundY + clipHeight;
-					if(angle !== 0)
-					{
-						rotateQuad(dQuad,cosa,sina);
-					}
-					dQuad.offset(offx,offy);
-					glw.quadTex(
-						dQuad.tlx, dQuad.tly,
-						dQuad.trx, dQuad.try_,
-						dQuad.brx, dQuad.bry,
-						dQuad.blx, dQuad.bly,
-						clipUV
-					);
-				}
-				drawX += letterWidth * scale + charSpace;
-				if (angle === 0 && offx + drawX > viewRight)
-					break;
-			}
-			drawY += charHeight;
-			if (angle === 0 && (drawY + charHeight + lineHeight > this.height || offy + drawY > viewBottom))
-			{
-				break;
-			}
-		}
-	};
-	function Cnds() {}
-	Cnds.prototype.CompareText = function(text_to_compare, case_sensitive)
-	{
-		if (case_sensitive)
-			return this.text == text_to_compare;
-		else
-			return cr.equals_nocase(this.text, text_to_compare);
-	};
-	pluginProto.cnds = new Cnds();
-	function Acts() {}
-	Acts.prototype.SetText = function(param)
-	{
-		if (cr.is_number(param) && param < 1e9)
-			param = Math.round(param * 1e10) / 1e10;	// round to nearest ten billionth - hides floating point errors
-		var text_to_set = param.toString();
-		if (this.text !== text_to_set)
-		{
-			this.text = text_to_set;
-			this.text_changed = true;
-			this.runtime.redraw = true;
-		}
-	};
-	Acts.prototype.AppendText = function(param)
-	{
-		if (cr.is_number(param))
-			param = Math.round(param * 1e10) / 1e10;	// round to nearest ten billionth - hides floating point errors
-		var text_to_append = param.toString();
-		if (text_to_append)	// not empty
-		{
-			this.text += text_to_append;
-			this.text_changed = true;
-			this.runtime.redraw = true;
-		}
-	};
-	Acts.prototype.SetScale = function(param)
-	{
-		if (param !== this.characterScale) {
-			this.characterScale = param;
-			this.text_changed = true;
-			this.runtime.redraw = true;
-		}
-	};
-	Acts.prototype.SetCharacterSpacing = function(param)
-	{
-		if (param !== this.CharacterSpacing) {
-			this.characterSpacing = param;
-			this.text_changed = true;
-			this.runtime.redraw = true;
-		}
-	};
-	Acts.prototype.SetLineHeight = function(param)
-	{
-		if (param !== this.lineHeight) {
-			this.lineHeight = param;
-			this.text_changed = true;
-			this.runtime.redraw = true;
-		}
-	};
-	instanceProto.SetCharWidth = function(character,width) {
-		var w = parseInt(width,10);
-		if (this.characterWidthList[character] !== w) {
-			this.characterWidthList[character] = w;
-			this.text_changed = true;
-			this.runtime.redraw = true;
-		}
-	};
-	Acts.prototype.SetCharacterWidth = function(characterSet,width)
-	{
-		if (characterSet !== "") {
-			for(var c = 0; c < characterSet.length; c++) {
-				this.SetCharWidth(characterSet.charAt(c),width);
-			}
-		}
-	};
-	Acts.prototype.SetEffect = function (effect)
-	{
-		this.blend_mode = effect;
-		this.compositeOp = cr.effectToCompositeOp(effect);
-		cr.setGLBlend(this, effect, this.runtime.gl);
-		this.runtime.redraw = true;
-	};
-	Acts.prototype.SetHAlign = function (a)
-	{
-		this.halign = a / 2.0;
-		this.text_changed = true;
-		this.runtime.redraw = true;
-	};
-	Acts.prototype.SetVAlign = function (a)
-	{
-		this.valign = a / 2.0;
-		this.text_changed = true;
-		this.runtime.redraw = true;
-	};
-	pluginProto.acts = new Acts();
-	function Exps() {}
-	Exps.prototype.CharacterWidth = function(ret,character)
-	{
-		ret.set_int(this.getCharacterWidth(character));
-	};
-	Exps.prototype.CharacterHeight = function(ret)
-	{
-		ret.set_int(this.characterHeight);
-	};
-	Exps.prototype.CharacterScale = function(ret)
-	{
-		ret.set_float(this.characterScale);
-	};
-	Exps.prototype.CharacterSpacing = function(ret)
-	{
-		ret.set_int(this.characterSpacing);
-	};
-	Exps.prototype.LineHeight = function(ret)
-	{
-		ret.set_int(this.lineHeight);
-	};
-	Exps.prototype.Text = function(ret)
-	{
-		ret.set_string(this.text);
-	};
-	Exps.prototype.TextWidth = function (ret)
-	{
-		this.rebuildText();
-		ret.set_float(this.textWidth);
-	};
-	Exps.prototype.TextHeight = function (ret)
-	{
-		this.rebuildText();
-		ret.set_float(this.textHeight);
-	};
-	pluginProto.exps = new Exps();
-}());
-;
-;
-cr.plugins_.Text = function(runtime)
-{
-	this.runtime = runtime;
-};
-(function ()
-{
-	var pluginProto = cr.plugins_.Text.prototype;
-	pluginProto.onCreate = function ()
-	{
-		pluginProto.acts.SetWidth = function (w)
-		{
-			if (this.width !== w)
-			{
-				this.width = w;
-				this.text_changed = true;	// also recalculate text wrapping
-				this.set_bbox_changed();
-			}
-		};
-	};
-	pluginProto.Type = function(plugin)
-	{
-		this.plugin = plugin;
-		this.runtime = plugin.runtime;
-	};
-	var typeProto = pluginProto.Type.prototype;
-	typeProto.onCreate = function()
-	{
-	};
-	typeProto.onLostWebGLContext = function ()
-	{
-		if (this.is_family)
-			return;
-		var i, len, inst;
-		for (i = 0, len = this.instances.length; i < len; i++)
-		{
-			inst = this.instances[i];
-			inst.mycanvas = null;
-			inst.myctx = null;
-			inst.mytex = null;
-		}
-	};
-	pluginProto.Instance = function(type)
-	{
-		this.type = type;
-		this.runtime = type.runtime;
-		if (this.recycled)
-			cr.clearArray(this.lines);
-		else
-			this.lines = [];		// for word wrapping
-		this.text_changed = true;
-	};
-	var instanceProto = pluginProto.Instance.prototype;
-	var requestedWebFonts = {};		// already requested web fonts have an entry here
-	instanceProto.onCreate = function()
-	{
-		this.text = this.properties[0];
-		this.visible = (this.properties[1] === 0);		// 0=visible, 1=invisible
-		this.font = this.properties[2];
-		this.color = this.properties[3];
-		this.halign = this.properties[4];				// 0=left, 1=center, 2=right
-		this.valign = this.properties[5];				// 0=top, 1=center, 2=bottom
-		this.wrapbyword = (this.properties[7] === 0);	// 0=word, 1=character
-		this.lastwidth = this.width;
-		this.lastwrapwidth = this.width;
-		this.lastheight = this.height;
-		this.line_height_offset = this.properties[8];
-		this.facename = "";
-		this.fontstyle = "";
-		this.ptSize = 0;
-		this.textWidth = 0;
-		this.textHeight = 0;
-		this.parseFont();
-		this.mycanvas = null;
-		this.myctx = null;
-		this.mytex = null;
-		this.need_text_redraw = false;
-		this.last_render_tick = this.runtime.tickcount;
-		if (this.recycled)
-			this.rcTex.set(0, 0, 1, 1);
-		else
-			this.rcTex = new cr.rect(0, 0, 1, 1);
-		if (this.runtime.glwrap)
-			this.runtime.tickMe(this);
-;
-	};
-	instanceProto.parseFont = function ()
-	{
-		var arr = this.font.split(" ");
-		var i;
-		for (i = 0; i < arr.length; i++)
-		{
-			if (arr[i].substr(arr[i].length - 2, 2) === "pt")
-			{
-				this.ptSize = parseInt(arr[i].substr(0, arr[i].length - 2));
-				this.pxHeight = Math.ceil((this.ptSize / 72.0) * 96.0) + 4;	// assume 96dpi...
-				if (i > 0)
-					this.fontstyle = arr[i - 1];
-				this.facename = arr[i + 1];
-				for (i = i + 2; i < arr.length; i++)
-					this.facename += " " + arr[i];
-				break;
-			}
-		}
-	};
-	instanceProto.saveToJSON = function ()
-	{
-		return {
-			"t": this.text,
-			"f": this.font,
-			"c": this.color,
-			"ha": this.halign,
-			"va": this.valign,
-			"wr": this.wrapbyword,
-			"lho": this.line_height_offset,
-			"fn": this.facename,
-			"fs": this.fontstyle,
-			"ps": this.ptSize,
-			"pxh": this.pxHeight,
-			"tw": this.textWidth,
-			"th": this.textHeight,
-			"lrt": this.last_render_tick
-		};
-	};
-	instanceProto.loadFromJSON = function (o)
-	{
-		this.text = o["t"];
-		this.font = o["f"];
-		this.color = o["c"];
-		this.halign = o["ha"];
-		this.valign = o["va"];
-		this.wrapbyword = o["wr"];
-		this.line_height_offset = o["lho"];
-		this.facename = o["fn"];
-		this.fontstyle = o["fs"];
-		this.ptSize = o["ps"];
-		this.pxHeight = o["pxh"];
-		this.textWidth = o["tw"];
-		this.textHeight = o["th"];
-		this.last_render_tick = o["lrt"];
-		this.text_changed = true;
-		this.lastwidth = this.width;
-		this.lastwrapwidth = this.width;
-		this.lastheight = this.height;
-	};
-	instanceProto.tick = function ()
-	{
-		if (this.runtime.glwrap && this.mytex && (this.runtime.tickcount - this.last_render_tick >= 300))
-		{
-			var layer = this.layer;
-            this.update_bbox();
-            var bbox = this.bbox;
-            if (bbox.right < layer.viewLeft || bbox.bottom < layer.viewTop || bbox.left > layer.viewRight || bbox.top > layer.viewBottom)
-			{
-				this.runtime.glwrap.deleteTexture(this.mytex);
-				this.mytex = null;
-				this.myctx = null;
-				this.mycanvas = null;
-			}
-		}
-	};
-	instanceProto.onDestroy = function ()
-	{
-		this.myctx = null;
-		this.mycanvas = null;
-		if (this.runtime.glwrap && this.mytex)
-			this.runtime.glwrap.deleteTexture(this.mytex);
-		this.mytex = null;
-	};
-	instanceProto.updateFont = function ()
-	{
-		this.font = this.fontstyle + " " + this.ptSize.toString() + "pt " + this.facename;
-		this.text_changed = true;
-		this.runtime.redraw = true;
-	};
-	instanceProto.draw = function(ctx, glmode)
-	{
-		ctx.font = this.font;
-		ctx.textBaseline = "top";
-		ctx.fillStyle = this.color;
-		ctx.globalAlpha = glmode ? 1 : this.opacity;
-		var myscale = 1;
-		if (glmode)
-		{
-			myscale = Math.abs(this.layer.getScale());
-			ctx.save();
-			ctx.scale(myscale, myscale);
-		}
-		if (this.text_changed || this.width !== this.lastwrapwidth)
-		{
-			this.type.plugin.WordWrap(this.text, this.lines, ctx, this.width, this.wrapbyword);
-			this.text_changed = false;
-			this.lastwrapwidth = this.width;
-		}
-		this.update_bbox();
-		var penX = glmode ? 0 : this.bquad.tlx;
-		var penY = glmode ? 0 : this.bquad.tly;
-		if (this.runtime.pixel_rounding)
-		{
-			penX = (penX + 0.5) | 0;
-			penY = (penY + 0.5) | 0;
-		}
-		if (this.angle !== 0 && !glmode)
-		{
-			ctx.save();
-			ctx.translate(penX, penY);
-			ctx.rotate(this.angle);
-			penX = 0;
-			penY = 0;
-		}
-		var endY = penY + this.height;
-		var line_height = this.pxHeight;
-		line_height += this.line_height_offset;
-		var drawX;
-		var i;
-		if (this.valign === 1)		// center
-			penY += Math.max(this.height / 2 - (this.lines.length * line_height) / 2, 0);
-		else if (this.valign === 2)	// bottom
-			penY += Math.max(this.height - (this.lines.length * line_height) - 2, 0);
-		for (i = 0; i < this.lines.length; i++)
-		{
-			drawX = penX;
-			if (this.halign === 1)		// center
-				drawX = penX + (this.width - this.lines[i].width) / 2;
-			else if (this.halign === 2)	// right
-				drawX = penX + (this.width - this.lines[i].width);
-			ctx.fillText(this.lines[i].text, drawX, penY);
-			penY += line_height;
-			if (penY >= endY - line_height)
-				break;
-		}
-		if (this.angle !== 0 || glmode)
-			ctx.restore();
-		this.last_render_tick = this.runtime.tickcount;
-	};
-	instanceProto.drawGL = function(glw)
-	{
-		if (this.width < 1 || this.height < 1)
-			return;
-		var need_redraw = this.text_changed || this.need_text_redraw;
-		this.need_text_redraw = false;
-		var layer_scale = this.layer.getScale();
-		var layer_angle = this.layer.getAngle();
-		var rcTex = this.rcTex;
-		var floatscaledwidth = layer_scale * this.width;
-		var floatscaledheight = layer_scale * this.height;
-		var scaledwidth = Math.ceil(floatscaledwidth);
-		var scaledheight = Math.ceil(floatscaledheight);
-		var absscaledwidth = Math.abs(scaledwidth);
-		var absscaledheight = Math.abs(scaledheight);
-		var halfw = this.runtime.draw_width / 2;
-		var halfh = this.runtime.draw_height / 2;
-		if (!this.myctx)
-		{
-			this.mycanvas = document.createElement("canvas");
-			this.mycanvas.width = absscaledwidth;
-			this.mycanvas.height = absscaledheight;
-			this.lastwidth = absscaledwidth;
-			this.lastheight = absscaledheight;
-			need_redraw = true;
-			this.myctx = this.mycanvas.getContext("2d");
-		}
-		if (absscaledwidth !== this.lastwidth || absscaledheight !== this.lastheight)
-		{
-			this.mycanvas.width = absscaledwidth;
-			this.mycanvas.height = absscaledheight;
-			if (this.mytex)
-			{
-				glw.deleteTexture(this.mytex);
-				this.mytex = null;
-			}
-			need_redraw = true;
-		}
-		if (need_redraw)
-		{
-			this.myctx.clearRect(0, 0, absscaledwidth, absscaledheight);
-			this.draw(this.myctx, true);
-			if (!this.mytex)
-				this.mytex = glw.createEmptyTexture(absscaledwidth, absscaledheight, this.runtime.linearSampling, this.runtime.isMobile);
-			glw.videoToTexture(this.mycanvas, this.mytex, this.runtime.isMobile);
-		}
-		this.lastwidth = absscaledwidth;
-		this.lastheight = absscaledheight;
-		glw.setTexture(this.mytex);
-		glw.setOpacity(this.opacity);
-		glw.resetModelView();
-		glw.translate(-halfw, -halfh);
-		glw.updateModelView();
-		var q = this.bquad;
-		var tlx = this.layer.layerToCanvas(q.tlx, q.tly, true, true);
-		var tly = this.layer.layerToCanvas(q.tlx, q.tly, false, true);
-		var trx = this.layer.layerToCanvas(q.trx, q.try_, true, true);
-		var try_ = this.layer.layerToCanvas(q.trx, q.try_, false, true);
-		var brx = this.layer.layerToCanvas(q.brx, q.bry, true, true);
-		var bry = this.layer.layerToCanvas(q.brx, q.bry, false, true);
-		var blx = this.layer.layerToCanvas(q.blx, q.bly, true, true);
-		var bly = this.layer.layerToCanvas(q.blx, q.bly, false, true);
-		if (this.runtime.pixel_rounding || (this.angle === 0 && layer_angle === 0))
-		{
-			var ox = ((tlx + 0.5) | 0) - tlx;
-			var oy = ((tly + 0.5) | 0) - tly
-			tlx += ox;
-			tly += oy;
-			trx += ox;
-			try_ += oy;
-			brx += ox;
-			bry += oy;
-			blx += ox;
-			bly += oy;
-		}
-		if (this.angle === 0 && layer_angle === 0)
-		{
-			trx = tlx + scaledwidth;
-			try_ = tly;
-			brx = trx;
-			bry = tly + scaledheight;
-			blx = tlx;
-			bly = bry;
-			rcTex.right = 1;
-			rcTex.bottom = 1;
-		}
-		else
-		{
-			rcTex.right = floatscaledwidth / scaledwidth;
-			rcTex.bottom = floatscaledheight / scaledheight;
-		}
-		glw.quadTex(tlx, tly, trx, try_, brx, bry, blx, bly, rcTex);
-		glw.resetModelView();
-		glw.scale(layer_scale, layer_scale);
-		glw.rotateZ(-this.layer.getAngle());
-		glw.translate((this.layer.viewLeft + this.layer.viewRight) / -2, (this.layer.viewTop + this.layer.viewBottom) / -2);
-		glw.updateModelView();
-		this.last_render_tick = this.runtime.tickcount;
-	};
-	var wordsCache = [];
-	pluginProto.TokeniseWords = function (text)
-	{
-		cr.clearArray(wordsCache);
-		var cur_word = "";
-		var ch;
-		var i = 0;
-		while (i < text.length)
-		{
-			ch = text.charAt(i);
-			if (ch === "\n")
-			{
-				if (cur_word.length)
-				{
-					wordsCache.push(cur_word);
-					cur_word = "";
-				}
-				wordsCache.push("\n");
-				++i;
-			}
-			else if (ch === " " || ch === "\t" || ch === "-")
-			{
-				do {
-					cur_word += text.charAt(i);
-					i++;
-				}
-				while (i < text.length && (text.charAt(i) === " " || text.charAt(i) === "\t"));
-				wordsCache.push(cur_word);
-				cur_word = "";
-			}
-			else if (i < text.length)
-			{
-				cur_word += ch;
-				i++;
-			}
-		}
-		if (cur_word.length)
-			wordsCache.push(cur_word);
-	};
-	var linesCache = [];
-	function allocLine()
-	{
-		if (linesCache.length)
-			return linesCache.pop();
-		else
-			return {};
-	};
-	function freeLine(l)
-	{
-		linesCache.push(l);
-	};
-	function freeAllLines(arr)
-	{
-		var i, len;
-		for (i = 0, len = arr.length; i < len; i++)
-		{
-			freeLine(arr[i]);
-		}
-		cr.clearArray(arr);
-	};
-	pluginProto.WordWrap = function (text, lines, ctx, width, wrapbyword)
-	{
-		if (!text || !text.length)
-		{
-			freeAllLines(lines);
-			return;
-		}
-		if (width <= 2.0)
-		{
-			freeAllLines(lines);
-			return;
-		}
-		if (text.length <= 100 && text.indexOf("\n") === -1)
-		{
-			var all_width = ctx.measureText(text).width;
-			if (all_width <= width)
-			{
-				freeAllLines(lines);
-				lines.push(allocLine());
-				lines[0].text = text;
-				lines[0].width = all_width;
-				return;
-			}
-		}
-		this.WrapText(text, lines, ctx, width, wrapbyword);
-	};
-	function trimSingleSpaceRight(str)
-	{
-		if (!str.length || str.charAt(str.length - 1) !== " ")
-			return str;
-		return str.substring(0, str.length - 1);
-	};
-	pluginProto.WrapText = function (text, lines, ctx, width, wrapbyword)
-	{
-		var wordArray;
-		if (wrapbyword)
-		{
-			this.TokeniseWords(text);	// writes to wordsCache
-			wordArray = wordsCache;
-		}
-		else
-			wordArray = text;
-		var cur_line = "";
-		var prev_line;
-		var line_width;
-		var i;
-		var lineIndex = 0;
-		var line;
-		for (i = 0; i < wordArray.length; i++)
-		{
-			if (wordArray[i] === "\n")
-			{
-				if (lineIndex >= lines.length)
-					lines.push(allocLine());
-				cur_line = trimSingleSpaceRight(cur_line);		// for correct center/right alignment
-				line = lines[lineIndex];
-				line.text = cur_line;
-				line.width = ctx.measureText(cur_line).width;
-				lineIndex++;
-				cur_line = "";
-				continue;
-			}
-			prev_line = cur_line;
-			cur_line += wordArray[i];
-			line_width = ctx.measureText(cur_line).width;
-			if (line_width >= width)
-			{
-				if (lineIndex >= lines.length)
-					lines.push(allocLine());
-				prev_line = trimSingleSpaceRight(prev_line);
-				line = lines[lineIndex];
-				line.text = prev_line;
-				line.width = ctx.measureText(prev_line).width;
-				lineIndex++;
-				cur_line = wordArray[i];
-				if (!wrapbyword && cur_line === " ")
-					cur_line = "";
-			}
-		}
-		if (cur_line.length)
-		{
-			if (lineIndex >= lines.length)
-				lines.push(allocLine());
-			cur_line = trimSingleSpaceRight(cur_line);
-			line = lines[lineIndex];
-			line.text = cur_line;
-			line.width = ctx.measureText(cur_line).width;
-			lineIndex++;
-		}
-		for (i = lineIndex; i < lines.length; i++)
-			freeLine(lines[i]);
-		lines.length = lineIndex;
-	};
-	function Cnds() {};
-	Cnds.prototype.CompareText = function(text_to_compare, case_sensitive)
-	{
-		if (case_sensitive)
-			return this.text == text_to_compare;
-		else
-			return cr.equals_nocase(this.text, text_to_compare);
-	};
-	pluginProto.cnds = new Cnds();
-	function Acts() {};
-	Acts.prototype.SetText = function(param)
-	{
-		if (cr.is_number(param) && param < 1e9)
-			param = Math.round(param * 1e10) / 1e10;	// round to nearest ten billionth - hides floating point errors
-		var text_to_set = param.toString();
-		if (this.text !== text_to_set)
-		{
-			this.text = text_to_set;
-			this.text_changed = true;
-			this.runtime.redraw = true;
-		}
-	};
-	Acts.prototype.AppendText = function(param)
-	{
-		if (cr.is_number(param))
-			param = Math.round(param * 1e10) / 1e10;	// round to nearest ten billionth - hides floating point errors
-		var text_to_append = param.toString();
-		if (text_to_append)	// not empty
-		{
-			this.text += text_to_append;
-			this.text_changed = true;
-			this.runtime.redraw = true;
-		}
-	};
-	Acts.prototype.SetFontFace = function (face_, style_)
-	{
-		var newstyle = "";
-		switch (style_) {
-		case 1: newstyle = "bold"; break;
-		case 2: newstyle = "italic"; break;
-		case 3: newstyle = "bold italic"; break;
-		}
-		if (face_ === this.facename && newstyle === this.fontstyle)
-			return;		// no change
-		this.facename = face_;
-		this.fontstyle = newstyle;
-		this.updateFont();
-	};
-	Acts.prototype.SetFontSize = function (size_)
-	{
-		if (this.ptSize === size_)
-			return;
-		this.ptSize = size_;
-		this.pxHeight = Math.ceil((this.ptSize / 72.0) * 96.0) + 4;	// assume 96dpi...
-		this.updateFont();
-	};
-	Acts.prototype.SetFontColor = function (rgb)
-	{
-		var newcolor = "rgb(" + cr.GetRValue(rgb).toString() + "," + cr.GetGValue(rgb).toString() + "," + cr.GetBValue(rgb).toString() + ")";
-		if (newcolor === this.color)
-			return;
-		this.color = newcolor;
-		this.need_text_redraw = true;
-		this.runtime.redraw = true;
-	};
-	Acts.prototype.SetWebFont = function (familyname_, cssurl_)
-	{
-		if (this.runtime.isDomFree)
-		{
-			cr.logexport("[Construct 2] Text plugin: 'Set web font' not supported on this platform - the action has been ignored");
-			return;		// DC todo
-		}
-		var self = this;
-		var refreshFunc = (function () {
-							self.runtime.redraw = true;
-							self.text_changed = true;
-						});
-		if (requestedWebFonts.hasOwnProperty(cssurl_))
-		{
-			var newfacename = "'" + familyname_ + "'";
-			if (this.facename === newfacename)
-				return;	// no change
-			this.facename = newfacename;
-			this.updateFont();
-			for (var i = 1; i < 10; i++)
-			{
-				setTimeout(refreshFunc, i * 100);
-				setTimeout(refreshFunc, i * 1000);
-			}
-			return;
-		}
-		var wf = document.createElement("link");
-		wf.href = cssurl_;
-		wf.rel = "stylesheet";
-		wf.type = "text/css";
-		wf.onload = refreshFunc;
-		document.getElementsByTagName('head')[0].appendChild(wf);
-		requestedWebFonts[cssurl_] = true;
-		this.facename = "'" + familyname_ + "'";
-		this.updateFont();
-		for (var i = 1; i < 10; i++)
-		{
-			setTimeout(refreshFunc, i * 100);
-			setTimeout(refreshFunc, i * 1000);
-		}
-;
-	};
-	Acts.prototype.SetEffect = function (effect)
-	{
-		this.blend_mode = effect;
-		this.compositeOp = cr.effectToCompositeOp(effect);
-		cr.setGLBlend(this, effect, this.runtime.gl);
-		this.runtime.redraw = true;
-	};
-	pluginProto.acts = new Acts();
-	function Exps() {};
-	Exps.prototype.Text = function(ret)
-	{
-		ret.set_string(this.text);
-	};
-	Exps.prototype.FaceName = function (ret)
-	{
-		ret.set_string(this.facename);
-	};
-	Exps.prototype.FaceSize = function (ret)
-	{
-		ret.set_int(this.ptSize);
-	};
-	Exps.prototype.TextWidth = function (ret)
-	{
-		var w = 0;
-		var i, len, x;
-		for (i = 0, len = this.lines.length; i < len; i++)
-		{
-			x = this.lines[i].width;
-			if (w < x)
-				w = x;
-		}
-		ret.set_int(w);
-	};
-	Exps.prototype.TextHeight = function (ret)
-	{
-		ret.set_int(this.lines.length * (this.pxHeight + this.line_height_offset) - this.line_height_offset);
 	};
 	pluginProto.exps = new Exps();
 }());
@@ -22041,582 +20390,6 @@ cr.plugins_.Touch = function(runtime)
 }());
 ;
 ;
-cr.plugins_.gamepad = function(runtime)
-{
-	this.runtime = runtime;
-};
-(function ()
-{
-	var pluginProto = cr.plugins_.gamepad.prototype;
-	var isSupported = false;
-	pluginProto.Type = function(plugin)
-	{
-		this.plugin = plugin;
-		this.runtime = plugin.runtime;
-		isSupported = !!(navigator["getGamepads"] || navigator["webkitGetGamepads"] || navigator["mozGetGamepads"] || navigator["gamepads"] || navigator["webkitGamepads"] || navigator["MozGamepads"] || window["cr_getGamepads"]);
-	};
-	var typeProto = pluginProto.Type.prototype;
-	typeProto.onCreate = function()
-	{
-	};
-	var gamepadRuntime = null;
-	var gamepadInstance = null;
-	var controllers = new Array(16);
-	var padStates = new Array(16);
-	var padOldStates = new Array(16);
-	var osToken = "";
-	var browserToken = "";
-	function getPadState(i)
-	{
-		var j;
-		if (!padStates[i])
-		{
-			padStates[i] = new Array(20);
-			for (j = 0; j < 20; ++j)
-				padStates[i][j] = 0;
-		}
-		return padStates[i];
-	};
-	function getPadOldState(i)
-	{
-		var j;
-		if (!padOldStates[i])
-		{
-			padOldStates[i] = new Array(20);
-			for (j = 0; j < 20; ++j)
-				padOldStates[i][j] = 0;
-		}
-		return padOldStates[i];
-	};
-	function updatePadOldState(i)
-	{
-		var cur = getPadState(i);
-		var old = getPadOldState(i);
-		var j;
-		for (j = 0; j < 20; ++j)
-			old[j] = cur[j];
-	};
-	function clearPadState(i)
-	{
-		padStates[i] = null;
-		padOldStates[i] = null;
-	};
-	var axisOffset = 16;
-	var curCtrlMap = null;
-	var ctrlmap = {};
-	ctrlmap["windows"] = {};
-	ctrlmap["windows"]["firefox"] = {};
-	function doControllerMapping(index, isAxis, buttonmap, axismap)
-	{
-		if (isAxis)
-		{
-			if (index >= axismap.length)
-				return -1;			// unknown axis
-			if (cr.is_number(axismap[index]))
-				return axismap[index] + axisOffset;
-			else
-			{
-				return axismap[index];	// returning array
-			}
-		}
-		else
-		{
-			if (index >= buttonmap.length)
-				return -1;			// unknown button
-			return buttonmap[index];
-		}
-	};
-	var win_ff_xbox360_buttons = [0, 1, 2, 3, 4, 5, 8, 9, 10, 11];
-	var win_ff_xbox360_axes    = [0, 1, [7, 6], 2, 3, [14, 15], [12, 13]];
-	ctrlmap["windows"]["firefox"]["xbox360"] = function (index, isAxis)
-	{
-		return doControllerMapping(index, isAxis, win_ff_xbox360_buttons, win_ff_xbox360_axes);
-	};
-	var win_ff_lda_buttons = [2, 0, 1, 3, 4, 6, 5, 7, 8, 9];
-	var win_ff_lda_axes    = [0, 1, 2, 3, [14, 15], [12, 13]];
-	ctrlmap["windows"]["firefox"]["logitechdualaction"] = function (index, isAxis)
-	{
-		return doControllerMapping(index, isAxis, win_ff_lda_buttons, win_ff_lda_axes);
-	};
-	function defaultMap(index, isAxis)
-	{
-		if (isAxis)
-		{
-			if (index >= 4)
-				return -1;		// unknown axis
-			return index + axisOffset;
-		}
-		else
-		{
-			if (index >= 16)
-				return -1;		// unknown button
-			return index;
-		}
-	};
-	function getMapper(id_)
-	{
-		if (!curCtrlMap)
-			return defaultMap;
-		var controllertoken = "";
-		var id = id_.toLowerCase();
-		if (id.indexOf("xbox 360") > -1)
-			controllertoken = "xbox360";
-		else if (id.indexOf("logitech dual action") > -1)
-			controllertoken = "logitechdualaction";
-		var curmap = curCtrlMap[controllertoken];
-		return curmap || defaultMap;
-	};
-	function onConnected(e)
-	{
-		controllers[e["gamepad"]["index"]] = e["gamepad"];
-		gamepadRuntime.trigger(cr.plugins_.gamepad.prototype.cnds.OnGamepadConnected, gamepadInstance);
-	};
-	function onDisconnected(e)
-	{
-		gamepadRuntime.trigger(cr.plugins_.gamepad.prototype.cnds.OnGamepadDisconnected, gamepadInstance);
-		controllers[e["gamepad"]["index"]] = null;
-	};
-	pluginProto.Instance = function(type)
-	{
-		this.type = type;
-		this.runtime = type.runtime;
-		gamepadRuntime = this.runtime;
-		gamepadInstance = this;
-	};
-	var instanceProto = pluginProto.Instance.prototype;
-	instanceProto.onCreate = function()
-	{
-		this.deadzone = this.properties[0];
-		this.lastButton = 0;
-		var userAgent = navigator.userAgent;
-		osToken = "windows";
-		if (/mac/i.test(userAgent))
-			osToken = "mac";
-		curCtrlMap = ctrlmap[osToken];
-		browserToken = "chrome";
-		if (/firefox/i.test(userAgent))
-			browserToken = "firefox";
-		if (curCtrlMap)
-			curCtrlMap = curCtrlMap[browserToken];
-		window.addEventListener("webkitgamepadconnected", onConnected, false);
-		window.addEventListener("webkitgamepaddisconnected", onDisconnected, false);
-		window.addEventListener("MozGamepadConnected", onConnected, false);
-		window.addEventListener("MozGamepadDisconnected", onDisconnected, false);
-		window.addEventListener("gamepadconnected", onConnected, false);
-		window.addEventListener("gamepaddisconnected", onDisconnected, false);
-		this.runtime.tickMe(this);
-		this.activeControllers = [];
-	};
-	instanceProto.tick = function ()
-	{
-		this.activeControllers.length = 0;
-		var gamepads = null;
-		var synthetic = false;
-		if (navigator["getGamepads"])
-			gamepads = navigator["getGamepads"]();
-		else if (navigator["webkitGetGamepads"])
-			gamepads = navigator["webkitGetGamepads"]();
-		else if (navigator["mozGetGamepads"])
-			gamepads = navigator["mozGetGamepads"]();
-		else if (navigator["msGetGamepads"])
-			gamepads = navigator["msGetGamepads"]();
-		else if (this.runtime.isWindows8Capable && window["cr_getGamepads"])
-		{
-			gamepads = window["cr_getGamepads"]();
-			synthetic = true;
-		}
-		else
-			gamepads = navigator["gamepads"] || navigator["webkitGamepads"] || navigator["MozGamepads"] || controllers;
-		if (!gamepads)
-			return;
-		var i, len, j, lenj, mapfunc, index, value;
-		for (i = 0, len = gamepads.length; i < len; i++)
-		{
-			var pad = gamepads[i];
-			if (!pad)
-			{
-				clearPadState(i);
-				continue;
-			}
-			var state = getPadState(i);
-			var oldstate = getPadOldState(i);
-			updatePadOldState(i);
-			mapfunc = (synthetic ? defaultMap : getMapper(pad.id));
-			for (j = 0, lenj = pad["buttons"].length; j < lenj; j++)
-			{
-				if (typeof pad["buttons"][j]["value"] !== "undefined")
-					value = pad["buttons"][j]["value"];
-				else
-					value = pad["buttons"][j];
-				index = mapfunc(j, false, value);
-				if (index >= 0 && index < 20)
-				{
-					state[index] = value * 100;
-					if (state[index] >= 50 && oldstate[index] < 50)
-						this.lastButton = index;
-				}
-			}
-			for (j = 0, lenj = pad["axes"].length; j < lenj; j++)
-			{
-				value = pad["axes"][j];
-				index = mapfunc(j, true, value);
-				if (cr.is_number(index))
-				{
-					if (index >= 0 && index < 20)
-						state[index] = value * 100;
-				}
-				else
-				{
-					state[index[0]] = 0;
-					state[index[1]] = 0;
-					if (value <= 0)
-						state[index[0]] = Math.abs(value * 100);
-					else
-						state[index[1]] = Math.abs(value * 100);
-				}
-			}
-			this.activeControllers.push(pad);
-		}
-		for ( ; i < 20; ++i)
-			clearPadState(i);
-	};
-	instanceProto.saveToJSON = function ()
-	{
-		return { "lastButton": this.lastButton };
-	};
-	instanceProto.loadFromJSON = function (o)
-	{
-		this.lastButton = o["lastButton"];
-	};
-	function Cnds() {};
-	Cnds.prototype.SupportsGamepad = function ()
-	{
-		return isSupported;
-	};
-	Cnds.prototype.OnGamepadConnected = function ()
-	{
-		return true;
-	};
-	Cnds.prototype.OnGamepadDisconnected = function ()
-	{
-		return true;
-	};
-	Cnds.prototype.IsButtonDown = function (gamepad, button)
-	{
-		gamepad = Math.floor(gamepad);
-		if (gamepad < 0 || gamepad >= this.activeControllers.length)
-			return false;
-		var state = getPadState(gamepad);
-		if (!state)
-			return false;
-		var ret = state[button] >= 50;
-		if (ret)
-			this.lastButton = button;
-		return ret;
-	};
-	Cnds.prototype.OnButtonDown = function (gamepad, button)
-	{
-		gamepad = Math.floor(gamepad);
-		if (gamepad < 0 || gamepad >= this.activeControllers.length)
-			return false;
-		var state = getPadState(gamepad);
-		var oldstate = getPadOldState(gamepad);
-		if (!state || !oldstate)
-			return false;
-		var ret = state[button] >= 50 && oldstate[button] < 50;
-		if (ret)
-			this.lastButton = button;
-		return ret;
-	};
-	Cnds.prototype.OnButtonUp = function (gamepad, button)
-	{
-		gamepad = Math.floor(gamepad);
-		if (gamepad < 0 || gamepad >= this.activeControllers.length)
-			return false;
-		var state = getPadState(gamepad);
-		var oldstate = getPadOldState(gamepad);
-		if (!state || !oldstate)
-			return false;
-		var ret = state[button] < 50 && oldstate[button] >= 50;
-		if (ret)
-			this.lastButton = button;
-		return ret;
-	};
-	Cnds.prototype.HasGamepads = function ()
-	{
-		return this.activeControllers.length > 0;
-	};
-	Cnds.prototype.CompareAxis = function (gamepad, axis, comparison, value)
-	{
-		gamepad = Math.floor(gamepad);
-		axis = Math.floor(axis);
-		if (gamepad < 0 || gamepad >= this.activeControllers.length)
-			return false;
-		var state = getPadState(gamepad);
-		if (!state)
-			return;
-		var axisvalue = state[axis + axisOffset];
-		var othervalue = 0;
-		if (axis % 2 === 0)										// is X axis
-			othervalue = state[axis + axisOffset + 1];	// get next axis (Y)
-		else
-			othervalue = state[axis + axisOffset - 1];	// get previous axis (X)
-		if (Math.sqrt(axisvalue * axisvalue + othervalue * othervalue) <= this.deadzone)
-			axisvalue = 0;
-		return cr.do_cmp(axisvalue, comparison, value);
-	};
-	Cnds.prototype.OnAnyButtonDown = function (gamepad)
-	{
-		gamepad = Math.floor(gamepad);
-		if (gamepad < 0 || gamepad >= this.activeControllers.length)
-			return false;
-		var state = getPadState(gamepad);
-		var oldstate = getPadOldState(gamepad);
-		if (!state || !oldstate)
-			return false;
-		var i, len;
-		for (i = 0, len = state.length; i < len; i++)
-		{
-			if (state[i] >= 50 && oldstate[i] < 50)
-			{
-				this.lastButton = i;
-				return true;
-			}
-		}
-		return false;
-	};
-	Cnds.prototype.OnAnyButtonUp = function (gamepad)
-	{
-		gamepad = Math.floor(gamepad);
-		if (gamepad < 0 || gamepad >= this.activeControllers.length)
-			return false;
-		var state = getPadState(gamepad);
-		var oldstate = getPadOldState(gamepad);
-		if (!state || !oldstate)
-			return false;
-		var i, len;
-		for (i = 0, len = state.length; i < len; i++)
-		{
-			if (state[i] < 50 && oldstate[i] >= 50)
-			{
-				this.lastButton = i;
-				return true;
-			}
-		}
-		return false;
-	};
-	Cnds.prototype.IsButtonIndexDown = function (gamepad, button)
-	{
-		gamepad = Math.floor(gamepad);
-		if (gamepad < 0 || gamepad >= this.activeControllers.length)
-			return false;
-		var state = getPadState(gamepad);
-		if (!state)
-			return false;
-		button = Math.floor(button);
-		if (button < 0 || button >= state.length)
-			return false;
-		var ret = state[button] >= 50;
-		if (ret)
-			this.lastButton = button;
-		return ret;
-	};
-	Cnds.prototype.OnButtonIndexDown = function (gamepad, button)
-	{
-		gamepad = Math.floor(gamepad);
-		if (gamepad < 0 || gamepad >= this.activeControllers.length)
-			return false;
-		var state = getPadState(gamepad);
-		var oldstate = getPadOldState(gamepad);
-		if (!state || !oldstate)
-			return false;
-		button = Math.floor(button);
-		if (button < 0 || button >= state.length)
-			return false;
-		var ret = state[button] >= 50 && oldstate[button] < 50;
-		if (ret)
-			this.lastButton = button;
-		return ret;
-	};
-	Cnds.prototype.OnButtonIndexUp = function (gamepad, button)
-	{
-		gamepad = Math.floor(gamepad);
-		if (gamepad < 0 || gamepad >= this.activeControllers.length)
-			return false;
-		var state = getPadState(gamepad);
-		var oldstate = getPadOldState(gamepad);
-		if (!state || !oldstate)
-			return false;
-		button = Math.floor(button);
-		if (button < 0 || button >= state.length)
-			return false;
-		var ret = state[button] < 50 && oldstate[button] >= 50;
-		if (ret)
-			this.lastButton = button;
-		return ret;
-	};
-	pluginProto.cnds = new Cnds();
-	function Acts() {};
-	pluginProto.acts = new Acts();
-	function Exps() {};
-	Exps.prototype.GamepadCount = function (ret)
-	{
-		ret.set_int(this.activeControllers.length);
-	};
-	Exps.prototype.GamepadID = function (ret, index)
-	{
-		if (index < 0 || index >= this.activeControllers.length)
-		{
-			ret.set_string("");
-			return;
-		}
-		ret.set_string(this.activeControllers[index].id);
-	};
-	Exps.prototype.GamepadAxes = function (ret, index)
-	{
-		if (index < 0 || index >= this.activeControllers.length)
-		{
-			ret.set_string("");
-			return;
-		}
-		var axes = this.activeControllers[index]["axes"];
-		var str = "";
-		var i, len;
-		for (i = 0, len = axes.length; i < len; i++)
-		{
-			str += "Axis " + i + ": " + Math.round(axes[i] * 100) + "\n";
-		}
-		ret.set_string(str);
-	};
-	Exps.prototype.GamepadButtons = function (ret, index)
-	{
-		if (index < 0 || index >= this.activeControllers.length)
-		{
-			ret.set_string("");
-			return;
-		}
-		var buttons = this.activeControllers[index]["buttons"];
-		var str = "";
-		var i, len, value;
-		for (i = 0, len = buttons.length; i < len; i++)
-		{
-			if (typeof buttons[i]["value"] !== "undefined")
-				value = buttons[i]["value"];
-			else
-				value = buttons[i];
-			str += "Button " + i + ": " + Math.round(value * 100) + "\n";
-		}
-		ret.set_string(str);
-	};
-	Exps.prototype.RawButton = function (ret, gamepad, index)
-	{
-		gamepad = Math.floor(gamepad);
-		index = Math.floor(index);
-		if (gamepad < 0 || gamepad >= this.activeControllers.length)
-		{
-			ret.set_float(0);
-			return;
-		}
-		var state = this.activeControllers[gamepad]["buttons"];
-		if (!state || index < 0 || index >= state.length)
-		{
-			ret.set_float(0);
-			return;
-		}
-		if (typeof state[index]["value"] !== "undefined")
-			ret.set_float(state[index]["value"]);
-		else
-			ret.set_float(state[index]);
-	};
-	Exps.prototype.RawAxis = function (ret, gamepad, index)
-	{
-		gamepad = Math.floor(gamepad);
-		index = Math.floor(index);
-		if (gamepad < 0 || gamepad >= this.activeControllers.length)
-		{
-			ret.set_float(0);
-			return;
-		}
-		var state = this.activeControllers[gamepad]["axes"];
-		if (!state || index < 0 || index >= state.length)
-		{
-			ret.set_float(0);
-			return;
-		}
-		ret.set_float(state[index]);
-	};
-	Exps.prototype.RawButtonCount = function (ret, gamepad)
-	{
-		gamepad = Math.floor(gamepad);
-		index = Math.floor(index);
-		if (gamepad < 0 || gamepad >= this.activeControllers.length)
-		{
-			ret.set_int(0);
-			return;
-		}
-		ret.set_int(this.activeControllers[gamepad]["buttons"].length);
-	};
-	Exps.prototype.RawAxisCount = function (ret, gamepad)
-	{
-		gamepad = Math.floor(gamepad);
-		index = Math.floor(index);
-		if (gamepad < 0 || gamepad >= this.activeControllers.length)
-		{
-			ret.set_int(0);
-			return;
-		}
-		ret.set_int(this.activeControllers[gamepad]["axes"].length);
-	};
-	Exps.prototype.Button = function (ret, gamepad, index)
-	{
-		gamepad = Math.floor(gamepad);
-		index = Math.floor(index);
-		if (gamepad < 0 || gamepad >= this.activeControllers.length)
-		{
-			ret.set_float(0);
-			return;
-		}
-		var state = getPadState(gamepad);
-		if (!state || index < 0 || index >= axisOffset)
-		{
-			ret.set_float(0);
-			return;
-		}
-		ret.set_float(state[index]);
-	};
-	Exps.prototype.Axis = function (ret, gamepad, index)
-	{
-		gamepad = Math.floor(gamepad);
-		index = Math.floor(index);
-		if (gamepad < 0 || gamepad >= this.activeControllers.length)
-		{
-			ret.set_float(0);
-			return;
-		}
-		var state = getPadState(gamepad);
-		if (!state || index < 0 || index >= 4)
-		{
-			ret.set_float(0);
-			return;
-		}
-		var value = state[index + axisOffset];
-		var othervalue = 0;
-		if (index % 2 === 0)								// is X axis
-			othervalue = state[index + axisOffset + 1];		// get next axis (Y)
-		else
-			othervalue = state[index + axisOffset - 1];		// get previous axis (X)
-		if (Math.sqrt(value * value + othervalue * othervalue) <= this.deadzone)
-			value = 0;
-		ret.set_float(value);
-	};
-	Exps.prototype.LastButton = function (ret)
-	{
-		ret.set_int(this.lastButton);
-	};
-	pluginProto.exps = new Exps();
-}());
-;
-;
 cr.behaviors.Bullet = function(runtime)
 {
 	this.runtime = runtime;
@@ -24639,13 +22412,13 @@ cr.behaviors.Sin = function(runtime)
 }());
 ;
 ;
-cr.behaviors.Turret = function(runtime)
+cr.behaviors.jumpthru = function(runtime)
 {
 	this.runtime = runtime;
 };
 (function ()
 {
-	var behaviorProto = cr.behaviors.Turret.prototype;
+	var behaviorProto = cr.behaviors.jumpthru.prototype;
 	behaviorProto.Type = function(behavior, objtype)
 	{
 		this.behavior = behavior;
@@ -24655,7 +22428,6 @@ cr.behaviors.Turret = function(runtime)
 	var behtypeProto = behaviorProto.Type.prototype;
 	behtypeProto.onCreate = function()
 	{
-		this.targetTypes = [];						// object types to check for as targets
 	};
 	behaviorProto.Instance = function(type, inst)
 	{
@@ -24667,721 +22439,23 @@ cr.behaviors.Turret = function(runtime)
 	var behinstProto = behaviorProto.Instance.prototype;
 	behinstProto.onCreate = function()
 	{
-		this.range = this.properties[0];
-		this.rateOfFire = this.properties[1];
-		this.rotateEnabled = (this.properties[2] !== 0);
-		this.rotateSpeed = cr.to_radians(this.properties[3]);
-		this.targetMode = this.properties[4];		// 0 = first, 1 = nearest
-		this.predictiveAim = (this.properties[5] !== 0);
-		this.projectileSpeed = this.properties[6];
-		this.enabled = (this.properties[7] !== 0);
-		this.useCollisionCells = (this.properties[8] !== 0);
-		this.lastCheckTime = 0;						// last time checked for targets in range
-		this.fireTimeCount = this.rateOfFire;		// counts up to rate of fire before shooting. starts in fully reloaded state
-		this.currentTarget = null;					// current target object
-		this.loadTargetUid = -1;
-		this.oldTargetX = 0;
-		this.oldTargetY = 0;
-		this.lastSpeeds = [0, 0, 0, 0];
-		this.speedsCount = 0;
-		this.firstTickWithTarget = true;
-		var self = this;
-		if (!this.recycled)
-		{
-			this.myDestroyCallback = function(inst) {
-										self.onInstanceDestroyed(inst);
-									};
-		}
-		this.runtime.addDestroyCallback(this.myDestroyCallback);
-	};
-	behinstProto.saveToJSON = function ()
-	{
-		var o = {
-			"r": this.range,
-			"rof": this.rateOfFire,
-			"re": this.rotateEnabled,
-			"rs": this.rotateSpeed,
-			"tm": this.targetMode,
-			"pa": this.predictiveAim,
-			"ps": this.projectileSpeed,
-			"en": this.enabled,
-			"lct": this.lastCheckTime,
-			"ftc": this.fireTimeCount,
-			"target": (this.currentTarget ? this.currentTarget.uid : -1),
-			"ox": this.oldTargetX,
-			"oy": this.oldTargetY,
-			"ls": this.lastSpeeds,
-			"sc": this.speedsCount,
-			"targs": []
-		};
-		var i, len;
-		for (i = 0, len = this.type.targetTypes.length; i < len; i++)
-		{
-			o["targs"].push(this.type.targetTypes[i].sid);
-		}
-		return o;
-	};
-	behinstProto.loadFromJSON = function (o)
-	{
-		this.range = o["r"];
-		this.rateOfFire = o["rof"];
-		this.rotateEnabled = o["re"];
-		this.rotateSpeed = o["rs"];
-		this.targetMode = o["tm"];
-		this.predictiveAim = o["pa"];
-		this.projectileSpeed = o["ps"];
-		this.enabled = o["en"];
-		this.lastCheckTime = o["lct"];
-		this.fireTimeCount = o["ftc"] || 0;		// not in <r154
-		this.loadTargetUid = o["target"];
-		this.oldTargetX = o["ox"];
-		this.oldTargetY = o["oy"];
-		this.lastSpeeds = o["ls"];
-		this.speedsCount = o["sc"];
-		cr.clearArray(this.type.targetTypes);
-		var i, len, t;
-		for (i = 0, len = o["targs"].length; i < len; i++)
-		{
-			t = this.runtime.getObjectTypeBySid(o["targs"][i]);
-			if (t)
-				this.type.targetTypes.push(t);
-		}
-	};
-	behinstProto.afterLoad = function ()
-	{
-		if (this.loadTargetUid === -1)
-			this.currentTarget = null;
-		else
-			this.currentTarget = this.runtime.getObjectByUID(this.loadTargetUid);
-	};
-	behinstProto.onInstanceDestroyed = function (inst)
-	{
-		if (this.currentTarget == inst)
-			this.currentTarget = null;
-	};
-	behinstProto.onDestroy = function ()
-	{
-		this.currentTarget = null;
-		this.runtime.removeDestroyCallback(this.myDestroyCallback);
-	};
-	behinstProto.addSpeed = function (s)
-	{
-		if (this.speedsCount < 4)
-		{
-			this.lastSpeeds[this.speedsCount] = s;
-			this.speedsCount++;
-		}
-		else
-		{
-			this.lastSpeeds.shift();
-			this.lastSpeeds.push(s);
-		}
-	};
-	behinstProto.getSpeed = function ()
-	{
-		var ret = 0;
-		var i = 0;
-		for ( ; i < this.speedsCount; i++)
-		{
-			ret += this.lastSpeeds[i];
-		}
-		return ret / this.speedsCount;
-	};
-	behinstProto.isInRange = function (obj_)
-	{
-		var inst = this.inst;
-		var dx = obj_.x - inst.x;
-		var dy = obj_.y - inst.y;
-		return dx * dx + dy * dy <= this.range * this.range;
-	};
-	var tmpRect = new cr.rect(0, 0, 0, 0);
-	var candidates = [];
-	behinstProto.lookForFirstTarget = function ()
-	{
-		var i, len, rinst;
-		tmpRect.left = this.inst.x - this.range;
-		tmpRect.top = this.inst.y - this.range;
-		tmpRect.right = this.inst.x + this.range;
-		tmpRect.bottom = this.inst.y + this.range;
-		if (this.useCollisionCells)
-		{
-			this.runtime.getTypesCollisionCandidates(null, this.type.targetTypes, tmpRect, candidates);
-		}
-		else
-		{
-			for (i = 0, len = this.type.targetTypes.length; i < len; ++i)
-			{
-				cr.appendArray(candidates, this.type.targetTypes[i].instances);
-			}
-		}
-		for (i = 0, len = candidates.length; i < len; ++i)
-		{
-			rinst = candidates[i];
-			if (this.isInRange(rinst))
-			{
-				this.currentTarget = rinst;
-				cr.clearArray(candidates);
-				return;
-			}
-		}
-		cr.clearArray(candidates);
-	};
-	behinstProto.lookForNearestTarget = function ()
-	{
-		var i, len, rinst, dist, dx, dy;
-		var myx = this.inst.x;
-		var myy = this.inst.y;
-		var closest = this.range * this.range;
-		this.currentTarget = null;
-		tmpRect.left = myx - this.range;
-		tmpRect.top = myy - this.range;
-		tmpRect.right = myx + this.range;
-		tmpRect.bottom = myy + this.range;
-		if (this.useCollisionCells)
-		{
-			this.runtime.getTypesCollisionCandidates(null, this.type.targetTypes, tmpRect, candidates);
-		}
-		else
-		{
-			for (i = 0, len = this.type.targetTypes.length; i < len; ++i)
-			{
-				cr.appendArray(candidates, this.type.targetTypes[i].instances);
-			}
-		}
-		for (i = 0, len = candidates.length; i < len; ++i)
-		{
-			rinst = candidates[i];
-			dx = myx - rinst.x;
-			dy = myy - rinst.y;
-			dist = dx * dx + dy * dy;
-			if (dist < closest)
-			{
-				this.currentTarget = rinst;
-				closest = dist;
-			}
-		}
-		candidates.length = 0;
+		this.inst.extra["jumpthruEnabled"] = (this.properties[0] !== 0);
 	};
 	behinstProto.tick = function ()
 	{
-		var dt = this.runtime.getDt(this.inst);
-		var nowtime = this.runtime.kahanTime.sum;
-		var inst = this.inst;
-		if (!this.enabled)
-			return;
-		if (this.currentTarget && !this.isInRange(this.currentTarget))
-		{
-			this.currentTarget = null;
-			this.speedsCount = 0;
-			this.firstTickWithTarget = true;
-		}
-		if (nowtime >= this.lastCheckTime + 0.1)
-		{
-			this.lastCheckTime = nowtime;
-			if (this.targetMode === 0 && !this.currentTarget)
-			{
-				this.lookForFirstTarget();
-				if (this.currentTarget)
-				{
-					this.speedsCount = 0;
-					this.firstTickWithTarget = true;
-					this.oldTargetX = this.currentTarget.x;
-					this.oldTargetY = this.currentTarget.y;
-					this.runtime.trigger(cr.behaviors.Turret.prototype.cnds.OnTargetAcquired, this.inst);
-				}
-			}
-			else if (this.targetMode === 1)
-			{
-				var oldTarget = this.currentTarget;
-				this.lookForNearestTarget();
-				if (this.currentTarget && this.currentTarget !== oldTarget)
-				{
-					this.speedsCount = 0;
-					this.firstTickWithTarget = true;
-					this.oldTargetX = this.currentTarget.x;
-					this.oldTargetY = this.currentTarget.y;
-					this.runtime.trigger(cr.behaviors.Turret.prototype.cnds.OnTargetAcquired, this.inst);
-				}
-			}
-		}
-		this.fireTimeCount += dt;
-		if (this.currentTarget)
-		{
-			var targetAngle = cr.angleTo(inst.x, inst.y, this.currentTarget.x, this.currentTarget.y);
-			if (this.predictiveAim)
-			{
-				var Gx = inst.x;
-				var Gy = inst.y;
-				var Px = this.currentTarget.x;
-				var Py = this.currentTarget.y;
-				var h = cr.angleTo(Px, Py, this.oldTargetX, this.oldTargetY);
-				if (!this.firstTickWithTarget)
-					this.addSpeed(cr.distanceTo(Px, Py, this.oldTargetX, this.oldTargetY) / dt);
-				var s = this.getSpeed();
-				var q = Py - Gy;
-				var r = Px - Gx;
-				var w = (s * Math.sin(h) * (Gx - Px) - s * Math.cos(h) * (Gy - Py)) / this.projectileSpeed;
-				var a = (Math.asin(w / Math.sqrt(q * q + r * r)) - Math.atan2(q, -r)) + Math.PI;
-				if (!isNaN(a))
-					targetAngle = a;
-			}
-			if (this.rotateEnabled)
-			{
-				inst.angle = cr.angleRotate(inst.angle, targetAngle, this.rotateSpeed * dt);
-				inst.set_bbox_changed();
-			}
-			if ((this.fireTimeCount >= this.rateOfFire) &&
-				cr.to_degrees(cr.angleDiff(inst.angle, targetAngle)) <= 0.1 &&
-				(!this.predictiveAim || this.speedsCount >= 4))
-			{
-				this.fireTimeCount -= this.rateOfFire;
-				if (this.fireTimeCount >= this.rateOfFire)
-					this.fireTimeCount = 0;
-				this.runtime.trigger(cr.behaviors.Turret.prototype.cnds.OnShoot, this.inst);
-			}
-			if (this.currentTarget)
-			{
-				this.oldTargetX = this.currentTarget.x;
-				this.oldTargetY = this.currentTarget.y;
-			}
-			this.firstTickWithTarget = false;
-		}
-		if (this.fireTimeCount > this.rateOfFire)
-			this.fireTimeCount = this.rateOfFire;
 	};
 	function Cnds() {};
-	Cnds.prototype.HasTarget = function ()
+	Cnds.prototype.IsEnabled = function ()
 	{
-		return !!this.currentTarget;
-	};
-	Cnds.prototype.OnShoot = function ()
-	{
-		return true;
-	};
-	Cnds.prototype.OnTargetAcquired = function ()
-	{
-		return true;
+		return this.inst.extra["jumpthruEnabled"];
 	};
 	behaviorProto.cnds = new Cnds();
 	function Acts() {};
-	Acts.prototype.AcquireTarget = function (obj_)
-	{
-		if (!obj_)
-			return;
-		var instances = obj_.getCurrentSol().getObjects();
-		var i, len, inst;
-		for (i = 0, len = instances.length; i < len; ++i)
-		{
-			inst = instances[i];
-			if (this.currentTarget !== inst && this.isInRange(inst))
-			{
-				this.currentTarget = inst;
-				this.speedsCount = 0;
-				this.firstTickWithTarget = true;
-				this.oldTargetX = this.currentTarget.x;
-				this.oldTargetY = this.currentTarget.y;
-				this.runtime.trigger(cr.behaviors.Turret.prototype.cnds.OnTargetAcquired, this.inst);
-				break;
-			}
-		}
-	};
-	Acts.prototype.AddTarget = function (obj_)
-	{
-		var targetTypes = this.type.targetTypes;
-		if (targetTypes.indexOf(obj_) !== -1)
-			return;
-		var i, len, t;
-		for (i = 0, len = targetTypes.length; i < len; i++)
-		{
-			t = targetTypes[i];
-			if (t.is_family && t.members.indexOf(obj_) !== -1)
-				return;
-		}
-		targetTypes.push(obj_);
-	};
-	Acts.prototype.ClearTargets = function ()
-	{
-		cr.clearArray(this.type.targetTypes);
-	};
-	Acts.prototype.UnacquireTarget = function ()
-	{
-		this.currentTarget = null;
-		this.speedsCount = 0;
-		this.firstTickWithTarget = true;
-	};
 	Acts.prototype.SetEnabled = function (e)
 	{
-		this.enabled = (e !== 0);
-	};
-	Acts.prototype.SetRange = function (r)
-	{
-		this.range = r;
-	};
-	Acts.prototype.SetRateOfFire = function (r)
-	{
-		this.rateOfFire = r;
-	};
-	Acts.prototype.SetRotate = function (r)
-	{
-		this.rotateEnabled = (r !== 0);
-	};
-	Acts.prototype.SetRotateSpeed = function (r)
-	{
-		this.rotateSpeed = cr.to_radians(r);
-	};
-	Acts.prototype.SetTargetMode = function (s)
-	{
-		this.targetMode = s;
-	};
-	Acts.prototype.SetPredictiveAim = function (s)
-	{
-		this.predictiveAim = (s !== 0);
-	};
-	Acts.prototype.SetProjectileSpeed = function (s)
-	{
-		this.projectileSpeed = s;
+		this.inst.extra["jumpthruEnabled"] = !!e;
 	};
 	behaviorProto.acts = new Acts();
-	function Exps() {};
-	Exps.prototype.TargetUID = function (ret)
-	{
-		ret.set_int(this.currentTarget ? this.currentTarget.uid : 0);
-	};
-	Exps.prototype.Range = function (ret)
-	{
-		ret.set_float(this.range);
-	};
-	Exps.prototype.RateOfFire = function (ret)
-	{
-		ret.set_float(this.rateOfFire);
-	};
-	Exps.prototype.RotateSpeed = function (ret)
-	{
-		ret.set_float(cr.to_degrees(this.rotateSpeed));
-	};
-	behaviorProto.exps = new Exps();
-}());
-;
-;
-cr.behaviors.custom = function(runtime)
-{
-	this.runtime = runtime;
-};
-(function ()
-{
-	var behaviorProto = cr.behaviors.custom.prototype;
-	behaviorProto.Type = function(behavior, objtype)
-	{
-		this.behavior = behavior;
-		this.objtype = objtype;
-		this.runtime = behavior.runtime;
-	};
-	var behtypeProto = behaviorProto.Type.prototype;
-	behtypeProto.onCreate = function()
-	{
-	};
-	behaviorProto.Instance = function(type, inst)
-	{
-		this.type = type;
-		this.behavior = type.behavior;
-		this.inst = inst;
-		this.runtime = type.runtime;
-		this.dx = 0;
-		this.dy = 0;
-		this.cancelStep = 0;
-	};
-	var behinstProto = behaviorProto.Instance.prototype;
-	behinstProto.onCreate = function()
-	{
-		this.stepMode = this.properties[0];	// 0=None, 1=Linear, 2=Horizontal then vertical, 3=Vertical then horizontal
-		this.pxPerStep = this.properties[1];
-		this.enabled = (this.properties[2] !== 0);
-	};
-	behinstProto.saveToJSON = function ()
-	{
-		return {
-			"dx": this.dx,
-			"dy": this.dy,
-			"cancelStep": this.cancelStep,
-			"enabled": this.enabled,
-			"stepMode": this.stepMode,
-			"pxPerStep": this.pxPerStep
-		};
-	};
-	behinstProto.loadFromJSON = function (o)
-	{
-		this.dx = o["dx"];
-		this.dy = o["dy"];
-		this.cancelStep = o["cancelStep"];
-		this.enabled = o["enabled"];
-		this.stepMode = o["stepMode"];
-		this.pxPerStep = o["pxPerStep"];
-	};
-	behinstProto.getSpeed = function ()
-	{
-		return Math.sqrt(this.dx * this.dx + this.dy * this.dy);
-	};
-	behinstProto.getAngle = function ()
-	{
-		return Math.atan2(this.dy, this.dx);
-	};
-	function sign(x)
-	{
-		if (x === 0)
-			return 0;
-		else if (x < 0)
-			return -1;
-		else
-			return 1;
-	};
-	behinstProto.step = function (x, y, trigmethod)
-	{
-		if (x === 0 && y === 0)
-			return;
-		var startx = this.inst.x;
-		var starty = this.inst.y;
-		var sx, sy, prog;
-		var steps = Math.round(Math.sqrt(x * x + y * y) / this.pxPerStep);
-		if (steps === 0)
-			steps = 1;
-		var i;
-		for (i = 1; i <= steps; i++)
-		{
-			prog = i / steps;
-			this.inst.x = startx + x * prog;
-			this.inst.y = starty + y * prog;
-			this.inst.set_bbox_changed();
-			this.runtime.trigger(trigmethod, this.inst);
-			if (this.cancelStep === 1)
-			{
-				i--;
-				prog = i / steps;
-				this.inst.x = startx + x * prog;
-				this.inst.y = starty + y * prog;
-				this.inst.set_bbox_changed();
-				return;
-			}
-			else if (this.cancelStep === 2)
-			{
-				return;
-			}
-		}
-	};
-	behinstProto.tick = function ()
-	{
-		var dt = this.runtime.getDt(this.inst);
-		var mx = this.dx * dt;
-		var my = this.dy * dt;
-		var i, steps;
-		if ((this.dx === 0 && this.dy === 0) || !this.enabled)
-			return;
-		this.cancelStep = 0;
-		if (this.stepMode === 0)		// none
-		{
-			this.inst.x += mx;
-			this.inst.y += my;
-		}
-		else if (this.stepMode === 1)	// linear
-		{
-			this.step(mx, my, cr.behaviors.custom.prototype.cnds.OnCMStep);
-		}
-		else if (this.stepMode === 2)	// horizontal then vertical
-		{
-			this.step(mx, 0, cr.behaviors.custom.prototype.cnds.OnCMHorizStep);
-			this.cancelStep = 0;
-			this.step(0, my, cr.behaviors.custom.prototype.cnds.OnCMVertStep);
-		}
-		else if (this.stepMode === 3)	// vertical then horizontal
-		{
-			this.step(0, my, cr.behaviors.custom.prototype.cnds.OnCMVertStep);
-			this.cancelStep = 0;
-			this.step(mx, 0, cr.behaviors.custom.prototype.cnds.OnCMHorizStep);
-		}
-		this.inst.set_bbox_changed();
-	};
-	function Cnds() {};
-	Cnds.prototype.IsMoving = function ()
-	{
-		return this.dx != 0 || this.dy != 0;
-	};
-	Cnds.prototype.CompareSpeed = function (axis, cmp, s)
-	{
-		var speed;
-		switch (axis) {
-		case 0:		speed = this.getSpeed();	break;
-		case 1:		speed = this.dx;			break;
-		case 2:		speed = this.dy;			break;
-		}
-		return cr.do_cmp(speed, cmp, s);
-	};
-	Cnds.prototype.OnCMStep = function ()
-	{
-		return true;
-	};
-	Cnds.prototype.OnCMHorizStep = function ()
-	{
-		return true;
-	};
-	Cnds.prototype.OnCMVertStep = function ()
-	{
-		return true;
-	};
-	behaviorProto.cnds = new Cnds();
-	function Acts() {};
-	Acts.prototype.Stop = function ()
-	{
-		this.dx = 0;
-		this.dy = 0;
-	};
-	Acts.prototype.Reverse = function (axis)
-	{
-		switch (axis) {
-		case 0:
-			this.dx *= -1;
-			this.dy *= -1;
-			break;
-		case 1:
-			this.dx *= -1;
-			break;
-		case 2:
-			this.dy *= -1;
-			break;
-		}
-	};
-	Acts.prototype.SetSpeed = function (axis, s)
-	{
-		var a;
-		switch (axis) {
-		case 0:
-			a = this.getAngle();
-			this.dx = Math.cos(a) * s;
-			this.dy = Math.sin(a) * s;
-			break;
-		case 1:
-			this.dx = s;
-			break;
-		case 2:
-			this.dy = s;
-			break;
-		}
-	};
-	Acts.prototype.Accelerate = function (axis, acc)
-	{
-		var dt = this.runtime.getDt(this.inst);
-		var ds = acc * dt;
-		var a;
-		switch (axis) {
-		case 0:
-			a = this.getAngle();
-			this.dx += Math.cos(a) * ds;
-			this.dy += Math.sin(a) * ds;
-			break;
-		case 1:
-			this.dx += ds;
-			break;
-		case 2:
-			this.dy += ds;
-			break;
-		}
-	};
-	Acts.prototype.AccelerateAngle = function (acc, a_)
-	{
-		var dt = this.runtime.getDt(this.inst);
-		var ds = acc * dt;
-		var a = cr.to_radians(a_);
-		this.dx += Math.cos(a) * ds;
-		this.dy += Math.sin(a) * ds;
-	};
-	Acts.prototype.AcceleratePos = function (acc, x, y)
-	{
-		var dt = this.runtime.getDt(this.inst);
-		var ds = acc * dt;
-		var a = Math.atan2(y - this.inst.y, x - this.inst.x);
-		this.dx += Math.cos(a) * ds;
-		this.dy += Math.sin(a) * ds;
-	};
-	Acts.prototype.SetAngleOfMotion = function (a_)
-	{
-		var a = cr.to_radians(a_);
-		var s = this.getSpeed();
-		this.dx = Math.cos(a) * s;
-		this.dy = Math.sin(a) * s;
-	};
-	Acts.prototype.RotateAngleOfMotionClockwise = function (a_)
-	{
-		var a = this.getAngle() + cr.to_radians(a_);
-		var s = this.getSpeed();
-		this.dx = Math.cos(a) * s;
-		this.dy = Math.sin(a) * s;
-	};
-	Acts.prototype.RotateAngleOfMotionCounterClockwise = function (a_)
-	{
-		var a = this.getAngle() - cr.to_radians(a_);
-		var s = this.getSpeed();
-		this.dx = Math.cos(a) * s;
-		this.dy = Math.sin(a) * s;
-	};
-	Acts.prototype.StopStepping = function (mode)
-	{
-		this.cancelStep = mode + 1;
-	};
-	Acts.prototype.PushOutSolid = function (mode)
-	{
-		var a, ux, uy;
-		switch (mode) {
-		case 0:
-			a = this.getAngle();
-			ux = Math.cos(a);
-			uy = Math.sin(a);
-			this.runtime.pushOutSolid(this.inst, -ux, -uy, Math.max(this.getSpeed() * 3, 100));
-			break;
-		case 1:
-			this.runtime.pushOutSolidNearest(this.inst);
-			break;
-		case 2:
-			this.runtime.pushOutSolid(this.inst, 0, -1, Math.max(Math.abs(this.dy) * 3, 100));
-			break;
-		case 3:
-			this.runtime.pushOutSolid(this.inst, 0, 1, Math.max(Math.abs(this.dy) * 3, 100));
-			break;
-		case 4:
-			this.runtime.pushOutSolid(this.inst, -1, 0, Math.max(Math.abs(this.dx) * 3, 100));
-			break;
-		case 5:
-			this.runtime.pushOutSolid(this.inst, 1, 0, Math.max(Math.abs(this.dx) * 3, 100));
-			break;
-		}
-	};
-	Acts.prototype.PushOutSolidAngle = function (a)
-	{
-		a = cr.to_radians(a);
-		var ux = Math.cos(a);
-		var uy = Math.sin(a);
-		this.runtime.pushOutSolid(this.inst, ux, uy, Math.max(this.getSpeed() * 3, 100));
-	};
-	Acts.prototype.SetEnabled = function (en)
-	{
-		this.enabled = (en === 1);
-	};
-	behaviorProto.acts = new Acts();
-	function Exps() {};
-	Exps.prototype.Speed = function (ret)
-	{
-		ret.set_float(this.getSpeed());
-	};
-	Exps.prototype.MovingAngle = function (ret)
-	{
-		ret.set_float(cr.to_degrees(this.getAngle()));
-	};
-	Exps.prototype.dx = function (ret)
-	{
-		ret.set_float(this.dx);
-	};
-	Exps.prototype.dy = function (ret)
-	{
-		ret.set_float(this.dy);
-	};
-	behaviorProto.exps = new Exps();
 }());
 ;
 ;
@@ -25542,105 +22616,75 @@ cr.behaviors.solid = function(runtime)
 	behaviorProto.acts = new Acts();
 }());
 cr.getObjectRefTable = function () { return [
-	cr.plugins_.AirConsole2,
-	cr.plugins_.GoogleAnalytics_ST,
-	cr.plugins_.gamepad,
 	cr.plugins_.Keyboard,
 	cr.plugins_.Function,
+	cr.plugins_.Mouse,
 	cr.plugins_.Particles,
-	cr.plugins_.Spritefont2,
-	cr.plugins_.Text,
-	cr.plugins_.Sprite,
 	cr.plugins_.TiledBg,
+	cr.plugins_.Sprite,
 	cr.plugins_.Tilemap,
 	cr.plugins_.Touch,
 	cr.behaviors.solid,
-	cr.behaviors.Sin,
-	cr.behaviors.Bullet,
-	cr.behaviors.Rotate,
 	cr.behaviors.Platform,
-	cr.behaviors.LOS,
-	cr.behaviors.Fade,
-	cr.behaviors.custom,
-	cr.behaviors.Turret,
 	cr.behaviors.scrollto,
+	cr.behaviors.Bullet,
+	cr.behaviors.Sin,
+	cr.behaviors.jumpthru,
+	cr.behaviors.Rotate,
+	cr.behaviors.Fade,
+	cr.behaviors.LOS,
 	cr.system_object.prototype.cnds.OnLayoutStart,
-	cr.plugins_.AirConsole2.prototype.acts.GameReady,
-	cr.plugins_.Touch.prototype.cnds.OnTapGesture,
-	cr.system_object.prototype.acts.GoToLayout,
-	cr.plugins_.Keyboard.prototype.cnds.OnKey,
-	cr.plugins_.gamepad.prototype.cnds.OnButtonDown,
-	cr.plugins_.AirConsole2.prototype.cnds.OnMessageIs,
-	cr.plugins_.Sprite.prototype.cnds.OnCollision,
 	cr.plugins_.Function.prototype.acts.CallFunction,
-	cr.plugins_.GoogleAnalytics_ST.prototype.acts.TrackEvent,
+	cr.system_object.prototype.acts.SetLayoutScale,
 	cr.system_object.prototype.cnds.IsGroupActive,
-	cr.plugins_.Sprite.prototype.cnds.IsOverlapping,
-	cr.plugins_.Sprite.prototype.acts.SetAnim,
-	cr.system_object.prototype.cnds.Else,
-	cr.plugins_.Text.prototype.acts.SetText,
-	cr.plugins_.Touch.prototype.cnds.OnTouchObject,
+	cr.plugins_.Keyboard.prototype.cnds.IsKeyDown,
+	cr.behaviors.Platform.prototype.acts.SimulateControl,
+	cr.plugins_.Sprite.prototype.acts.SetMirrored,
+	cr.system_object.prototype.acts.SetVar,
 	cr.behaviors.Platform.prototype.cnds.IsOnFloor,
+	cr.behaviors.Platform.prototype.cnds.IsMoving,
+	cr.plugins_.Sprite.prototype.acts.SetAnim,
+	cr.plugins_.Sprite.prototype.acts.SetAnimSpeed,
+	cr.behaviors.Platform.prototype.cnds.OnLand,
+	cr.plugins_.Sprite.prototype.acts.Spawn,
+	cr.plugins_.Keyboard.prototype.cnds.OnKey,
 	cr.system_object.prototype.cnds.CompareVar,
 	cr.behaviors.Platform.prototype.acts.SetVectorY,
 	cr.system_object.prototype.acts.SubVar,
-	cr.behaviors.Platform.prototype.acts.SimulateControl,
-	cr.system_object.prototype.acts.SetVar,
-	cr.plugins_.Keyboard.prototype.cnds.IsKeyDown,
-	cr.plugins_.Touch.prototype.cnds.IsTouchingObject,
-	cr.plugins_.gamepad.prototype.cnds.CompareAxis,
-	cr.plugins_.Sprite.prototype.acts.SetMirrored,
-	cr.behaviors.Platform.prototype.cnds.IsFalling,
 	cr.behaviors.Platform.prototype.cnds.IsJumping,
-	cr.behaviors.Platform.prototype.cnds.IsMoving,
-	cr.plugins_.Sprite.prototype.acts.SetAnimSpeed,
-	cr.plugins_.gamepad.prototype.cnds.IsButtonDown,
+	cr.behaviors.Platform.prototype.cnds.IsFalling,
+	cr.plugins_.Sprite.prototype.cnds.OnAnimFinished,
+	cr.plugins_.Sprite.prototype.acts.Destroy,
+	cr.plugins_.Sprite.prototype.cnds.OnCreated,
+	cr.system_object.prototype.acts.Wait,
+	cr.plugins_.Function.prototype.cnds.OnFunction,
+	cr.behaviors.Bullet.prototype.acts.SetAngleOfMotion,
 	cr.system_object.prototype.cnds.EveryTick,
 	cr.plugins_.Sprite.prototype.acts.SetPos,
 	cr.system_object.prototype.exps.lerp,
 	cr.plugins_.Sprite.prototype.exps.X,
 	cr.plugins_.Sprite.prototype.exps.Y,
-	cr.behaviors.Platform.prototype.cnds.OnLand,
-	cr.plugins_.Sprite.prototype.acts.Spawn,
-	cr.plugins_.Function.prototype.cnds.OnFunction,
-	cr.plugins_.Particles.prototype.acts.SetPosToObject,
 	cr.system_object.prototype.acts.CreateObject,
-	cr.plugins_.Sprite.prototype.cnds.IsBoolInstanceVarSet,
-	cr.behaviors.Bullet.prototype.acts.SetGravity,
-	cr.plugins_.Sprite.prototype.acts.Destroy,
-	cr.plugins_.Sprite.prototype.acts.ToggleBoolInstanceVar,
-	cr.plugins_.Sprite.prototype.acts.SetAnimFrame,
-	cr.plugins_.Sprite.prototype.acts.SetBoolInstanceVar,
+	cr.plugins_.Sprite.prototype.acts.SetPosToObject,
+	cr.system_object.prototype.acts.RestartLayout,
+	cr.plugins_.Sprite.prototype.cnds.IsOverlapping,
+	cr.behaviors.Platform.prototype.acts.SetEnabled,
+	cr.system_object.prototype.exps.layoutscale,
+	cr.system_object.prototype.exps.dt,
+	cr.system_object.prototype.acts.GoToLayout,
+	cr.plugins_.Sprite.prototype.cnds.OnCollision,
+	cr.behaviors.Sin.prototype.acts.SetActive,
+	cr.plugins_.Sprite.prototype.cnds.IsOverlappingOffset,
+	cr.system_object.prototype.cnds.OnLoadFinished,
 	cr.behaviors.LOS.prototype.cnds.HasLOSToObject,
 	cr.plugins_.Sprite.prototype.cnds.CompareX,
-	cr.system_object.prototype.acts.Wait,
 	cr.plugins_.Sprite.prototype.acts.SetInstanceVar,
+	cr.behaviors.LOS.prototype.acts.SetCone,
 	cr.plugins_.Sprite.prototype.cnds.CompareInstanceVar,
+	cr.system_object.prototype.cnds.Else,
 	cr.behaviors.Platform.prototype.acts.SetMaxSpeed,
-	cr.plugins_.Sprite.prototype.acts.SetHeight,
-	cr.plugins_.Sprite.prototype.exps.Height,
+	cr.plugins_.Sprite.prototype.cnds.IsAnimPlaying,
 	cr.plugins_.TiledBg.prototype.acts.Destroy,
-	cr.plugins_.Text.prototype.acts.SetPos,
-	cr.behaviors.Fade.prototype.acts.StartFade,
-	cr.plugins_.Particles.prototype.acts.SetPos,
-	cr.plugins_.Sprite.prototype.cnds.CompareFrame,
-	cr.behaviors.scrollto.prototype.acts.Shake,
-	cr.plugins_.Sprite.prototype.acts.SetAnimRepeatToFrame,
-	cr.plugins_.Sprite.prototype.acts.StartAnim,
-	cr.plugins_.TiledBg.prototype.acts.SetPosToObject,
-	cr.plugins_.Sprite.prototype.acts.SetPosToObject,
-	cr.behaviors.Bullet.prototype.acts.SetSpeed,
-	cr.system_object.prototype.cnds.OnLoadFinished,
-	cr.plugins_.Sprite.prototype.cnds.OnAnimFinished,
-	cr.plugins_.Sprite.prototype.cnds.OnDestroyed,
-	cr.plugins_.TiledBg.prototype.acts.SetVisible,
-	cr.behaviors.custom.prototype.acts.SetSpeed,
-	cr.system_object.prototype.cnds.Every,
-	cr.system_object.prototype.exps.random,
-	cr.behaviors.Rotate.prototype.acts.SetSpeed,
-	cr.behaviors.Sin.prototype.acts.SetActive,
-	cr.behaviors.custom.prototype.acts.AccelerateAngle,
-	cr.behaviors.custom.prototype.acts.Stop,
-	cr.plugins_.TiledBg.prototype.exps.X,
-	cr.plugins_.TiledBg.prototype.exps.Y
+	cr.plugins_.Touch.prototype.cnds.OnTouchObject,
+	cr.system_object.prototype.cnds.Every
 ];};

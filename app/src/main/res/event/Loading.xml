@@ -3,12 +3,12 @@
     <!-- TUSONIC -->
     <name>Loading</name>
     <events>
-        <event-block sid="328561397148372">
+        <event-block sid="262081045344751">
             <conditions>
-                <condition id="-25" name="On loader layout complete" sid="825866383219613" type="System" />
+                <condition id="-25" name="On loader layout complete" sid="601677884283929" type="System" />
             </conditions>
             <actions>
-                <action id="-2" name="Go to layout" sid="771351991774063" type="System">
+                <action id="-2" name="Go to layout" sid="956304845028809" type="System">
                     <param id="0" name="Layout">Menu</param>
                 </action>
             </actions>

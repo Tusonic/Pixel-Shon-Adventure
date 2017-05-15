@@ -3,185 +3,196 @@
     <!-- TUSONIC -->
     <name>Menu</name>
     <events>
-        <event-block sid="966852232961473">
+        <variable constant="0" name="ShonMenu" sid="951337288933903" static="0" type="number">0</variable>
+        <event-block sid="377799452453148">
             <conditions>
-                <condition id="-2" name="On start of layout" sid="296393986754954" type="System" />
-            </conditions>
-            <actions>
-                <action id="0" name="Game ready" sid="392826959439725" type="AirConsole2" />
-            </actions>
-        </event-block>
-        <include>AirConsole</include>
-        <event-block sid="377504197893586">
-            <conditions>
-                <condition id="14" name="On tap" sid="651544823369899" type="Touch" />
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="591334529631464" type="System">
-                    <param id="0" name="Layout">Select</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="996152894310818">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="470315290624319" type="Keyboard">
-                    <param id="0" name="Key">32 (Space)</param>
+                <condition id="3" name="On touched object" sid="672259648346541" type="Touch">
+                    <param id="0" name="Object">start</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-2" name="Go to layout" sid="783011832764800" type="System">
-                    <param id="0" name="Layout">Select</param>
+                <action id="4" name="Set animation" sid="121047802435205" type="Portal">
+                    <param id="0" name="Animation">&quot;OPEN&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="996860542793766" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="974849842252743" type="System">
+                    <param id="0" name="Layout">Level1-1</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="499269312610380">
+        <event-block sid="315574794217214">
             <conditions>
-                <condition id="0" name="On key pressed" sid="259503022065088" type="Keyboard">
-                    <param id="0" name="Key">87 (W)</param>
+                <condition id="-14" name="Compare variable" sid="959899764496528" type="System">
+                    <param id="0" name="Variable">ShonMenu</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-2" name="Go to layout" sid="329720291432812" type="System">
-                    <param id="0" name="Layout">Select</param>
+                <action behavior="Platform" id="7" name="Simulate control" sid="401535930887457" type="ShonMenu">
+                    <param id="0" name="Control">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="996966987729097" type="ShonMenu">
+                    <param id="0" name="Animation">&quot;ID_RUN&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="6" name="Set speed" sid="292908124284763" type="ShonMenu">
+                    <param id="0" name="Speed">13</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="100415585919756" type="ShonMenu">
+                    <param id="0" name="State">1</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="941381414989228">
+        <event-block sid="921380756329319">
             <conditions>
-                <condition id="0" name="On key pressed" sid="914316230621265" type="Keyboard">
-                    <param id="0" name="Key">83 (S)</param>
+                <condition id="-14" name="Compare variable" sid="305512652667580" type="System">
+                    <param id="0" name="Variable">ShonMenu</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-2" name="Go to layout" sid="241833966481804" type="System">
-                    <param id="0" name="Layout">Select</param>
+                <action behavior="Platform" id="7" name="Simulate control" sid="611604757007605" type="ShonMenu">
+                    <param id="0" name="Control">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="101619401530864" type="ShonMenu">
+                    <param id="0" name="Animation">&quot;ID_RUN&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="6" name="Set speed" sid="927067280357149" type="ShonMenu">
+                    <param id="0" name="Speed">13</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="547107709284050" type="ShonMenu">
+                    <param id="0" name="State">0</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="747202148211434">
+        <event-block sid="860193947448324">
             <conditions>
-                <condition id="0" name="On key pressed" sid="564153112953960" type="Keyboard">
-                    <param id="0" name="Key">65 (A)</param>
+                <condition id="-14" name="Compare variable" sid="982259154008686" type="System">
+                    <param id="0" name="Variable">ShonMenu</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-2" name="Go to layout" sid="450905468112529" type="System">
-                    <param id="0" name="Layout">Select</param>
+                <action id="4" name="Set animation" sid="133710942306324" type="ShonMenu">
+                    <param id="0" name="Animation">&quot;ID_IDLE&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="6" name="Set speed" sid="112973487195871" type="ShonMenu">
+                    <param id="0" name="Speed">8</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="163546327442028" type="ShonMenu">
+                    <param id="0" name="State">0</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="717802929822397">
+        <event-block sid="267924500198743">
             <conditions>
-                <condition id="0" name="On key pressed" sid="643400265223014" type="Keyboard">
-                    <param id="0" name="Key">68 (D)</param>
+                <condition id="-14" name="Compare variable" sid="222535730196099" type="System">
+                    <param id="0" name="Variable">ShonMenu</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-2" name="Go to layout" sid="859311168333290" type="System">
-                    <param id="0" name="Layout">Select</param>
+                <action id="4" name="Set animation" sid="377089439597683" type="ShonMenu">
+                    <param id="0" name="Animation">&quot;ID_IDLE&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="6" name="Set speed" sid="221439817843800" type="ShonMenu">
+                    <param id="0" name="Speed">8</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="401864825260604" type="ShonMenu">
+                    <param id="0" name="State">1</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="242941129388527">
+        <event-block sid="291118791640414">
             <conditions>
-                <condition id="0" name="On key pressed" sid="356332659815834" type="Keyboard">
-                    <param id="0" name="Key">66 (B)</param>
-                </condition>
+                <condition id="-2" name="On start of layout" sid="232355567327622" type="System" />
             </conditions>
             <actions>
-                <action id="-2" name="Go to layout" sid="135033586432123" type="System">
-                    <param id="0" name="Layout">Select</param>
+                <action id="-9" name="Set value" sid="874787002336428" type="System">
+                    <param id="0" name="Variable">ShonMenu</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="-16" name="Wait" sid="354124185386901" type="System">
+                    <param id="0" name="Seconds">12</param>
+                </action>
+                <action id="-9" name="Set value" sid="133265192080136" type="System">
+                    <param id="0" name="Variable">ShonMenu</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="218759662091041" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-9" name="Set value" sid="851946733221335" type="System">
+                    <param id="0" name="Variable">ShonMenu</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="-16" name="Wait" sid="788178659996840" type="System">
+                    <param id="0" name="Seconds">8</param>
+                </action>
+                <action id="-9" name="Set value" sid="726060982285618" type="System">
+                    <param id="0" name="Variable">ShonMenu</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="648963309485160" type="System">
+                    <param id="0" name="Seconds">5</param>
+                </action>
+                <action id="-9" name="Set value" sid="474346834110842" type="System">
+                    <param id="0" name="Variable">ShonMenu</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="-16" name="Wait" sid="663454113065819" type="System">
+                    <param id="0" name="Seconds">8</param>
+                </action>
+                <action id="-9" name="Set value" sid="203686456246313" type="System">
+                    <param id="0" name="Variable">ShonMenu</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="898928646349522" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-9" name="Set value" sid="229249517301225" type="System">
+                    <param id="0" name="Variable">ShonMenu</param>
+                    <param id="1" name="Value">3</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="716134082702289">
+        <event-block sid="908324930943538">
             <conditions>
-                <condition id="6" name="On button pressed" sid="166692047879201" type="Gamepad">
-                    <param id="0" name="Gamepad">0</param>
-                    <param id="1" name="Button">0</param>
-                </condition>
+                <condition id="-1" name="Every tick" sid="157931839593079" type="System" />
             </conditions>
             <actions>
-                <action id="-2" name="Go to layout" sid="130359281262583" type="System">
-                    <param id="0" name="Layout">Select</param>
+                <action id="4" name="Set animation" sid="525590180006577" type="item7">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="6" name="Set speed" sid="163101026034255" type="item7">
+                    <param id="0" name="Speed">5</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="773502191696880">
+        <event-block sid="187810192663226">
             <conditions>
-                <condition id="6" name="On button pressed" sid="990413840200229" type="Gamepad">
-                    <param id="0" name="Gamepad">0</param>
-                    <param id="1" name="Button">1</param>
+                <condition id="-6" name="Every X seconds" sid="749561440655691" type="System">
+                    <param id="0" name="Interval (seconds)">10</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-2" name="Go to layout" sid="920975554030859" type="System">
-                    <param id="0" name="Layout">Select</param>
+                <action id="4" name="Set animation" sid="902222717565530" type="item9">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
-            </actions>
-        </event-block>
-        <event-block sid="210464839648577">
-            <conditions>
-                <condition id="6" name="On button pressed" sid="963992768982413" type="Gamepad">
-                    <param id="0" name="Gamepad">0</param>
-                    <param id="1" name="Button">2</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="452119319356476" type="System">
-                    <param id="0" name="Layout">Select</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="305524670476448">
-            <conditions>
-                <condition id="6" name="On button pressed" sid="826618000813232" type="Gamepad">
-                    <param id="0" name="Gamepad">0</param>
-                    <param id="1" name="Button">3</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="191018424795634" type="System">
-                    <param id="0" name="Layout">Select</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="236391942721694">
-            <conditions>
-                <condition id="6" name="On button pressed" sid="560766874689825" type="Gamepad">
-                    <param id="0" name="Gamepad">0</param>
-                    <param id="1" name="Button">9</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="861721877268221" type="System">
-                    <param id="0" name="Layout">Select</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="523397180706530">
-            <conditions>
-                <condition id="7" name="On message is" sid="405447776686968" type="AirConsole2">
-                    <param id="0" name="Property">&quot;message&quot;</param>
-                    <param id="1" name="Property value">&quot;a&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="939195182898677" type="System">
-                    <param id="0" name="Layout">Select</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="714362962187364">
-            <conditions>
-                <condition id="7" name="On message is" sid="300964039376365" type="AirConsole2">
-                    <param id="0" name="Property">&quot;message&quot;</param>
-                    <param id="1" name="Property value">&quot;b&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="743539445704469" type="System">
-                    <param id="0" name="Layout">Select</param>
+                <action id="6" name="Set speed" sid="388457150820626" type="item9">
+                    <param id="0" name="Speed">5</param>
                 </action>
             </actions>
         </event-block>

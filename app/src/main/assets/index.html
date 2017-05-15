@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html manifest="offline.appcache">
 <head>
     <meta charset="UTF-8" />
@@ -30,11 +30,8 @@
 			-ms-touch-action: none;
 		}
     </style>
-	
-
 </head> 
- 
-<body> 
+ <body> 
 	<div id="fb-root"></div>
 	<div id="c2canvasdiv">
 
@@ -49,15 +46,13 @@
 	</div>
 
 	<script src="jquery-2.1.1.min.js"></script>
-	<script src="https://www.airconsole.com/api/airconsole-1.7.0.js"></script>
-	<script src="ga_init.js"></script>
 	<script src="c2runtime.js"></script>
 
     <script>
-	
+
 		jQuery(document).ready(function ()
 		{			
-		
+	
 			cr_createRuntime("c2canvas");
 		});
 		
@@ -78,11 +73,12 @@
 		{
 			console.warn("Failed to register service worker: ", e);
 		};
+		
 
 		window.C2_RegisterSW = function C2_RegisterSW()
 		{
 			if (!navigator.serviceWorker)
-				return;
+				return;		
 			
 			try {
 				navigator.serviceWorker.register("sw.js", { scope: "./" })
