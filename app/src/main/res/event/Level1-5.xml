@@ -3,6 +3,7 @@
     <!-- TUSONIC -->
     <name>Level1-5</name>
     <events>
+        <include>Control</include>
         <include>Trap</include>
         <include>Player</include>
         <event-group description="Next Level" sid="225378892637463" title="Portal5">

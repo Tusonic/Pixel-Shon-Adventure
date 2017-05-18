@@ -22616,14 +22616,14 @@ cr.behaviors.solid = function(runtime)
 	behaviorProto.acts = new Acts();
 }());
 cr.getObjectRefTable = function () { return [
-	cr.plugins_.Keyboard,
 	cr.plugins_.Function,
+	cr.plugins_.Keyboard,
 	cr.plugins_.Mouse,
-	cr.plugins_.Particles,
-	cr.plugins_.TiledBg,
-	cr.plugins_.Sprite,
 	cr.plugins_.Tilemap,
+	cr.plugins_.Sprite,
+	cr.plugins_.Particles,
 	cr.plugins_.Touch,
+	cr.plugins_.TiledBg,
 	cr.behaviors.solid,
 	cr.behaviors.Platform,
 	cr.behaviors.scrollto,
@@ -22638,6 +22638,7 @@ cr.getObjectRefTable = function () { return [
 	cr.system_object.prototype.acts.SetLayoutScale,
 	cr.system_object.prototype.cnds.IsGroupActive,
 	cr.plugins_.Keyboard.prototype.cnds.IsKeyDown,
+	cr.plugins_.Touch.prototype.cnds.IsTouchingObject,
 	cr.behaviors.Platform.prototype.acts.SimulateControl,
 	cr.plugins_.Sprite.prototype.acts.SetMirrored,
 	cr.system_object.prototype.acts.SetVar,
@@ -22648,6 +22649,7 @@ cr.getObjectRefTable = function () { return [
 	cr.behaviors.Platform.prototype.cnds.OnLand,
 	cr.plugins_.Sprite.prototype.acts.Spawn,
 	cr.plugins_.Keyboard.prototype.cnds.OnKey,
+	cr.plugins_.Touch.prototype.cnds.OnTouchObject,
 	cr.system_object.prototype.cnds.CompareVar,
 	cr.behaviors.Platform.prototype.acts.SetVectorY,
 	cr.system_object.prototype.acts.SubVar,
@@ -22685,6 +22687,5 @@ cr.getObjectRefTable = function () { return [
 	cr.behaviors.Platform.prototype.acts.SetMaxSpeed,
 	cr.plugins_.Sprite.prototype.cnds.IsAnimPlaying,
 	cr.plugins_.TiledBg.prototype.acts.Destroy,
-	cr.plugins_.Touch.prototype.cnds.OnTouchObject,
 	cr.system_object.prototype.cnds.Every
 ];};

@@ -29,6 +29,9 @@
                         <condition id="2" name="Key is down" sid="278714125572125" type="Keyboard">
                             <param id="0" name="Key">37 (Left arrow)</param>
                         </condition>
+                        <condition id="4" name="Is touching object" sid="652166217703822" type="Touch">
+                            <param id="0" name="Object">L</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action behavior="Platform" id="7" name="Simulate control" sid="300771040111928" type="Shon">
@@ -50,6 +53,9 @@
                         </condition>
                         <condition id="2" name="Key is down" sid="853025069731503" type="Keyboard">
                             <param id="0" name="Key">39 (Right arrow)</param>
+                        </condition>
+                        <condition id="4" name="Is touching object" sid="106757962793110" type="Touch">
+                            <param id="0" name="Object">R</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -94,6 +100,9 @@
                 <event-block sid="702104175843854">
                     <conditions>
                         <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="689806395098601" type="Shon" />
+                        <condition id="4" inverted="1" name="Is touching object" sid="677122648345234" type="Touch">
+                            <param id="0" name="Object">A</param>
+                        </condition>
                         <condition id="2" inverted="1" name="Key is down" sid="232359427127540" type="Keyboard">
                             <param id="0" name="Key">66 (B)</param>
                         </condition>
@@ -131,6 +140,9 @@
                         </condition>
                         <condition id="0" name="On key pressed" sid="326001706581196" type="Keyboard">
                             <param id="0" name="Key">87 (W)</param>
+                        </condition>
+                        <condition id="3" name="On touched object" sid="557262850893552" type="Touch">
+                            <param id="0" name="Object">B</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -210,6 +222,9 @@
                     <conditions>
                         <condition id="0" name="On key pressed" sid="388455151714238" type="Keyboard">
                             <param id="0" name="Key">66 (B)</param>
+                        </condition>
+                        <condition id="3" name="On touched object" sid="429804721701272" type="Touch">
+                            <param id="0" name="Object">A</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -328,13 +343,13 @@
                         <action id="-9" name="Destroy" sid="682162398076060" type="Key2" />
                         <action id="-3" name="Create object" sid="359661977061303" type="System">
                             <param id="0" name="Object to create">ShonDeath</param>
-                            <param id="1" name="Layer">&quot;Player&quot;</param>
+                            <param id="1" name="Layer">&quot;Screen&quot;</param>
                             <param id="2" name="X">Shon.X</param>
                             <param id="3" name="Y">Shon.Y</param>
                         </action>
                         <action id="-3" name="Create object" sid="219710092611152" type="System">
                             <param id="0" name="Object to create">ShonDeathScreen</param>
-                            <param id="1" name="Layer">&quot;Control&quot;</param>
+                            <param id="1" name="Layer">&quot;Screen&quot;</param>
                             <param id="2" name="X">0</param>
                             <param id="3" name="Y">-300</param>
                         </action>
@@ -363,7 +378,7 @@
                     <actions>
                         <action id="-3" name="Create object" sid="744501616878112" type="System">
                             <param id="0" name="Object to create">ShonStartScreen</param>
-                            <param id="1" name="Layer">&quot;Control&quot;</param>
+                            <param id="1" name="Layer">&quot;Screen&quot;</param>
                             <param id="2" name="X">0</param>
                             <param id="3" name="Y">-300</param>
                         </action>
@@ -375,5 +390,9 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="146606937395775">
+            <conditions />
+            <actions />
+        </event-block>
     </events>
 </c2eventsheet>

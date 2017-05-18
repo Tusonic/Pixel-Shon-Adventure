@@ -3,6 +3,7 @@
     <!-- TUSONIC -->
     <name>Level1-3</name>
     <events>
+        <include>Control</include>
         <include>Enemy</include>
         <include>Trap</include>
         <include>Player</include>
