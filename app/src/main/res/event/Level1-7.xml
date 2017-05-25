@@ -2,5 +2,8 @@
 <c2eventsheet>
     <!-- TUSONIC -->
     <name>Level1-7</name>
-    <events />
+    <events>
+        <include>Player</include>
+        <include>Control</include>
+    </events>
 </c2eventsheet>
