@@ -13,7 +13,7 @@
                 <event-block sid="831927369361644">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="806201370438052" type="Shon">
-                            <param id="0" name="Object">TiledBackground</param>
+                            <param id="0" name="Object">PortalCheck</param>
                         </condition>
                     </conditions>
                     <actions>

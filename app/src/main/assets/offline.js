@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1495138225,
+	"version": 1495921540,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -19,7 +19,7 @@
 		"images/shonatack-sheet2.png",
 		"images/portal-sheet0.png",
 		"images/portalopen.png",
-		"images/tiledbackground.png",
+		"images/portalcheck.png",
 		"images/trap11-sheet0.png",
 		"images/trap12-sheet0.png",
 		"images/trap13-sheet0.png",

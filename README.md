@@ -15,7 +15,7 @@ ___
 - [x] Level 1-4 
 - [x] Level 1-5 
 - [x] Level 1-6 
-- [ ] Level 1-7
+- [x] Level 1-7
 - [ ] Level 1-8 (BOSS) 
 
 ### Level (Level 2)

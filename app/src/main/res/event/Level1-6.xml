@@ -13,7 +13,7 @@
                 <event-block sid="281903055453910">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="257940970789629" type="Shon">
-                            <param id="0" name="Object">TiledBackground</param>
+                            <param id="0" name="Object">PortalCheck</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -21,7 +21,7 @@
                             <param id="0" name="Animation">&quot;OPEN&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="273789504735894" type="TiledBackground" />
+                        <action id="-9" name="Destroy" sid="273789504735894" type="PortalCheck" />
                     </actions>
                 </event-block>
                 <event-block sid="653046848026253">
@@ -45,7 +45,7 @@
                             <param id="0" name="Seconds">0.5</param>
                         </action>
                         <action id="-2" name="Go to layout" sid="846171038727081" type="System">
-                            <param id="0" name="Layout">Level1-6</param>
+                            <param id="0" name="Layout">Level1-7</param>
                         </action>
                     </actions>
                 </event-block>

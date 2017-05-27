@@ -202,6 +202,19 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="127929295273528">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="841199404724340" type="Shon">
+                            <param id="0" name="Object">Trap43</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="615871964840929" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
     </events>

@@ -3,7 +3,51 @@
     <!-- TUSONIC -->
     <name>Level1-7</name>
     <events>
+        <include>Trap</include>
         <include>Player</include>
         <include>Control</include>
+        <event-group description="Next Level" sid="925315733176067" title="Portal7">
+            <sub-events>
+                <event-block sid="161257743672157">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="884193373501263" type="Shon">
+                            <param id="0" name="Object">PortalCheck</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="884021475455953" type="Portal">
+                            <param id="0" name="Animation">&quot;OPEN&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="372687756836934" type="PortalCheck" />
+                    </actions>
+                </event-block>
+                <event-block sid="142479741261421">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="367242233902060" type="Shon">
+                            <param id="0" name="Object">PortalOpen</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="801540274097211" type="Shon">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="908282780478586" type="Shon">
+                            <param id="0" name="Animation">&quot;ID_IDLE&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-20" name="Set layout scale" sid="385792436657576" type="System">
+                            <param id="0" name="Scale">lerp(LayoutScale, 2.0, 6*dt)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="575619044477330" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="172124442800610" type="System">
+                            <param id="0" name="Layout">Level1-7</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
