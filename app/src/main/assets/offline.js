@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1495921540,
+	"version": 1496597433,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -9,6 +9,7 @@
 		"images/tilemap3.png",
 		"images/tilemap5.png",
 		"images/dark.png",
+		"images/tilemap9.png",
 		"images/shon-sheet0.png",
 		"images/shon-sheet1.png",
 		"images/shon-sheet2.png",
@@ -80,6 +81,7 @@
 		"icon-114.png",
 		"icon-128.png",
 		"icon-256.png",
-		"loading-logo.png"
+		"loading-logo.png",
+		"ga_init.js"
 	]
 }

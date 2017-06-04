@@ -15314,6 +15314,96 @@ cr.plugins_.Function = function(runtime)
 }());
 ;
 ;
+cr.plugins_.GoogleAnalytics_ST = function(runtime)
+{
+	this.runtime = runtime;
+};
+(function ()
+{
+	var pluginProto = cr.plugins_.GoogleAnalytics_ST.prototype;
+	pluginProto.Type = function(plugin)
+	{
+		this.plugin = plugin;
+		this.runtime = plugin.runtime;
+	};
+	var typeProto = pluginProto.Type.prototype;
+	typeProto.onCreate = function()
+	{
+		if( !this.runtime.isCocoonJs )
+			return;
+	};
+	pluginProto.Instance = function(type)
+	{
+		this.type = type;
+		this.runtime = type.runtime;
+	};
+	var instanceProto = pluginProto.Instance.prototype;
+	instanceProto.onCreate = function()
+	{
+		this.timingEvents = {};
+		if( this.properties[0] == "" || this.properties[0] == "0" )
+			alert( "Please enter your Google Analytics Tracking ID in Google Analytic Object's properties for Google Analytics to work!" );
+		ga( 'create', this.properties[0], 'auto' );
+		ga( 'send', 'pageview' );
+	};
+	instanceProto.onDestroy = function ()
+	{
+	};
+	instanceProto.saveToJSON = function ()
+	{
+		return {
+		};
+	};
+	instanceProto.loadFromJSON = function (o)
+	{
+	};
+	instanceProto.draw = function(ctx)
+	{
+	};
+	instanceProto.drawGL = function (glw)
+	{
+	};
+	function Cnds() {};
+	pluginProto.cnds = new Cnds();
+	function Acts() {};
+	Acts.prototype.TrackEvent = function(category,action)
+	{
+		ga('send', 'event', category, action);
+	}
+	Acts.prototype.TrackEventEx = function(category,action,label,value)
+	{
+		ga('send', 'event', category, action, label, value);
+	}
+	Acts.prototype.TrackTimeStart = function(category,name)
+	{
+		var curTime = (new Date()).getTime();
+		var prop = "cat___" + category + "___name___" + name;
+		if( this.timingEvents.hasOwnProperty( prop ) )
+		{
+			ga('send', 'timing', category, name, curTime - this.timingEvents[ prop ] );
+		}
+		this.timingEvents[ prop ] = curTime;
+	}
+	Acts.prototype.TrackTimeStop = function(category,name)
+	{
+		var curTime = (new Date()).getTime();
+		var prop = "cat___" + category + "___name___" + name;
+		if( this.timingEvents.hasOwnProperty( prop ) )
+		{
+			ga('send', 'timing', category, name, curTime - this.timingEvents[ prop ] );
+			delete this.timingEvents[ prop ];
+		}
+		else
+		{
+			console.log( "Google Analytics Plugin: time tracking for " + prop + " was not started yet is now attempted to be stopped!" );
+		}
+	}
+	pluginProto.acts = new Acts();
+	function Exps() {};
+	pluginProto.exps = new Exps();
+}());
+;
+;
 cr.plugins_.Keyboard = function(runtime)
 {
 	this.runtime = runtime;
@@ -22616,14 +22706,15 @@ cr.behaviors.solid = function(runtime)
 	behaviorProto.acts = new Acts();
 }());
 cr.getObjectRefTable = function () { return [
-	cr.plugins_.Mouse,
+	cr.plugins_.GoogleAnalytics_ST,
 	cr.plugins_.Keyboard,
+	cr.plugins_.Mouse,
 	cr.plugins_.Function,
+	cr.plugins_.Touch,
 	cr.plugins_.Tilemap,
 	cr.plugins_.Sprite,
-	cr.plugins_.Touch,
-	cr.plugins_.Particles,
 	cr.plugins_.TiledBg,
+	cr.plugins_.Particles,
 	cr.behaviors.solid,
 	cr.behaviors.Platform,
 	cr.behaviors.scrollto,
@@ -22674,6 +22765,7 @@ cr.getObjectRefTable = function () { return [
 	cr.system_object.prototype.exps.layoutscale,
 	cr.system_object.prototype.exps.dt,
 	cr.system_object.prototype.acts.GoToLayout,
+	cr.plugins_.GoogleAnalytics_ST.prototype.acts.TrackEvent,
 	cr.plugins_.Sprite.prototype.cnds.OnCollision,
 	cr.behaviors.Sin.prototype.acts.SetActive,
 	cr.plugins_.Sprite.prototype.cnds.IsOverlappingOffset,

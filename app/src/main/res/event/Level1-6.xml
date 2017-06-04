@@ -51,5 +51,16 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="126292887851378">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="986194476488547" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Track Event" sid="586144172852617" type="GoogleAnalytics">
+                    <param id="0" name="Category">&quot;game&quot;</param>
+                    <param id="1" name="Name">&quot;level1-6&quot;</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

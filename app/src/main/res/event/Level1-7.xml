@@ -43,11 +43,22 @@
                             <param id="0" name="Seconds">0.5</param>
                         </action>
                         <action id="-2" name="Go to layout" sid="172124442800610" type="System">
-                            <param id="0" name="Layout">Level1-7</param>
+                            <param id="0" name="Layout">Level1-8</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="801109602933830">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="416343554350179" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Track Event" sid="963462153158775" type="GoogleAnalytics">
+                    <param id="0" name="Category">&quot;game&quot;</param>
+                    <param id="1" name="Name">&quot;level1-7&quot;</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

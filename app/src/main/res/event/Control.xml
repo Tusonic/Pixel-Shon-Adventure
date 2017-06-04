@@ -3,7 +3,7 @@
     <!-- TUSONIC -->
     <name>Control</name>
     <events>
-        <variable constant="0" name="Control" sid="297579621888022" static="0" type="number">1</variable>
+        <variable constant="0" name="Control" sid="297579621888022" static="0" type="number">0</variable>
         <event-block sid="324924205801028">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="652151005591655" type="System" />
