@@ -16,16 +16,16 @@ ___
 - [x] Level 1-5 
 - [x] Level 1-6 
 - [x] Level 1-7
-- [ ] Level 1-8 (BOSS) 
+- [x] Level 1-8
 
 ### Level (Level 2)
 ___
-- [ ] Control
-- [ ] Logic
-- [ ] Graphics
-- [ ] Design
+- [x] Control
+- [x] Logic
+- [x] Graphics
+- [x] Design
 ___
-- [ ] Level 2-1  
+- [x] Level 2-1  
 - [ ] Level 2-2 
 - [ ] Level 2-3
 - [ ] Level 2-4 
