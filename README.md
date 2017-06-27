@@ -26,8 +26,8 @@ ___
 - [x] Design
 ___
 - [x] Level 2-1  
-- [ ] Level 2-2 
-- [ ] Level 2-3
+- [x] Level 2-2 
+- [x] Level 2-3
 - [ ] Level 2-4 
 - [ ] Level 2-5 
 - [ ] Level 2-6 

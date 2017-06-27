@@ -1,14 +1,16 @@
 ﻿CACHE MANIFEST
-#1496597433
+#1498598128
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
+offlineClient.js
 images/tilemap0.png
 images/background0.png
 images/tilemap3.png
 images/tilemap5.png
 images/dark.png
 images/tilemap9.png
+images/tilemap10.png
 images/shon-sheet0.png
 images/shon-sheet1.png
 images/shon-sheet2.png
@@ -75,6 +77,18 @@ images/l-sheet0.png
 images/l-sheet1.png
 images/r-sheet0.png
 images/r-sheet1.png
+images/control_panel_cross-sheet0.png
+images/control_panel_horizontal-sheet0.png
+images/control_panel_horizontalleft-sheet0.png
+images/control_panel_horizontalright-sheet0.png
+images/control_panel_left_down-sheet0.png
+images/control_panel_left_up-sheet0.png
+images/control_panel_right_down-sheet0.png
+images/control_panel_right_up-sheet0.png
+images/control_panel_vertical-sheet0.png
+images/control_panel_vertical_down-sheet0.png
+images/control_panel_vertical_up-sheet0.png
+images/platform_left_right-sheet0.png
 icon-16.png
 icon-32.png
 icon-114.png
