@@ -322,8 +322,8 @@
                     </conditions>
                     <actions>
                         <action id="-3" name="Set position" sid="312014587617179" type="Camera">
-                            <param id="0" name="X">lerp(Self.X, Shon.X, 0.37)</param>
-                            <param id="1" name="Y">lerp(Self.Y, Shon.Y-20, 0.37)</param>
+                            <param id="0" name="X">lerp(Self.X, Shon.X, 0.10)</param>
+                            <param id="1" name="Y">lerp(Self.Y, Shon.Y-20, 0.10)</param>
                         </action>
                     </actions>
                 </event-block>

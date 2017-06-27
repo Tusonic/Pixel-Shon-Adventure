@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!-- TUSONIC -->
+    <name>Platform</name>
+    <events>
+        <event-block sid="796859199857121">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="144203959191134" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="CustomMovement" id="2" name="Set speed" sid="108368739898687" type="platform_up_down">
+                    <param id="0" name="Which">2</param>
+                    <param id="1" name="Speed">40</param>
+                </action>
+                <action behavior="CustomMovement" id="2" name="Set speed" sid="676318774336929" type="platform_left_right">
+                    <param id="0" name="Which">1</param>
+                    <param id="1" name="Speed">-40</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="479951833553829">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="450229715307250" type="platform_up_down">
+                    <param id="0" name="Object">control_panel_vertical_down</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="CustomMovement" id="2" name="Set speed" sid="558078038039024" type="platform_up_down">
+                    <param id="0" name="Which">2</param>
+                    <param id="1" name="Speed">-40</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="184060850145863">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="813330814363920" type="platform_up_down">
+                    <param id="0" name="Object">control_panel_vertical_up</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="CustomMovement" id="2" name="Set speed" sid="356650699289194" type="platform_up_down">
+                    <param id="0" name="Which">2</param>
+                    <param id="1" name="Speed">40</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="938289509356025">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="889695456282698" type="platform_left_right">
+                    <param id="0" name="Object">control_panel_horizontalright</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="CustomMovement" id="2" name="Set speed" sid="234118679711518" type="platform_left_right">
+                    <param id="0" name="Which">1</param>
+                    <param id="1" name="Speed">-40</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="858649832983503">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="603043795668560" type="platform_left_right">
+                    <param id="0" name="Object">control_panel_horizontalleft</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="CustomMovement" id="2" name="Set speed" sid="274279313302207" type="platform_left_right">
+                    <param id="0" name="Which">1</param>
+                    <param id="1" name="Speed">40</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
