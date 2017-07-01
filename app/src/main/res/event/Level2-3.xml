@@ -8,5 +8,59 @@
         <include>Platform</include>
         <include>Control</include>
         <include>Player</include>
+        <event-group description="Next Level" sid="926213877443879" title="Portal11">
+            <sub-events>
+                <event-block sid="312839876902217">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="854036259214630" type="Shon">
+                            <param id="0" name="Object">PortalCheck</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="445610403599357" type="Portal">
+                            <param id="0" name="Animation">&quot;OPEN&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="296244943407990" type="PortalCheck" />
+                    </actions>
+                </event-block>
+                <event-block sid="990197286326807">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="538093070293098" type="Shon">
+                            <param id="0" name="Object">PortalOpen</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="873114108349523" type="Shon">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="379038592157517" type="Shon">
+                            <param id="0" name="Animation">&quot;ID_IDLE&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-20" name="Set layout scale" sid="659742846727047" type="System">
+                            <param id="0" name="Scale">lerp(LayoutScale, 2.0, 6*dt)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="288650317599737" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="776854198429881" type="System">
+                            <param id="0" name="Layout">Level2-3</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="347905785286304">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="236144877843812" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Track Event" sid="563832288293488" type="GoogleAnalytics">
+                    <param id="0" name="Category">&quot;game&quot;</param>
+                    <param id="1" name="Name">&quot;level2-3&quot;</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
