@@ -28,8 +28,8 @@ ___
 - [x] Level 2-1  
 - [x] Level 2-2 
 - [x] Level 2-3
-- [ ] Level 2-4 
-- [ ] Level 2-5 
+- [x] Level 2-4 
+- [x] Level 2-5 
 - [ ] Level 2-6 
 - [ ] Level 2-7
 - [ ] Level 2-8 (BOSS) 

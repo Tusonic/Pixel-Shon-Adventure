@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1498860625,
+	"version": 1499616670,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -12,6 +12,7 @@
 		"images/dark.png",
 		"images/tilemap9.png",
 		"images/tilemap10.png",
+		"images/tilemap13.png",
 		"images/shon-sheet0.png",
 		"images/shon-sheet1.png",
 		"images/shon-sheet2.png",
@@ -33,6 +34,7 @@
 		"images/trap42-sheet0.png",
 		"images/shondeath.png",
 		"images/shondeathscreen-sheet0.png",
+		"images/shonstartscreen-sheet0.png",
 		"images/skeleton-sheet0.png",
 		"images/skeleton-sheet1.png",
 		"images/enemybuffer-sheet0.png",

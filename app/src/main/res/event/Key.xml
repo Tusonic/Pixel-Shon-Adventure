@@ -235,7 +235,7 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Create object" sid="811250532791367" type="System">
-                                    <param id="0" name="Object to create">Key2Door</param>
+                                    <param id="0" name="Object to create">Key3Particles</param>
                                     <param id="1" name="Layer">&quot;Player&quot;</param>
                                     <param id="2" name="X">Shon.X</param>
                                     <param id="3" name="Y">Shon.Y</param>

@@ -25,6 +25,12 @@
                     <param id="0" name="Category">&quot;game&quot;</param>
                     <param id="1" name="Name">&quot;start&quot;</param>
                 </action>
+                <action id="12" name="Vibrate" sid="959933194648979" type="Browser">
+                    <param id="0" name="Pattern">&quot;200,100,200&quot;</param>
+                </action>
+                <action id="17" name="Execute Javascript" sid="898576594117775" type="Browser">
+                    <param id="0" name="Javascript">&quot;navigator.vibrate([500, 300, 100]);&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="315574794217214">

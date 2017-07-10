@@ -1,5 +1,5 @@
 ﻿CACHE MANIFEST
-#1498860625
+#1499616670
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
@@ -11,6 +11,7 @@ images/tilemap5.png
 images/dark.png
 images/tilemap9.png
 images/tilemap10.png
+images/tilemap13.png
 images/shon-sheet0.png
 images/shon-sheet1.png
 images/shon-sheet2.png
@@ -32,6 +33,7 @@ images/trap41-sheet0.png
 images/trap42-sheet0.png
 images/shondeath.png
 images/shondeathscreen-sheet0.png
+images/shonstartscreen-sheet0.png
 images/skeleton-sheet0.png
 images/skeleton-sheet1.png
 images/enemybuffer-sheet0.png
