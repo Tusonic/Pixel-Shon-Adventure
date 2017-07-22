@@ -50,7 +50,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="226969693748058">
+        <event-block disabled="1" sid="226969693748058">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="887513112509598" type="Shon">
                     <param id="0" name="Object">Point1</param>

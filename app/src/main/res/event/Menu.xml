@@ -19,17 +19,35 @@
                     <param id="0" name="Seconds">2</param>
                 </action>
                 <action id="-2" name="Go to layout" sid="974849842252743" type="System">
-                    <param id="0" name="Layout">Level1-1</param>
+                    <param id="0" name="Layout">Select</param>
                 </action>
                 <action id="0" name="Track Event" sid="767962286027516" type="GoogleAnalytics">
                     <param id="0" name="Category">&quot;game&quot;</param>
                     <param id="1" name="Name">&quot;start&quot;</param>
                 </action>
-                <action id="12" name="Vibrate" sid="959933194648979" type="Browser">
-                    <param id="0" name="Pattern">&quot;200,100,200&quot;</param>
+            </actions>
+        </event-block>
+        <event-block sid="163182534217320">
+            <conditions>
+                <condition id="3" name="On touched object" sid="307238900211683" type="Touch">
+                    <param id="0" name="Object">credits</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="618566351916434" type="System">
+                    <param id="0" name="Layout">Credits</param>
                 </action>
-                <action id="17" name="Execute Javascript" sid="898576594117775" type="Browser">
-                    <param id="0" name="Javascript">&quot;navigator.vibrate([500, 300, 100]);&quot;</param>
+            </actions>
+        </event-block>
+        <event-block sid="226407513338019">
+            <conditions>
+                <condition id="3" name="On touched object" sid="126857691259489" type="Touch">
+                    <param id="0" name="Object">options</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="791548857402896" type="System">
+                    <param id="0" name="Layout">Options</param>
                 </action>
             </actions>
         </event-block>

@@ -1,5 +1,5 @@
 ﻿CACHE MANIFEST
-#1499616670
+#1500712065
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
@@ -91,6 +91,27 @@ images/control_panel_vertical-sheet0.png
 images/control_panel_vertical_down-sheet0.png
 images/control_panel_vertical_up-sheet0.png
 images/platform_left_right-sheet0.png
+images/10select-sheet0.png
+images/11select-sheet0.png
+images/13select-sheet0.png
+images/14select-sheet0.png
+images/1select-sheet0.png
+images/15select-sheet0.png
+images/3select-sheet0.png
+images/16select-sheet0.png
+images/5select-sheet0.png
+images/7select-sheet0.png
+images/4select-sheet0.png
+images/2select-sheet0.png
+images/6select-sheet0.png
+images/8select-sheet0.png
+images/9select-sheet0.png
+images/12select-sheet0.png
+images/selecttxt-sheet0.png
+images/0select-sheet0.png
+images/debugmode-sheet0.png
+images/credittext1.png
+images/exit-sheet0.png
 icon-16.png
 icon-32.png
 icon-114.png
