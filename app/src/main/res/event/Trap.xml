@@ -217,5 +217,149 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="365853204391599" title="Trap5">
+            <sub-events>
+                <event-block sid="552289153825228">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="826341963719294" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="233584242972723" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="212169410118059" type="Trap51">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="921475284249162">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="420801448916410" type="Shon">
+                            <param id="0" name="Object">Trap51</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="114228211664929" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="430308087311153">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="293104307371350" type="Shon">
+                            <param id="0" name="Object">Trap52</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="120242926412759" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="419599295482762">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="591669887261334" type="Shon">
+                            <param id="0" name="Object">Trap53</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="824405249275570" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="169873247093437" title="Trap6">
+            <sub-events>
+                <event-block sid="827239146211337">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="158521176342620" type="Shon">
+                            <param id="0" name="Object">Trap6Start</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="699148442570053" type="Trap6Start" />
+                        <action id="-16" name="Wait" sid="950367756901761" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action behavior="CustomMovement" id="3" name="Accelerate" sid="686735352310331" type="Trap61">
+                            <param id="0" name="Which">2</param>
+                            <param id="1" name="Acceleration">350</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="441280519058948">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="776235396422287" type="Shon">
+                            <param id="0" name="Object">Trap6Start2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="789664731135766" type="Trap6Start2" />
+                        <action id="-16" name="Wait" sid="641333511632759" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action behavior="CustomMovement" id="3" name="Accelerate" sid="373949038367482" type="Trap62">
+                            <param id="0" name="Which">1</param>
+                            <param id="1" name="Acceleration">-3200</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="113139421205212">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="118686448550171" type="Trap61">
+                            <param id="0" name="Object">Trap6Up</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="CustomMovement" id="0" name="Stop" sid="739043119858926" type="Trap61" />
+                        <action id="-16" name="Wait" sid="662502236661859" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action behavior="CustomMovement" id="3" name="Accelerate" sid="892261338996613" type="Trap61">
+                            <param id="0" name="Which">2</param>
+                            <param id="1" name="Acceleration">-350</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="241955948641784">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="382841890321293" type="Trap61">
+                            <param id="0" name="Object">Trap6Down</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="CustomMovement" id="3" name="Accelerate" sid="175548221949856" type="Trap61">
+                            <param id="0" name="Which">2</param>
+                            <param id="1" name="Acceleration">350</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="831670002082025">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="997969323904481" type="Trap61">
+                            <param id="0" name="Object">Trap6Stop</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="CustomMovement" id="0" name="Stop" sid="614848276308572" type="Trap61" />
+                    </actions>
+                </event-block>
+                <event-block sid="261486966919918">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="267077740510680" type="Trap62">
+                            <param id="0" name="Object">Trap6Stop</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="CustomMovement" id="0" name="Stop" sid="731784738895771" type="Trap62" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

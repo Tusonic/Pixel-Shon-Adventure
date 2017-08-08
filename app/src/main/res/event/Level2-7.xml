@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!-- TUSONIC -->
+    <name>Level2-7</name>
+    <events>
+        <include>Enemy</include>
+        <include>Trap</include>
+        <include>Player</include>
+        <include>Control</include>
+        <include>Platform</include>
+    </events>
+</c2eventsheet>

@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1500712065,
+	"version": 1502021251,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -32,6 +32,16 @@
 		"images/trap31-sheet0.png",
 		"images/trap41-sheet0.png",
 		"images/trap42-sheet0.png",
+		"images/trap51-sheet0.png",
+		"images/trap61-sheet0.png",
+		"images/trap6up-sheet0.png",
+		"images/trap6down-sheet0.png",
+		"images/trap6start-sheet0.png",
+		"images/trap6stop-sheet0.png",
+		"images/trap62-sheet0.png",
+		"images/trap6left-sheet0.png",
+		"images/trap6right-sheet0.png",
+		"images/trap6start2-sheet0.png",
 		"images/shondeath.png",
 		"images/shondeathscreen-sheet0.png",
 		"images/shonstartscreen-sheet0.png",

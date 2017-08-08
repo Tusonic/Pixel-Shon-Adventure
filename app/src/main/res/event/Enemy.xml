@@ -95,7 +95,7 @@
                         <condition id="0" name="On collision with another object" sid="657141892847245" type="Skeleton">
                             <param id="0" name="Object">EnemyBuffer</param>
                         </condition>
-                        <condition behavior="LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="483686162811132" type="Skeleton">
+                        <condition behavior="LineOfSight" id="0" <!-- TUSONIC -->erted="1" name="Has LOS to object" sid="483686162811132" type="Skeleton">
                             <param id="0" name="Object">Shon</param>
                         </condition>
                     </conditions>
@@ -162,7 +162,7 @@
                         </event-block>
                         <event-block sid="324301703357508">
                             <conditions>
-                                <condition behavior="LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="203098776587053" type="Skeleton">
+                                <condition behavior="LineOfSight" id="0" <!-- TUSONIC -->erted="1" name="Has LOS to object" sid="203098776587053" type="Skeleton">
                                     <param id="0" name="Object">Shon</param>
                                 </condition>
                             </conditions>
@@ -214,7 +214,7 @@
                         <condition id="0" name="On collision with another object" sid="761040905662789" type="Skeleton">
                             <param id="0" name="Object">Shon</param>
                         </condition>
-                        <condition id="2" inverted="1" name="Is playing" sid="112913790146375" type="Shon">
+                        <condition id="2" <!-- TUSONIC -->erted="1" name="Is playing" sid="112913790146375" type="Shon">
                             <param id="0" name="Animation">&quot;ID_ATACK&quot;</param>
                         </condition>
                     </conditions>
