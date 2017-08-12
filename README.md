@@ -9,14 +9,14 @@ ___
 - [X] Graphics
 - [X] Design
 ___
-- [x] Level 1-1  
-- [x] Level 1-2 
-- [x] Level 1-3
-- [x] Level 1-4 
-- [x] Level 1-5 
-- [x] Level 1-6 
-- [x] Level 1-7
-- [x] Level 1-8
+- [x] Level 1-1  (1)
+- [x] Level 1-2  (2)
+- [x] Level 1-3  (3)
+- [x] Level 1-4  (4)
+- [x] Level 1-5  (5)
+- [x] Level 1-6  (6)
+- [x] Level 1-7  (7)
+- [x] Level 1-8  (8)
 
 ### Level (Level 2)
 ___
@@ -25,46 +25,28 @@ ___
 - [x] Graphics
 - [x] Design
 ___
-- [x] Level 2-1  
-- [x] Level 2-2 
-- [x] Level 2-3
-- [x] Level 2-4 
-- [x] Level 2-5 
-- [ ] Level 2-6 
-- [ ] Level 2-7
-- [ ] Level 2-8 (BOSS) 
+- [x] Level 2-1  (9)
+- [x] Level 2-2  (10)
+- [x] Level 2-3  (11)
+- [x] Level 2-4  (12)
+- [x] Level 2-5  (13)
+- [x] Level 2-6  (14)
+- [x] Level 2-7  (15)
+- [x] Level 2-8  (16) 
 
 ### Level (Level 3)
 ___
-- [ ] Control
-- [ ] Logic
-- [ ] Graphics
+- [x] Control
+- [x] Logic
+- [x] Graphics
 - [ ] Design
 ___
-- [ ] Level 3-1  
-- [ ] Level 3-2 
-- [ ] Level 3-3
-- [ ] Level 3-4 
-- [ ] Level 3-5 
-- [ ] Level 3-6 
-- [ ] Level 3-7
-- [ ] Level 3-8 (BOSS) 
-
-### Level (Level 4)
-___
-- [ ] Control
-- [ ] Logic
-- [ ] Graphics
-- [ ] Design
-___
-- [ ] Level 4-1  
-- [ ] Level 4-2 
-- [ ] Level 4-3
-- [ ] Level 4-4 
-- [ ] Level 4-5 
-- [ ] Level 4-6 
-- [ ] Level 4-7
-- [ ] Level 4-8 (BOSS) 
+- [x] Level 3-1  (17)
+- [x] Level 3-2  (18)
+- [x] Level 3-3  (19)
+- [ ] Level 3-4  (20)
+- [ ] Level 3-5  (21)
+- [ ] Level 3-6  (22)
 
 ### AirConsole
 ___
