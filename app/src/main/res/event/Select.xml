@@ -168,7 +168,7 @@
             </conditions>
             <actions>
                 <action id="-2" name="Go to layout" sid="451587261415217" type="System">
-                    <param id="0" name="Layout">Level2-5</param>
+                    <param id="0" name="Layout">Level2-6</param>
                 </action>
             </actions>
         </event-block>
@@ -180,7 +180,79 @@
             </conditions>
             <actions>
                 <action id="-2" name="Go to layout" sid="672625678212774" type="System">
-                    <param id="0" name="Layout">Level2-5</param>
+                    <param id="0" name="Layout">Level2-7</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="263195696289226">
+            <conditions>
+                <condition id="3" name="On touched object" sid="577468797432194" type="Touch">
+                    <param id="0" name="Object">16Select</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="626362134490805" type="System">
+                    <param id="0" name="Layout">Level2-8</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="628927574030900">
+            <conditions>
+                <condition id="3" name="On touched object" sid="732284371884291" type="Touch">
+                    <param id="0" name="Object">17Select</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="956515068794503" type="System">
+                    <param id="0" name="Layout">Level3-1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="240604079718435">
+            <conditions>
+                <condition id="3" name="On touched object" sid="308960847518237" type="Touch">
+                    <param id="0" name="Object">18Select</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="851200114705549" type="System">
+                    <param id="0" name="Layout">Level3-2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="119550244224793">
+            <conditions>
+                <condition id="3" name="On touched object" sid="974766061947573" type="Touch">
+                    <param id="0" name="Object">19Select</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="420374478169876" type="System">
+                    <param id="0" name="Layout">Level1-1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="462435484563464">
+            <conditions>
+                <condition id="3" name="On touched object" sid="197168239220652" type="Touch">
+                    <param id="0" name="Object">20Select</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="549661461777608" type="System">
+                    <param id="0" name="Layout">Level1-1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="727544847786605">
+            <conditions>
+                <condition id="3" name="On touched object" sid="490103595558597" type="Touch">
+                    <param id="0" name="Object">21Select</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="458647966046422" type="System">
+                    <param id="0" name="Layout">Level1-1</param>
                 </action>
             </actions>
         </event-block>

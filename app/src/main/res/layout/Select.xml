@@ -473,8 +473,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>128</x>
-                        <y>176</y>
+                        <x>224</x>
+                        <y>80</y>
                         <z>0</z>
                         <width>18</width>
                         <height>18</height>
@@ -495,8 +495,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>160</x>
-                        <y>176</y>
+                        <x>32</x>
+                        <y>112</y>
                         <z>0</z>
                         <width>18</width>
                         <height>18</height>
@@ -517,8 +517,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>192</x>
-                        <y>176</y>
+                        <x>64</x>
+                        <y>112</y>
                         <z>0</z>
                         <width>18</width>
                         <height>18</height>
@@ -547,28 +547,6 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.555555582</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="0Select" uid="1068">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>224</x>
-                        <y>80</y>
-                        <z>0</z>
-                        <width>18</width>
-                        <height>18</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -639,7 +617,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="0Select" uid="1072">
+                <instance type="debugmode" uid="1076">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -649,11 +627,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>128</x>
-                        <y>112</y>
+                        <x>226</x>
+                        <y>7</y>
                         <z>0</z>
-                        <width>18</width>
-                        <height>18</height>
+                        <width>65</width>
+                        <height>15</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -661,7 +639,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="0Select" uid="1073">
+                <instance type="17Select" uid="1068">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -683,7 +661,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="0Select" uid="1074">
+                <instance type="18Select" uid="1072">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -693,55 +671,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>64</x>
+                        <x>128</x>
                         <y>112</y>
                         <z>0</z>
                         <width>18</width>
                         <height>18</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="0Select" uid="1075">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>32</x>
-                        <y>112</y>
-                        <z>0</z>
-                        <width>18</width>
-                        <height>18</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="debugmode" uid="1076">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>226</x>
-                        <y>7</y>
-                        <z>0</z>
-                        <width>65</width>
-                        <height>15</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

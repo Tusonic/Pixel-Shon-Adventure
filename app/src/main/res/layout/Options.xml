@@ -191,7 +191,7 @@
                         <character-width>59</character-width>
                         <character-height>59</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
-                        <text>VIBRA: OFF</text>
+                        <text>VIBRA: ON</text>
                         <scale>0.2</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Left</horizontal-alignment>

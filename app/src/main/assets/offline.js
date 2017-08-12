@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1502021251,
+	"version": 1502545718,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -21,8 +21,8 @@
 		"images/shonatack-sheet0.png",
 		"images/shonatack-sheet1.png",
 		"images/shonatack-sheet2.png",
+		"images/portalopen1.png",
 		"images/portal-sheet0.png",
-		"images/portalopen.png",
 		"images/portalcheck.png",
 		"images/trap11-sheet0.png",
 		"images/trap12-sheet0.png",
@@ -121,6 +121,11 @@
 		"images/selecttxt-sheet0.png",
 		"images/0select-sheet0.png",
 		"images/debugmode-sheet0.png",
+		"images/17select-sheet0.png",
+		"images/18select-sheet0.png",
+		"images/19select-sheet0.png",
+		"images/20select-sheet0.png",
+		"images/21select-sheet0.png",
 		"images/credittext1.png",
 		"images/exit-sheet0.png",
 		"icon-16.png",

@@ -1,64 +1,65 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!-- TUSONIC -->
-    <name>Level2-8</name>
+    <name>Level2-6</name>
     <events>
-        <include>Enemy</include>
-        <include>Platform</include>
-        <include>Trap</include>
-        <include>Player</include>
         <include>Control</include>
-        <event-group description="Next Level" sid="742628237631244" title="Portal16">
+        <include>Enemy</include>
+        <include>Key</include>
+        <include>Trap</include>
+        <include>Platform</include>
+        <include>Player</include>
+        <event-group description="Next Level" sid="251553731025513" title="Portal14">
             <sub-events>
-                <event-block sid="893074063986003">
+                <event-block sid="984835412505351">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="766458845234718" type="Shon">
+                        <condition id="1" name="Is overlapping another object" sid="693613874934222" type="Shon">
                             <param id="0" name="Object">PortalCheck</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="625416109212464" type="Portal">
+                        <action id="4" name="Set animation" sid="308198643578559" type="Portal">
                             <param id="0" name="Animation">&quot;OPEN&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="323815636274187" type="PortalCheck" />
+                        <action id="-9" name="Destroy" sid="356727901634422" type="PortalCheck" />
                     </actions>
                 </event-block>
-                <event-block sid="937224891047178">
+                <event-block sid="342218143042680">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="177538679753290" type="Shon">
+                        <condition id="1" name="Is overlapping another object" sid="847846233654099" type="Shon">
                             <param id="0" name="Object">PortalOpen</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Platform" id="11" name="Set enabled" sid="187952921623716" type="Shon">
+                        <action behavior="Platform" id="11" name="Set enabled" sid="709459535164002" type="Shon">
                             <param id="0" name="State">0</param>
                         </action>
-                        <action id="4" name="Set animation" sid="890583669653455" type="Shon">
+                        <action id="4" name="Set animation" sid="974732485223875" type="Shon">
                             <param id="0" name="Animation">&quot;ID_IDLE&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-20" name="Set layout scale" sid="751861609134687" type="System">
+                        <action id="-20" name="Set layout scale" sid="830582623936707" type="System">
                             <param id="0" name="Scale">lerp(LayoutScale, 2.0, 6*dt)</param>
                         </action>
-                        <action id="-16" name="Wait" sid="289831304421308" type="System">
+                        <action id="-16" name="Wait" sid="951831589330490" type="System">
                             <param id="0" name="Seconds">0.5</param>
                         </action>
-                        <action id="-2" name="Go to layout" sid="860799020956969" type="System">
-                            <param id="0" name="Layout">Level3-1</param>
+                        <action id="-2" name="Go to layout" sid="695469294498002" type="System">
+                            <param id="0" name="Layout">Level2-7</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="632102263951452">
+        <event-block sid="913342277281643">
             <conditions>
-                <condition id="-2" name="On start of layout" sid="890058618954361" type="System" />
+                <condition id="-2" name="On start of layout" sid="106878826540829" type="System" />
             </conditions>
             <actions>
-                <action id="0" name="Track Event" sid="967293260995627" type="GoogleAnalytics">
+                <action id="0" name="Track Event" sid="353111455147983" type="GoogleAnalytics">
                     <param id="0" name="Category">&quot;game&quot;</param>
-                    <param id="1" name="Name">&quot;level2-8&quot;</param>
+                    <param id="1" name="Name">&quot;level2-6&quot;</param>
                 </action>
             </actions>
         </event-block>
