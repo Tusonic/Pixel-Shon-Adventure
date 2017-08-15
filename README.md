@@ -39,12 +39,12 @@ ___
 - [x] Control
 - [x] Logic
 - [x] Graphics
-- [ ] Design
+- [x] Design
 ___
 - [x] Level 3-1  (17)
 - [x] Level 3-2  (18)
 - [x] Level 3-3  (19)
-- [ ] Level 3-4  (20)
+- [x] Level 3-4  (20)
 - [ ] Level 3-5  (21)
 - [ ] Level 3-6  (22)
 
@@ -60,7 +60,6 @@ ___
 | Platform | Pixel Shon Adventure BETA (CASTLE) |
 | ------ | ------ |
 | HTML (DEV) | http://www.tusonic.pl/beta |
-| HTML | http://www.tusonic.pl/pixelshonadventure |
 | ANDROID | https://play.google.com/store/apps/details?id=pl.tusonic.pixelshonadventure |
 
 

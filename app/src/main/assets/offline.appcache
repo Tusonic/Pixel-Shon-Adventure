@@ -1,5 +1,5 @@
 ﻿CACHE MANIFEST
-#1502545718
+#1502793809
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
@@ -60,7 +60,8 @@ images/key1opendoor-sheet0.png
 images/key2opendoor-sheet0.png
 images/key1particles.png
 images/key0particles.png
-images/key3particles.png
+images/key2particles.png
+images/key3doornone.png
 images/point1-sheet0.png
 images/item1-sheet0.png
 images/item12-sheet0.png
@@ -127,6 +128,13 @@ images/20select-sheet0.png
 images/21select-sheet0.png
 images/credittext1.png
 images/exit-sheet0.png
+images/boss1-sheet0.png
+images/lawastone-sheet0.png
+images/particles.png
+images/boss1monster1-sheet0.png
+images/boss1monster3-sheet0.png
+images/boss21-sheet0.png
+images/deletebullet-sheet0.png
 icon-16.png
 icon-32.png
 icon-114.png

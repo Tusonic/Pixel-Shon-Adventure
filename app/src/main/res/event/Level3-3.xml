@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!-- TUSONIC -->
+    <name>Level3-3</name>
+    <events>
+        <variable constant="0" name="Boss1" sid="729652907788459" static="0" type="number">0</variable>
+        <include>Platform</include>
+        <include>Player</include>
+        <include>Control</include>
+        <include>Key</include>
+        <event-group description="" sid="443692359924811" title="Boss1Atack1">
+            <sub-events>
+                <event-block sid="164331434081962">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="886658153998968" type="System">
+                            <param id="0" name="Interval (seconds)">6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="226731800610699" type="System">
+                            <param id="0" name="Object to create">LawaStone</param>
+                            <param id="1" name="Layer">&quot;Logic&quot;</param>
+                            <param id="2" name="X">Boss1.X</param>
+                            <param id="3" name="Y">Boss1.Y</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="616243008108282" type="LawaStone">
+                            <param id="0" name="Speed">100</param>
+                        </action>
+                        <action id="-22" name="Set angle toward position" sid="672794375879746" type="LawaStone">
+                            <param id="0" name="X">Shon.X</param>
+                            <param id="1" name="Y">Shon.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="856155694272718" title="Boss1Atack2">
+            <sub-events>
+                <event-block sid="481343115001746">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="335386712974456" type="System">
+                            <param id="0" name="Interval (seconds)">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="581291668674942" type="System">
+                            <param id="0" name="Object to create">LawaStone</param>
+                            <param id="1" name="Layer">&quot;Logic&quot;</param>
+                            <param id="2" name="X">Boss1.X</param>
+                            <param id="3" name="Y">Boss1.Y</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="603991231916272" type="LawaStone">
+                            <param id="0" name="Angle">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="692914398966707">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="804608229069272" type="System">
+                            <param id="0" name="Interval (seconds)">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="613318348302418" type="System">
+                            <param id="0" name="Object to create">LawaStone</param>
+                            <param id="1" name="Layer">&quot;Logic&quot;</param>
+                            <param id="2" name="X">Boss1.X</param>
+                            <param id="3" name="Y">Boss1.Y</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="822284192889509" type="LawaStone">
+                            <param id="0" name="Angle">45</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="941853964601135">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="631253067467183" type="System">
+                            <param id="0" name="Interval (seconds)">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="615711568628183" type="System">
+                            <param id="0" name="Object to create">LawaStone</param>
+                            <param id="1" name="Layer">&quot;Logic&quot;</param>
+                            <param id="2" name="X">Boss1.X</param>
+                            <param id="3" name="Y">Boss1.Y</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="259062345173245" type="LawaStone">
+                            <param id="0" name="Angle">90</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="946705077410884">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="569567481123807" type="System">
+                            <param id="0" name="Interval (seconds)">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="811724438589626" type="System">
+                            <param id="0" name="Object to create">LawaStone</param>
+                            <param id="1" name="Layer">&quot;Logic&quot;</param>
+                            <param id="2" name="X">Boss1.X</param>
+                            <param id="3" name="Y">Boss1.Y</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="243769246954719" type="LawaStone">
+                            <param id="0" name="Angle">135</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="550159965142108">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="107372742741788" type="System">
+                            <param id="0" name="Interval (seconds)">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="669741962222985" type="System">
+                            <param id="0" name="Object to create">LawaStone</param>
+                            <param id="1" name="Layer">&quot;Logic&quot;</param>
+                            <param id="2" name="X">Boss1.X</param>
+                            <param id="3" name="Y">Boss1.Y</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="430196640308328" type="LawaStone">
+                            <param id="0" name="Angle">180</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="343659406983211">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="641109651525372" type="System">
+                            <param id="0" name="Interval (seconds)">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="510307752196447" type="System">
+                            <param id="0" name="Object to create">LawaStone</param>
+                            <param id="1" name="Layer">&quot;Logic&quot;</param>
+                            <param id="2" name="X">Boss1.X</param>
+                            <param id="3" name="Y">Boss1.Y</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="266896806973057" type="LawaStone">
+                            <param id="0" name="Angle">225</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="322455289928609">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="160162154768781" type="System">
+                            <param id="0" name="Interval (seconds)">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="757894211477382" type="System">
+                            <param id="0" name="Object to create">LawaStone</param>
+                            <param id="1" name="Layer">&quot;Logic&quot;</param>
+                            <param id="2" name="X">Boss1.X</param>
+                            <param id="3" name="Y">Boss1.Y</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="155112664014278" type="LawaStone">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="872141968801090">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="872047861766946" type="System">
+                            <param id="0" name="Interval (seconds)">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="104197922567252" type="System">
+                            <param id="0" name="Object to create">LawaStone</param>
+                            <param id="1" name="Layer">&quot;Logic&quot;</param>
+                            <param id="2" name="X">Boss1.X</param>
+                            <param id="3" name="Y">Boss1.Y</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="351124879604160" type="LawaStone">
+                            <param id="0" name="Angle">315</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="206859623153317">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="932059768315184" type="LawaStone">
+                    <param id="0" name="Object">DeleteBullet</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="271175203298309" type="LawaStone" />
+            </actions>
+        </event-block>
+        <event-group description="" sid="429966324114795" title="LogicBoss1">
+            <sub-events>
+                <event-block sid="753519125973065">
+                    <conditions>
+                        <condition id="5" name="On any finished" sid="168490999203680" type="Boss1Monster1" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Start" sid="985941006971384" type="Boss1Monster1">
+                            <param id="0" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="692912656028376">
+                    <conditions>
+                        <condition id="5" name="On any finished" sid="523080857973985" type="Boss1Monster2" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Start" sid="616132650086489" type="Boss1Monster2">
+                            <param id="0" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="900947620687954">
+                    <conditions>
+                        <condition id="5" name="On any finished" sid="804998509037785" type="Boss1Monster3" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Start" sid="150043727066575" type="Boss1Monster3">
+                            <param id="0" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="512149423418312">
+                    <conditions>
+                        <condition id="5" name="On any finished" sid="814144543420003" type="Boss1Monster4" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Start" sid="254058361844222" type="Boss1Monster4">
+                            <param id="0" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="139899220171720">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="411360979645962" type="ShonAtack">
+                            <param id="0" name="Object">Boss1Monster1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="165987405732191" type="System">
+                            <param id="0" name="Object to create">Particles</param>
+                            <param id="1" name="Layer">&quot;Logic&quot;</param>
+                            <param id="2" name="X">Boss1Monster1.X</param>
+                            <param id="3" name="Y">Boss1Monster1.Y</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="916959642966190" type="Boss1Monster1" />
+                    </actions>
+                </event-block>
+                <event-block sid="561221824805403">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="516925017182419" type="ShonAtack">
+                            <param id="0" name="Object">Boss1Monster2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="811951453916029" type="System">
+                            <param id="0" name="Object to create">Particles</param>
+                            <param id="1" name="Layer">&quot;Logic&quot;</param>
+                            <param id="2" name="X">Boss1Monster2.X</param>
+                            <param id="3" name="Y">Boss1Monster2.Y</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="841435938851375" type="Boss1Monster2" />
+                    </actions>
+                </event-block>
+                <event-block sid="121827226624916">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="515064340142331" type="ShonAtack">
+                            <param id="0" name="Object">Boss1Monster3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="259609471122583" type="System">
+                            <param id="0" name="Object to create">Particles</param>
+                            <param id="1" name="Layer">&quot;Logic&quot;</param>
+                            <param id="2" name="X">Boss1Monster3.X</param>
+                            <param id="3" name="Y">Boss1Monster3.Y</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="481377587855392" type="Boss1Monster3" />
+                    </actions>
+                </event-block>
+                <event-block sid="655921150535583">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="164872385134648" type="ShonAtack">
+                            <param id="0" name="Object">Boss1Monster4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="179858605823092" type="System">
+                            <param id="0" name="Object to create">Particles</param>
+                            <param id="1" name="Layer">&quot;Logic&quot;</param>
+                            <param id="2" name="X">Boss1Monster4.X</param>
+                            <param id="3" name="Y">Boss1Monster4.Y</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="315335378093149" type="Boss1Monster4" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="520963156635554">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="561053759455061" type="Boss1Monster1" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="263866593725900" type="System">
+                    <param id="0" name="Variable">Boss1</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="792475914751149">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="185137984855183" type="Boss1Monster2" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="729458751854300" type="System">
+                    <param id="0" name="Variable">Boss1</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="737655509989048">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="495234547887853" type="Boss1Monster3" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="488001345214765" type="System">
+                    <param id="0" name="Variable">Boss1</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="352930267165543">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="139822090719508" type="Boss1Monster4" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="886724253510911" type="System">
+                    <param id="0" name="Variable">Boss1</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="495858739772158">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="581733596086772" type="System">
+                    <param id="0" name="Variable">Boss1</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="963015291672507" type="Boss1" />
+                <action id="-9" name="Destroy" sid="505414342143068" type="Key3DoorNone" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -25290,15 +25290,15 @@ cr.behaviors.solid = function(runtime)
 cr.getObjectRefTable = function () { return [
 	cr.plugins_.GoogleAnalytics_ST,
 	cr.plugins_.Browser,
-	cr.plugins_.Keyboard,
 	cr.plugins_.Function,
+	cr.plugins_.Keyboard,
 	cr.plugins_.Mouse,
-	cr.plugins_.TiledBg,
-	cr.plugins_.Particles,
 	cr.plugins_.Spritefont2,
+	cr.plugins_.Text,
 	cr.plugins_.Touch,
 	cr.plugins_.Sprite,
-	cr.plugins_.Text,
+	cr.plugins_.Particles,
+	cr.plugins_.TiledBg,
 	cr.plugins_.Tilemap,
 	cr.behaviors.solid,
 	cr.behaviors.Platform,
@@ -25369,5 +25369,11 @@ cr.getObjectRefTable = function () { return [
 	cr.plugins_.TiledBg.prototype.acts.Destroy,
 	cr.system_object.prototype.cnds.Every,
 	cr.behaviors.custom.prototype.acts.SetSpeed,
-	cr.system_object.prototype.cnds.CompareTime
+	cr.system_object.prototype.cnds.CompareTime,
+	cr.behaviors.Bullet.prototype.acts.SetSpeed,
+	cr.plugins_.Sprite.prototype.acts.SetTowardPosition,
+	cr.plugins_.Sprite.prototype.cnds.OnAnyAnimFinished,
+	cr.plugins_.Sprite.prototype.acts.StartAnim,
+	cr.plugins_.Sprite.prototype.cnds.OnDestroyed,
+	cr.system_object.prototype.acts.AddVar
 ];};

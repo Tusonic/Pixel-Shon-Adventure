@@ -216,7 +216,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Key3Particles" uid="46">
+                <instance type="Key2Particles" uid="46">
                     <properties>
                         <rate>50</rate>
                         <spray-cone>360</spray-cone>

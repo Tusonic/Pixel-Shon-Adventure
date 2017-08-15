@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!-- TUSONIC -->
+    <name>Level3-4</name>
+    <events>
+        <include>Player</include>
+        <include>Control</include>
+        <event-block sid="403509807969067">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="905269609344944" type="System">
+                    <param id="0" name="Interval (seconds)">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="551420316730883" type="System">
+                    <param id="0" name="Object to create">LawaStone</param>
+                    <param id="1" name="Layer">&quot;Logic&quot;</param>
+                    <param id="2" name="X">Boss21.X</param>
+                    <param id="3" name="Y">Boss21.Y</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="150841834003238" type="LawaStone">
+                    <param id="0" name="Speed">100</param>
+                </action>
+                <action id="-22" name="Set angle toward position" sid="486596442522456" type="LawaStone">
+                    <param id="0" name="X">Shon.X</param>
+                    <param id="1" name="Y">Shon.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="447206302162463" title="Boss2Monster5">
+            <sub-events>
+                <event-block sid="632704200131372">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="302511884250600" type="ShonAtack">
+                            <param id="0" name="Object">Boss2Monster5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="663241698663157" type="System">
+                            <param id="0" name="Object to create">Particles</param>
+                            <param id="1" name="Layer">&quot;Logic&quot;</param>
+                            <param id="2" name="X">Boss2Monster5.X</param>
+                            <param id="3" name="Y">Boss2Monster5.Y</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="841221353694096" type="Boss2Monster5" />
+                    </actions>
+                </event-block>
+                <event-block sid="637005849539858">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="716992098715574" type="Shon">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">Boss2Monster5.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="791219270845184" type="Boss2Monster5">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="486819965656494">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="237116462605870" type="Shon">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">Boss2Monster5.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="697121370525514" type="Boss2Monster5">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="974975810093790">
+                    <conditions>
+                        <condition id="5" name="On any finished" sid="340507020835482" type="Boss2Monster5" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Start" sid="909345673144835" type="Boss2Monster5">
+                            <param id="0" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="629706236371277" title="Boss2Monster6">
+            <sub-events>
+                <event-block sid="722612863712134">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="490630342526317" type="ShonAtack">
+                            <param id="0" name="Object">Boss2Monster6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="758728190039840" type="System">
+                            <param id="0" name="Object to create">Particles</param>
+                            <param id="1" name="Layer">&quot;Logic&quot;</param>
+                            <param id="2" name="X">Boss2Monster6.X</param>
+                            <param id="3" name="Y">Boss2Monster6.Y</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="837191631999139" type="Boss2Monster6" />
+                    </actions>
+                </event-block>
+                <event-block sid="648485450461573">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="981047825771366" type="Shon">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">Boss2Monster6.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="522939741697421" type="Boss2Monster6">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="307006364341572">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="810301152271517" type="Shon">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">Boss2Monster6.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="935265045666879" type="Boss2Monster6">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="670972461579803">
+                    <conditions>
+                        <condition id="5" name="On any finished" sid="501551979573200" type="Boss2Monster6" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Start" sid="952316064589697" type="Boss2Monster6">
+                            <param id="0" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="247303087800542" title="Boss2Monster7">
+            <sub-events>
+                <event-block sid="667069379622616">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="293416475707504" type="ShonAtack">
+                            <param id="0" name="Object">Boss2Monster7</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="922195787577951" type="System">
+                            <param id="0" name="Object to create">Particles</param>
+                            <param id="1" name="Layer">&quot;Logic&quot;</param>
+                            <param id="2" name="X">Boss2Monster7.X</param>
+                            <param id="3" name="Y">Boss2Monster7.Y</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="511608904133433" type="Boss2Monster7" />
+                    </actions>
+                </event-block>
+                <event-block sid="934514779536155">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="422452561225907" type="Shon">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">Boss2Monster7.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="874185979321521" type="Boss2Monster7">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="127009134252361">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="113700167267720" type="Shon">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">Boss2Monster7.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="362830376832581" type="Boss2Monster7">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="547809484386958">
+                    <conditions>
+                        <condition id="5" name="On any finished" sid="974909274292832" type="Boss2Monster7" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Start" sid="933875493929945" type="Boss2Monster7">
+                            <param id="0" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="270393120973926" title="Boss2Monster8">
+            <sub-events>
+                <event-block sid="241057594937349">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="803683670543294" type="ShonAtack">
+                            <param id="0" name="Object">Boss2Monster8</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="524622851616818" type="System">
+                            <param id="0" name="Object to create">Particles</param>
+                            <param id="1" name="Layer">&quot;Logic&quot;</param>
+                            <param id="2" name="X">Boss2Monster8.X</param>
+                            <param id="3" name="Y">Boss2Monster8.Y</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="636919018533520" type="Boss2Monster8" />
+                    </actions>
+                </event-block>
+                <event-block sid="419849732100564">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="977112733044799" type="Shon">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">Boss2Monster8.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="238807210729102" type="Boss2Monster8">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="970839413506405">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="678995931252934" type="Shon">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">Boss2Monster8.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="752695060035789" type="Boss2Monster8">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="550594262817566">
+                    <conditions>
+                        <condition id="5" name="On any finished" sid="490128364066729" type="Boss2Monster8" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Start" sid="786345330159865" type="Boss2Monster8">
+                            <param id="0" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
