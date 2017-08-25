@@ -1,5 +1,5 @@
 ﻿CACHE MANIFEST
-#1502793809
+#1503663694
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
@@ -27,6 +27,8 @@ images/trap11-sheet0.png
 images/trap12-sheet0.png
 images/trap13-sheet0.png
 images/trap14-sheet0.png
+images/trap15-sheet0.png
+images/trap16-sheet0.png
 images/trap21-sheet0.png
 images/trap31-sheet0.png
 images/trap41-sheet0.png
@@ -103,6 +105,7 @@ images/control_panel_vertical_down-sheet0.png
 images/control_panel_vertical_up-sheet0.png
 images/platform_left_right-sheet0.png
 images/10select-sheet0.png
+images/10select-sheet1.png
 images/11select-sheet0.png
 images/13select-sheet0.png
 images/14select-sheet0.png
@@ -119,21 +122,27 @@ images/8select-sheet0.png
 images/9select-sheet0.png
 images/12select-sheet0.png
 images/selecttxt-sheet0.png
-images/0select-sheet0.png
 images/debugmode-sheet0.png
 images/17select-sheet0.png
 images/18select-sheet0.png
 images/19select-sheet0.png
+images/19select-sheet1.png
 images/20select-sheet0.png
 images/21select-sheet0.png
-images/credittext1.png
+images/selectback.png
 images/exit-sheet0.png
+images/chestyellow-sheet0.png
+images/chestblue-sheet0.png
+images/chestgreen-sheet0.png
+images/chestred-sheet0.png
 images/boss1-sheet0.png
 images/lawastone-sheet0.png
 images/particles.png
 images/boss1monster1-sheet0.png
 images/boss1monster3-sheet0.png
 images/boss21-sheet0.png
+images/boss3-sheet0.png
+images/boss3-sheet1.png
 images/deletebullet-sheet0.png
 icon-16.png
 icon-32.png

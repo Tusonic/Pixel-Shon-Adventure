@@ -3,256 +3,996 @@
     <!-- TUSONIC -->
     <name>Select</name>
     <events>
-        <variable constant="0" name="SelectMenu" sid="297582154646410" static="0" type="number">0</variable>
-        <event-block sid="437364292103943">
+        <variable constant="0" name="SelectMenuBoss" sid="454762573311005" static="0" type="number">1</variable>
+        <variable constant="0" name="SelectMenu" sid="297582154646410" static="0" type="number">1</variable>
+        <event-block sid="523676080034124">
             <conditions>
-                <condition id="3" name="On touched object" sid="559710744798940" type="Touch">
-                    <param id="0" name="Object">1Select</param>
-                </condition>
+                <condition id="-2" name="On start of layout" sid="816061767961070" type="System" />
             </conditions>
             <actions>
-                <action id="-2" name="Go to layout" sid="752423395808410" type="System">
-                    <param id="0" name="Layout">Level1-1</param>
+                <action id="1" name="Get item" sid="846307133897538" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Save&quot;</param>
+                </action>
+                <action id="1" name="Get item" sid="139034070313291" type="LocalStorage">
+                    <param id="0" name="Key">&quot;SaveBoss&quot;</param>
+                </action>
+                <action id="4" name="Set animation" sid="676332114789406" type="1Select">
+                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="897916107907766" type="2Select">
+                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="126713470581924" type="3Select">
+                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="531989154664618" type="4Select">
+                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="457919724430126" type="5Select">
+                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="152324042949264" type="6Select">
+                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="847847530605381" type="7Select">
+                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="695153578898360" type="8Select">
+                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="792579337798355" type="9Select">
+                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="686680310018393" type="10Select">
+                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="959102800864719" type="11Select">
+                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="342707274777976" type="12Select">
+                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="384408127990094" type="13Select">
+                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="851702064871569" type="14Select">
+                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="840145488055035" type="15Select">
+                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="549949968735120" type="16Select">
+                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="358490979910136" type="17Select">
+                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="842818257832916" type="18Select">
+                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="822931566144503" type="19Select">
+                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="550158822972778" type="20Select">
+                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="349163072339049" type="21Select">
+                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="320205962694858">
+        <event-block sid="151197617766253">
             <conditions>
-                <condition id="3" name="On touched object" sid="118192217055286" type="Touch">
-                    <param id="0" name="Object">2Select</param>
+                <condition id="1" name="On item get" sid="809777139026049" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Save&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-2" name="Go to layout" sid="983250928271380" type="System">
-                    <param id="0" name="Layout">Level1-2</param>
+                <action id="-9" name="Set value" sid="919024988961941" type="System">
+                    <param id="0" name="Variable">SelectMenu</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="302966028554963">
+        <event-block sid="217034796182863">
             <conditions>
-                <condition id="3" name="On touched object" sid="471405988069963" type="Touch">
-                    <param id="0" name="Object">3Select</param>
+                <condition id="1" name="On item get" sid="356099109188272" type="LocalStorage">
+                    <param id="0" name="Key">&quot;SaveBoss&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-2" name="Go to layout" sid="242874519355288" type="System">
-                    <param id="0" name="Layout">Level1-3</param>
+                <action id="-9" name="Set value" sid="963936291780288" type="System">
+                    <param id="0" name="Variable">SelectMenuBoss</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="978551945515460">
+        <event-group description="" sid="933010298746777" title="SelectAnimation">
+            <sub-events>
+                <event-block sid="194659517705075">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="314255813911995" type="System" />
+                        <condition id="-14" name="Compare variable" sid="625799930476069" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="728981169899061" type="1Select">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="175944381310328">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="949276300901292" type="System" />
+                        <condition id="-14" name="Compare variable" sid="470010766912433" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="585824610658313" type="2Select">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="524751680449374">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="539165850542442" type="System" />
+                        <condition id="-14" name="Compare variable" sid="741157734194355" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="809893719419863" type="3Select">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="172368962277779">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="647168920669668" type="System" />
+                        <condition id="-14" name="Compare variable" sid="948524601611695" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="277615630319956" type="4Select">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="162780123347259">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="341527494530923" type="System" />
+                        <condition id="-14" name="Compare variable" sid="639905773972465" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="599738259023835" type="5Select">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="278774989834106">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="119746654196094" type="System" />
+                        <condition id="-14" name="Compare variable" sid="828120938580096" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="272402255501479" type="6Select">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="209457319752270">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="527209090505177" type="System" />
+                        <condition id="-14" name="Compare variable" sid="679760411463132" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">7</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="600896038838703" type="7Select">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="494618028762950">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="623177691160569" type="System" />
+                        <condition id="-14" name="Compare variable" sid="995399047481012" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">8</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="225848789316728" type="8Select">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="673495953340555">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="349246645366849" type="System" />
+                        <condition id="-14" name="Compare variable" sid="990577181093120" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">9</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="321745073712766" type="9Select">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="467653986047118">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="709972177633409" type="System" />
+                        <condition id="-14" name="Compare variable" sid="659601577052248" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="931911973238634" type="10Select">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="110757235596078">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="877724391586884" type="System" />
+                        <condition id="-14" name="Compare variable" sid="975460576123379" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">11</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="362494623611997" type="11Select">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="268807869426407">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="851079746790808" type="System" />
+                        <condition id="-14" name="Compare variable" sid="555817063632371" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">12</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="239771049145103" type="12Select">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="684886129064278">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="709691960069431" type="System" />
+                        <condition id="-14" name="Compare variable" sid="288784362138050" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">13</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="188019117302714" type="13Select">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="321029639093847">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="739107323414369" type="System" />
+                        <condition id="-14" name="Compare variable" sid="436675172397080" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">14</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="281795799678477" type="14Select">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="379379411290560">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="515839284133327" type="System" />
+                        <condition id="-14" name="Compare variable" sid="800113296111638" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">15</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="965394925431430" type="15Select">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="990780550757110">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="973653247383792" type="System" />
+                        <condition id="-14" name="Compare variable" sid="673295956716707" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">16</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="104611066706006" type="16Select">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="845490832999804">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="730729833964845" type="System" />
+                        <condition id="-14" name="Compare variable" sid="685764572883160" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">17</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="942091534979532" type="17Select">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="381243596908023">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="393597219744140" type="System" />
+                        <condition id="-14" name="Compare variable" sid="387455755406149" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">18</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="649490365103143" type="18Select">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="135705303838499">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="989670649886694" type="System" />
+                        <condition id="-14" name="Compare variable" sid="809270472578206" type="System">
+                            <param id="0" name="Variable">SelectMenuBoss</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="412536554250775" type="ChestBlue">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="782699722865608" type="ChestGreen">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="172024142658074" type="ChestRed">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="566710855064426">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="415811528963654" type="System" />
+                        <condition id="-14" name="Compare variable" sid="434394047125463" type="System">
+                            <param id="0" name="Variable">SelectMenuBoss</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="652591994227866" type="19Select">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="463900308226106" type="ChestBlue">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="943737561798910" type="ChestGreen">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="770785416286037" type="ChestRed">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="418019295372314">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="138141705491996" type="System" />
+                        <condition id="-14" name="Compare variable" sid="525589890041549" type="System">
+                            <param id="0" name="Variable">SelectMenuBoss</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="832978284765489" type="20Select">
+                            <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="469196582394688" type="19Select">
+                            <param id="0" name="X">244</param>
+                            <param id="1" name="Y">244</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="224035282055485" type="ChestBlue">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="366856937210423" type="ChestGreen">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="996462007501863" type="ChestRed">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="432709441111237">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="728908140926617" type="System" />
+                        <condition id="-14" name="Compare variable" sid="316741074558207" type="System">
+                            <param id="0" name="Variable">SelectMenuBoss</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="739618887811944" type="20Select">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="436410120237030" type="19Select">
+                            <param id="0" name="X">244</param>
+                            <param id="1" name="Y">244</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="240646529275719" type="ChestBlue">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="617014196261292" type="ChestGreen">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="754327230133617" type="ChestRed">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="531825186622446">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="658852316367337" type="System" />
+                        <condition id="-14" name="Compare variable" sid="307139073486422" type="System">
+                            <param id="0" name="Variable">SelectMenuBoss</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="562991190754975" type="21Select">
+                            <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="820244296674676" type="20Select">
+                            <param id="0" name="X">244</param>
+                            <param id="1" name="Y">244</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="776523646455386" type="19Select">
+                            <param id="0" name="X">244</param>
+                            <param id="1" name="Y">244</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="865116483339007" type="ChestBlue">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="619375410909775" type="ChestGreen">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="278089497880854" type="ChestRed">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="316101304265749">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="239111523675758" type="System" />
+                        <condition id="-14" name="Compare variable" sid="567726249247668" type="System">
+                            <param id="0" name="Variable">SelectMenuBoss</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="742592915365440" type="21Select">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="905708491564447" type="20Select">
+                            <param id="0" name="X">244</param>
+                            <param id="1" name="Y">244</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="672526040799564" type="19Select">
+                            <param id="0" name="X">244</param>
+                            <param id="1" name="Y">244</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="200983887139435" type="ChestBlue">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="893637846078976" type="ChestGreen">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="666221398246955" type="ChestRed">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="496140536124875">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="599825062787700" type="System" />
+                        <condition id="-14" name="Compare variable" sid="208503720217833" type="System">
+                            <param id="0" name="Variable">SelectMenuBoss</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">7</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="938465358356778" type="21Select">
+                            <param id="0" name="X">244</param>
+                            <param id="1" name="Y">244</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="519385777445512" type="20Select">
+                            <param id="0" name="X">244</param>
+                            <param id="1" name="Y">244</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="509639098669611" type="19Select">
+                            <param id="0" name="X">244</param>
+                            <param id="1" name="Y">244</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="890918126266279" type="ChestBlue">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="707966609528112" type="ChestGreen">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="367058016821593" type="ChestRed">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="977972747339681" title="SelectTouch">
+            <sub-events>
+                <event-block sid="437364292103943">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="559710744798940" type="Touch">
+                            <param id="0" name="Object">1Select</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="609825660668562" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="752423395808410" type="System">
+                            <param id="0" name="Layout">Level1-1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="320205962694858">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="118192217055286" type="Touch">
+                            <param id="0" name="Object">2Select</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="710254063599089" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="983250928271380" type="System">
+                            <param id="0" name="Layout">Level1-2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="302966028554963">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="471405988069963" type="Touch">
+                            <param id="0" name="Object">3Select</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="948999656742815" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="242874519355288" type="System">
+                            <param id="0" name="Layout">Level1-3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="978551945515460">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="211347339507619" type="Touch">
+                            <param id="0" name="Object">4Select</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="948399173108755" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="846793773902974" type="System">
+                            <param id="0" name="Layout">Level1-4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="200372925772128">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="124598215019337" type="Touch">
+                            <param id="0" name="Object">5Select</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="732097903336592" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="816254517026421" type="System">
+                            <param id="0" name="Layout">Level1-5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="273629254874071">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="822653006692912" type="Touch">
+                            <param id="0" name="Object">6Select</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="155968500850940" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="553108525177109" type="System">
+                            <param id="0" name="Layout">Level1-6</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="818768628101280">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="395910610627307" type="Touch">
+                            <param id="0" name="Object">7Select</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="173898334003511" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">7</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="480315008450870" type="System">
+                            <param id="0" name="Layout">Level1-7</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="523108086298830">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="912340189283186" type="Touch">
+                            <param id="0" name="Object">8Select</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="613433285596833" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">8</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="726898430420626" type="System">
+                            <param id="0" name="Layout">Level1-8</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="107703143608719">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="518187715803005" type="Touch">
+                            <param id="0" name="Object">9Select</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="927600721632301" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">9</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="942263743549640" type="System">
+                            <param id="0" name="Layout">Level2-1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="851975301680363">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="441077403807149" type="Touch">
+                            <param id="0" name="Object">10Select</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="882872250297603" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="758678598682644" type="System">
+                            <param id="0" name="Layout">Level2-2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="611448976112292">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="869053873491064" type="Touch">
+                            <param id="0" name="Object">11Select</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="974034028390361" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">11</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="932255526772626" type="System">
+                            <param id="0" name="Layout">Level2-3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="731013990277509">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="163641068431265" type="Touch">
+                            <param id="0" name="Object">12Select</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="645087946317018" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">12</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="165785204632597" type="System">
+                            <param id="0" name="Layout">Level2-4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="972040305395579">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="809508443620705" type="Touch">
+                            <param id="0" name="Object">13Select</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="181280424923701" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">13</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="313455161426761" type="System">
+                            <param id="0" name="Layout">Level2-5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="615377612850748">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="672264062701638" type="Touch">
+                            <param id="0" name="Object">14Select</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="421986035454291" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">14</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="451587261415217" type="System">
+                            <param id="0" name="Layout">Level2-6</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="548726286747509">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="362569631200694" type="Touch">
+                            <param id="0" name="Object">15Select</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="132388819989705" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">15</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="672625678212774" type="System">
+                            <param id="0" name="Layout">Level2-7</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="263195696289226">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="577468797432194" type="Touch">
+                            <param id="0" name="Object">16Select</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="576568374787893" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">16</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="626362134490805" type="System">
+                            <param id="0" name="Layout">Level2-8</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="628927574030900">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="732284371884291" type="Touch">
+                            <param id="0" name="Object">17Select</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="234843438822730" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">17</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="956515068794503" type="System">
+                            <param id="0" name="Layout">Level3-1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="240604079718435">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="308960847518237" type="Touch">
+                            <param id="0" name="Object">18Select</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="441459430654573" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">18</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="851200114705549" type="System">
+                            <param id="0" name="Layout">Level3-2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="119550244224793">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="974766061947573" type="Touch">
+                            <param id="0" name="Object">19Select</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="905036340000641" type="System">
+                            <param id="0" name="Variable">SelectMenuBoss</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="420374478169876" type="System">
+                            <param id="0" name="Layout">Level3-3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="462435484563464">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="197168239220652" type="Touch">
+                            <param id="0" name="Object">20Select</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="870251600009525" type="System">
+                            <param id="0" name="Variable">SelectMenuBoss</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="549661461777608" type="System">
+                            <param id="0" name="Layout">Level3-4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="727544847786605">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="490103595558597" type="Touch">
+                            <param id="0" name="Object">21Select</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="512649692733354" type="System">
+                            <param id="0" name="Variable">SelectMenuBoss</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="458647966046422" type="System">
+                            <param id="0" name="Layout">Level3-5</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="227398355872338">
             <conditions>
-                <condition id="3" name="On touched object" sid="211347339507619" type="Touch">
-                    <param id="0" name="Object">4Select</param>
+                <condition id="3" name="On touched object" sid="592454943182879" type="Touch">
+                    <param id="0" name="Object">selectback</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-2" name="Go to layout" sid="846793773902974" type="System">
-                    <param id="0" name="Layout">Level1-4</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="200372925772128">
-            <conditions>
-                <condition id="3" name="On touched object" sid="124598215019337" type="Touch">
-                    <param id="0" name="Object">5Select</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="816254517026421" type="System">
-                    <param id="0" name="Layout">Level1-5</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="273629254874071">
-            <conditions>
-                <condition id="3" name="On touched object" sid="822653006692912" type="Touch">
-                    <param id="0" name="Object">6Select</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="553108525177109" type="System">
-                    <param id="0" name="Layout">Level1-6</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="818768628101280">
-            <conditions>
-                <condition id="3" name="On touched object" sid="395910610627307" type="Touch">
-                    <param id="0" name="Object">7Select</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="480315008450870" type="System">
-                    <param id="0" name="Layout">Level1-7</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="523108086298830">
-            <conditions>
-                <condition id="3" name="On touched object" sid="912340189283186" type="Touch">
-                    <param id="0" name="Object">8Select</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="726898430420626" type="System">
-                    <param id="0" name="Layout">Level1-8</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="107703143608719">
-            <conditions>
-                <condition id="3" name="On touched object" sid="518187715803005" type="Touch">
-                    <param id="0" name="Object">9Select</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="942263743549640" type="System">
-                    <param id="0" name="Layout">Level2-1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="851975301680363">
-            <conditions>
-                <condition id="3" name="On touched object" sid="441077403807149" type="Touch">
-                    <param id="0" name="Object">10Select</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="758678598682644" type="System">
-                    <param id="0" name="Layout">Level2-2</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="611448976112292">
-            <conditions>
-                <condition id="3" name="On touched object" sid="869053873491064" type="Touch">
-                    <param id="0" name="Object">11Select</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="932255526772626" type="System">
-                    <param id="0" name="Layout">Level2-3</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="731013990277509">
-            <conditions>
-                <condition id="3" name="On touched object" sid="163641068431265" type="Touch">
-                    <param id="0" name="Object">12Select</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="165785204632597" type="System">
-                    <param id="0" name="Layout">Level2-4</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="972040305395579">
-            <conditions>
-                <condition id="3" name="On touched object" sid="809508443620705" type="Touch">
-                    <param id="0" name="Object">13Select</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="313455161426761" type="System">
-                    <param id="0" name="Layout">Level2-5</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="615377612850748">
-            <conditions>
-                <condition id="3" name="On touched object" sid="672264062701638" type="Touch">
-                    <param id="0" name="Object">14Select</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="451587261415217" type="System">
-                    <param id="0" name="Layout">Level2-6</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="548726286747509">
-            <conditions>
-                <condition id="3" name="On touched object" sid="362569631200694" type="Touch">
-                    <param id="0" name="Object">15Select</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="672625678212774" type="System">
-                    <param id="0" name="Layout">Level2-7</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="263195696289226">
-            <conditions>
-                <condition id="3" name="On touched object" sid="577468797432194" type="Touch">
-                    <param id="0" name="Object">16Select</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="626362134490805" type="System">
-                    <param id="0" name="Layout">Level2-8</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="628927574030900">
-            <conditions>
-                <condition id="3" name="On touched object" sid="732284371884291" type="Touch">
-                    <param id="0" name="Object">17Select</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="956515068794503" type="System">
-                    <param id="0" name="Layout">Level3-1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="240604079718435">
-            <conditions>
-                <condition id="3" name="On touched object" sid="308960847518237" type="Touch">
-                    <param id="0" name="Object">18Select</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="851200114705549" type="System">
-                    <param id="0" name="Layout">Level3-2</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="119550244224793">
-            <conditions>
-                <condition id="3" name="On touched object" sid="974766061947573" type="Touch">
-                    <param id="0" name="Object">19Select</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="420374478169876" type="System">
-                    <param id="0" name="Layout">Level1-1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="462435484563464">
-            <conditions>
-                <condition id="3" name="On touched object" sid="197168239220652" type="Touch">
-                    <param id="0" name="Object">20Select</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="549661461777608" type="System">
-                    <param id="0" name="Layout">Level1-1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="727544847786605">
-            <conditions>
-                <condition id="3" name="On touched object" sid="490103595558597" type="Touch">
-                    <param id="0" name="Object">21Select</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="458647966046422" type="System">
-                    <param id="0" name="Layout">Level1-1</param>
+                <action id="-2" name="Go to layout" sid="715764936350633" type="System">
+                    <param id="0" name="Layout">Menu</param>
                 </action>
             </actions>
         </event-block>

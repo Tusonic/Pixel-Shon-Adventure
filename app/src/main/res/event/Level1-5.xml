@@ -26,6 +26,11 @@
                         <condition id="1" name="Is overlapping another object" sid="234698324773036" type="Shon">
                             <param id="0" name="Object">PortalOpen</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="554270248073913" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action behavior="Platform" id="11" name="Set enabled" sid="192051570812361" type="Shon">
@@ -42,6 +47,40 @@
                             <param id="0" name="Seconds">0.5</param>
                         </action>
                         <action id="-2" name="Go to layout" sid="203987974228628" type="System">
+                            <param id="0" name="Layout">Level1-6</param>
+                        </action>
+                        <action id="0" name="Set item" sid="373581505735596" type="LocalStorage">
+                            <param id="0" name="Key">&quot;Save&quot;</param>
+                            <param id="1" name="Value">&quot;6&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="132232108690506">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="659724841942014" type="Shon">
+                            <param id="0" name="Object">PortalOpen</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="407518489305872" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="242095438834049" type="Shon">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="456238132531016" type="Shon">
+                            <param id="0" name="Animation">&quot;ID_IDLE&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-20" name="Set layout scale" sid="767977682573156" type="System">
+                            <param id="0" name="Scale">lerp(LayoutScale, 2.0, 6*dt)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="308934551122494" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="431078129150216" type="System">
                             <param id="0" name="Layout">Level1-6</param>
                         </action>
                     </actions>

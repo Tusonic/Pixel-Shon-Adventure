@@ -368,7 +368,6 @@
                         <action id="-2" name="Go to layout" sid="105351417023935" type="System">
                             <param id="0" name="Layout">Select</param>
                         </action>
-                        <action disabled="1" id="-26" name="Restart layout" sid="963658344414912" type="System" />
                     </actions>
                 </event-block>
             </sub-events>

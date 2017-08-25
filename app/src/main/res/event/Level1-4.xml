@@ -28,6 +28,11 @@
                         <condition id="1" name="Is overlapping another object" sid="505384369970323" type="Shon">
                             <param id="0" name="Object">PortalOpen</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="390230753930276" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action behavior="Platform" id="11" name="Set enabled" sid="709123115331606" type="Shon">
@@ -46,26 +51,44 @@
                         <action id="-2" name="Go to layout" sid="716883392631353" type="System">
                             <param id="0" name="Layout">Level1-5</param>
                         </action>
+                        <action id="0" name="Set item" sid="481162585346218" type="LocalStorage">
+                            <param id="0" name="Key">&quot;Save&quot;</param>
+                            <param id="1" name="Value">&quot;5&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="342987017594131">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="792507850590896" type="Shon">
+                            <param id="0" name="Object">PortalOpen</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="990910779328894" type="System">
+                            <param id="0" name="Variable">SelectMenu</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="232226327541063" type="Shon">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="917984927059639" type="Shon">
+                            <param id="0" name="Animation">&quot;ID_IDLE&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-20" name="Set layout scale" sid="252455928057632" type="System">
+                            <param id="0" name="Scale">lerp(LayoutScale, 2.0, 6*dt)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="951260545658458" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="826943072710527" type="System">
+                            <param id="0" name="Layout">Level1-5</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block disabled="1" sid="226969693748058">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="887513112509598" type="Shon">
-                    <param id="0" name="Object">Point1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-3" name="Create object" sid="290302038485497" type="System">
-                    <param id="0" name="Object to create">Skeleton</param>
-                    <param id="1" name="Layer">&quot;Logic&quot;</param>
-                    <param id="2" name="X">768</param>
-                    <param id="3" name="Y">272</param>
-                </action>
-                <action id="-9" name="Destroy" sid="498551773703744" type="Point1" />
-            </actions>
-        </event-block>
         <event-block sid="850408070837935">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="242910984258023" type="System" />

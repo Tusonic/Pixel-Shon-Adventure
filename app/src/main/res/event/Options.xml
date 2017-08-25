@@ -3,14 +3,14 @@
     <!-- TUSONIC -->
     <name>Options</name>
     <events>
-        <event-block sid="414296611990443">
+        <event-block sid="369692516814032">
             <conditions>
-                <condition id="3" name="On touched object" sid="788237166296095" type="Touch">
-                    <param id="0" name="Object">exit</param>
+                <condition id="3" name="On touched object" sid="187504857136276" type="Touch">
+                    <param id="0" name="Object">OptionsBack</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-2" name="Go to layout" sid="388790079895164" type="System">
+                <action id="-2" name="Go to layout" sid="869347348598554" type="System">
                     <param id="0" name="Layout">Menu</param>
                 </action>
             </actions>

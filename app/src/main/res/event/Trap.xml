@@ -57,6 +57,32 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="721852260806956">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="719458386778374" type="Shon">
+                            <param id="0" name="Object">Trap15</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="317133079080778" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="159331982196979">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="815110660461783" type="Shon">
+                            <param id="0" name="Object">Trap16</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="708877887397085" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="843436352843148" title="Trap2">

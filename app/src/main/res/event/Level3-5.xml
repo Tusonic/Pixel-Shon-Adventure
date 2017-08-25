@@ -1,0 +1,454 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!-- TUSONIC -->
+    <name>Level3-5</name>
+    <events>
+        <variable constant="0" name="Boss3" sid="932013125426087" static="0" type="number">0</variable>
+        <event-block sid="777628237506374">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="154751935448418" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="211797412768482" type="System">
+                    <param id="0" name="Variable">Boss3</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <include>Player</include>
+        <include>Control</include>
+        <event-block sid="346188451188607">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="926660574739676" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="447226504575231" type="Boss3">
+                    <param id="0" name="X">lerp(Self.X, Shon.X, 0.005)</param>
+                    <param id="1" name="Y">lerp(Self.Y, Shon.Y, 0.005)</param>
+                </action>
+                <action id="-3" name="Set position" sid="793293442102142" type="Boss3Monster10">
+                    <param id="0" name="X">lerp(Self.X, Boss3.X+40, 0.1)</param>
+                    <param id="1" name="Y">lerp(Self.Y, Boss3.Y+40, 0.1)</param>
+                </action>
+                <action id="-3" name="Set position" sid="709741587094142" type="Boss3Monster11">
+                    <param id="0" name="X">lerp(Self.X, Boss3.X-40, 0.1)</param>
+                    <param id="1" name="Y">lerp(Self.Y, Boss3.Y+40, 0.1)</param>
+                </action>
+                <action id="-3" name="Set position" sid="253103949397494" type="Boss3Monster12">
+                    <param id="0" name="X">lerp(Self.X, Boss3.X+40, 0.1)</param>
+                    <param id="1" name="Y">lerp(Self.Y, Boss3.Y-40, 0.1)</param>
+                </action>
+                <action id="-3" name="Set position" sid="177120139289199" type="Boss3Monster13">
+                    <param id="0" name="X">lerp(Self.X, Boss3.X-40, 0.1)</param>
+                    <param id="1" name="Y">lerp(Self.Y, Boss3.Y-40, 0.1)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="615125254943518">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="633267415680374" type="System">
+                    <param id="0" name="Interval (seconds)">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="955807861905169" type="Boss3">
+                    <param id="0" name="Animation">&quot;Atack&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="133739662567734" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-3" name="Create object" sid="984149113262640" type="System">
+                    <param id="0" name="Object to create">LawaStone</param>
+                    <param id="1" name="Layer">&quot;Logic&quot;</param>
+                    <param id="2" name="X">Boss3.X</param>
+                    <param id="3" name="Y">Boss3.Y</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="364399083260501" type="LawaStone">
+                    <param id="0" name="Speed">100</param>
+                </action>
+                <action id="-22" name="Set angle toward position" sid="929519064609300" type="LawaStone">
+                    <param id="0" name="X">Shon.X</param>
+                    <param id="1" name="Y">Shon.Y</param>
+                </action>
+                <action id="4" name="Set animation" sid="806817826599584" type="Boss3">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="249014223341354" title="Boss3MonsterAtack">
+            <sub-events>
+                <event-block sid="881784308992306">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="463408593258012" type="ShonAtack">
+                            <param id="0" name="Object">Boss3Monster10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="262900011445979" type="System">
+                            <param id="0" name="Object to create">Particles</param>
+                            <param id="1" name="Layer">&quot;Logic&quot;</param>
+                            <param id="2" name="X">Boss3Monster10.X</param>
+                            <param id="3" name="Y">Boss3Monster10.Y</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="498116553898222" type="Boss3Monster10" />
+                    </actions>
+                </event-block>
+                <event-block sid="285000697854921">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="365666065418209" type="ShonAtack">
+                            <param id="0" name="Object">Boss3Monster11</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="118773436656404" type="System">
+                            <param id="0" name="Object to create">Particles</param>
+                            <param id="1" name="Layer">&quot;Logic&quot;</param>
+                            <param id="2" name="X">Boss3Monster11.X</param>
+                            <param id="3" name="Y">Boss3Monster11.Y</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="542984750305687" type="Boss3Monster11" />
+                    </actions>
+                </event-block>
+                <event-block sid="563955534960468">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="113714854455336" type="ShonAtack">
+                            <param id="0" name="Object">Boss3Monster12</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="257301119634555" type="System">
+                            <param id="0" name="Object to create">Particles</param>
+                            <param id="1" name="Layer">&quot;Logic&quot;</param>
+                            <param id="2" name="X">Boss3Monster12.X</param>
+                            <param id="3" name="Y">Boss3Monster12.Y</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="890746117845477" type="Boss3Monster12" />
+                    </actions>
+                </event-block>
+                <event-block sid="469929040081000">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="423644772455200" type="ShonAtack">
+                            <param id="0" name="Object">Boss3Monster13</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="947278625131175" type="System">
+                            <param id="0" name="Object to create">Particles</param>
+                            <param id="1" name="Layer">&quot;Logic&quot;</param>
+                            <param id="2" name="X">Boss3Monster13.X</param>
+                            <param id="3" name="Y">Boss3Monster13.Y</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="557666852409277" type="Boss3Monster13" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="821040237133280" title="Boss3MonsterAnimation">
+            <sub-events>
+                <event-block sid="654099962520481">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="924300762117845" type="Shon">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">Boss3Monster10.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="742379949940977" type="Boss3Monster10">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="420063637897966">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="712087284817532" type="Shon">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">Boss3Monster10.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="299223584383832" type="Boss3Monster10">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="335410745353897">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="243687390228918" type="Shon">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">Boss3Monster11.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="959874161089203" type="Boss3Monster11">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="416963352419834">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="511026969382333" type="Shon">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">Boss3Monster11.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="964353398759689" type="Boss3Monster11">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="807116440858927">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="472076425537519" type="Shon">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">Boss3Monster12.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="635999252059855" type="Boss3Monster12">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="793487028187187">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="540087529255985" type="Shon">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">Boss3Monster12.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="108194463080294" type="Boss3Monster12">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="450988217009017">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="216063360920118" type="Shon">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">Boss3Monster13.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="727274942115340" type="Boss3Monster13">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="146224378969705">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="926737917909036" type="Shon">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">Boss3Monster13.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="847683997224304" type="Boss3Monster13">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="388614628643955">
+                    <conditions>
+                        <condition id="5" name="On any finished" sid="375528796406889" type="Boss3Monster10" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Start" sid="396447925811351" type="Boss3Monster10">
+                            <param id="0" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="162156848698861">
+                    <conditions>
+                        <condition id="5" name="On any finished" sid="712950181009929" type="Boss3Monster11" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Start" sid="165488648439358" type="Boss3Monster11">
+                            <param id="0" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="766525230471144">
+                    <conditions>
+                        <condition id="5" name="On any finished" sid="137623647027929" type="Boss3Monster12" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Start" sid="288551649999125" type="Boss3Monster12">
+                            <param id="0" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="547165923474099">
+                    <conditions>
+                        <condition id="5" name="On any finished" sid="546205554238513" type="Boss3Monster13" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Start" sid="712217398507486" type="Boss3Monster13">
+                            <param id="0" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="863804413993508" title="Boss3DeathPlayer3">
+            <sub-events>
+                <event-block sid="562091079224534">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="141349029576948" type="LawaStone">
+                            <param id="0" name="Object">Shon</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="427641671454373" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="439195789843291">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="901014815330763" type="Boss3">
+                            <param id="0" name="Object">Shon</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="143982962385414" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="512739738983029">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="657548627209595" type="ShonAtack">
+                            <param id="0" name="Object">LawaStone</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="4" name="Bounce off object" sid="446877646192679" type="LawaStone">
+                            <param id="0" name="Object">Boss1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="590740410341357" title="Boss3Logic">
+            <sub-events>
+                <event-block sid="464946528775293">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="289888543269728" type="Boss3Monster10" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="922970971882692" type="System">
+                            <param id="0" name="Variable">Boss3</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="368023527615631">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="749211498112701" type="Boss3Monster11" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="604902856391480" type="System">
+                            <param id="0" name="Variable">Boss3</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="594594380605484">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="906409802558551" type="Boss3Monster12" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="874717611907130" type="System">
+                            <param id="0" name="Variable">Boss3</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="828336619879149">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="942232714972254" type="Boss3Monster13" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="387525149149798" type="System">
+                            <param id="0" name="Variable">Boss3</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="150144611471642">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="948986676861492" type="System">
+                    <param id="0" name="Variable">Boss3</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="492555815073533" type="Key3DoorNone" />
+                <action id="-9" name="Destroy" sid="244395750561990" type="Boss3" />
+                <action id="-3" name="Create object" sid="734216711689174" type="System">
+                    <param id="0" name="Object to create">Particles</param>
+                    <param id="1" name="Layer">&quot;Logic&quot;</param>
+                    <param id="2" name="X">Boss3.X</param>
+                    <param id="3" name="Y">Boss3.Y</param>
+                </action>
+                <action id="-9" name="Destroy" sid="453820596514011" type="LawaStone" />
+            </actions>
+        </event-block>
+        <event-group description="Next Level" sid="630848192851103" title="Portal21">
+            <sub-events>
+                <event-block sid="435443375568949">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="586242031281863" type="Shon">
+                            <param id="0" name="Object">PortalCheck</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="826877433600479" type="Portal">
+                            <param id="0" name="Animation">&quot;OPEN&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="341629473564853" type="PortalCheck" />
+                    </actions>
+                </event-block>
+                <event-block sid="157979116671086">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="566934025075758" type="Shon">
+                            <param id="0" name="Object">PortalOpen</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set item" sid="357832941036487" type="LocalStorage">
+                            <param id="0" name="Key">&quot;SaveBoss&quot;</param>
+                            <param id="1" name="Value">&quot;7&quot;</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="683890269803429" type="Shon">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="559990815507846" type="Shon">
+                            <param id="0" name="Animation">&quot;ID_IDLE&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-20" name="Set layout scale" sid="323453799258777" type="System">
+                            <param id="0" name="Scale">lerp(LayoutScale, 2.0, 6*dt)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="969715214675081" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="552177557468009" type="System">
+                            <param id="0" name="Layout">Select</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

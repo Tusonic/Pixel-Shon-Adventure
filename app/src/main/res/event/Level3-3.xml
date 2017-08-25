@@ -8,12 +8,33 @@
         <include>Player</include>
         <include>Control</include>
         <include>Key</include>
+        <event-block sid="107642457795101">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="217042197986998" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="110569179986320" type="System">
+                    <param id="0" name="Variable">Boss1</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="206859623153317">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="932059768315184" type="LawaStone">
+                    <param id="0" name="Object">DeleteBullet</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="271175203298309" type="LawaStone" />
+            </actions>
+        </event-block>
         <event-group description="" sid="443692359924811" title="Boss1Atack1">
             <sub-events>
                 <event-block sid="164331434081962">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="886658153998968" type="System">
-                            <param id="0" name="Interval (seconds)">6</param>
+                            <param id="0" name="Interval (seconds)">16</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -39,7 +60,7 @@
                 <event-block sid="481343115001746">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="335386712974456" type="System">
-                            <param id="0" name="Interval (seconds)">4</param>
+                            <param id="0" name="Interval (seconds)">10</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -49,6 +70,9 @@
                             <param id="2" name="X">Boss1.X</param>
                             <param id="3" name="Y">Boss1.Y</param>
                         </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="782075928780364" type="LawaStone">
+                            <param id="0" name="Speed">100</param>
+                        </action>
                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="603991231916272" type="LawaStone">
                             <param id="0" name="Angle">0</param>
                         </action>
@@ -57,7 +81,7 @@
                 <event-block sid="692914398966707">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="804608229069272" type="System">
-                            <param id="0" name="Interval (seconds)">4</param>
+                            <param id="0" name="Interval (seconds)">10</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -67,6 +91,9 @@
                             <param id="2" name="X">Boss1.X</param>
                             <param id="3" name="Y">Boss1.Y</param>
                         </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="484831699554251" type="LawaStone">
+                            <param id="0" name="Speed">100</param>
+                        </action>
                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="822284192889509" type="LawaStone">
                             <param id="0" name="Angle">45</param>
                         </action>
@@ -75,7 +102,7 @@
                 <event-block sid="941853964601135">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="631253067467183" type="System">
-                            <param id="0" name="Interval (seconds)">4</param>
+                            <param id="0" name="Interval (seconds)">10</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -85,6 +112,9 @@
                             <param id="2" name="X">Boss1.X</param>
                             <param id="3" name="Y">Boss1.Y</param>
                         </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="282212964466596" type="LawaStone">
+                            <param id="0" name="Speed">100</param>
+                        </action>
                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="259062345173245" type="LawaStone">
                             <param id="0" name="Angle">90</param>
                         </action>
@@ -93,7 +123,7 @@
                 <event-block sid="946705077410884">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="569567481123807" type="System">
-                            <param id="0" name="Interval (seconds)">4</param>
+                            <param id="0" name="Interval (seconds)">10</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -103,6 +133,9 @@
                             <param id="2" name="X">Boss1.X</param>
                             <param id="3" name="Y">Boss1.Y</param>
                         </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="735359894166420" type="LawaStone">
+                            <param id="0" name="Speed">100</param>
+                        </action>
                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="243769246954719" type="LawaStone">
                             <param id="0" name="Angle">135</param>
                         </action>
@@ -111,7 +144,7 @@
                 <event-block sid="550159965142108">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="107372742741788" type="System">
-                            <param id="0" name="Interval (seconds)">4</param>
+                            <param id="0" name="Interval (seconds)">10</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -121,6 +154,9 @@
                             <param id="2" name="X">Boss1.X</param>
                             <param id="3" name="Y">Boss1.Y</param>
                         </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="324663464649134" type="LawaStone">
+                            <param id="0" name="Speed">100</param>
+                        </action>
                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="430196640308328" type="LawaStone">
                             <param id="0" name="Angle">180</param>
                         </action>
@@ -129,7 +165,7 @@
                 <event-block sid="343659406983211">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="641109651525372" type="System">
-                            <param id="0" name="Interval (seconds)">4</param>
+                            <param id="0" name="Interval (seconds)">10</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -139,6 +175,9 @@
                             <param id="2" name="X">Boss1.X</param>
                             <param id="3" name="Y">Boss1.Y</param>
                         </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="537186314954329" type="LawaStone">
+                            <param id="0" name="Speed">100</param>
+                        </action>
                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="266896806973057" type="LawaStone">
                             <param id="0" name="Angle">225</param>
                         </action>
@@ -147,7 +186,7 @@
                 <event-block sid="322455289928609">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="160162154768781" type="System">
-                            <param id="0" name="Interval (seconds)">4</param>
+                            <param id="0" name="Interval (seconds)">10</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -157,6 +196,9 @@
                             <param id="2" name="X">Boss1.X</param>
                             <param id="3" name="Y">Boss1.Y</param>
                         </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="822180753404753" type="LawaStone">
+                            <param id="0" name="Speed">100</param>
+                        </action>
                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="155112664014278" type="LawaStone">
                             <param id="0" name="Angle">270</param>
                         </action>
@@ -165,7 +207,7 @@
                 <event-block sid="872141968801090">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="872047861766946" type="System">
-                            <param id="0" name="Interval (seconds)">4</param>
+                            <param id="0" name="Interval (seconds)">10</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -175,6 +217,9 @@
                             <param id="2" name="X">Boss1.X</param>
                             <param id="3" name="Y">Boss1.Y</param>
                         </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="591209218757495" type="LawaStone">
+                            <param id="0" name="Speed">100</param>
+                        </action>
                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="351124879604160" type="LawaStone">
                             <param id="0" name="Angle">315</param>
                         </action>
@@ -182,18 +227,65 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="206859623153317">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="932059768315184" type="LawaStone">
-                    <param id="0" name="Object">DeleteBullet</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="271175203298309" type="LawaStone" />
-            </actions>
-        </event-block>
         <event-group description="" sid="429966324114795" title="LogicBoss1">
             <sub-events>
+                <event-block sid="520963156635554">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="561053759455061" type="Boss1Monster1" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="263866593725900" type="System">
+                            <param id="0" name="Variable">Boss1</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="792475914751149">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="185137984855183" type="Boss1Monster2" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="729458751854300" type="System">
+                            <param id="0" name="Variable">Boss1</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="737655509989048">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="495234547887853" type="Boss1Monster3" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="488001345214765" type="System">
+                            <param id="0" name="Variable">Boss1</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="352930267165543">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="139822090719508" type="Boss1Monster4" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="886724253510911" type="System">
+                            <param id="0" name="Variable">Boss1</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="495858739772158">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="581733596086772" type="System">
+                            <param id="0" name="Variable">Boss1</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="963015291672507" type="Boss1" />
+                        <action id="-9" name="Destroy" sid="505414342143068" type="Key3DoorNone" />
+                    </actions>
+                </event-block>
                 <event-block sid="753519125973065">
                     <conditions>
                         <condition id="5" name="On any finished" sid="168490999203680" type="Boss1Monster1" />
@@ -300,62 +392,94 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="520963156635554">
-            <conditions>
-                <condition id="-19" name="On destroyed" sid="561053759455061" type="Boss1Monster1" />
-            </conditions>
-            <actions>
-                <action id="-10" name="Add to" sid="263866593725900" type="System">
-                    <param id="0" name="Variable">Boss1</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="792475914751149">
-            <conditions>
-                <condition id="-19" name="On destroyed" sid="185137984855183" type="Boss1Monster2" />
-            </conditions>
-            <actions>
-                <action id="-10" name="Add to" sid="729458751854300" type="System">
-                    <param id="0" name="Variable">Boss1</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="737655509989048">
-            <conditions>
-                <condition id="-19" name="On destroyed" sid="495234547887853" type="Boss1Monster3" />
-            </conditions>
-            <actions>
-                <action id="-10" name="Add to" sid="488001345214765" type="System">
-                    <param id="0" name="Variable">Boss1</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="352930267165543">
-            <conditions>
-                <condition id="-19" name="On destroyed" sid="139822090719508" type="Boss1Monster4" />
-            </conditions>
-            <actions>
-                <action id="-10" name="Add to" sid="886724253510911" type="System">
-                    <param id="0" name="Variable">Boss1</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="495858739772158">
-            <conditions>
-                <condition id="-14" name="Compare variable" sid="581733596086772" type="System">
-                    <param id="0" name="Variable">Boss1</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">4</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="963015291672507" type="Boss1" />
-                <action id="-9" name="Destroy" sid="505414342143068" type="Key3DoorNone" />
-            </actions>
-        </event-block>
+        <event-group description="" sid="650233475668491" title="Boss1DeathPlayer1">
+            <sub-events>
+                <event-block sid="560181201632131">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="404589818872440" type="LawaStone">
+                            <param id="0" name="Object">Shon</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="750720627593955" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="603254657456808">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="613561392617709" type="Boss1">
+                            <param id="0" name="Object">Shon</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="186464693288974" type="Function">
+                            <param id="0" name="Name">&quot;OnDeathPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="798487339677193">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="765825351130674" type="ShonAtack">
+                            <param id="0" name="Object">LawaStone</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="4" name="Bounce off object" sid="803384178610798" type="LawaStone">
+                            <param id="0" name="Object">Boss1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Next Level" sid="589754923111387" title="Portal19">
+            <sub-events>
+                <event-block sid="152962759372338">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="704908131773581" type="Shon">
+                            <param id="0" name="Object">PortalCheck</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="374966688156243" type="Portal">
+                            <param id="0" name="Animation">&quot;OPEN&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="533230656795095" type="PortalCheck" />
+                    </actions>
+                </event-block>
+                <event-block sid="999637956663313">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="321965336499623" type="Shon">
+                            <param id="0" name="Object">PortalOpen</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set item" sid="534898756984415" type="LocalStorage">
+                            <param id="0" name="Key">&quot;SaveBoss&quot;</param>
+                            <param id="1" name="Value">&quot;3&quot;</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="400631329759528" type="Shon">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="145343880037281" type="Shon">
+                            <param id="0" name="Animation">&quot;ID_IDLE&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-20" name="Set layout scale" sid="362494934596130" type="System">
+                            <param id="0" name="Scale">lerp(LayoutScale, 2.0, 6*dt)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="141701786214476" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="299247806658433" type="System">
+                            <param id="0" name="Layout">Select</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
