@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!-- TUSONIC -->
+    <name>Reset</name>
+    <events>
+        <event-block sid="406262198157810">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="996670733624765" type="System" />
+            </conditions>
+            <actions>
+                <action id="2" name="Remove item" sid="122952001667325" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Save&quot;</param>
+                </action>
+                <action id="2" name="Remove item" sid="261910490325976" type="LocalStorage">
+                    <param id="0" name="Key">&quot;SaveBoss&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

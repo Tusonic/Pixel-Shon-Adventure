@@ -17,7 +17,7 @@
                     <param id="0" name="Key">&quot;SaveBoss&quot;</param>
                 </action>
                 <action id="4" name="Set animation" sid="676332114789406" type="1Select">
-                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
                 <action id="4" name="Set animation" sid="897916107907766" type="2Select">
@@ -132,295 +132,1500 @@
             <sub-events>
                 <event-block sid="194659517705075">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="314255813911995" type="System" />
                         <condition id="-14" name="Compare variable" sid="625799930476069" type="System">
                             <param id="0" name="Variable">SelectMenu</param>
-                            <param id="1" name="Comparison">5</param>
+                            <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="728981169899061" type="1Select">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="400311248414698" type="2Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="651620929666714" type="3Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="739948102180383" type="4Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="131263271626560" type="5Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="757636854790145" type="6Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="996021266216210" type="7Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="218534790608162" type="8Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="862162095513996" type="9Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="746072422606884" type="10Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="686825071099730" type="11Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="508392389527046" type="12Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="158002226691701" type="13Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="804922080060426" type="14Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="238972924576369" type="15Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="853767786008501" type="16Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="654125190851610" type="17Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="511402390656964" type="18Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="175944381310328">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="949276300901292" type="System" />
                         <condition id="-14" name="Compare variable" sid="470010766912433" type="System">
                             <param id="0" name="Variable">SelectMenu</param>
-                            <param id="1" name="Comparison">5</param>
+                            <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="585824610658313" type="2Select">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        <action id="4" name="Set animation" sid="589452053047382" type="1Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="789800566260334" type="2Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="583617078104296" type="3Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="875995094568954" type="4Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="838674488477081" type="5Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="518593431591370" type="6Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="687509182667880" type="7Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="151748398562426" type="8Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="311233678420507" type="9Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="596703153649589" type="10Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="221963876822216" type="11Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="347399256344510" type="12Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="895837241066901" type="13Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="326572687277690" type="14Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="113896021267159" type="15Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="801172725130681" type="16Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="959832702167895" type="17Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="890010311309194" type="18Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="524751680449374">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="539165850542442" type="System" />
                         <condition id="-14" name="Compare variable" sid="741157734194355" type="System">
                             <param id="0" name="Variable">SelectMenu</param>
-                            <param id="1" name="Comparison">5</param>
+                            <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">3</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="809893719419863" type="3Select">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        <action id="4" name="Set animation" sid="539194710336726" type="1Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="168612682088273" type="2Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="619817407112685" type="3Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="175650992070026" type="4Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="535201845738387" type="5Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="764556049433143" type="6Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="842865536606318" type="7Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="371978228432100" type="8Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="346399070040545" type="9Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="467538051323694" type="10Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="899699156616362" type="11Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="108389419537921" type="12Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="432417060506588" type="13Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="943672742758370" type="14Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="182745397219154" type="15Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="748701727739292" type="16Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="456558496797292" type="17Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="381030387506443" type="18Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="172368962277779">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="647168920669668" type="System" />
                         <condition id="-14" name="Compare variable" sid="948524601611695" type="System">
                             <param id="0" name="Variable">SelectMenu</param>
-                            <param id="1" name="Comparison">5</param>
+                            <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">4</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="277615630319956" type="4Select">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        <action id="4" name="Set animation" sid="560017200528235" type="1Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="697680730455225" type="2Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="875051590402542" type="3Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="599602340047358" type="4Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="461125666779289" type="5Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="214106198530937" type="6Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="155864653305748" type="7Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="691583859001841" type="8Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="754104932378920" type="9Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="390687741839293" type="10Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="482716068294438" type="11Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="719048384667093" type="12Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="630036366735388" type="13Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="496806144219122" type="14Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="143940095897527" type="15Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="942467824155555" type="16Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="293635363185211" type="17Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="481131799088490" type="18Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="162780123347259">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="341527494530923" type="System" />
                         <condition id="-14" name="Compare variable" sid="639905773972465" type="System">
                             <param id="0" name="Variable">SelectMenu</param>
-                            <param id="1" name="Comparison">5</param>
+                            <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">5</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="599738259023835" type="5Select">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        <action id="4" name="Set animation" sid="732190693993778" type="1Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="569380613889612" type="2Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="284588620838679" type="3Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="497440807267546" type="4Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="756173582712763" type="5Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="129541469192030" type="6Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="548884934507046" type="7Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="589730049725514" type="8Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="337703270152912" type="9Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="404693641625911" type="10Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="869816885654788" type="11Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="987724401387522" type="12Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="423280549374303" type="13Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="604373742805041" type="14Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="896854294119188" type="15Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="917398764761287" type="16Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="186828288742867" type="17Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="296892404710846" type="18Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="278774989834106">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="119746654196094" type="System" />
                         <condition id="-14" name="Compare variable" sid="828120938580096" type="System">
                             <param id="0" name="Variable">SelectMenu</param>
-                            <param id="1" name="Comparison">5</param>
+                            <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">6</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="272402255501479" type="6Select">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        <action id="4" name="Set animation" sid="848288576649512" type="1Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="571747543042274" type="2Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="399530090284191" type="3Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="503242263596728" type="4Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="324955323913854" type="5Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="709138851462005" type="6Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="891577908003520" type="7Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="222120007937972" type="8Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="618019147836118" type="9Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="210162587539525" type="10Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="159741387569456" type="11Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="425124852942390" type="12Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="717077427519620" type="13Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="755458283759723" type="14Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="971905340328799" type="15Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="675184704737969" type="16Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="399777505886416" type="17Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="603471600387311" type="18Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="209457319752270">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="527209090505177" type="System" />
                         <condition id="-14" name="Compare variable" sid="679760411463132" type="System">
                             <param id="0" name="Variable">SelectMenu</param>
-                            <param id="1" name="Comparison">5</param>
+                            <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">7</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="600896038838703" type="7Select">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        <action id="4" name="Set animation" sid="904068490083004" type="1Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="648297179178901" type="2Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="258688043591202" type="3Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="998986838715163" type="4Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="938275258814387" type="5Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="609804821806376" type="6Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="688554661056590" type="7Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="959593218040951" type="8Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="770629092229429" type="9Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="413129030646339" type="10Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="849253877218061" type="11Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="457986582882884" type="12Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="322183848849518" type="13Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="624408302333415" type="14Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="990283611995572" type="15Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="450530326105047" type="16Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="541330037051626" type="17Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="878134085865030" type="18Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="494618028762950">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="623177691160569" type="System" />
                         <condition id="-14" name="Compare variable" sid="995399047481012" type="System">
                             <param id="0" name="Variable">SelectMenu</param>
-                            <param id="1" name="Comparison">5</param>
+                            <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">8</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="225848789316728" type="8Select">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        <action id="4" name="Set animation" sid="738987770941175" type="1Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="104250058221390" type="2Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="148970561354497" type="3Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="521438836084183" type="4Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="757325753693953" type="5Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="143820611340598" type="6Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="160947132015397" type="7Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="276727062920374" type="8Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="309213020298466" type="9Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="639798177460955" type="10Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="823299961354636" type="11Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="193060409331696" type="12Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="535374829631324" type="13Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="710363996839671" type="14Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="406088064258015" type="15Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="529818802225257" type="16Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="661588774174608" type="17Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="682756576643304" type="18Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="673495953340555">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="349246645366849" type="System" />
                         <condition id="-14" name="Compare variable" sid="990577181093120" type="System">
                             <param id="0" name="Variable">SelectMenu</param>
-                            <param id="1" name="Comparison">5</param>
+                            <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">9</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="321745073712766" type="9Select">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        <action id="4" name="Set animation" sid="225473440575989" type="1Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="785451520881486" type="2Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="100652070136446" type="3Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="783867866361282" type="4Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="255349077108699" type="5Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="380778471050862" type="6Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="391691806235670" type="7Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="796746579066505" type="8Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="453566930244043" type="9Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="453436169867388" type="10Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="690575504466128" type="11Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="609135700723299" type="12Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="162461883004869" type="13Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="545270709849404" type="14Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="739640987740850" type="15Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="798068989988145" type="16Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="157561461427952" type="17Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="489528190344070" type="18Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="467653986047118">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="709972177633409" type="System" />
                         <condition id="-14" name="Compare variable" sid="659601577052248" type="System">
                             <param id="0" name="Variable">SelectMenu</param>
-                            <param id="1" name="Comparison">5</param>
+                            <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">10</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="931911973238634" type="10Select">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        <action id="4" name="Set animation" sid="561551439912346" type="1Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="513654249092237" type="2Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="292780659322651" type="3Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="596921490371521" type="4Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="308066036711847" type="5Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="825656487689332" type="6Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="547551856082537" type="7Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="904906201231661" type="8Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="588900990144068" type="9Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="477956822868882" type="10Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="962605978472033" type="11Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="609058356035791" type="12Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="564719382163655" type="13Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="844880579795815" type="14Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="666325426469743" type="15Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="894718841348014" type="16Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="566764216604332" type="17Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="286258316368908" type="18Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="110757235596078">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="877724391586884" type="System" />
                         <condition id="-14" name="Compare variable" sid="975460576123379" type="System">
                             <param id="0" name="Variable">SelectMenu</param>
-                            <param id="1" name="Comparison">5</param>
+                            <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">11</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="362494623611997" type="11Select">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        <action id="4" name="Set animation" sid="657269772754237" type="1Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="271515979220353" type="2Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="246654650084099" type="3Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="504986158471486" type="4Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="549491937119015" type="5Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="461902762131576" type="6Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="163815377575620" type="7Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="700515637751746" type="8Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="220705804025929" type="9Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="499383697246597" type="10Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="885664014370175" type="11Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="181951021456094" type="12Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="376273231304721" type="13Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="392061388086767" type="14Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="256638584918952" type="15Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="175544166683215" type="16Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="580279622982835" type="17Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="187583258828718" type="18Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="268807869426407">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="851079746790808" type="System" />
                         <condition id="-14" name="Compare variable" sid="555817063632371" type="System">
                             <param id="0" name="Variable">SelectMenu</param>
-                            <param id="1" name="Comparison">5</param>
+                            <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">12</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="239771049145103" type="12Select">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        <action id="4" name="Set animation" sid="355958853300386" type="1Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="670834785888684" type="2Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="173718065729135" type="3Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="216223618061790" type="4Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="335575286776696" type="5Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="588056953350357" type="6Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="929097342996998" type="7Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="393686647987074" type="8Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="387132785347135" type="9Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="970287787305997" type="10Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="933213939933973" type="11Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="374568835118100" type="12Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="192072479792736" type="13Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="619346824844117" type="14Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="582774311610513" type="15Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="566982088469374" type="16Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="210809674191341" type="17Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="760157733732909" type="18Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="684886129064278">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="709691960069431" type="System" />
                         <condition id="-14" name="Compare variable" sid="288784362138050" type="System">
                             <param id="0" name="Variable">SelectMenu</param>
-                            <param id="1" name="Comparison">5</param>
+                            <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">13</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="188019117302714" type="13Select">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        <action id="4" name="Set animation" sid="936357692840329" type="1Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="723975636275647" type="2Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="793939350455130" type="3Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="721284156012240" type="4Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="285601525804644" type="5Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="165050861970559" type="6Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="914736241319864" type="7Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="266245051061094" type="8Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="516876949712415" type="9Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="382179599370222" type="10Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="967865661961863" type="11Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="454631889183342" type="12Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="643196759563268" type="13Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="419140316235798" type="14Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="777805806239489" type="15Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="119845430611525" type="16Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="375617704263086" type="17Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="820969990322523" type="18Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="321029639093847">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="739107323414369" type="System" />
                         <condition id="-14" name="Compare variable" sid="436675172397080" type="System">
                             <param id="0" name="Variable">SelectMenu</param>
-                            <param id="1" name="Comparison">5</param>
+                            <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">14</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="281795799678477" type="14Select">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        <action id="4" name="Set animation" sid="286243977254063" type="1Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="331361233752911" type="2Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="664649395954242" type="3Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="294891833679797" type="4Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="434258206144482" type="5Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="555723983106135" type="6Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="756695662099282" type="7Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="430475258522893" type="8Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="248812305934883" type="9Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="292159230808596" type="10Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="122346755067600" type="11Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="774141756742092" type="12Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="107411331098261" type="13Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="994855551233285" type="14Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="511309701264223" type="15Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="665063711696643" type="16Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="390694041006583" type="17Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="483875597325656" type="18Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="379379411290560">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="515839284133327" type="System" />
                         <condition id="-14" name="Compare variable" sid="800113296111638" type="System">
                             <param id="0" name="Variable">SelectMenu</param>
-                            <param id="1" name="Comparison">5</param>
+                            <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">15</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="965394925431430" type="15Select">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        <action id="4" name="Set animation" sid="300771674059617" type="1Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="164061763252176" type="2Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="928308554424657" type="3Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="867004962778289" type="4Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="649359322004491" type="5Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="692406613211287" type="6Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="527976488195948" type="7Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="306067476099587" type="8Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="179624096780740" type="9Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="615326079246748" type="10Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="180862247554678" type="11Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="791654423112950" type="12Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="307639435234572" type="13Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="559067055836465" type="14Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="588450743939135" type="15Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="955182628531307" type="16Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="596316759154747" type="17Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="872801489826162" type="18Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="990780550757110">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="973653247383792" type="System" />
                         <condition id="-14" name="Compare variable" sid="673295956716707" type="System">
                             <param id="0" name="Variable">SelectMenu</param>
-                            <param id="1" name="Comparison">5</param>
+                            <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">16</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="104611066706006" type="16Select">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        <action id="4" name="Set animation" sid="428083030564640" type="1Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="900515523430812" type="2Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="808363173783035" type="3Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="308171241381970" type="4Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="586192737907090" type="5Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="471524095921631" type="6Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="233041043113058" type="7Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="210731650063807" type="8Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="314432960375160" type="9Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="531576141792008" type="10Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="128947874450891" type="11Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="760772413735028" type="12Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="209706865534287" type="13Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="928730260746376" type="14Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="957097008210993" type="15Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="502431655037752" type="16Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="302697923686806" type="17Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="653068842607791" type="18Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="845490832999804">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="730729833964845" type="System" />
                         <condition id="-14" name="Compare variable" sid="685764572883160" type="System">
                             <param id="0" name="Variable">SelectMenu</param>
-                            <param id="1" name="Comparison">5</param>
+                            <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">17</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="942091534979532" type="17Select">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        <action id="4" name="Set animation" sid="636828569864507" type="1Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="180170757756039" type="2Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="873841332640384" type="3Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="988091874152650" type="4Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="628407812705476" type="5Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="922038929178882" type="6Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="873879755410471" type="7Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="882431766017726" type="8Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="904527560128952" type="9Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="855784351155152" type="10Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="318467426484572" type="11Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="876655238754954" type="12Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="481942103255073" type="13Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="841226646304958" type="14Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="593476254795148" type="15Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="853000569598014" type="16Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="353920649078054" type="17Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="471680502463781" type="18Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="381243596908023">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="393597219744140" type="System" />
                         <condition id="-14" name="Compare variable" sid="387455755406149" type="System">
                             <param id="0" name="Variable">SelectMenu</param>
-                            <param id="1" name="Comparison">5</param>
+                            <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">18</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="649490365103143" type="18Select">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        <action id="4" name="Set animation" sid="496717207844418" type="1Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="272819329961561" type="2Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="503532269258018" type="3Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="385184798925055" type="4Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="747424588588487" type="5Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="538169767254377" type="6Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="736353226258905" type="7Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="746439098058623" type="8Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="871285867926778" type="9Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="686850371284897" type="10Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="729452309771000" type="11Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="463895826886117" type="12Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="580673799928125" type="13Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="930836159687903" type="14Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="564025674282857" type="15Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="267393333762698" type="16Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="975432163463194" type="17Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="320528342864432" type="18Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="135705303838499">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="989670649886694" type="System" />
                         <condition id="-14" name="Compare variable" sid="809270472578206" type="System">
                             <param id="0" name="Variable">SelectMenuBoss</param>
                             <param id="1" name="Comparison">0</param>
@@ -441,7 +1646,6 @@
                 </event-block>
                 <event-block sid="566710855064426">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="415811528963654" type="System" />
                         <condition id="-14" name="Compare variable" sid="434394047125463" type="System">
                             <param id="0" name="Variable">SelectMenuBoss</param>
                             <param id="1" name="Comparison">0</param>
@@ -466,7 +1670,6 @@
                 </event-block>
                 <event-block sid="418019295372314">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="138141705491996" type="System" />
                         <condition id="-14" name="Compare variable" sid="525589890041549" type="System">
                             <param id="0" name="Variable">SelectMenuBoss</param>
                             <param id="1" name="Comparison">0</param>
@@ -495,7 +1698,6 @@
                 </event-block>
                 <event-block sid="432709441111237">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="728908140926617" type="System" />
                         <condition id="-14" name="Compare variable" sid="316741074558207" type="System">
                             <param id="0" name="Variable">SelectMenuBoss</param>
                             <param id="1" name="Comparison">0</param>
@@ -524,7 +1726,6 @@
                 </event-block>
                 <event-block sid="531825186622446">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="658852316367337" type="System" />
                         <condition id="-14" name="Compare variable" sid="307139073486422" type="System">
                             <param id="0" name="Variable">SelectMenuBoss</param>
                             <param id="1" name="Comparison">0</param>
@@ -557,7 +1758,6 @@
                 </event-block>
                 <event-block sid="316101304265749">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="239111523675758" type="System" />
                         <condition id="-14" name="Compare variable" sid="567726249247668" type="System">
                             <param id="0" name="Variable">SelectMenuBoss</param>
                             <param id="1" name="Comparison">0</param>
@@ -590,7 +1790,6 @@
                 </event-block>
                 <event-block sid="496140536124875">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="599825062787700" type="System" />
                         <condition id="-14" name="Compare variable" sid="208503720217833" type="System">
                             <param id="0" name="Variable">SelectMenuBoss</param>
                             <param id="1" name="Comparison">0</param>
@@ -629,11 +1828,6 @@
                     <conditions>
                         <condition id="3" name="On touched object" sid="559710744798940" type="Touch">
                             <param id="0" name="Object">1Select</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="609825660668562" type="System">
-                            <param id="0" name="Variable">SelectMenu</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>

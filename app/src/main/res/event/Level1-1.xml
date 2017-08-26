@@ -21,40 +21,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="466421541521397">
-                    <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="231169483672330" type="Shon">
-                            <param id="0" name="Object">PortalOpen</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="346100131874041" type="System">
-                            <param id="0" name="Variable">SelectMenu</param>
-                            <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Platform" id="11" name="Set enabled" sid="768645926017351" type="Shon">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="741120890956482" type="Shon">
-                            <param id="0" name="Animation">&quot;ID_IDLE&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-20" name="Set layout scale" sid="276067137214493" type="System">
-                            <param id="0" name="Scale">lerp(LayoutScale, 2.0, 6*dt)</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="448934670841027" type="System">
-                            <param id="0" name="Seconds">0.5</param>
-                        </action>
-                        <action id="-2" name="Go to layout" sid="736638007903642" type="System">
-                            <param id="0" name="Layout">Level1-2</param>
-                        </action>
-                        <action id="0" name="Set item" sid="237817352287811" type="LocalStorage">
-                            <param id="0" name="Key">&quot;Save&quot;</param>
-                            <param id="1" name="Value">&quot;2&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="583003933544830">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="380163253168774" type="Shon">
@@ -82,6 +48,39 @@
                         </action>
                         <action id="-2" name="Go to layout" sid="531289223757195" type="System">
                             <param id="0" name="Layout">Level1-2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="466421541521397">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="231169483672330" type="Shon">
+                            <param id="0" name="Object">PortalOpen</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="768645926017351" type="Shon">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="741120890956482" type="Shon">
+                            <param id="0" name="Animation">&quot;ID_IDLE&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-20" name="Set layout scale" sid="276067137214493" type="System">
+                            <param id="0" name="Scale">lerp(LayoutScale, 2.0, 6*dt)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="448934670841027" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="736638007903642" type="System">
+                            <param id="0" name="Layout">Level1-2</param>
+                        </action>
+                        <action id="0" name="Set item" sid="237817352287811" type="LocalStorage">
+                            <param id="0" name="Key">&quot;Save&quot;</param>
+                            <param id="1" name="Value">&quot;2&quot;</param>
+                        </action>
+                        <action id="0" name="Set item" sid="209833952862922" type="LocalStorage">
+                            <param id="0" name="Key">&quot;SaveBoss&quot;</param>
+                            <param id="1" name="Value">&quot;1&quot;</param>
                         </action>
                     </actions>
                 </event-block>

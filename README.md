@@ -45,13 +45,13 @@ ___
 - [x] Level 3-2  (18)
 - [x] Level 3-3  (19)
 - [x] Level 3-4  (20)
-- [ ] Level 3-5  (21)
-- [ ] Level 3-6  (22)
+- [x] Level 3-5  (21)
+- [x] Level 3-6  (22)
 
 ### AirConsole
 ___
 - [X] Control
-- [ ] Logic
+- [x] Logic
 - [X] Graphics
 - [X] Design
 ___
