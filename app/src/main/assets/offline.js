@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1503738403,
+	"version": 1503762873,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -24,6 +24,7 @@
 		"images/portalopen1.png",
 		"images/portal-sheet0.png",
 		"images/portalcheck.png",
+		"images/portalopenbossnull.png",
 		"images/trap11-sheet0.png",
 		"images/trap12-sheet0.png",
 		"images/trap13-sheet0.png",

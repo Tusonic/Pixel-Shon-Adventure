@@ -1642,6 +1642,18 @@
                         <action id="-15" name="Set visible" sid="172024142658074" type="ChestRed">
                             <param id="0" name="Visibility">0</param>
                         </action>
+                        <action id="4" name="Set animation" sid="380746989013693" type="19Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="901432731102105" type="20Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="714498348707373" type="21Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="566710855064426">
@@ -1653,18 +1665,26 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="652591994227866" type="19Select">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        <action id="-15" name="Set visible" sid="309499743866104" type="ChestBlue">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="480305492098301" type="ChestGreen">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="830762885638108" type="ChestRed">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="461193750012956" type="19Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="463900308226106" type="ChestBlue">
-                            <param id="0" name="Visibility">0</param>
+                        <action id="4" name="Set animation" sid="120723437246543" type="20Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="943737561798910" type="ChestGreen">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="770785416286037" type="ChestRed">
-                            <param id="0" name="Visibility">0</param>
+                        <action id="4" name="Set animation" sid="562823108154843" type="21Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1677,22 +1697,26 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="832978284765489" type="20Select">
-                            <param id="0" name="Animation">&quot;Animation2&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="469196582394688" type="19Select">
-                            <param id="0" name="X">244</param>
-                            <param id="1" name="Y">244</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="224035282055485" type="ChestBlue">
+                        <action id="-15" name="Set visible" sid="846472534346021" type="ChestBlue">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="366856937210423" type="ChestGreen">
+                        <action id="-15" name="Set visible" sid="548250940988468" type="ChestGreen">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="996462007501863" type="ChestRed">
+                        <action id="-15" name="Set visible" sid="990990329308493" type="ChestRed">
                             <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="223058451262361" type="19Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="260725572349895" type="20Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="286048288303803" type="21Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1705,22 +1729,26 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="739618887811944" type="20Select">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="436410120237030" type="19Select">
-                            <param id="0" name="X">244</param>
-                            <param id="1" name="Y">244</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="240646529275719" type="ChestBlue">
+                        <action id="-15" name="Set visible" sid="144086723379714" type="ChestBlue">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="617014196261292" type="ChestGreen">
+                        <action id="-15" name="Set visible" sid="767412924149746" type="ChestGreen">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="754327230133617" type="ChestRed">
+                        <action id="-15" name="Set visible" sid="370485911587760" type="ChestRed">
                             <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="432492969992914" type="19Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="151411072041337" type="20Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="627443570823144" type="21Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1733,26 +1761,26 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="562991190754975" type="21Select">
-                            <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                        <action id="-15" name="Set visible" sid="339305551390548" type="ChestBlue">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="911613746825394" type="ChestGreen">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="951650379735934" type="ChestRed">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="735134584814408" type="19Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-3" name="Set position" sid="820244296674676" type="20Select">
-                            <param id="0" name="X">244</param>
-                            <param id="1" name="Y">244</param>
+                        <action id="4" name="Set animation" sid="344374868169100" type="20Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
-                        <action id="-3" name="Set position" sid="776523646455386" type="19Select">
-                            <param id="0" name="X">244</param>
-                            <param id="1" name="Y">244</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="865116483339007" type="ChestBlue">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="619375410909775" type="ChestGreen">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="278089497880854" type="ChestRed">
-                            <param id="0" name="Visibility">0</param>
+                        <action id="4" name="Set animation" sid="810558688983917" type="21Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1765,26 +1793,26 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="742592915365440" type="21Select">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        <action id="-15" name="Set visible" sid="679328552775006" type="ChestBlue">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="700606092370328" type="ChestGreen">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="200286406433002" type="ChestRed">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="705576717778805" type="19Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-3" name="Set position" sid="905708491564447" type="20Select">
-                            <param id="0" name="X">244</param>
-                            <param id="1" name="Y">244</param>
+                        <action id="4" name="Set animation" sid="637168500942449" type="20Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
-                        <action id="-3" name="Set position" sid="672526040799564" type="19Select">
-                            <param id="0" name="X">244</param>
-                            <param id="1" name="Y">244</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="200983887139435" type="ChestBlue">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="893637846078976" type="ChestGreen">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="666221398246955" type="ChestRed">
-                            <param id="0" name="Visibility">0</param>
+                        <action id="4" name="Set animation" sid="577560918769982" type="21Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1797,26 +1825,49 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Set position" sid="938465358356778" type="21Select">
-                            <param id="0" name="X">244</param>
-                            <param id="1" name="Y">244</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="519385777445512" type="20Select">
-                            <param id="0" name="X">244</param>
-                            <param id="1" name="Y">244</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="509639098669611" type="19Select">
-                            <param id="0" name="X">244</param>
-                            <param id="1" name="Y">244</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="890918126266279" type="ChestBlue">
+                        <action id="-15" name="Set visible" sid="689137043774951" type="ChestBlue">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="707966609528112" type="ChestGreen">
+                        <action id="-15" name="Set visible" sid="630042937520985" type="ChestGreen">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="367058016821593" type="ChestRed">
+                        <action id="-15" name="Set visible" sid="450089776551695" type="ChestRed">
                             <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="890237441930377" type="19Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="478533198043202" type="20Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="644714949246653" type="21Select">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="902515706901177">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="788666047622188" type="System">
+                            <param id="0" name="Variable">SelectMenuBoss</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="733659840857082" type="19Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="410252537078365" type="20Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="482909171831012" type="21Select">
+                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>

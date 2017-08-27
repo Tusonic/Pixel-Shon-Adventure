@@ -78,10 +78,6 @@
                             <param id="0" name="Key">&quot;Save&quot;</param>
                             <param id="1" name="Value">&quot;2&quot;</param>
                         </action>
-                        <action id="0" name="Set item" sid="209833952862922" type="LocalStorage">
-                            <param id="0" name="Key">&quot;SaveBoss&quot;</param>
-                            <param id="1" name="Value">&quot;1&quot;</param>
-                        </action>
                     </actions>
                 </event-block>
             </sub-events>

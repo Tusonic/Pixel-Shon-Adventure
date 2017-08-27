@@ -1,5 +1,5 @@
 ﻿CACHE MANIFEST
-#1503738403
+#1503762873
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
@@ -23,6 +23,7 @@ images/shonatack-sheet2.png
 images/portalopen1.png
 images/portal-sheet0.png
 images/portalcheck.png
+images/portalopenbossnull.png
 images/trap11-sheet0.png
 images/trap12-sheet0.png
 images/trap13-sheet0.png

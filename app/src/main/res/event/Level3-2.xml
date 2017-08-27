@@ -52,40 +52,35 @@
                         <action id="-9" name="Destroy" sid="975595656474625" type="PortalCheck" />
                     </actions>
                 </event-block>
-                <event-block sid="874238426383257">
+                <event-block sid="372971832798066">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="468917536785890" type="Shon">
-                            <param id="0" name="Object">PortalOpen</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="989976926618778" type="System">
-                            <param id="0" name="Variable">SelectMenuBoss</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
+                        <condition id="1" name="Is overlapping another object" sid="317959000741822" type="Shon">
+                            <param id="0" name="Object">PortalOpenBossNull</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Set item" sid="980415602418515" type="LocalStorage">
+                        <action id="0" name="Set item" sid="585861140809990" type="LocalStorage">
                             <param id="0" name="Key">&quot;Save&quot;</param>
                             <param id="1" name="Value">&quot;1&quot;</param>
                         </action>
-                        <action id="0" name="Set item" sid="292911396923362" type="LocalStorage">
+                        <action id="0" name="Set item" sid="722058226455790" type="LocalStorage">
                             <param id="0" name="Key">&quot;SaveBoss&quot;</param>
                             <param id="1" name="Value">&quot;2&quot;</param>
                         </action>
-                        <action behavior="Platform" id="11" name="Set enabled" sid="823491458634930" type="Shon">
+                        <action behavior="Platform" id="11" name="Set enabled" sid="946089869648539" type="Shon">
                             <param id="0" name="State">0</param>
                         </action>
-                        <action id="4" name="Set animation" sid="600009612268220" type="Shon">
+                        <action id="4" name="Set animation" sid="537165461515065" type="Shon">
                             <param id="0" name="Animation">&quot;ID_IDLE&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-20" name="Set layout scale" sid="851753292108301" type="System">
+                        <action id="-20" name="Set layout scale" sid="325240616555688" type="System">
                             <param id="0" name="Scale">lerp(LayoutScale, 2.0, 6*dt)</param>
                         </action>
-                        <action id="-16" name="Wait" sid="426953988206765" type="System">
+                        <action id="-16" name="Wait" sid="714652910170666" type="System">
                             <param id="0" name="Seconds">0.5</param>
                         </action>
-                        <action id="-2" name="Go to layout" sid="554746403440419" type="System">
+                        <action id="-2" name="Go to layout" sid="700740579038708" type="System">
                             <param id="0" name="Layout">Level3-3</param>
                         </action>
                     </actions>
