@@ -54,7 +54,7 @@
                         </action>
                         <action id="0" name="Set item" sid="501655904597089" type="LocalStorage">
                             <param id="0" name="Key">&quot;Save&quot;</param>
-                            <param id="1" name="Value">&quot;17&quot;</param>
+                            <param id="1" name="Value">&quot;18&quot;</param>
                         </action>
                     </actions>
                 </event-block>
