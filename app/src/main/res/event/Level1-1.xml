@@ -28,7 +28,7 @@
                         </condition>
                         <condition id="-14" name="Compare variable" sid="899715792738479" type="System">
                             <param id="0" name="Variable">SelectMenu</param>
-                            <param id="1" name="Comparison">4</param>
+                            <param id="1" name="Comparison">5</param>
                             <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
@@ -53,11 +53,19 @@
                 </event-block>
                 <event-block sid="466421541521397">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="231169483672330" type="Shon">
-                            <param id="0" name="Object">PortalOpen</param>
+                        <condition id="0" name="On collision with another object" sid="624552225877429" type="Shon">
+                            <param id="0" name="Object">PortalOpenBossNull</param>
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Set item" sid="237817352287811" type="LocalStorage">
+                            <param id="0" name="Key">&quot;Save&quot;</param>
+                            <param id="1" name="Value">&quot;2&quot;</param>
+                        </action>
+                        <action id="0" name="Set item" sid="249059671302312" type="LocalStorage">
+                            <param id="0" name="Key">&quot;SaveBoss&quot;</param>
+                            <param id="1" name="Value">&quot;1&quot;</param>
+                        </action>
                         <action behavior="Platform" id="11" name="Set enabled" sid="768645926017351" type="Shon">
                             <param id="0" name="State">0</param>
                         </action>
@@ -74,10 +82,6 @@
                         <action id="-2" name="Go to layout" sid="736638007903642" type="System">
                             <param id="0" name="Layout">Level1-2</param>
                         </action>
-                        <action id="0" name="Set item" sid="237817352287811" type="LocalStorage">
-                            <param id="0" name="Key">&quot;Save&quot;</param>
-                            <param id="1" name="Value">&quot;2&quot;</param>
-                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -90,6 +94,18 @@
                 <action id="0" name="Track Event" sid="858412065629315" type="GoogleAnalytics">
                     <param id="0" name="Category">&quot;game&quot;</param>
                     <param id="1" name="Name">&quot;level1-1&quot;</param>
+                </action>
+                <action id="6" name="Stop" sid="794287117381498" type="Audio">
+                    <param id="0" name="Tag">&quot;music1&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="677516932355513" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="0" name="Play" sid="961802596536755" type="Audio">
+                    <param id="0" name="Audio file">menu1</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;music1&quot;</param>
                 </action>
             </actions>
         </event-block>

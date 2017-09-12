@@ -3,7 +3,7 @@
     <!-- TUSONIC -->
     <name>Control</name>
     <events>
-        <variable constant="0" name="Control" sid="297579621888022" static="0" type="number">1</variable>
+        <variable constant="0" name="Control" sid="297579621888022" static="0" type="number">2</variable>
         <event-block sid="324924205801028">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="652151005591655" type="System" />
@@ -35,6 +35,33 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="308484553197533">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="276419891009658" type="System">
+                    <param id="0" name="Variable">Control</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="269004311733338" type="L">
+                    <param id="0" name="X">-100</param>
+                    <param id="1" name="Y">-100</param>
+                </action>
+                <action id="-3" name="Set position" sid="690617115200929" type="R">
+                    <param id="0" name="X">-100</param>
+                    <param id="1" name="Y">-100</param>
+                </action>
+                <action id="-3" name="Set position" sid="605261287819458" type="A">
+                    <param id="0" name="X">-100</param>
+                    <param id="1" name="Y">-100</param>
+                </action>
+                <action id="-3" name="Set position" sid="643015543137905" type="B">
+                    <param id="0" name="X">-100</param>
+                    <param id="1" name="Y">-100</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="220307375030759">
             <conditions>
                 <condition id="-14" name="Compare variable" sid="244134852687812" type="System">
@@ -62,30 +89,42 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="308484553197533">
+        <event-block sid="762575184576851">
             <conditions>
-                <condition id="-14" name="Compare variable" sid="276419891009658" type="System">
+                <condition id="-14" name="Compare variable" sid="251081104637075" type="System">
                     <param id="0" name="Variable">Control</param>
                     <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
+                    <param id="2" name="Value">2</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-3" name="Set position" sid="269004311733338" type="L">
-                    <param id="0" name="X">-100</param>
-                    <param id="1" name="Y">-100</param>
+                <action id="-3" name="Set position" sid="226281910201549" type="L">
+                    <param id="0" name="X">30</param>
+                    <param id="1" name="Y">125</param>
                 </action>
-                <action id="-3" name="Set position" sid="690617115200929" type="R">
-                    <param id="0" name="X">-100</param>
-                    <param id="1" name="Y">-100</param>
+                <action id="-3" name="Set position" sid="746038926610916" type="R">
+                    <param id="0" name="X">85</param>
+                    <param id="1" name="Y">125</param>
                 </action>
-                <action id="-3" name="Set position" sid="605261287819458" type="A">
-                    <param id="0" name="X">-100</param>
-                    <param id="1" name="Y">-100</param>
+                <action id="-3" name="Set position" sid="779265578800117" type="A">
+                    <param id="0" name="X">170</param>
+                    <param id="1" name="Y">125</param>
                 </action>
-                <action id="-3" name="Set position" sid="643015543137905" type="B">
-                    <param id="0" name="X">-100</param>
-                    <param id="1" name="Y">-100</param>
+                <action id="-3" name="Set position" sid="992399687545160" type="B">
+                    <param id="0" name="X">225</param>
+                    <param id="1" name="Y">125</param>
+                </action>
+                <action id="9" name="Set scale" sid="561913297540732" type="A">
+                    <param id="0" name="Scale">1.5</param>
+                </action>
+                <action id="9" name="Set scale" sid="610783580539631" type="B">
+                    <param id="0" name="Scale">1.5</param>
+                </action>
+                <action id="9" name="Set scale" sid="688776017661375" type="L">
+                    <param id="0" name="Scale">1.5</param>
+                </action>
+                <action id="9" name="Set scale" sid="155039094455633" type="R">
+                    <param id="0" name="Scale">1.5</param>
                 </action>
             </actions>
         </event-block>
@@ -125,6 +164,12 @@
                 <action id="4" name="Set animation" sid="907634036998203" type="B">
                     <param id="0" name="Animation">&quot;Click&quot;</param>
                     <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Play" sid="440966671348166" type="Audio">
+                    <param id="0" name="Audio file">jump</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">SoundSelect</param>
+                    <param id="1" name="Tag (optional)">&quot;sound1&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -190,6 +235,99 @@
                 <action id="4" name="Set animation" sid="518186428214605" type="R">
                     <param id="0" name="Animation">&quot;Default&quot;</param>
                     <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="349840647200791">
+            <conditions>
+                <condition id="2" name="Key is down" sid="925317825216953" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="257988907829128" type="R">
+                    <param id="0" name="Animation">&quot;Click&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="648711318729600">
+            <conditions>
+                <condition id="2" name="Key is down" sid="439335951633155" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="920865206926534" type="L">
+                    <param id="0" name="Animation">&quot;Click&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="217097636607015">
+            <conditions>
+                <condition id="2" name="Key is down" sid="669783104558323" type="Keyboard">
+                    <param id="0" name="Key">38 (Up arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="849924863805742" type="B">
+                    <param id="0" name="Animation">&quot;Click&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="163277011475448">
+            <conditions>
+                <condition id="2" name="Key is down" sid="316450865504165" type="Keyboard">
+                    <param id="0" name="Key">66 (B)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="760702076667615" type="A">
+                    <param id="0" name="Animation">&quot;Click&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="586205376472838">
+            <conditions>
+                <condition id="2" name="Key is down" sid="185340441204753" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="583082648750845" type="A">
+                    <param id="0" name="Animation">&quot;Click&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="534874903199714">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="630075770915364" type="Keyboard">
+                    <param id="0" name="Key">38 (Up arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="855194379451454" type="Audio">
+                    <param id="0" name="Audio file">jump</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">SoundSelect</param>
+                    <param id="1" name="Tag (optional)">&quot;sound1&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="229563706867870">
+            <conditions>
+                <condition id="1" name="On item get" sid="859074822524737" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Control&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="714210846240374" type="System">
+                    <param id="0" name="Variable">Control</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
                 </action>
             </actions>
         </event-block>

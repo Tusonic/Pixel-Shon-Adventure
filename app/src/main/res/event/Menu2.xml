@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!-- TUSONIC -->
+    <name>Menu2</name>
+    <events>
+        <event-block sid="876494405631514">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="249887444309871" type="System" />
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="842206406623998" type="Audio">
+                    <param id="0" name="Tag">&quot;music1&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="652668055679454" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="0" name="Play" sid="183897487624036" type="Audio">
+                    <param id="0" name="Audio file">menu7</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;music1&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="624543337116884">
+            <conditions>
+                <condition id="3" name="On touched object" sid="106574852878307" type="Touch">
+                    <param id="0" name="Object">start</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="592784805023098" type="Portal">
+                    <param id="0" name="Animation">&quot;OPEN&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="556231542595501" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="366773832085949" type="System">
+                    <param id="0" name="Layout">Select</param>
+                </action>
+                <action id="0" name="Track Event" sid="997870017697595" type="GoogleAnalytics">
+                    <param id="0" name="Category">&quot;game&quot;</param>
+                    <param id="1" name="Name">&quot;start&quot;</param>
+                </action>
+                <action id="6" name="Stop" sid="613230525692289" type="Audio">
+                    <param id="0" name="Tag">&quot;music1&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="466099058617481" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="0" name="Play" sid="385853182299065" type="Audio">
+                    <param id="0" name="Audio file">menu7</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;music1&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="439890462968108">
+            <conditions>
+                <condition id="3" name="On touched object" sid="606629492388847" type="Touch">
+                    <param id="0" name="Object">credits</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="145727557677867" type="System">
+                    <param id="0" name="Layout">Credits</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="794609301971248">
+            <conditions>
+                <condition id="3" name="On touched object" sid="194398277842680" type="Touch">
+                    <param id="0" name="Object">options</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="206414142689317" type="System">
+                    <param id="0" name="Layout">Options</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="906214055135459">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="757220933353373" type="System">
+                    <param id="0" name="Variable">ShonMenu</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="538972489057740" type="ShonMenu">
+                    <param id="0" name="Control">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="418234340740245" type="ShonMenu">
+                    <param id="0" name="Animation">&quot;ID_RUN&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="6" name="Set speed" sid="980239852424734" type="ShonMenu">
+                    <param id="0" name="Speed">13</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="441916227729317" type="ShonMenu">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="318175445577805">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="833332659191222" type="System">
+                    <param id="0" name="Variable">ShonMenu</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="639609077196915" type="ShonMenu">
+                    <param id="0" name="Control">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="476034989625934" type="ShonMenu">
+                    <param id="0" name="Animation">&quot;ID_RUN&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="6" name="Set speed" sid="331953093968253" type="ShonMenu">
+                    <param id="0" name="Speed">13</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="692337392257221" type="ShonMenu">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="716741476777696">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="486321363193807" type="System">
+                    <param id="0" name="Variable">ShonMenu</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="779180101703998" type="ShonMenu">
+                    <param id="0" name="Animation">&quot;ID_IDLE&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="6" name="Set speed" sid="575606979976517" type="ShonMenu">
+                    <param id="0" name="Speed">8</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="556461442416168" type="ShonMenu">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="594189344738249">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="482017048904059" type="System">
+                    <param id="0" name="Variable">ShonMenu</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="708035318959649" type="ShonMenu">
+                    <param id="0" name="Animation">&quot;ID_IDLE&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="6" name="Set speed" sid="396130892449102" type="ShonMenu">
+                    <param id="0" name="Speed">8</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="770808704873625" type="ShonMenu">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="326267107096507">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="388310205262857" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="589223709095718" type="System">
+                    <param id="0" name="Variable">ShonMenu</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="-16" name="Wait" sid="118791486880484" type="System">
+                    <param id="0" name="Seconds">12</param>
+                </action>
+                <action id="-9" name="Set value" sid="815915295056504" type="System">
+                    <param id="0" name="Variable">ShonMenu</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="299992877475068" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-9" name="Set value" sid="790354698262436" type="System">
+                    <param id="0" name="Variable">ShonMenu</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="-16" name="Wait" sid="306947511866649" type="System">
+                    <param id="0" name="Seconds">8</param>
+                </action>
+                <action id="-9" name="Set value" sid="714447299713516" type="System">
+                    <param id="0" name="Variable">ShonMenu</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="350294911035490" type="System">
+                    <param id="0" name="Seconds">5</param>
+                </action>
+                <action id="-9" name="Set value" sid="664781404164784" type="System">
+                    <param id="0" name="Variable">ShonMenu</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="-16" name="Wait" sid="572656496413114" type="System">
+                    <param id="0" name="Seconds">8</param>
+                </action>
+                <action id="-9" name="Set value" sid="852930158732770" type="System">
+                    <param id="0" name="Variable">ShonMenu</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="749267501898635" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-9" name="Set value" sid="581063974891742" type="System">
+                    <param id="0" name="Variable">ShonMenu</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="531537079878962">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="390099360261193" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="624596598191020" type="item7">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="6" name="Set speed" sid="147968613110000" type="item7">
+                    <param id="0" name="Speed">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="205170879024740">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="665628420001371" type="System">
+                    <param id="0" name="Interval (seconds)">10</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="490415797010063" type="item9">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="6" name="Set speed" sid="210841190902933" type="item9">
+                    <param id="0" name="Speed">5</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

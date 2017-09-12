@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!-- TUSONIC -->
+    <name>Music</name>
+    <events>
+        <event-block sid="300703963040552">
+            <conditions>
+                <condition id="0" name="On ended" sid="235331440375940" type="Audio">
+                    <param id="0" name="Tag">&quot;music1&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="659134683277623" type="Audio">
+                    <param id="0" name="Tag">&quot;music1&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="468556326466734" type="System">
+                    <param id="0" name="Seconds">3.0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

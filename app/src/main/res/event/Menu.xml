@@ -4,6 +4,28 @@
     <name>Menu</name>
     <events>
         <variable constant="0" name="ShonMenu" sid="951337288933903" static="0" type="number">0</variable>
+        <event-block sid="328784806393506">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="554619895347187" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="131797037844246" type="Audio">
+                    <param id="0" name="Audio file">intro</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;music1&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="700976168319493" type="System">
+                    <param id="0" name="Seconds">10</param>
+                </action>
+                <action id="0" name="Play" sid="822563777545104" type="Audio">
+                    <param id="0" name="Audio file">menu7</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;music1&quot;</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="377799452453148">
             <conditions>
                 <condition id="3" name="On touched object" sid="672259648346541" type="Touch">

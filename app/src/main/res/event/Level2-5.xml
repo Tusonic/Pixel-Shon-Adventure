@@ -9,6 +9,45 @@
         <include>Key</include>
         <include>Enemy</include>
         <include>Control</include>
+        <event-block sid="522230361439366">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="744766998458252" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Track Event" sid="975911628544594" type="GoogleAnalytics">
+                    <param id="0" name="Category">&quot;game&quot;</param>
+                    <param id="1" name="Name">&quot;level2-5&quot;</param>
+                </action>
+                <action id="1" name="Get item" sid="442662484107289" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Save&quot;</param>
+                </action>
+                <action id="6" name="Stop" sid="571374311690751" type="Audio">
+                    <param id="0" name="Tag">&quot;music1&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="315190627263043" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="0" name="Play" sid="791660063335969" type="Audio">
+                    <param id="0" name="Audio file">menu1</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;music1&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="219798133825404">
+            <conditions>
+                <condition id="1" name="On item get" sid="909984750559345" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Save&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="209824717505101" type="System">
+                    <param id="0" name="Variable">SelectMenu</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
         <event-group description="Next Level" sid="120129918039451" title="Portal13">
             <sub-events>
                 <event-block sid="206757109984713">
@@ -37,6 +76,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Set item" sid="233127761052975" type="LocalStorage">
+                            <param id="0" name="Key">&quot;Save&quot;</param>
+                            <param id="1" name="Value">&quot;14&quot;</param>
+                        </action>
                         <action behavior="Platform" id="11" name="Set enabled" sid="666243704343205" type="Shon">
                             <param id="0" name="State">0</param>
                         </action>
@@ -52,10 +95,6 @@
                         </action>
                         <action id="-2" name="Go to layout" sid="943118587577316" type="System">
                             <param id="0" name="Layout">Level2-6</param>
-                        </action>
-                        <action id="0" name="Set item" sid="233127761052975" type="LocalStorage">
-                            <param id="0" name="Key">&quot;Save&quot;</param>
-                            <param id="1" name="Value">&quot;14&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -91,16 +130,5 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="522230361439366">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="744766998458252" type="System" />
-            </conditions>
-            <actions>
-                <action id="0" name="Track Event" sid="975911628544594" type="GoogleAnalytics">
-                    <param id="0" name="Category">&quot;game&quot;</param>
-                    <param id="1" name="Name">&quot;level2-5&quot;</param>
-                </action>
-            </actions>
-        </event-block>
     </events>
 </c2eventsheet>

@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>Reklama</name>
-    <sid>639142192631781</sid>
-    <event-sheet>Menu</event-sheet>
+    <name>Menu2</name>
+    <sid>848083032311207</sid>
+    <event-sheet>Menu2</event-sheet>
     <size>
         <width>256</width>
         <height>144</height>
@@ -13,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="BackgroundDOWN" sid="118142432121516">
+        <layer name="BackgroundDOWN" sid="526361046179420">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="MenuBackground" uid="805">
+                <instance type="MenuBackground" uid="1647">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <tile-width>16</tile-width>
@@ -58,13 +58,13 @@
                         <height>9</height>
                         <max-width>16</max-width>
                         <max-height>9</max-height>
-                        <data>-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,24,24,24,24,24,24,24,-1,-1,24,24,24,24,24,24,24,-1,-1,24,24,24,24,24,24,24,-1,-1,24,24,24,24,24,24,24,-1,-1,24,24,24,24,24,24,24,-1,-1,24,24,24,24,24,24,24,-1,-1,24,24,24,24,24,24,24,-1,-1,24,24,24,24,24,24,24,-1,-1,24,24,24,24,24,24,24,-1,-1,24,24,24,24,24,24,24,-1,-1,24,24,24,24,24,24,24,-1,-1,24,24,24,24,24,24,24,-1,-1,24,24,24,24,24,24,24,-1,-1,24,24,24,24,24,24,24,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1</data>
+                        <data>-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,24,24,24,24,24,24,24,-1,-1,24,24,24,6,24,24,24,-1,-1,6,24,6,24,24,24,24,-1,-1,24,24,24,24,6,24,24,-1,-1,24,24,24,24,24,24,24,-1,-1,24,24,24,24,24,24,24,-1,-1,24,24,24,24,24,24,24,-1,-1,24,24,24,24,24,24,24,-1,-1,24,24,24,24,24,24,24,-1,-1,24,24,24,24,24,24,24,-1,-1,24,24,24,24,24,24,24,-1,-1,24,24,24,24,24,24,24,-1,-1,24,24,24,24,24,24,24,-1,-1,24,24,24,24,24,24,24,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1</data>
                     </tilemap-data>
                 </instance>
             </instances>
             <effects />
         </layer>
-        <layer name="Background" sid="775867264273173">
+        <layer name="Background" sid="253453631257878">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -80,7 +80,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="MenuTilemap" uid="806">
+                <instance type="MenuTilemap" uid="1648">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <tile-width>16</tile-width>
@@ -122,7 +122,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="BackgroundUP" sid="613559393711106">
+        <layer name="BackgroundUP" sid="967274798419783">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -140,7 +140,7 @@
             <instances />
             <effects />
         </layer>
-        <layer name="Logic" sid="494898727488196">
+        <layer name="Logic" sid="485609976234385">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -156,7 +156,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="item1" uid="807">
+                <instance type="item1" uid="1649">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -178,7 +178,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="item3" uid="808">
+                <instance type="item3" uid="1650">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -188,8 +188,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>128</x>
-                        <y>-32</y>
+                        <x>144</x>
+                        <y>80</y>
                         <z>0</z>
                         <width>23.270153046</width>
                         <height>18.371173859</height>
@@ -200,7 +200,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="item4" uid="809">
+                <instance type="item4" uid="1651">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -222,7 +222,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="item5" uid="810">
+                <instance type="item5" uid="1652">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -244,7 +244,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="item6" uid="811">
+                <instance type="item6" uid="1653">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -266,7 +266,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="item7" uid="812">
+                <instance type="item7" uid="1654">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -288,7 +288,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="item12" uid="813">
+                <instance type="item12" uid="1655">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -310,7 +310,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="item9" uid="814">
+                <instance type="item9" uid="1656">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -332,7 +332,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="item11" uid="815">
+                <instance type="item11" uid="1657">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -354,7 +354,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Portal" uid="816">
+                <instance type="Portal" uid="1658">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -379,7 +379,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Player" sid="476916634179923">
+        <layer name="Player" sid="236317655998887">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -395,7 +395,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="ShonMenu" uid="817">
+                <instance type="ShonMenu" uid="1659">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -421,7 +421,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>96</x>
+                        <x>144</x>
                         <y>128</y>
                         <z>0</z>
                         <width>16</width>
@@ -436,7 +436,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Control" sid="544556869855433">
+        <layer name="Control" sid="152241370849668">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -452,7 +452,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="TiledBackground1" uid="818">
+                <instance type="TiledBackground1" uid="1660">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -460,8 +460,8 @@
                     <blend-mode>9</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-304</x>
-                        <y>176</y>
+                        <x>0</x>
+                        <y>0</y>
                         <z>0</z>
                         <width>256</width>
                         <height>144</height>
@@ -472,7 +472,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="start" uid="819">
+                <instance type="start" uid="1661">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -483,7 +483,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>48</x>
-                        <y>-32</y>
+                        <y>64</y>
                         <z>0</z>
                         <width>54</width>
                         <height>16</height>
@@ -494,7 +494,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="options" uid="820">
+                <instance type="options" uid="1662">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -504,8 +504,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>224</x>
-                        <y>-32</y>
+                        <x>208</x>
+                        <y>64</y>
                         <z>0</z>
                         <width>54</width>
                         <height>16</height>
@@ -516,7 +516,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="credits" uid="821">
+                <instance type="credits" uid="1663">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -526,45 +526,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>160</x>
-                        <y>-48</y>
+                        <x>128</x>
+                        <y>64</y>
                         <z>0</z>
                         <width>54</width>
                         <height>16</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="TiledBackground2" uid="822">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Fade">
-                            <properties>
-                                <active-at-start>Yes</active-at-start>
-                                <fade-in-time>0</fade-in-time>
-                                <wait-time>3</wait-time>
-                                <fade-out-time>3</fade-out-time>
-                                <destroy>After fade out</destroy>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>0</x>
-                        <y>176</y>
-                        <z>0</z>
-                        <width>256</width>
-                        <height>144</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -572,7 +541,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Screen" sid="129311263327731">
+        <layer name="Screen" sid="981460856998072">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>

@@ -353,7 +353,7 @@
                     <actions>
                         <action id="-9" name="Destroy" sid="789664731135766" type="Trap6Start2" />
                         <action id="-16" name="Wait" sid="641333511632759" type="System">
-                            <param id="0" name="Seconds">1.0</param>
+                            <param id="0" name="Seconds">2</param>
                         </action>
                         <action behavior="CustomMovement" id="3" name="Accelerate" sid="373949038367482" type="Trap62">
                             <param id="0" name="Which">1</param>

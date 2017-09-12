@@ -48,13 +48,7 @@ ___
 - [x] Level 3-5  (21)
 - [x] Level 3-6  (22)
 
-### AirConsole
-___
-- [X] Control
-- [x] Logic
-- [X] Graphics
-- [X] Design
-___
+# GAME COMPLATE
 
 
 | Platform | Pixel Shon Adventure BETA (CASTLE) |

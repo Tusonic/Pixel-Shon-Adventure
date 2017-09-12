@@ -188,6 +188,12 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Play" sid="463546263774976" type="Audio">
+                            <param id="0" name="Audio file">skeleton</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">SoundSelect</param>
+                            <param id="1" name="Tag (optional)">&quot;sound1&quot;</param>
+                        </action>
                         <action id="12" name="Vibrate" sid="246868980752521" type="Browser">
                             <param id="0" name="Pattern">&quot;250&quot;</param>
                         </action>

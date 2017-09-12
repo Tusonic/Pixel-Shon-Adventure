@@ -338,6 +338,12 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Play" sid="441877133928873" type="Audio">
+                            <param id="0" name="Audio file">gameover</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">SoundSelect</param>
+                            <param id="1" name="Tag (optional)">&quot;sound1&quot;</param>
+                        </action>
                         <action id="12" name="Vibrate" sid="952741160908493" type="Browser">
                             <param id="0" name="Pattern">&quot;500&quot;</param>
                         </action>

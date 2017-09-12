@@ -3,8 +3,48 @@
     <!-- TUSONIC -->
     <name>Credit</name>
     <events>
+        <include>Key</include>
         <include>Player</include>
         <include>Control</include>
+        <event-block sid="385950985148852">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="923771953190293" type="System" />
+            </conditions>
+            <actions>
+                <action id="1" name="Get item" sid="850234368377166" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Save&quot;</param>
+                </action>
+                <action id="1" name="Get item" sid="924985300047293" type="LocalStorage">
+                    <param id="0" name="Key">&quot;SaveBoss&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="743182077833062">
+            <conditions>
+                <condition id="1" name="On item get" sid="672334412816226" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Save&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="345481526821169" type="System">
+                    <param id="0" name="Variable">SelectMenu</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="812098355645211">
+            <conditions>
+                <condition id="1" name="On item get" sid="258429390122952" type="LocalStorage">
+                    <param id="0" name="Key">&quot;SaveBoss&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="324373666725644" type="System">
+                    <param id="0" name="Variable">SelectMenuBoss</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="637493576775234">
             <conditions>
                 <condition id="-1" name="Every tick" sid="180196217868601" type="System" />
@@ -35,6 +75,106 @@
                 </action>
             </actions>
         </event-block>
+        <event-group description="" sid="581412791222081" title="KeyCredit">
+            <sub-events>
+                <event-block sid="726465761589990">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="318769402265555" type="System">
+                            <param id="0" name="Variable">SelectMenuBoss</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="136728408461748" type="Key2">
+                            <param id="0" name="X">480</param>
+                            <param id="1" name="Y">192</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="382331532362304" type="Key1">
+                            <param id="0" name="X">560</param>
+                            <param id="1" name="Y">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="723328231128288" type="Key0">
+                            <param id="0" name="X">640</param>
+                            <param id="1" name="Y">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="275802162707343" type="ChestBlue2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="319613621509315" type="ChestRed2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="296313282548881" type="ChestYellow2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="578720792957303">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="448116380872517" type="System">
+                            <param id="0" name="Variable">SelectMenuBoss</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="856117061907151" type="Key2">
+                            <param id="0" name="X">480</param>
+                            <param id="1" name="Y">192</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="516432315924062" type="Key1">
+                            <param id="0" name="X">560</param>
+                            <param id="1" name="Y">192</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="445041354092357" type="Key0">
+                            <param id="0" name="X">640</param>
+                            <param id="1" name="Y">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="892517890338501" type="ChestBlue2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="498802730607017" type="ChestRed2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="147633716495277" type="ChestYellow2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="947325960931802">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="538912143364009" type="System">
+                            <param id="0" name="Variable">SelectMenuBoss</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">7</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="814169302231684" type="Key2">
+                            <param id="0" name="X">480</param>
+                            <param id="1" name="Y">192</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="460107554312032" type="Key1">
+                            <param id="0" name="X">560</param>
+                            <param id="1" name="Y">192</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="644162257311090" type="Key0">
+                            <param id="0" name="X">640</param>
+                            <param id="1" name="Y">192</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="432084249077847" type="ChestBlue2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="485733808770686" type="ChestRed2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="888458601022933" type="ChestYellow2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="Next Level" sid="283256221139907" title="PortalCredit">
             <sub-events>
                 <event-block sid="148388019876709">
@@ -72,124 +212,11 @@
                             <param id="0" name="Seconds">0.5</param>
                         </action>
                         <action id="-2" name="Go to layout" sid="109704953325889" type="System">
-                            <param id="0" name="Layout">Menu</param>
+                            <param id="0" name="Layout">Menu2</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="581412791222081" title="KeyCredit" />
-        <event-block sid="575319570421737">
-            <conditions>
-                <condition id="-25" name="On loader layout complete" sid="706753828611956" type="System" />
-            </conditions>
-            <actions>
-                <action id="-15" name="Set visible" sid="541051368520916" type="ChestBlue">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action id="-15" name="Set visible" sid="704479302950532" type="ChestRed">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action id="-15" name="Set visible" sid="182234508962209" type="ChestYellow">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="726465761589990">
-            <conditions>
-                <condition id="-14" name="Compare variable" sid="318769402265555" type="System">
-                    <param id="0" name="Variable">SelectMenuBoss</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">3</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-3" name="Set position" sid="704419494004283" type="Key2">
-                    <param id="0" name="X">480</param>
-                    <param id="1" name="Y">192</param>
-                </action>
-                <action id="-3" name="Set position" sid="382331532362304" type="Key1">
-                    <param id="0" name="X">560</param>
-                    <param id="1" name="Y">0</param>
-                </action>
-                <action id="-3" name="Set position" sid="723328231128288" type="Key0">
-                    <param id="0" name="X">640</param>
-                    <param id="1" name="Y">0</param>
-                </action>
-                <action id="-15" name="Set visible" sid="644486230359026" type="ChestBlue">
-                    <param id="0" name="Visibility">0</param>
-                </action>
-                <action id="-15" name="Set visible" sid="850102824138504" type="ChestRed">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action id="-15" name="Set visible" sid="843152441563529" type="ChestYellow">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="578720792957303">
-            <conditions>
-                <condition id="-14" name="Compare variable" sid="448116380872517" type="System">
-                    <param id="0" name="Variable">SelectMenuBoss</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">5</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-3" name="Set position" sid="856117061907151" type="Key2">
-                    <param id="0" name="X">480</param>
-                    <param id="1" name="Y">192</param>
-                </action>
-                <action id="-3" name="Set position" sid="516432315924062" type="Key1">
-                    <param id="0" name="X">560</param>
-                    <param id="1" name="Y">192</param>
-                </action>
-                <action id="-3" name="Set position" sid="445041354092357" type="Key0">
-                    <param id="0" name="X">640</param>
-                    <param id="1" name="Y">0</param>
-                </action>
-                <action id="-15" name="Set visible" sid="783602504391286" type="ChestBlue">
-                    <param id="0" name="Visibility">0</param>
-                </action>
-                <action id="-15" name="Set visible" sid="192373125014915" type="ChestRed">
-                    <param id="0" name="Visibility">0</param>
-                </action>
-                <action id="-15" name="Set visible" sid="315029253709134" type="ChestYellow">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="947325960931802">
-            <conditions>
-                <condition id="-14" name="Compare variable" sid="538912143364009" type="System">
-                    <param id="0" name="Variable">SelectMenuBoss</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">7</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-3" name="Set position" sid="814169302231684" type="Key2">
-                    <param id="0" name="X">480</param>
-                    <param id="1" name="Y">192</param>
-                </action>
-                <action id="-3" name="Set position" sid="460107554312032" type="Key1">
-                    <param id="0" name="X">560</param>
-                    <param id="1" name="Y">192</param>
-                </action>
-                <action id="-3" name="Set position" sid="644162257311090" type="Key0">
-                    <param id="0" name="X">640</param>
-                    <param id="1" name="Y">192</param>
-                </action>
-                <action id="-15" name="Set visible" sid="439100497366455" type="ChestBlue">
-                    <param id="0" name="Visibility">0</param>
-                </action>
-                <action id="-15" name="Set visible" sid="727047659532307" type="ChestRed">
-                    <param id="0" name="Visibility">0</param>
-                </action>
-                <action id="-15" name="Set visible" sid="417028560532577" type="ChestYellow">
-                    <param id="0" name="Visibility">0</param>
-                </action>
-            </actions>
-        </event-block>
     </events>
 </c2eventsheet>

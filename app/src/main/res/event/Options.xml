@@ -3,6 +3,7 @@
     <!-- TUSONIC -->
     <name>Options</name>
     <events>
+        <variable constant="0" name="SoundSelect" sid="202842175743890" static="0" type="number">-20</variable>
         <event-block sid="369692516814032">
             <conditions>
                 <condition id="3" name="On touched object" sid="187504857136276" type="Touch">
@@ -11,9 +12,489 @@
             </conditions>
             <actions>
                 <action id="-2" name="Go to layout" sid="869347348598554" type="System">
-                    <param id="0" name="Layout">Menu</param>
+                    <param id="0" name="Layout">Menu2</param>
                 </action>
             </actions>
         </event-block>
+        <event-group description="" sid="618765342621757" title="MusicSelect">
+            <sub-events>
+                <event-block sid="240905396579313">
+                    <conditions>
+                        <condition id="1" name="Compare value" sid="419713131603824" type="Music">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Value">-50</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="671898433834784" type="OptionsMusicOffOn">
+                            <param id="0" name="Text">&quot;Music: OFF&quot;</param>
+                        </action>
+                        <action id="2" name="Set muted" sid="291496064030123" type="Audio">
+                            <param id="0" name="Tag">&quot;music1&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="238769112352628">
+                    <conditions>
+                        <condition id="1" name="Compare value" sid="654976506844799" type="Music">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Value">-45</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set volume" sid="449456308695936" type="Audio">
+                            <param id="0" name="Tag">&quot;music1&quot;</param>
+                            <param id="1" name="dB">-45</param>
+                        </action>
+                        <action id="0" name="Set text" sid="744008975747301" type="OptionsMusicOffOn">
+                            <param id="0" name="Text">&quot;Music: ON&quot;</param>
+                        </action>
+                        <action id="2" name="Set muted" sid="196364645478627" type="Audio">
+                            <param id="0" name="Tag">&quot;music1&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="479085834069734">
+                    <conditions>
+                        <condition id="1" name="Compare value" sid="759849148223586" type="Music">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Value">-40</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set volume" sid="902774257295967" type="Audio">
+                            <param id="0" name="Tag">&quot;music1&quot;</param>
+                            <param id="1" name="dB">-40</param>
+                        </action>
+                        <action id="0" name="Set text" sid="227985358970628" type="OptionsMusicOffOn">
+                            <param id="0" name="Text">&quot;Music: ON&quot;</param>
+                        </action>
+                        <action id="2" name="Set muted" sid="656731873191606" type="Audio">
+                            <param id="0" name="Tag">&quot;music1&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="397968213806557">
+                    <conditions>
+                        <condition id="1" name="Compare value" sid="318767613804752" type="Music">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Value">-35</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set volume" sid="201522089764336" type="Audio">
+                            <param id="0" name="Tag">&quot;music1&quot;</param>
+                            <param id="1" name="dB">-35</param>
+                        </action>
+                        <action id="0" name="Set text" sid="468959486983791" type="OptionsMusicOffOn">
+                            <param id="0" name="Text">&quot;Music: ON&quot;</param>
+                        </action>
+                        <action id="2" name="Set muted" sid="401060990019951" type="Audio">
+                            <param id="0" name="Tag">&quot;music1&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="559836321099446">
+                    <conditions>
+                        <condition id="1" name="Compare value" sid="837812860997364" type="Music">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Value">-30</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set volume" sid="443668306443275" type="Audio">
+                            <param id="0" name="Tag">&quot;music1&quot;</param>
+                            <param id="1" name="dB">-30</param>
+                        </action>
+                        <action id="0" name="Set text" sid="995877382450221" type="OptionsMusicOffOn">
+                            <param id="0" name="Text">&quot;Music: ON&quot;</param>
+                        </action>
+                        <action id="2" name="Set muted" sid="199104498538664" type="Audio">
+                            <param id="0" name="Tag">&quot;music1&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="503715158436748">
+                    <conditions>
+                        <condition id="1" name="Compare value" sid="730665984123797" type="Music">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Value">-25</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set volume" sid="499681086767106" type="Audio">
+                            <param id="0" name="Tag">&quot;music1&quot;</param>
+                            <param id="1" name="dB">-25</param>
+                        </action>
+                        <action id="0" name="Set text" sid="393590196474729" type="OptionsMusicOffOn">
+                            <param id="0" name="Text">&quot;Music: ON&quot;</param>
+                        </action>
+                        <action id="2" name="Set muted" sid="699554282379097" type="Audio">
+                            <param id="0" name="Tag">&quot;music1&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="499246842408547">
+                    <conditions>
+                        <condition id="1" name="Compare value" sid="842048578161358" type="Music">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Value">-20</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set volume" sid="669852143176887" type="Audio">
+                            <param id="0" name="Tag">&quot;music1&quot;</param>
+                            <param id="1" name="dB">-20</param>
+                        </action>
+                        <action id="0" name="Set text" sid="488621321073101" type="OptionsMusicOffOn">
+                            <param id="0" name="Text">&quot;Music: ON&quot;</param>
+                        </action>
+                        <action id="2" name="Set muted" sid="516172669415833" type="Audio">
+                            <param id="0" name="Tag">&quot;music1&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="912966114916441">
+                    <conditions>
+                        <condition id="1" name="Compare value" sid="384960522854358" type="Music">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Value">-15</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set volume" sid="545598530408576" type="Audio">
+                            <param id="0" name="Tag">&quot;music1&quot;</param>
+                            <param id="1" name="dB">-15</param>
+                        </action>
+                        <action id="0" name="Set text" sid="557009716331623" type="OptionsMusicOffOn">
+                            <param id="0" name="Text">&quot;Music: ON&quot;</param>
+                        </action>
+                        <action id="2" name="Set muted" sid="710004818087022" type="Audio">
+                            <param id="0" name="Tag">&quot;music1&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="997245186867724">
+                    <conditions>
+                        <condition id="1" name="Compare value" sid="620440164511847" type="Music">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Value">-10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set volume" sid="317711214424953" type="Audio">
+                            <param id="0" name="Tag">&quot;music1&quot;</param>
+                            <param id="1" name="dB">-10</param>
+                        </action>
+                        <action id="0" name="Set text" sid="464780450276441" type="OptionsMusicOffOn">
+                            <param id="0" name="Text">&quot;Music: ON&quot;</param>
+                        </action>
+                        <action id="2" name="Set muted" sid="115081810953191" type="Audio">
+                            <param id="0" name="Tag">&quot;music1&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="860700098175229">
+                    <conditions>
+                        <condition id="1" name="Compare value" sid="745591580057434" type="Music">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Value">-5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set volume" sid="653175291445762" type="Audio">
+                            <param id="0" name="Tag">&quot;music1&quot;</param>
+                            <param id="1" name="dB">-5</param>
+                        </action>
+                        <action id="0" name="Set text" sid="535880014574251" type="OptionsMusicOffOn">
+                            <param id="0" name="Text">&quot;Music: ON&quot;</param>
+                        </action>
+                        <action id="2" name="Set muted" sid="284245076411855" type="Audio">
+                            <param id="0" name="Tag">&quot;music1&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="934702316732593">
+                    <conditions>
+                        <condition id="1" name="Compare value" sid="612117275205640" type="Music">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set volume" sid="762727176584987" type="Audio">
+                            <param id="0" name="Tag">&quot;music1&quot;</param>
+                            <param id="1" name="dB">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="548229033978110" type="OptionsMusicOffOn">
+                            <param id="0" name="Text">&quot;Music: ON&quot;</param>
+                        </action>
+                        <action id="2" name="Set muted" sid="651562352341384" type="Audio">
+                            <param id="0" name="Tag">&quot;music1&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="724311639736668" title="SoundSelect">
+            <sub-events>
+                <event-block sid="188732593523248">
+                    <conditions>
+                        <condition id="1" name="Compare value" sid="226289649157570" type="Sound">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Value">-50</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="109058408455496" type="OptionsSoundOffOn">
+                            <param id="0" name="Text">&quot;Sound: OFF&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="364998847863786" type="System">
+                            <param id="0" name="Variable">SoundSelect</param>
+                            <param id="1" name="Value">-50</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="464773497213138">
+                    <conditions>
+                        <condition id="1" name="Compare value" sid="492942410461567" type="Sound">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Value">-45</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="693541995600141" type="OptionsSoundOffOn">
+                            <param id="0" name="Text">&quot;Sound: ON&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="936297839890911" type="System">
+                            <param id="0" name="Variable">SoundSelect</param>
+                            <param id="1" name="Value">-45</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="428396593796549">
+                    <conditions>
+                        <condition id="1" name="Compare value" sid="311465009783373" type="Sound">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Value">-40</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="694550409273145" type="OptionsSoundOffOn">
+                            <param id="0" name="Text">&quot;Sound: ON&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="879608685805993" type="System">
+                            <param id="0" name="Variable">SoundSelect</param>
+                            <param id="1" name="Value">-40</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="613189800437946">
+                    <conditions>
+                        <condition id="1" name="Compare value" sid="651003411519773" type="Sound">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Value">-35</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="352559111438913" type="OptionsSoundOffOn">
+                            <param id="0" name="Text">&quot;Sound: ON&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="732227546837212" type="System">
+                            <param id="0" name="Variable">SoundSelect</param>
+                            <param id="1" name="Value">-35</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="225266278325168">
+                    <conditions>
+                        <condition id="1" name="Compare value" sid="449020024614211" type="Sound">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Value">-30</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="476230735075623" type="OptionsSoundOffOn">
+                            <param id="0" name="Text">&quot;Sound: ON&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="863520796984129" type="System">
+                            <param id="0" name="Variable">SoundSelect</param>
+                            <param id="1" name="Value">-30</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="453340340264092">
+                    <conditions>
+                        <condition id="1" name="Compare value" sid="581094162314767" type="Sound">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Value">-25</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="709744047791946" type="OptionsSoundOffOn">
+                            <param id="0" name="Text">&quot;Sound: ON&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="438730791942827" type="System">
+                            <param id="0" name="Variable">SoundSelect</param>
+                            <param id="1" name="Value">-25</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="849639064942452">
+                    <conditions>
+                        <condition id="1" name="Compare value" sid="216645140366451" type="Sound">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Value">-20</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="151143855680287" type="OptionsSoundOffOn">
+                            <param id="0" name="Text">&quot;Sound: ON&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="815960722382413" type="System">
+                            <param id="0" name="Variable">SoundSelect</param>
+                            <param id="1" name="Value">-20</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="457527931680049">
+                    <conditions>
+                        <condition id="1" name="Compare value" sid="635825442295373" type="Sound">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Value">-15</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="452915603767617" type="OptionsSoundOffOn">
+                            <param id="0" name="Text">&quot;Sound: ON&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="329856622199322" type="System">
+                            <param id="0" name="Variable">SoundSelect</param>
+                            <param id="1" name="Value">-15</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="796699079809727">
+                    <conditions>
+                        <condition id="1" name="Compare value" sid="248328304789436" type="Sound">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Value">-10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="889492248331516" type="OptionsSoundOffOn">
+                            <param id="0" name="Text">&quot;Sound: ON&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="982175570061952" type="System">
+                            <param id="0" name="Variable">SoundSelect</param>
+                            <param id="1" name="Value">-10</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="116883929081262">
+                    <conditions>
+                        <condition id="1" name="Compare value" sid="190070778434804" type="Sound">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Value">-5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="506095713858560" type="OptionsSoundOffOn">
+                            <param id="0" name="Text">&quot;Sound: ON&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="357048314953111" type="System">
+                            <param id="0" name="Variable">SoundSelect</param>
+                            <param id="1" name="Value">-5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="867153240163375">
+                    <conditions>
+                        <condition id="1" name="Compare value" sid="510140529642856" type="Sound">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="188282191697441" type="OptionsSoundOffOn">
+                            <param id="0" name="Text">&quot;Sound: ON&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="849014314124217" type="System">
+                            <param id="0" name="Variable">SoundSelect</param>
+                            <param id="1" name="Value">-0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="386968712436282" title="ButtonSelect">
+            <sub-events>
+                <event-block sid="647731336111004">
+                    <conditions>
+                        <condition id="1" name="Compare value" sid="432404103137997" type="Button">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="402586945098937" type="System">
+                            <param id="0" name="Variable">Control</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set item" sid="360834964739985" type="LocalStorage">
+                            <param id="0" name="Key">&quot;Control&quot;</param>
+                            <param id="1" name="Value">&quot;0&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="510936016446836">
+                    <conditions>
+                        <condition id="1" name="Compare value" sid="350737729789352" type="Button">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="623865898353730" type="System">
+                            <param id="0" name="Variable">Control</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set item" sid="438919846695360" type="LocalStorage">
+                            <param id="0" name="Key">&quot;Control&quot;</param>
+                            <param id="1" name="Value">&quot;1&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="345989880270183">
+                    <conditions>
+                        <condition id="1" name="Compare value" sid="977306962761379" type="Button">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="247682013091133" type="System">
+                            <param id="0" name="Variable">Control</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="0" name="Set item" sid="816168375773159" type="LocalStorage">
+                            <param id="0" name="Key">&quot;Control&quot;</param>
+                            <param id="1" name="Value">&quot;2&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
