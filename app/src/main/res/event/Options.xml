@@ -494,6 +494,24 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="911113124858814">
+                    <conditions>
+                        <condition id="1" name="Compare value" sid="190065483147856" type="Button">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="198420691468466" type="System">
+                            <param id="0" name="Variable">Control</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                        <action id="0" name="Set item" sid="410708422934381" type="LocalStorage">
+                            <param id="0" name="Key">&quot;Control&quot;</param>
+                            <param id="1" name="Value">&quot;3&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
     </events>

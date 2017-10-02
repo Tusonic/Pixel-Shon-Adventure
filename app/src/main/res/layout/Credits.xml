@@ -633,7 +633,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>82</x>
-                        <y>176</y>
+                        <y>185</y>
                         <z>0</z>
                         <width>144</width>
                         <height>16</height>
@@ -663,7 +663,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>82</x>
-                        <y>224</y>
+                        <y>233</y>
                         <z>0</z>
                         <width>96</width>
                         <height>16</height>
@@ -693,7 +693,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>244</x>
-                        <y>224</y>
+                        <y>233</y>
                         <z>0</z>
                         <width>144</width>
                         <height>16</height>
@@ -723,7 +723,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>82</x>
-                        <y>192</y>
+                        <y>201</y>
                         <z>0</z>
                         <width>160</width>
                         <height>16</height>
@@ -753,7 +753,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>82</x>
-                        <y>240</y>
+                        <y>249</y>
                         <z>0</z>
                         <width>160</width>
                         <height>16</height>
@@ -783,7 +783,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>244</x>
-                        <y>176</y>
+                        <y>185</y>
                         <z>0</z>
                         <width>160</width>
                         <height>16</height>
@@ -813,9 +813,9 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>370</x>
-                        <y>176</y>
+                        <y>185</y>
                         <z>0</z>
-                        <width>160</width>
+                        <width>112</width>
                         <height>16</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -843,7 +843,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>244</x>
-                        <y>192</y>
+                        <y>201</y>
                         <z>0</z>
                         <width>160</width>
                         <height>16</height>
@@ -1308,7 +1308,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>82</x>
-                        <y>208</y>
+                        <y>217</y>
                         <z>0</z>
                         <width>160</width>
                         <height>16</height>
@@ -1338,7 +1338,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>244</x>
-                        <y>208</y>
+                        <y>217</y>
                         <z>0</z>
                         <width>160</width>
                         <height>16</height>
@@ -1368,9 +1368,9 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>370</x>
-                        <y>192</y>
+                        <y>201</y>
                         <z>0</z>
-                        <width>160</width>
+                        <width>112</width>
                         <height>16</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -1458,9 +1458,9 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>370</x>
-                        <y>208</y>
+                        <y>217</y>
                         <z>0</z>
-                        <width>160</width>
+                        <width>112</width>
                         <height>16</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -1488,7 +1488,97 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>370</x>
-                        <y>224</y>
+                        <y>233</y>
+                        <z>0</z>
+                        <width>112</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="CreditText1" uid="485">
+                    <properties>
+                        <character-width>59</character-width>
+                        <character-height>59</character-height>
+                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
+                        <text>-IDS131</text>
+                        <scale>0.2</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>0</character-spacing>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>370</x>
+                        <y>169</y>
+                        <z>0</z>
+                        <width>112</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="CreditText1" uid="490">
+                    <properties>
+                        <character-width>59</character-width>
+                        <character-height>59</character-height>
+                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
+                        <text>-Ziemnik</text>
+                        <scale>0.2</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>0</character-spacing>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>244</x>
+                        <y>169</y>
+                        <z>0</z>
+                        <width>160</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="CreditText1" uid="805">
+                    <properties>
+                        <character-width>59</character-width>
+                        <character-height>59</character-height>
+                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
+                        <text>-Kaziczek</text>
+                        <scale>0.2</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>0</character-spacing>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>82</x>
+                        <y>169</y>
                         <z>0</z>
                         <width>160</width>
                         <height>16</height>

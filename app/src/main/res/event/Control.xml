@@ -89,12 +89,51 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="561544966123403">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="386525901142017" type="System">
+                    <param id="0" name="Variable">Control</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="676969757922542" type="L">
+                    <param id="0" name="X">30</param>
+                    <param id="1" name="Y">125</param>
+                </action>
+                <action id="-3" name="Set position" sid="434450450657683" type="R">
+                    <param id="0" name="X">85</param>
+                    <param id="1" name="Y">125</param>
+                </action>
+                <action id="-3" name="Set position" sid="849632600676286" type="A">
+                    <param id="0" name="X">170</param>
+                    <param id="1" name="Y">125</param>
+                </action>
+                <action id="-3" name="Set position" sid="641187738870076" type="B">
+                    <param id="0" name="X">225</param>
+                    <param id="1" name="Y">125</param>
+                </action>
+                <action id="9" name="Set scale" sid="582354429022055" type="A">
+                    <param id="0" name="Scale">1.2</param>
+                </action>
+                <action id="9" name="Set scale" sid="751181542314944" type="B">
+                    <param id="0" name="Scale">1.2</param>
+                </action>
+                <action id="9" name="Set scale" sid="394444706210495" type="L">
+                    <param id="0" name="Scale">1.2</param>
+                </action>
+                <action id="9" name="Set scale" sid="127725922377724" type="R">
+                    <param id="0" name="Scale">1.2</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="762575184576851">
             <conditions>
                 <condition id="-14" name="Compare variable" sid="251081104637075" type="System">
                     <param id="0" name="Variable">Control</param>
                     <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">2</param>
+                    <param id="2" name="Value">3</param>
                 </condition>
             </conditions>
             <actions>
