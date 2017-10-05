@@ -9,14 +9,14 @@ Price: FREE
 
 = Description
 
-Pixel Shon Adventure is an adventure game with elements of a arcade game. In the 
+Pixel Shon Adventure is an adventure game with elements of arcade game. In
 game we are impersonating the small knight which must find secret treasure. 
 Our job is a defeating next chambers of the castle, so long as far as we will find 
-the chamber in which he will be chest with the treasures. During the exploration we 
+chamber in which he will be chest with the treasures. During the exploration we 
 will meet on the all mass of not safe skeletons which they will try us to disturb. 
-During our all expedition we will have to kill three bosses. Each from them presents the 
+During our all expedition we will have to kill three bosses. Each from them presents
 different style of battle, and every of arenas possesses appropriate music. 
-In the game we have to face traps in which they you have to show courage and reflex.
+In game we have to face traps in which they you have to show courage and reflex.
 
 The game has classic logic riddle, with which we will have to face. If you like classic 
 2D adventure games with pixel retro graphics, then you will definitely love this game, 
@@ -31,7 +31,7 @@ The game is free and not have any ads.
 
 = History:
 
-I am a person that from the youngest years is fascinated by the process of creation of games. 
+I am a person who has been fascinated with the game development process from an early age.
 On my account I have some small production but never published them. In January 2017 launched 
 the idea of creating a game for mobile devices. It is my first major production in which 
 I invested my time and money, and the first serious production that I managed to finish and from 
